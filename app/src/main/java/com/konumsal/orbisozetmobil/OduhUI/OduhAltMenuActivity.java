@@ -9,17 +9,14 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ListView;
 
 import com.konumsal.orbisozetmobil.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import AdapterLayer.Oduh.MenuAdapter;
-import AdapterLayer.Ortak.AnaMenuAdapter;
+import AdapterLayer.Ortak.MenuAdapter;
 import ToolLayer.MessageBox;
 
 public class OduhAltMenuActivity extends AppCompatActivity {

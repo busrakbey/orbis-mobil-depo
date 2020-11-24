@@ -18,7 +18,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.google.gson.reflect.TypeToken;
-import com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPAnaMenuActivity;
+import com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPAltMenuActivity;
 import com.konumsal.orbisozetmobil.KadastroUI.KadastroSorgulamaActivity;
 import com.konumsal.orbisozetmobil.OduhUI.OduhAltMenuActivity;
 import com.konumsal.orbisozetmobil.OduhUI.OduhSorgulamaActivity;
@@ -210,7 +210,7 @@ public class AnaMenuActivity extends AppCompatActivity {
                     mintent.putExtra("MODE", 6);
                     startActivity(mintent);
                 } else if (position == 7) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, IPAnaMenuActivity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, IPAltMenuActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", 7);
                     startActivity(mintent);

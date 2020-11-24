@@ -2,6 +2,10 @@ package ToolLayer;
 
 import java.util.List;
 
+import EntityLayer.IsletmePazarlama.Damga;
+import EntityLayer.IsletmePazarlama.Odenek;
+import EntityLayer.IsletmePazarlama.Satis;
+import EntityLayer.IsletmePazarlama.Uretim;
 import EntityLayer.Kadastro.KdmDosya;
 import EntityLayer.Oduh.BalOrmani;
 import EntityLayer.Oduh.MesireYeri;
@@ -29,6 +33,18 @@ public interface RefrofitRestApi {
 
     @POST("rest/SaglikDurumuRS/ozmDepoSucTutanagiForMobil")
     Call<List<SucTutanagi>>  getOzmDepoSucTutanagiForMobil(@Body SendParametersForServer parameter);
+
+    @POST("rest/IsletmePazarlamaRS/mobilDamga")
+    Call<List<Damga>>  getMobilDamga(@Body SendParametersForServer parameter);
+
+    @POST("rest/IsletmePazarlamaRS/mobilUretim")
+    Call<List<Uretim>>  getMobilUretim(@Body SendParametersForServer parameter);
+
+    @POST("rest/IsletmePazarlamaRS/mobilSatis")
+    Call<List<Satis>>  getMobilSatis(@Body SendParametersForServer parameter);
+
+    @POST("rest/IsletmePazarlamaRS/mobilOdenek")
+    Call<List<Odenek>>  getMobilOdenek(@Body SendParametersForServer parameter);
 
 
 

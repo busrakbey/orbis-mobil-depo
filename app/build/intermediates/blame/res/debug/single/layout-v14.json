@@ -4,23 +4,11 @@
         "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout-v14\\md_stub_progress.xml"
     },
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\md_stub_progress.xml",
-        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout-v14\\md_stub_progress.xml"
-    },
-    {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\md_stub_progress_indeterminate.xml",
         "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout-v14\\md_stub_progress_indeterminate.xml"
     },
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\md_stub_progress_indeterminate_horizontal.xml",
-        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout-v14\\md_stub_progress_indeterminate_horizontal.xml"
-    },
-    {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\md_stub_progress_indeterminate_horizontal.xml",
         "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout-v14\\md_stub_progress_indeterminate_horizontal.xml"
-    },
-    {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\md_stub_progress_indeterminate.xml",
-        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout-v14\\md_stub_progress_indeterminate.xml"
     }
 ]

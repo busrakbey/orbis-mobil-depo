@@ -16,7 +16,7 @@ import com.konumsal.orbisozetmobil.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import AdapterLayer.Oduh.MenuAdapter;
+import AdapterLayer.Ortak.MenuAdapter;
 import ToolLayer.MessageBox;
 
 public class OzmAltMenuActivity extends AppCompatActivity {

@@ -1140,7 +1140,6 @@ android/support/v4/media/session/MediaSessionCompat$QueueItem.class
 com/google/android/gms/wearable/ChannelApi$OpenChannelResult.class
 com/google/android/gms/internal/zzkg.class
 com/esri/core/internal/util/g.class
-AdapterLayer/Oduh/MenuAdapter.class
 android/support/v7/view/menu/MenuBuilder$Callback.class
 com/google/android/gms/ads/internal/overlay/zze.class
 retrofit2/Converter.class
@@ -1387,6 +1386,7 @@ org/codehaus/jackson/JsonParseException.class
 com/google/android/gms/wearable/CapabilityApi$GetAllCapabilitiesResult.class
 retrofit2/http/HEAD.class
 android/support/v4/app/NotificationCompat$BuilderExtender.class
+AdapterLayer/Ortak/MenuAdapter.class
 android/support/design/widget/Snackbar$9.class
 com/google/android/gms/drive/query/Query$Builder.class
 DataLayer/Ortak/OrtakKisi_Data.class
