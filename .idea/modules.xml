@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DepoMobilSon.iml" filepath="$PROJECT_DIR$/DepoMobilSon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jxl/DepoMobilSon-jxl.iml" filepath="$PROJECT_DIR$/jxl/DepoMobilSon-jxl.iml" />
       <module fileurl="file://$PROJECT_DIR$/..//orbisozetmobil/../../OrbisDepoMobil/OrbisDepoMobil.iml" filepath="$PROJECT_DIR$/..//orbisozetmobil/../../OrbisDepoMobil/OrbisDepoMobil.iml" group="OrbisDepoMobil" />
-      <module fileurl="file://$PROJECT_DIR$/OrbisMobilDepoSon.iml" filepath="$PROJECT_DIR$/OrbisMobilDepoSon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jxl/OrbisMobilDepoSon-jxl.iml" filepath="$PROJECT_DIR$/jxl/OrbisMobilDepoSon-jxl.iml" />
       <module fileurl="file://$PROJECT_DIR$/OrbisOzetMobil.iml" filepath="$PROJECT_DIR$/OrbisOzetMobil.iml" />
       <module fileurl="file://$PROJECT_DIR$/jxl/OrbisOzetMobil-jxl.iml" filepath="$PROJECT_DIR$/jxl/OrbisOzetMobil-jxl.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />

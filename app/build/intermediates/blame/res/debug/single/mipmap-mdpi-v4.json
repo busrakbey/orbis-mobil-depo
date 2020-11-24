@@ -1,19 +1,15 @@
 [
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_listicon.png",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_listicon.png"
-    },
-    {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher_ogmlogo.png",
         "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_ogmlogo.png"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_mapzoom.png",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_mapzoom.png"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_agaccam.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_agaccam.png"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_fullworldmap.png",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_fullworldmap.png"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_edit.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_edit.png"
     },
     {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\actionlogoiconleaf.png",
@@ -28,40 +24,60 @@
         "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_agaccam.png"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_actionhomebar.png",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_actionhomebar.png"
-    },
-    {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_plusboldgray.png",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_plusboldgray.png"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\mr_calendar.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\mr_calendar.png"
     },
     {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_key.png",
         "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_key.png"
     },
     {
+        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_plusboldgray.png",
+        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_plusboldgray.png"
+    },
+    {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_actionokey.png",
         "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_actionokey.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_search.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_search.png"
     },
     {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_clock.png",
         "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_clock.png"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_tickwhite.png",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_tickwhite.png"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_actionhomebar.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_actionhomebar.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_actiontakvim.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_actiontakvim.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher_ogmlogo.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_ogmlogo.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_foldergray.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_foldergray.png"
     },
     {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_mapponint.png",
         "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_mapponint.png"
     },
     {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_setting_white.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_setting_white.png"
+    },
+    {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_setting_white.png",
         "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_setting_white.png"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_search.png",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_search.png"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_listicon.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_listicon.png"
     },
     {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\mr_calendar.png",
@@ -74,6 +90,94 @@
     {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_actionlogin.png",
         "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_actionlogin.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_cross_white.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_cross_white.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\mr_calendarclock.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\mr_calendarclock.png"
+    },
+    {
+        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_person.png",
+        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_person.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_key.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_key.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_mapzoom.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_mapzoom.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_tickwhite.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_tickwhite.png"
+    },
+    {
+        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_pushonwhite.png",
+        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_pushonwhite.png"
+    },
+    {
+        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_listicon.png",
+        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_listicon.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_actionplus.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_actionplus.png"
+    },
+    {
+        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_mapzoom.png",
+        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_mapzoom.png"
+    },
+    {
+        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_fullworldmap.png",
+        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_fullworldmap.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_person.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_person.png"
+    },
+    {
+        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_actionhomebar.png",
+        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_actionhomebar.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_camera.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_camera.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_clock.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_clock.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_plusboldgray.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_plusboldgray.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\actionlogoiconleaf.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\actionlogoiconleaf.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_mapponint.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_mapponint.png"
+    },
+    {
+        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_tickwhite.png",
+        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_tickwhite.png"
+    },
+    {
+        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_search.png",
+        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_search.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_actionokey.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_actionokey.png"
     },
     {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_actionplus.png",
@@ -92,19 +196,23 @@
         "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_cross_white.png"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_person.png",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_person.png"
-    },
-    {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
         "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_actionlogin.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_actionlogin.png"
     },
     {
         "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_foldergray.png",
         "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_foldergray.png"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_pushonwhite.png",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_pushonwhite.png"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_fullworldmap.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_fullworldmap.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_pushonwhite.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_pushonwhite.png"
     }
 ]

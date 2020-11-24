@@ -33,6 +33,7 @@ public class Damga {
     }
 
     public Double getDikili() {
+        
         return dikili;
     }
 

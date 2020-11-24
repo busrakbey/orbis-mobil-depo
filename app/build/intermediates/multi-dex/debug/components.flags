@@ -1,5 +1,5 @@
--injars 'D:\OrbisMobilDepoSon\app\build\intermediates\transforms\jarMerging\debug\jars\1\1f\combined.jar'
--outjars 'D:\OrbisMobilDepoSon\app\build\intermediates\multi-dex\debug\componentClasses.jar'
+-injars 'D:\DepoMobilSon\app\build\intermediates\transforms\jarMerging\debug\jars\1\1f\combined.jar'
+-outjars 'D:\DepoMobilSon\app\build\intermediates\multi-dex\debug\componentClasses.jar'
 
 -libraryjars 'C:\Users\busrakbey\AppData\Local\Android\Sdk\build-tools\23.0.3\lib\shrinkedAndroid.jar'
 
@@ -10,7 +10,7 @@
 -dontpreverify
 -dontnote **,com.android.tools.fd.**,android.support.multidex.MultiDexExtractor
 -dontwarn **
--printconfiguration 'D:\OrbisMobilDepoSon\app\build\intermediates\multi-dex\debug\components.flags'
+-printconfiguration 'D:\DepoMobilSon\app\build\intermediates\multi-dex\debug\components.flags'
 
 
 -keep class android.support.multidex.MultiDexApplication {
