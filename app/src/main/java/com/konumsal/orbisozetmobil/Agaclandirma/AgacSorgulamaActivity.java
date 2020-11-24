@@ -1,13 +1,11 @@
-package com.konumsal.orbisozetmobil.OduhUI;
+package com.konumsal.orbisozetmobil.Agaclandirma;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
 import android.view.View;
-
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -16,7 +14,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
-
 import com.konumsal.orbisozetmobil.OrtakUI.OrtakFunction;
 import com.konumsal.orbisozetmobil.R;
 
@@ -25,26 +22,23 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-
-import AdapterLayer.Oduh.BalOrmaniAdapter;
-import AdapterLayer.Oduh.MesireYeriAdapter;
-import AdapterLayer.Oduh.UretimPaketAdapter;
+import AdapterLayer.Agaclandirma.AgacProjeAdapter;
+import AdapterLayer.Agaclandirma.ToprakProjeAdapter;
 import DataLayer.Ortak.ConfigData;
-import EntityLayer.Oduh.BalOrmani;
-import EntityLayer.Oduh.MesireYeri;
-import EntityLayer.Oduh.UretimPaket;
+import EntityLayer.Agaclandirma.AgacProje;
+import EntityLayer.Agaclandirma.ToprakProje;
 import EntityLayer.SendParametersForServer;
 import EntityLayer.Sistem.SOrgBirim;
+import ToolLayer.MessageBox;
 import ToolLayer.NullOnEmptyConverterFactory;
 import ToolLayer.RefrofitRestApi;
-import ToolLayer.MessageBox;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class OduhSorgulamaActivity extends AppCompatActivity {
+public class AgacSorgulamaActivity extends AppCompatActivity {
     Toolbar toolbar;
     Spinner bolge_spinner, mudurluk_spinner, seflik_spinner, yil_spinner;
     Button sorgula_button, temizle_button;
@@ -55,16 +49,13 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
     List<String> item_source_str_seflik;
     List<SOrgBirim> item_souce_mudurluk;
     List<SOrgBirim> item_source_seflik;
-    BalOrmaniAdapter balOrmaniAdapter;
-    MesireYeriAdapter mesireYeriAdapter;
-    UretimPaketAdapter uretimPaketAdapter;
-    List<BalOrmani> gelenBalOrmaniList;
-    List<MesireYeri> gelenMesireYeriList;
-    List<UretimPaket> gelenUretimList;
-
+    AgacProjeAdapter agacProjeAdapter;
+    ToprakProjeAdapter toprakProjeAdapter;
+    List<AgacProje> gelenAgacList;
+    List<ToprakProje> gelenToprakList;
     ListView listview;
     String gelenSayfaId;
-    LinearLayout baslikLinear1, baslikLinear2, baslikLinear3;
+    LinearLayout baslikLinear1, baslikLinear2;
 
 
     @Override
@@ -73,7 +64,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.oduh_sorgulama_activity);
+        setContentView(R.layout.agac_sorgulama_activity);
 
         Intent i = getIntent();
         gelenSayfaId = i.getStringExtra("MODE");
@@ -94,24 +85,20 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
             setSupportActionBar(toolbar);
             //  getSupportActionBar().setLogo(R.mipmap.ic_launcher_ogmlogo);
             if (gelenSayfaId.equalsIgnoreCase("0")) {
-                getSupportActionBar().setTitle("Bal Ormani Listesi");
+                getSupportActionBar().setTitle("Ağaçlandırma Gerçekleşen Program");
                 baslikLinear1.setVisibility(View.VISIBLE);
                 baslikLinear2.setVisibility(View.GONE);
-                baslikLinear3.setVisibility(View.GONE);
+
+
             }
             if (gelenSayfaId.equalsIgnoreCase("1")) {
-                getSupportActionBar().setTitle("Mesire Yeri Listesi");
+                getSupportActionBar().setTitle("Toprak Muh. Gerçekleşen Program");
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.VISIBLE);
-                baslikLinear3.setVisibility(View.GONE);
+
 
             }
 
-            if (gelenSayfaId.equalsIgnoreCase("2")) {
-                getSupportActionBar().setTitle("Orman Dışı Ürünleri Listesi");
-                baslikLinear1.setVisibility(View.GONE);
-                baslikLinear2.setVisibility(View.GONE);
-            }
 
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setDisplayShowTitleEnabled(true);
@@ -121,17 +108,17 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    OduhSorgulamaActivity.this.finish();
+                    AgacSorgulamaActivity.this.finish();
                 }
             });
 
         } catch (Exception e) {
             e.printStackTrace();
-            MessageBox.showAlert(OduhSorgulamaActivity.this, "Hata:" + e.toString(), false);
+            MessageBox.showAlert(AgacSorgulamaActivity.this, "Hata:" + e.toString(), false);
 
         } catch (Throwable e) {
             e.printStackTrace();
-            MessageBox.showAlert(OduhSorgulamaActivity.this, "Hata:" + e.toString(), false);
+            MessageBox.showAlert(AgacSorgulamaActivity.this, "Hata:" + e.toString(), false);
         }
     }
 
@@ -158,9 +145,9 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
 
         baslikLinear1 = (LinearLayout) findViewById(R.id.birinci_baslik);
         baslikLinear2 = (LinearLayout) findViewById(R.id.ikinci_baslik);
-        baslikLinear3 = (LinearLayout) findViewById(R.id.ucuncu_baslik);
 
-        pd2 = new ProgressDialog(OduhSorgulamaActivity.this);
+
+        pd2 = new ProgressDialog(AgacSorgulamaActivity.this);
         listview = (ListView) findViewById(R.id.oduh_listview);
         sorgula_button = (Button) findViewById(R.id.oduh_sorgula_button);
         sorgula_button.setOnClickListener(new View.OnClickListener() {
@@ -215,112 +202,76 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
         parameters.prmYil = secili_yil.toString();
 
         final ProgressDialog progressDoalog;
-        progressDoalog = new ProgressDialog(OduhSorgulamaActivity.this);
+        progressDoalog = new ProgressDialog(AgacSorgulamaActivity.this);
         progressDoalog.setMessage("Lütfen bekleyiniz..");
         progressDoalog.setTitle("ORBİS");
         progressDoalog.setProgressStyle(ProgressDialog.BUTTON_NEGATIVE);
         progressDoalog.show();
 
         if (gelenSayfaId.equalsIgnoreCase("0")) {
-            Call<List<BalOrmani>> call = refrofitRestApi.getBalOrmaniService(parameters);
-            call.enqueue(new Callback<List<BalOrmani>>() {
+            Call<List<AgacProje>> call = refrofitRestApi.getAgacProjeGerceklesmeListForMobil(parameters);
+            call.enqueue(new Callback<List<AgacProje>>() {
                 @Override
-                public void onResponse(Call<List<BalOrmani>> call, Response<List<BalOrmani>> response) {
+                public void onResponse(Call<List<AgacProje>> call, Response<List<AgacProje>> response) {
                     if (!response.isSuccessful()) {
                         progressDoalog.dismiss();
-                        MessageBox.showAlert(OduhSorgulamaActivity.this, "Servisle bağlantı sırasında hata oluştu...", false);
+                        MessageBox.showAlert(AgacSorgulamaActivity.this, "Servisle bağlantı sırasında hata oluştu...", false);
                         return;
                     }
                     if (response.isSuccessful()) {
                         progressDoalog.dismiss();
-                        gelenBalOrmaniList = response.body();
-                        if (gelenBalOrmaniList != null && gelenBalOrmaniList.size() > 0) {
+                        gelenAgacList = response.body();
+                        if (gelenAgacList != null && gelenAgacList.size() > 0) {
                             get_listview();
 
                         } else
-                            MessageBox.showAlert(OduhSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
+                            MessageBox.showAlert(AgacSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
                     }
                 }
 
                 @Override
-                public void onFailure(Call<List<BalOrmani>> call, Throwable t) {
+                public void onFailure(Call<List<AgacProje>> call, Throwable t) {
                     progressDoalog.dismiss();
-                    MessageBox.showAlert(OduhSorgulamaActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
+                    MessageBox.showAlert(AgacSorgulamaActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
                 }
             });
         }
         if (gelenSayfaId.equalsIgnoreCase("1")) {
-            Call<List<MesireYeri>> call = refrofitRestApi.getOduhDepoMesireService(parameters);
-            call.enqueue(new Callback<List<MesireYeri>>() {
+            Call<List<ToprakProje>> call = refrofitRestApi.getToprakProjeGerceklesmeListForMobil(parameters);
+            call.enqueue(new Callback<List<ToprakProje>>() {
                 @Override
-                public void onResponse(Call<List<MesireYeri>> call, Response<List<MesireYeri>> response) {
+                public void onResponse(Call<List<ToprakProje>> call, Response<List<ToprakProje>> response) {
                     if (!response.isSuccessful()) {
                         // textViewResult.setText("Code: " + response.code());
                         progressDoalog.dismiss();
-                        MessageBox.showAlert(OduhSorgulamaActivity.this, "Hata Oluştu.. " + response.message(), false);
+                        MessageBox.showAlert(AgacSorgulamaActivity.this, "Hata Oluştu.. " + response.message(), false);
                         return;
                     }
                     if (response.isSuccessful()) {
                         progressDoalog.dismiss();
-                        gelenMesireYeriList = response.body();
-                        if (gelenMesireYeriList != null && gelenMesireYeriList.size() > 0) {
+                        gelenToprakList = response.body();
+                        if (gelenToprakList != null && gelenToprakList.size() > 0) {
                             get_listview();
 
                         } else
-                            MessageBox.showAlert(OduhSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
+                            MessageBox.showAlert(AgacSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
 
                     }
                 }
 
                 @Override
-                public void onFailure(Call<List<MesireYeri>> call, Throwable t) {
+                public void onFailure(Call<List<ToprakProje>> call, Throwable t) {
                     progressDoalog.dismiss();
                     //textViewResult.setText(t.getMessage());
-                    MessageBox.showAlert(OduhSorgulamaActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
+                    MessageBox.showAlert(AgacSorgulamaActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
                 }
             });
-        }
-        if (gelenSayfaId.equalsIgnoreCase("2")) {
-
-            Call<List<UretimPaket>> call = refrofitRestApi.getOduhDepoUretimPaketService(parameters);
-            call.enqueue(new Callback<List<UretimPaket>>() {
-                @Override
-                public void onResponse(Call<List<UretimPaket>> call, Response<List<UretimPaket>> response) {
-                    if (!response.isSuccessful()) {
-                        // textViewResult.setText("Code: " + response.code());
-                        progressDoalog.dismiss();
-                        MessageBox.showAlert(OduhSorgulamaActivity.this, "Hata Oluştu.. " + response.message(), false);
-                        return;
-                    }
-                    if (response.isSuccessful()) {
-                        progressDoalog.dismiss();
-                        gelenUretimList = response.body();
-                        if (gelenMesireYeriList != null && gelenMesireYeriList.size() > 0) {
-                            get_listview();
-
-                        } else
-                            MessageBox.showAlert(OduhSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
-
-                    }
-                }
-
-                @Override
-                public void onFailure(Call<List<UretimPaket>> call, Throwable t) {
-                    progressDoalog.dismiss();
-                    //textViewResult.setText(t.getMessage());
-                    MessageBox.showAlert(OduhSorgulamaActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
-                }
-            });
-
-        }
-        if (gelenSayfaId.equalsIgnoreCase("3")) {
-
         }
     }
 
 
     void filtre_spinner() {
-        ArrayAdapter<String> dataAdapter_bolge = new ArrayAdapter<String>(OduhSorgulamaActivity.this, android.R.layout.simple_spinner_item, OrtakFunction.bolge_list_string);
+        ArrayAdapter<String> dataAdapter_bolge = new ArrayAdapter<String>(AgacSorgulamaActivity.this, android.R.layout.simple_spinner_item, OrtakFunction.bolge_list_string);
         dataAdapter_bolge.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
         bolge_spinner.setAdapter(dataAdapter_bolge);
         bolge_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -354,13 +305,13 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
                         }
 
 
-                        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(OduhSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
+                        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(AgacSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
                         dataAdapter_mudurluk.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
                         mudurluk_spinner.setAdapter(dataAdapter_mudurluk);
                         mudurluk_spinner.setSelection(0);
 
 
-                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(OduhSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
+                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(AgacSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
                         dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
                         seflik_spinner.setAdapter(dataAdapter_seflik);
                         seflik_spinner.setSelection(0);
@@ -418,7 +369,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
         }*/
 
 
-        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(OduhSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
+        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(AgacSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
         dataAdapter_mudurluk.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
 
         mudurluk_spinner.setAdapter(dataAdapter_mudurluk);
@@ -451,7 +402,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
                         }
 
 
-                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(OduhSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
+                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(AgacSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
                         dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
                         seflik_spinner.setAdapter(dataAdapter_seflik);
                         seflik_spinner.setSelection(0);
@@ -484,7 +435,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
         });
 
 
-        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(OduhSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
+        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(AgacSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
         dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
 
         seflik_spinner.setAdapter(dataAdapter_seflik);
@@ -513,29 +464,18 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
 
     void get_listview() {
         if (gelenSayfaId.equalsIgnoreCase("0")) {
-            balOrmaniAdapter = new BalOrmaniAdapter(OduhSorgulamaActivity.this, R.layout.item_yedi, gelenBalOrmaniList);
-            listview.setAdapter(balOrmaniAdapter);
-            balOrmaniAdapter.notifyDataSetChanged();
+            agacProjeAdapter = new AgacProjeAdapter(AgacSorgulamaActivity.this, R.layout.item_sekiz, gelenAgacList);
+            listview.setAdapter(agacProjeAdapter);
+            agacProjeAdapter.notifyDataSetChanged();
             listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("1")) {
-            mesireYeriAdapter = new MesireYeriAdapter(OduhSorgulamaActivity.this, R.layout.item_bes, gelenMesireYeriList);
-            listview.setAdapter(mesireYeriAdapter);
-            mesireYeriAdapter.notifyDataSetChanged();
+            toprakProjeAdapter = new ToprakProjeAdapter(AgacSorgulamaActivity.this, R.layout.item_sekiz, gelenToprakList);
+            listview.setAdapter(toprakProjeAdapter);
+            toprakProjeAdapter.notifyDataSetChanged();
             listview.setClickable(true);
         }
-        if (gelenSayfaId.equalsIgnoreCase("2")) {
-            uretimPaketAdapter = new UretimPaketAdapter(OduhSorgulamaActivity.this, R.layout.item_sekiz, gelenUretimList);
-            listview.setAdapter(uretimPaketAdapter);
-            uretimPaketAdapter.notifyDataSetChanged();
-            listview.setClickable(true);
-        }
-        if (gelenSayfaId.equalsIgnoreCase("3")) {
-            /*balOrmaniAdapter = new BalOrmaniAdapter(OduhSorgulamaActivity.this, R.layout.item_yedi, gelenBalOrmaniList);
-            listview.setAdapter(balOrmaniAdapter);
-            balOrmaniAdapter.notifyDataSetChanged();
-            listview.setClickable(true);*/
-        }
+
     }
 
 

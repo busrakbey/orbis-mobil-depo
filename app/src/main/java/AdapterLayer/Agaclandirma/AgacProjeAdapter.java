@@ -1,4 +1,4 @@
-package AdapterLayer.IsletmePazarlama;
+package AdapterLayer.Agaclandirma;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,13 +12,13 @@ import com.konumsal.orbisozetmobil.R;
 
 import java.util.List;
 
-import EntityLayer.IsletmePazarlama.Satis;
+import EntityLayer.Agaclandirma.AgacProje;
 
-public class SatisAdapter extends ArrayAdapter<Satis> {
+public class AgacProjeAdapter extends ArrayAdapter<AgacProje> {
 
     Context context;
 
-    public List<Satis> faaliyet_detay_tablo_list;
+    public List<AgacProje> faaliyet_detay_tablo_list;
     int layoutResID;
     int NameID;
     private int[] colors = new int[] { 0x23755383, 0x22369620};
@@ -26,7 +26,7 @@ public class SatisAdapter extends ArrayAdapter<Satis> {
     View view;
     int mes_or_surutme_or_sevk;
 
-    public SatisAdapter(Context context, int layoutResourceID, List<Satis> listItems)
+    public AgacProjeAdapter(Context context, int layoutResourceID, List<AgacProje> listItems)
     {
         super(context, layoutResourceID, listItems);
         this.context = context;
@@ -37,15 +37,15 @@ public class SatisAdapter extends ArrayAdapter<Satis> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // TODO Auto-generated method stub
-        final Satis dItem = (Satis) this.faaliyet_detay_tablo_list.get(position);
-        final SatisAdapter.DetayBilgiOzetItemHolder drawerHolder;
+        final AgacProje dItem = (AgacProje) this.faaliyet_detay_tablo_list.get(position);
+        final AgacProjeAdapter.DetayBilgiOzetItemHolder drawerHolder;
         view = convertView;
 
 
         if (view == null)
         {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-            drawerHolder = new SatisAdapter.DetayBilgiOzetItemHolder();
+            drawerHolder = new AgacProjeAdapter.DetayBilgiOzetItemHolder();
 
             view = inflater.inflate(layoutResID, parent, false);
             drawerHolder.birinci_item = (TextView) view.findViewById(R.id.birinci_item);
@@ -56,69 +56,62 @@ public class SatisAdapter extends ArrayAdapter<Satis> {
             drawerHolder.altinci_item = (TextView) view.findViewById(R.id.altinci_item);
             drawerHolder.yedinci_item = (TextView) view.findViewById(R.id.yedinci_item);
             drawerHolder.sekizinci_item = (TextView) view.findViewById(R.id.sekizinci_item);
-            drawerHolder.dokuzuncu_item = (TextView) view.findViewById(R.id.dokuzuncu_item);
 
             view.setTag(drawerHolder);
 
         } else
         {
-            drawerHolder = (SatisAdapter.DetayBilgiOzetItemHolder) view.getTag();
+            drawerHolder = (AgacProjeAdapter.DetayBilgiOzetItemHolder) view.getTag();
         }
 
 
-        if(dItem.getUrunAdi() != null)
-            drawerHolder.birinci_item.setText(dItem.getUrunAdi().toString());
+        if(dItem.getBolgeAdi() != null)
+            drawerHolder.birinci_item.setText(dItem.getBolgeAdi());
         else
             drawerHolder.birinci_item.setText("");
 
 
-        if(dItem.getTmiktar() != null)
-            drawerHolder.ikinci_item.setText(dItem.getTmiktar().toString());
+        if(dItem.getIsletmeAdi() != null)
+            drawerHolder.ikinci_item.setText(dItem.getIsletmeAdi());
         else
             drawerHolder.ikinci_item.setText("");
 
 
-        if(dItem.getTtutar() != null)
-            drawerHolder.ucuncu_item.setText(dItem.getTtutar().toString());
+        if(dItem.getSeflikAdi() != null)
+            drawerHolder.ucuncu_item.setText(dItem.getSeflikAdi());
         else
             drawerHolder.ucuncu_item.setText("");
 
 
-        if(dItem.getAaMiktar() != null)
-            drawerHolder.dorduncu_item.setText(dItem.getAaMiktar().toString());
+        if(dItem.getGerceklesmeMiktar() != null)
+            drawerHolder.dorduncu_item.setText(dItem.getGerceklesmeMiktar().toString());
         else
             drawerHolder.dorduncu_item.setText("");
 
 
-        if(dItem.getAaTutar() != null)
-            drawerHolder.besinci_item.setText(dItem.getAaTutar().toString());
+        if(dItem.getGerceklesmeTutar() != null)
+            drawerHolder.besinci_item.setText(dItem.getGerceklesmeTutar().toString());
         else
             drawerHolder.besinci_item.setText("");
 
 
-        if(dItem.getKmiktar() != null)
-            drawerHolder.altinci_item.setText(dItem.getKmiktar().toString());
+        if(dItem.getProgramMiktar() != null)
+            drawerHolder.altinci_item.setText(dItem.getProgramMiktar().toString());
         else
             drawerHolder.altinci_item.setText("");
 
-
-        if(dItem.getKtutar() != null)
-            drawerHolder.yedinci_item.setText(dItem.getKtutar().toString());
+        if(dItem.getProgramTutar() != null)
+            drawerHolder.yedinci_item.setText(dItem.getProgramTutar().toString());
         else
             drawerHolder.yedinci_item.setText("");
 
-
-
-        if(dItem.getProgramMiktar() != null)
-            drawerHolder.sekizinci_item.setText(dItem.getProgramMiktar().toString());
+        if(dItem.getYil() != null)
+            drawerHolder.sekizinci_item.setText(dItem.getYil().toString());
         else
             drawerHolder.sekizinci_item.setText("");
 
 
-        if(dItem.getProgramTutar() != null)
-            drawerHolder.dokuzuncu_item.setText(dItem.getProgramTutar().toString());
-        else
-            drawerHolder.dokuzuncu_item.setText("");
+
 
         return view;
     }
@@ -127,13 +120,11 @@ public class SatisAdapter extends ArrayAdapter<Satis> {
 
     private static class DetayBilgiOzetItemHolder
     {
-        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item ,     altinci_item , yedinci_item, sekizinci_item, dokuzuncu_item,
-                onuncu_item , on_birinci_item, on_ikinci_item;
+        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item , sekizinci_item;
 
 
 
 
     }
 }
-
 

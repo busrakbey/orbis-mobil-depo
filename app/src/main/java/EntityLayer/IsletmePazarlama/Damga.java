@@ -1,12 +1,14 @@
 package EntityLayer.IsletmePazarlama;
 
+import java.math.BigDecimal;
+
 public class Damga {
     private Long id;
-    private Double toplam;
-    private Double uretimeVerilen;
-    private Double dikili;
-    private Double toplamProgram;
-    private Double dikiliProgram;
+    private BigDecimal toplam;
+    private BigDecimal uretimeVerilen;
+    private BigDecimal dikili;
+    private BigDecimal toplamProgram;
+    private BigDecimal dikiliProgram;
 
     public Long getId() {
         return id;
@@ -16,43 +18,43 @@ public class Damga {
         this.id = id;
     }
 
-    public Double getToplam() {
+    public BigDecimal getToplam() {
         return toplam;
     }
 
-    public void setToplam(Double toplam) {
+    public void setToplam(BigDecimal toplam) {
         this.toplam = toplam;
     }
 
-    public Double getUretimeVerilen() {
+    public BigDecimal getUretimeVerilen() {
         return uretimeVerilen;
     }
 
-    public void setUretimeVerilen(Double uretimeVerilen) {
+    public void setUretimeVerilen(BigDecimal uretimeVerilen) {
         this.uretimeVerilen = uretimeVerilen;
     }
 
-    public Double getDikili() {
-        return dikili; 
+    public BigDecimal getDikili() {
+        return dikili;
     }
 
-    public void setDikili(Double dikili) {
+    public void setDikili(BigDecimal dikili) {
         this.dikili = dikili;
     }
 
-    public Double getToplamProgram() {
+    public BigDecimal getToplamProgram() {
         return toplamProgram;
     }
 
-    public void setToplamProgram(Double toplamProgram) {
+    public void setToplamProgram(BigDecimal toplamProgram) {
         this.toplamProgram = toplamProgram;
     }
 
-    public Double getDikiliProgram() {
+    public BigDecimal getDikiliProgram() {
         return dikiliProgram;
     }
 
-    public void setDikiliProgram(Double dikiliProgram) {
+    public void setDikiliProgram(BigDecimal dikiliProgram) {
         this.dikiliProgram = dikiliProgram;
     }
 }

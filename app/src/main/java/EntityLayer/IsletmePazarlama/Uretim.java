@@ -1,10 +1,12 @@
 package EntityLayer.IsletmePazarlama;
 
+import java.math.BigDecimal;
+
 public class Uretim {
     private Long id;
     private String urunAdi;
-    private Double gmiktar;
-    private Double pmiktar;
+    private BigDecimal gmiktar;
+    private BigDecimal pmiktar;
 
     public Long getId() {
         return id;
@@ -22,19 +24,19 @@ public class Uretim {
         this.urunAdi = urunAdi;
     }
 
-    public Double getGmiktar() {
+    public BigDecimal getGmiktar() {
         return gmiktar;
     }
 
-    public void setGmiktar(Double gmiktar) {
+    public void setGmiktar(BigDecimal gmiktar) {
         this.gmiktar = gmiktar;
     }
 
-    public Double getPmiktar() {
+    public BigDecimal getPmiktar() {
         return pmiktar;
     }
 
-    public void setPmiktar(Double pmiktar) {
+    public void setPmiktar(BigDecimal pmiktar) {
         this.pmiktar = pmiktar;
     }
 }

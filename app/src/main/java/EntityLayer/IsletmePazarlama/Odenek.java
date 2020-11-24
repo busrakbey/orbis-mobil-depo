@@ -1,21 +1,23 @@
 package EntityLayer.IsletmePazarlama;
 
+import java.math.BigDecimal;
+
 public class Odenek {
 
     private Long id;
     private String urunAdi;
     private Long urunId;
-    private Double kmiktar;
-    private Double ktutar;
-    private Double smiktar;
-    private Double stutar;
-    private Double ymiktar;
-    private Double ytutar;
-    private Double tmiktar;
-    private Double ttutar;
-    private Double imiktar;
-    private Double itutar;
-    private Double program;
+    private BigDecimal kmiktar;
+    private BigDecimal ktutar;
+    private BigDecimal smiktar;
+    private BigDecimal stutar;
+    private BigDecimal ymiktar;
+    private BigDecimal ytutar;
+    private BigDecimal tmiktar;
+    private BigDecimal ttutar;
+    private BigDecimal imiktar;
+    private BigDecimal itutar;
+    private BigDecimal program;
 
     public Long getId() {
         return id;
@@ -41,91 +43,91 @@ public class Odenek {
         this.urunId = urunId;
     }
 
-    public Double getKmiktar() {
+    public BigDecimal getKmiktar() {
         return kmiktar;
     }
 
-    public void setKmiktar(Double kmiktar) {
+    public void setKmiktar(BigDecimal kmiktar) {
         this.kmiktar = kmiktar;
     }
 
-    public Double getKtutar() {
+    public BigDecimal getKtutar() {
         return ktutar;
     }
 
-    public void setKtutar(Double ktutar) {
+    public void setKtutar(BigDecimal ktutar) {
         this.ktutar = ktutar;
     }
 
-    public Double getSmiktar() {
+    public BigDecimal getSmiktar() {
         return smiktar;
     }
 
-    public void setSmiktar(Double smiktar) {
+    public void setSmiktar(BigDecimal smiktar) {
         this.smiktar = smiktar;
     }
 
-    public Double getStutar() {
+    public BigDecimal getStutar() {
         return stutar;
     }
 
-    public void setStutar(Double stutar) {
+    public void setStutar(BigDecimal stutar) {
         this.stutar = stutar;
     }
 
-    public Double getYmiktar() {
+    public BigDecimal getYmiktar() {
         return ymiktar;
     }
 
-    public void setYmiktar(Double ymiktar) {
+    public void setYmiktar(BigDecimal ymiktar) {
         this.ymiktar = ymiktar;
     }
 
-    public Double getYtutar() {
+    public BigDecimal getYtutar() {
         return ytutar;
     }
 
-    public void setYtutar(Double ytutar) {
+    public void setYtutar(BigDecimal ytutar) {
         this.ytutar = ytutar;
     }
 
-    public Double getTmiktar() {
+    public BigDecimal getTmiktar() {
         return tmiktar;
     }
 
-    public void setTmiktar(Double tmiktar) {
+    public void setTmiktar(BigDecimal tmiktar) {
         this.tmiktar = tmiktar;
     }
 
-    public Double getTtutar() {
+    public BigDecimal getTtutar() {
         return ttutar;
     }
 
-    public void setTtutar(Double ttutar) {
+    public void setTtutar(BigDecimal ttutar) {
         this.ttutar = ttutar;
     }
 
-    public Double getImiktar() {
+    public BigDecimal getImiktar() {
         return imiktar;
     }
 
-    public void setImiktar(Double imiktar) {
+    public void setImiktar(BigDecimal imiktar) {
         this.imiktar = imiktar;
     }
 
-    public Double getItutar() {
+    public BigDecimal getItutar() {
         return itutar;
     }
 
-    public void setItutar(Double itutar) {
+    public void setItutar(BigDecimal itutar) {
         this.itutar = itutar;
     }
 
-    public Double getProgram() {
+    public BigDecimal getProgram() {
         return program;
     }
 
-    public void setProgram(Double program) {
+    public void setProgram(BigDecimal program) {
         this.program = program;
     }
 }

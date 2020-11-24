@@ -1,17 +1,19 @@
 package EntityLayer.IsletmePazarlama;
 
+import java.math.BigDecimal;
+
 public class Satis {
     private Long id;
     private String urunAdi;
     private Long sira;
-    private Double aaMiktar;
-    private Double aaTutar;
-    private Double tmiktar;
-    private Double ttutar;
-    private Double kmiktar;
-    private Double ktutar;
-    private Double programMiktar;
-    private Double programTutar;
+    private BigDecimal aaMiktar;
+    private BigDecimal aaTutar;
+    private BigDecimal tmiktar;
+    private BigDecimal ttutar;
+    private BigDecimal kmiktar;
+    private BigDecimal ktutar;
+    private BigDecimal programMiktar;
+    private BigDecimal programTutar;
 
     public Long getId() {
         return id;
@@ -37,67 +39,67 @@ public class Satis {
         this.sira = sira;
     }
 
-    public Double getAaMiktar() {
+    public BigDecimal getAaMiktar() {
         return aaMiktar;
     }
 
-    public void setAaMiktar(Double aaMiktar) {
+    public void setAaMiktar(BigDecimal aaMiktar) {
         this.aaMiktar = aaMiktar;
     }
 
-    public Double getAaTutar() {
+    public BigDecimal getAaTutar() {
         return aaTutar;
     }
 
-    public void setAaTutar(Double aaTutar) {
+    public void setAaTutar(BigDecimal aaTutar) {
         this.aaTutar = aaTutar;
     }
 
-    public Double getTmiktar() {
+    public BigDecimal getTmiktar() {
         return tmiktar;
     }
 
-    public void setTmiktar(Double tmiktar) {
+    public void setTmiktar(BigDecimal tmiktar) {
         this.tmiktar = tmiktar;
     }
 
-    public Double getTtutar() {
+    public BigDecimal getTtutar() {
         return ttutar;
     }
 
-    public void setTtutar(Double ttutar) {
+    public void setTtutar(BigDecimal ttutar) {
         this.ttutar = ttutar;
     }
 
-    public Double getKmiktar() {
+    public BigDecimal getKmiktar() {
         return kmiktar;
     }
 
-    public void setKmiktar(Double kmiktar) {
+    public void setKmiktar(BigDecimal kmiktar) {
         this.kmiktar = kmiktar;
     }
 
-    public Double getKtutar() {
+    public BigDecimal getKtutar() {
         return ktutar;
     }
 
-    public void setKtutar(Double ktutar) {
+    public void setKtutar(BigDecimal ktutar) {
         this.ktutar = ktutar;
     }
 
-    public Double getProgramMiktar() {
+    public BigDecimal getProgramMiktar() {
         return programMiktar;
     }
 
-    public void setProgramMiktar(Double programMiktar) {
+    public void setProgramMiktar(BigDecimal programMiktar) {
         this.programMiktar = programMiktar;
     }
 
-    public Double getProgramTutar() {
+    public BigDecimal getProgramTutar() {
         return programTutar;
     }
 
-    public void setProgramTutar(Double programTutar) {
+    public void setProgramTutar(BigDecimal programTutar) {
         this.programTutar = programTutar;
     }
 }

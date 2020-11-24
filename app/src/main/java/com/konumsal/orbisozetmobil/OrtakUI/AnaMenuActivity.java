@@ -18,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.google.gson.reflect.TypeToken;
+import com.konumsal.orbisozetmobil.Agaclandirma.AgacAltMenuActivity;
 import com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPAltMenuActivity;
 import com.konumsal.orbisozetmobil.KadastroUI.KadastroSorgulamaActivity;
 import com.konumsal.orbisozetmobil.OduhUI.OduhAltMenuActivity;
@@ -174,7 +175,7 @@ public class AnaMenuActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, OduhSorgulamaActivity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, AgacAltMenuActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", 0);
                     startActivity(mintent);
