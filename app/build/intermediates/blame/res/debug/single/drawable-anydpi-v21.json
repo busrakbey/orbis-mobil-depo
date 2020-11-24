@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_login_bk.xml",
+        "source": "D:\\OrbisMobilDepoSon\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_login_bk.xml"
+    },
+    {
+        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\md_nav_back.xml",
+        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\drawable-anydpi-v21\\md_nav_back.xml"
+    }
+]
