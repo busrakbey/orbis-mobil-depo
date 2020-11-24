@@ -3,8 +3,8 @@ package EntityLayer.IsletmePazarlama;
 public class Uretim {
     private Long id;
     private String urunAdi;
-    private Double gMiktar;
-    private Double pMiktar;
+    private Double gmiktar;
+    private Double pmiktar;
 
     public Long getId() {
         return id;
@@ -22,19 +22,19 @@ public class Uretim {
         this.urunAdi = urunAdi;
     }
 
-    public Double getgMiktar() {
-        return gMiktar;
+    public Double getGmiktar() {
+        return gmiktar;
     }
 
-    public void setgMiktar(Double gMiktar) {
-        this.gMiktar = gMiktar;
+    public void setGmiktar(Double gmiktar) {
+        this.gmiktar = gmiktar;
     }
 
-    public Double getpMiktar() {
-        return pMiktar;
+    public Double getPmiktar() {
+        return pmiktar;
     }
 
-    public void setpMiktar(Double pMiktar) {
-        this.pMiktar = pMiktar;
+    public void setPmiktar(Double pmiktar) {
+        this.pmiktar = pmiktar;
     }
 }

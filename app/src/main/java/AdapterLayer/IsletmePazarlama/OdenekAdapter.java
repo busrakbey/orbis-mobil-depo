@@ -70,61 +70,61 @@ public class OdenekAdapter extends ArrayAdapter<Odenek> {
         }
 
 
-        if(dItem.getiMiktar() != null)
-            drawerHolder.birinci_item.setText(dItem.getiMiktar().toString());
+        if(dItem.getImiktar() != null)
+            drawerHolder.birinci_item.setText(dItem.getImiktar().toString());
         else
             drawerHolder.birinci_item.setText("");
 
 
-        if(dItem.getiTutar() != null)
-            drawerHolder.ikinci_item.setText(dItem.getiTutar().toString());
+        if(dItem.getItutar() != null)
+            drawerHolder.ikinci_item.setText(dItem.getItutar().toString());
         else
             drawerHolder.ikinci_item.setText("");
 
 
-        if(dItem.getkMiktar() != null)
-            drawerHolder.ucuncu_item.setText(dItem.getkMiktar().toString());
+        if(dItem.getKmiktar() != null)
+            drawerHolder.ucuncu_item.setText(dItem.getKmiktar().toString());
         else
             drawerHolder.ucuncu_item.setText("");
 
 
-        if(dItem.getkMiktar() != null)
-            drawerHolder.dorduncu_item.setText(dItem.getkMiktar().toString());
+        if(dItem.getKtutar() != null)
+            drawerHolder.dorduncu_item.setText(dItem.getKtutar().toString());
         else
             drawerHolder.dorduncu_item.setText("");
 
 
-        if(dItem.getsMiktar() != null)
-            drawerHolder.besinci_item.setText(dItem.getsMiktar().toString());
+        if(dItem.getSmiktar() != null)
+            drawerHolder.besinci_item.setText(dItem.getSmiktar().toString());
         else
             drawerHolder.besinci_item.setText("");
 
 
-       if(dItem.getsTutar() != null)
-            drawerHolder.altinci_item.setText(dItem.getsTutar().toString());
+       if(dItem.getStutar() != null)
+            drawerHolder.altinci_item.setText(dItem.getStutar().toString());
         else
             drawerHolder.altinci_item.setText("");
 
 
-        if(dItem.gettMiktar() != null)
-            drawerHolder.yedinci_item.setText(dItem.gettMiktar().toString());
+        if(dItem.getTmiktar() != null)
+            drawerHolder.yedinci_item.setText(dItem.getTmiktar().toString());
         else
             drawerHolder.yedinci_item.setText("");
 
 
-        if(dItem.gettTutar() != null)
-            drawerHolder.sekizinci_item.setText(dItem.gettTutar().toString());
+        if(dItem.getTtutar() != null)
+            drawerHolder.sekizinci_item.setText(dItem.getTtutar().toString());
         else
             drawerHolder.yedinci_item.setText("");
 
-        if(dItem.getyMiktar() != null)
-            drawerHolder.dokuzuncu_item.setText(dItem.getyMiktar().toString());
+        if(dItem.getYmiktar() != null)
+            drawerHolder.dokuzuncu_item.setText(dItem.getYmiktar().toString());
         else
             drawerHolder.yedinci_item.setText("");
 
 
-        if(dItem.getyTutar() != null)
-            drawerHolder.onuncu_item.setText(dItem.getyTutar().toString());
+        if(dItem.getYtutar() != null)
+            drawerHolder.onuncu_item.setText(dItem.getYtutar().toString());
         else
             drawerHolder.onuncu_item.setText("");
 

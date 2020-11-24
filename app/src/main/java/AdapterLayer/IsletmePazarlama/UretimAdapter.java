@@ -70,14 +70,14 @@ public class UretimAdapter extends ArrayAdapter<Uretim> {
             drawerHolder.birinci_item.setText("");
 
 
-        if(dItem.getgMiktar() != null)
-            drawerHolder.ikinci_item.setText(dItem.getgMiktar().toString());
+        if(dItem.getGmiktar() != null)
+            drawerHolder.ikinci_item.setText(dItem.getGmiktar().toString());
         else
             drawerHolder.ikinci_item.setText("");
 
 
-        if(dItem.getpMiktar() != null)
-            drawerHolder.ucuncu_item.setText(dItem.getpMiktar().toString());
+        if(dItem.getPmiktar() != null)
+            drawerHolder.ucuncu_item.setText(dItem.getPmiktar().toString());
         else
             drawerHolder.ucuncu_item.setText("");
 

@@ -73,7 +73,7 @@ public class IPSorgulamaActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.oduh_sorgulama_activity);
+        setContentView(R.layout.ip_sorgulama_activity);
 
         Intent i = getIntent();
         gelenSayfaId = i.getStringExtra("MODE");
@@ -169,6 +169,8 @@ public class IPSorgulamaActivity extends AppCompatActivity {
 
         baslikLinear1 = (LinearLayout) findViewById(R.id.birinci_baslik);
         baslikLinear2 = (LinearLayout) findViewById(R.id.ikinci_baslik);
+        baslikLinear3 = (LinearLayout) findViewById(R.id.ucuncu_baslik);
+        baslikLinear4 = (LinearLayout) findViewById(R.id.dorduncu_baslik);
 
         pd2 = new ProgressDialog(IPSorgulamaActivity.this);
         listview = (ListView) findViewById(R.id.oduh_listview);
@@ -305,7 +307,7 @@ public class IPSorgulamaActivity extends AppCompatActivity {
                     if (response.isSuccessful()) {
                         progressDoalog.dismiss();
                         gelenSatisList = response.body();
-                        if (gelenOdenekList != null && gelenOdenekList.size() > 0) {
+                        if (gelenSatisList != null && gelenSatisList.size() > 0) {
                             get_listview();
 
                         } else
@@ -338,7 +340,7 @@ public class IPSorgulamaActivity extends AppCompatActivity {
                     if (response.isSuccessful()) {
                         progressDoalog.dismiss();
                         gelenUretimList = response.body();
-                        if (gelenOdenekList != null && gelenOdenekList.size() > 0) {
+                        if (gelenUretimList != null && gelenUretimList.size() > 0) {
                             get_listview();
 
                         } else
@@ -552,25 +554,25 @@ public class IPSorgulamaActivity extends AppCompatActivity {
 
     void get_listview() {
         if (gelenSayfaId.equalsIgnoreCase("0")) {
-            damgaAdapter = new DamgaAdapter(IPSorgulamaActivity.this, R.layout.item_yedi, gelenDamgaList);
+            damgaAdapter = new DamgaAdapter(IPSorgulamaActivity.this, R.layout.item_bes, gelenDamgaList);
             listview.setAdapter(damgaAdapter);
             damgaAdapter.notifyDataSetChanged();
             listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("1")) {
-            odenekAdapter = new OdenekAdapter(IPSorgulamaActivity.this, R.layout.item_bes, gelenOdenekList);
+            odenekAdapter = new OdenekAdapter(IPSorgulamaActivity.this, R.layout.item_on_iki, gelenOdenekList);
             listview.setAdapter(odenekAdapter);
             odenekAdapter.notifyDataSetChanged();
             listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("2")) {
-            satisAdapter = new SatisAdapter(IPSorgulamaActivity.this, R.layout.item_yedi, gelenSatisList);
+            satisAdapter = new SatisAdapter(IPSorgulamaActivity.this, R.layout.item_dokuz, gelenSatisList);
             listview.setAdapter(satisAdapter);
             satisAdapter.notifyDataSetChanged();
             listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("3")) {
-            uretimAdapter = new UretimAdapter(IPSorgulamaActivity.this, R.layout.item_yedi, gelenUretimList);
+            uretimAdapter = new UretimAdapter(IPSorgulamaActivity.this, R.layout.item_uc, gelenUretimList);
             listview.setAdapter(uretimAdapter);
             uretimAdapter.notifyDataSetChanged();
             listview.setClickable(true);

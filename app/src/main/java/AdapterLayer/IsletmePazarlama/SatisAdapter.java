@@ -70,14 +70,14 @@ public class SatisAdapter extends ArrayAdapter<Satis> {
             drawerHolder.birinci_item.setText("");
 
 
-        if(dItem.gettMiktar() != null)
-            drawerHolder.ikinci_item.setText(dItem.gettMiktar().toString());
+        if(dItem.getTmiktar() != null)
+            drawerHolder.ikinci_item.setText(dItem.getTmiktar().toString());
         else
             drawerHolder.ikinci_item.setText("");
 
 
-        if(dItem.gettTutar() != null)
-            drawerHolder.ucuncu_item.setText(dItem.gettTutar().toString());
+        if(dItem.getTtutar() != null)
+            drawerHolder.ucuncu_item.setText(dItem.getTtutar().toString());
         else
             drawerHolder.ucuncu_item.setText("");
 
@@ -94,14 +94,14 @@ public class SatisAdapter extends ArrayAdapter<Satis> {
             drawerHolder.besinci_item.setText("");
 
 
-        if(dItem.getkMiktar() != null)
-            drawerHolder.altinci_item.setText(dItem.getkMiktar().toString());
+        if(dItem.getKmiktar() != null)
+            drawerHolder.altinci_item.setText(dItem.getKmiktar().toString());
         else
             drawerHolder.altinci_item.setText("");
 
 
-        if(dItem.getkTutar() != null)
-            drawerHolder.yedinci_item.setText(dItem.getkTutar().toString());
+        if(dItem.getKtutar() != null)
+            drawerHolder.yedinci_item.setText(dItem.getKtutar().toString());
         else
             drawerHolder.yedinci_item.setText("");
 

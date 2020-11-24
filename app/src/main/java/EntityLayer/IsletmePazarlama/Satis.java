@@ -6,10 +6,10 @@ public class Satis {
     private Long sira;
     private Double aaMiktar;
     private Double aaTutar;
-    private Double tMiktar;
-    private Double tTutar;
-    private Double kMiktar;
-    private Double kTutar;
+    private Double tmiktar;
+    private Double ttutar;
+    private Double kmiktar;
+    private Double ktutar;
     private Double programMiktar;
     private Double programTutar;
 
@@ -53,36 +53,36 @@ public class Satis {
         this.aaTutar = aaTutar;
     }
 
-    public Double gettMiktar() {
-        return tMiktar;
+    public Double getTmiktar() {
+        return tmiktar;
     }
 
-    public void settMiktar(Double tMiktar) {
-        this.tMiktar = tMiktar;
+    public void setTmiktar(Double tmiktar) {
+        this.tmiktar = tmiktar;
     }
 
-    public Double gettTutar() {
-        return tTutar;
+    public Double getTtutar() {
+        return ttutar;
     }
 
-    public void settTutar(Double tTutar) {
-        this.tTutar = tTutar;
+    public void setTtutar(Double ttutar) {
+        this.ttutar = ttutar;
     }
 
-    public Double getkMiktar() {
-        return kMiktar;
+    public Double getKmiktar() {
+        return kmiktar;
     }
 
-    public void setkMiktar(Double kMiktar) {
-        this.kMiktar = kMiktar;
+    public void setKmiktar(Double kmiktar) {
+        this.kmiktar = kmiktar;
     }
 
-    public Double getkTutar() {
-        return kTutar;
+    public Double getKtutar() {
+        return ktutar;
     }
 
-    public void setkTutar(Double kTutar) {
-        this.kTutar = kTutar;
+    public void setKtutar(Double ktutar) {
+        this.ktutar = ktutar;
     }
 
     public Double getProgramMiktar() {

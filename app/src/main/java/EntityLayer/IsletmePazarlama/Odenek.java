@@ -5,16 +5,16 @@ public class Odenek {
     private Long id;
     private String urunAdi;
     private Long urunId;
-    private Double kMiktar;
-    private Double kTutar;
-    private Double sMiktar;
-    private Double sTutar;
-    private Double yMiktar;
-    private Double yTutar;
-    private Double tMiktar;
-    private Double tTutar;
-    private Double iMiktar;
-    private Double iTutar;
+    private Double kmiktar;
+    private Double ktutar;
+    private Double smiktar;
+    private Double stutar;
+    private Double ymiktar;
+    private Double ytutar;
+    private Double tmiktar;
+    private Double ttutar;
+    private Double imiktar;
+    private Double itutar;
     private Double program;
 
     public Long getId() {
@@ -41,84 +41,84 @@ public class Odenek {
         this.urunId = urunId;
     }
 
-    public Double getkMiktar() {
-        return kMiktar;
+    public Double getKmiktar() {
+        return kmiktar;
     }
 
-    public void setkMiktar(Double kMiktar) {
-        this.kMiktar = kMiktar;
+    public void setKmiktar(Double kmiktar) {
+        this.kmiktar = kmiktar;
     }
 
-    public Double getkTutar() {
-        return kTutar;
+    public Double getKtutar() {
+        return ktutar;
     }
 
-    public void setkTutar(Double kTutar) {
-        this.kTutar = kTutar;
+    public void setKtutar(Double ktutar) {
+        this.ktutar = ktutar;
     }
 
-    public Double getsMiktar() {
-        return sMiktar;
+    public Double getSmiktar() {
+        return smiktar;
     }
 
-    public void setsMiktar(Double sMiktar) {
-        this.sMiktar = sMiktar;
+    public void setSmiktar(Double smiktar) {
+        this.smiktar = smiktar;
     }
 
-    public Double getsTutar() {
-        return sTutar;
+    public Double getStutar() {
+        return stutar;
     }
 
-    public void setsTutar(Double sTutar) {
-        this.sTutar = sTutar;
+    public void setStutar(Double stutar) {
+        this.stutar = stutar;
     }
 
-    public Double getyMiktar() {
-        return yMiktar;
+    public Double getYmiktar() {
+        return ymiktar;
     }
 
-    public void setyMiktar(Double yMiktar) {
-        this.yMiktar = yMiktar;
+    public void setYmiktar(Double ymiktar) {
+        this.ymiktar = ymiktar;
     }
 
-    public Double getyTutar() {
-        return yTutar;
+    public Double getYtutar() {
+        return ytutar;
     }
 
-    public void setyTutar(Double yTutar) {
-        this.yTutar = yTutar;
+    public void setYtutar(Double ytutar) {
+        this.ytutar = ytutar;
     }
 
-    public Double gettMiktar() {
-        return tMiktar;
+    public Double getTmiktar() {
+        return tmiktar;
     }
 
-    public void settMiktar(Double tMiktar) {
-        this.tMiktar = tMiktar;
+    public void setTmiktar(Double tmiktar) {
+        this.tmiktar = tmiktar;
     }
 
-    public Double gettTutar() {
-        return tTutar;
+    public Double getTtutar() {
+        return ttutar;
     }
 
-    public void settTutar(Double tTutar) {
-        this.tTutar = tTutar;
+    public void setTtutar(Double ttutar) {
+        this.ttutar = ttutar;
     }
 
-    public Double getiMiktar() {
-        return iMiktar;
+    public Double getImiktar() {
+        return imiktar;
     }
 
-    public void setiMiktar(Double iMiktar) {
-        this.iMiktar = iMiktar;
+    public void setImiktar(Double imiktar) {
+        this.imiktar = imiktar;
     }
 
-    public Double getiTutar() {
-        return iTutar;
+    public Double getItutar() {
+        return itutar;
     }
 
-    public void setiTutar(Double iTutar) {
-        this.iTutar = iTutar;
+    public void setItutar(Double itutar) {
+        this.itutar = itutar;
     }
 
     public Double getProgram() {

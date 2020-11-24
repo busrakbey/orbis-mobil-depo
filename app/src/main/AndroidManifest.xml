@@ -128,6 +128,17 @@
 
 
         <activity
+            android:name="com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPAltMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPSorgulamaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name="com.konumsal.orbisozetmobil.OzmUI.OzmSorgulamaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
