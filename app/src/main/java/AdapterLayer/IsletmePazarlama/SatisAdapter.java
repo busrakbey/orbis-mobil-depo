@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import com.konumsal.orbisozetmobil.R;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.List;
 
 import EntityLayer.IsletmePazarlama.Satis;
@@ -73,50 +76,50 @@ public class SatisAdapter extends ArrayAdapter<Satis> {
 
 
         if(dItem.getTmiktar() != null)
-            drawerHolder.ikinci_item.setText(dItem.getTmiktar().toString());
+            drawerHolder.ikinci_item.setText(decimalFormat(dItem.getTmiktar()).toString());
         else
             drawerHolder.ikinci_item.setText("");
 
 
         if(dItem.getTtutar() != null)
-            drawerHolder.ucuncu_item.setText(dItem.getTtutar().toString());
+            drawerHolder.ucuncu_item.setText(decimalFormat(dItem.getTtutar()).toString());
         else
             drawerHolder.ucuncu_item.setText("");
 
 
         if(dItem.getAaMiktar() != null)
-            drawerHolder.dorduncu_item.setText(dItem.getAaMiktar().toString());
+            drawerHolder.dorduncu_item.setText(decimalFormat(dItem.getAaMiktar()).toString());
         else
             drawerHolder.dorduncu_item.setText("");
 
 
         if(dItem.getAaTutar() != null)
-            drawerHolder.besinci_item.setText(dItem.getAaTutar().toString());
+            drawerHolder.besinci_item.setText(decimalFormat(dItem.getAaTutar()).toString());
         else
             drawerHolder.besinci_item.setText("");
 
 
         if(dItem.getKmiktar() != null)
-            drawerHolder.altinci_item.setText(dItem.getKmiktar().toString());
+            drawerHolder.altinci_item.setText(decimalFormat(dItem.getKmiktar()).toString());
         else
             drawerHolder.altinci_item.setText("");
 
 
         if(dItem.getKtutar() != null)
-            drawerHolder.yedinci_item.setText(dItem.getKtutar().toString());
+            drawerHolder.yedinci_item.setText(decimalFormat(dItem.getKtutar()).toString());
         else
             drawerHolder.yedinci_item.setText("");
 
 
 
         if(dItem.getProgramMiktar() != null)
-            drawerHolder.sekizinci_item.setText(dItem.getProgramMiktar().toString());
+            drawerHolder.sekizinci_item.setText(decimalFormat(dItem.getProgramMiktar()).toString());
         else
             drawerHolder.sekizinci_item.setText("");
 
 
         if(dItem.getProgramTutar() != null)
-            drawerHolder.dokuzuncu_item.setText(dItem.getProgramTutar().toString());
+            drawerHolder.dokuzuncu_item.setText(decimalFormat(dItem.getProgramTutar()).toString());
         else
             drawerHolder.dokuzuncu_item.setText("");
 
@@ -133,6 +136,14 @@ public class SatisAdapter extends ArrayAdapter<Satis> {
 
 
 
+    }
+
+
+    String decimalFormat(BigDecimal sayi){
+        DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
+        decimalFormatSymbols.setDecimalSeparator(',');
+        decimalFormatSymbols.setGroupingSeparator('.');
+        return new DecimalFormat("#,##0.00", decimalFormatSymbols).format(new BigDecimal(String.valueOf(sayi)));
     }
 }
 

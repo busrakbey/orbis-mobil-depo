@@ -255,7 +255,7 @@ public class AnaMenuActivity extends AppCompatActivity {
                 } else if (position == 15) {
                     Intent mintent = new Intent(AnaMenuActivity.this, OrmIdaresi_Amenajman_Yangin_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", "1");  ///YANGIN
+                    mintent.putExtra("MODE", "2");  ///YANGIN
                     startActivity(mintent);
                 } else if (position == 16) {
                     Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);

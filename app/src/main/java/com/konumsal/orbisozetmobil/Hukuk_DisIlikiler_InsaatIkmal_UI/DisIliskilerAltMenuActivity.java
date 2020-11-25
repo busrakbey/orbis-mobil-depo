@@ -96,7 +96,7 @@ public class DisIliskilerAltMenuActivity extends AppCompatActivity {
                 {
                     Intent mintent = new Intent(DisIliskilerAltMenuActivity.this, Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("EGITIM","1");   //
+                    mintent.putExtra("EGITIM","1");   // egt katılımcı
                     startActivity(mintent);
                 }
 

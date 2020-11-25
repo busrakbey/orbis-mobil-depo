@@ -13,11 +13,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import com.esri.core.geometry.Line;
 import com.konumsal.orbisozetmobil.OrtakUI.OrtakFunction;
 import com.konumsal.orbisozetmobil.R;
 
@@ -28,15 +30,18 @@ import java.util.List;
 
 
 import AdapterLayer.BilgiSistemleri.HaritaArsivAdapter;
+import AdapterLayer.DisIliskiler.BirimAutoCompleteAdapter;
 import AdapterLayer.Kadastro.KdmGerceklesmeAdapter;
 import AdapterLayer.Strateji.TefKonularAdapter;
 import DataLayer.Ortak.ConfigData;
+import DataLayer.Sistem.SOrgBirim_Data;
 import EntityLayer.BilgiSistemleri.HaritaArsiv;
 import EntityLayer.Kadastro.KdmGerceklesme;
 import EntityLayer.SendParametersForServer;
 import EntityLayer.Sistem.SOrgBirim;
 import EntityLayer.Strateji.TefKonular;
 import ToolLayer.NullOnEmptyConverterFactory;
+import ToolLayer.OrbisDefaultException;
 import ToolLayer.RefrofitRestApi;
 import ToolLayer.MessageBox;
 import retrofit2.Call;
@@ -47,7 +52,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
     Toolbar toolbar;
-    Spinner bolge_spinner, mudurluk_spinner, seflik_spinner, yil_spinner;
+    Spinner bolge_spinner, mudurluk_spinner, seflik_spinner, yil_spinner, harita_yil_spinner;
     Button sorgula_button, temizle_button;
     ProgressDialog pd_main;
     int selected_bolge_index = 0, selected_mudurluk_index = 0, selected_seflik_index = 0;
@@ -62,10 +67,12 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
     List<KdmGerceklesme> gelenKdmGerceklesmeList;
     List<HaritaArsiv> gelenHaritaArsivList;
     List<TefKonular> gelenTefKonularList;
+    AutoCompleteTextView bolge_auto, isletme_acuto;
 
     ListView listview;
     String gelenSayfaId;
-    LinearLayout baslikLinear1, baslikLinear2, baslikLinear3;
+    LinearLayout baslikLinear1, baslikLinear2, baslikLinear3, sorguharita_linear, genelsorgu_linear, kdm_ana_baslik_linear;
+    LinearLayout mudurluk_linear, seflik_linear;
 
 
     @Override
@@ -74,7 +81,7 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.oduh_sorgulama_activity);
+        setContentView(R.layout.kdm_str_bilgisis_activity);
 
         Intent i = getIntent();
         gelenSayfaId = i.getStringExtra("MODE");
@@ -82,6 +89,7 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
         Init();
         initToolBar();
         filtre_spinner();
+        autocomplete_birim();
         bolge_spinner.setSelection(0);
         mudurluk_spinner.setSelection(0);
         seflik_spinner.setSelection(0);
@@ -99,12 +107,23 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
                 baslikLinear1.setVisibility(View.VISIBLE);
                 baslikLinear2.setVisibility(View.GONE);
                 baslikLinear3.setVisibility(View.GONE);
+                genelsorgu_linear.setVisibility(View.VISIBLE);
+                sorguharita_linear.setVisibility(View.GONE);
+                kdm_ana_baslik_linear.setVisibility(View.VISIBLE);
+                seflik_linear.setVisibility(View.GONE);
+                mudurluk_linear.setVisibility(View.GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("1")) {
                 getSupportActionBar().setTitle("Meşcere Taslak Üretim Durumu");
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.VISIBLE);
                 baslikLinear3.setVisibility(View.GONE);
+                genelsorgu_linear.setVisibility(View.GONE);
+                sorguharita_linear.setVisibility(View.VISIBLE);
+                kdm_ana_baslik_linear.setVisibility(View.GONE);
+                seflik_linear.setVisibility(View.VISIBLE);
+                mudurluk_linear.setVisibility(View.VISIBLE);
+
 
             }
 
@@ -112,6 +131,12 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
                 getSupportActionBar().setTitle("Teftiş Listesi");
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.GONE);
+                genelsorgu_linear.setVisibility(View.VISIBLE);
+                sorguharita_linear.setVisibility(View.GONE);
+                kdm_ana_baslik_linear.setVisibility(View.GONE);
+                seflik_linear.setVisibility(View.GONE);
+                mudurluk_linear.setVisibility(View.VISIBLE);
+
             }
 
             getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -141,6 +166,14 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
         mudurluk_spinner = (Spinner) findViewById(R.id.mudurluk_spinner);
         seflik_spinner = (Spinner) findViewById(R.id.seflik_spinner);
         yil_spinner = (Spinner) findViewById(R.id.yil_spinner);
+        harita_yil_spinner = (Spinner) findViewById(R.id.egitim_yil_spinner);
+        bolge_auto = (AutoCompleteTextView) findViewById(R.id.bolge_auto);
+        isletme_acuto = (AutoCompleteTextView) findViewById(R.id.mudurluk_auto);
+        sorguharita_linear = (LinearLayout) findViewById(R.id.egitim);
+        genelsorgu_linear = (LinearLayout) findViewById(R.id.genel_sorgu);
+        kdm_ana_baslik_linear = (LinearLayout) findViewById(R.id.kdm_ana_baslik);
+        mudurluk_linear = (LinearLayout) findViewById(R.id.mudurluk_linear);
+        seflik_linear = (LinearLayout) findViewById(R.id.seflik_linear);
 
         ArrayList<String> years = new ArrayList<String>();
         years.add("");
@@ -151,6 +184,7 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, years);
         adapter.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
         yil_spinner.setAdapter(adapter);
+        harita_yil_spinner.setAdapter(adapter);
 
         item_source_str_mudurluk = new ArrayList<String>();
         item_source_str_seflik = new ArrayList<String>();
@@ -179,9 +213,17 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
                 bolge_spinner.setSelection(0);
                 mudurluk_spinner.setSelection(0);
                 seflik_spinner.setSelection(0);
+                yil_spinner.setSelection(0);
+                harita_yil_spinner.setSelection(0);
                 secili_mudurluk_id = -1L;
                 secili_bolge_id = -1L;
                 secili_seflik_id = -1L;
+                bolge_auto.setText("");
+                isletme_acuto.setText("");
+                secilenBolgeId = -1L;
+                secilenIsletmeId = -1L;
+                secili_yil = -1L;
+
 
             }
         });
@@ -195,6 +237,12 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
     void getBalOrmaniServis() {
 
         if (yil_spinner.getSelectedItem().toString().equalsIgnoreCase(""))
+            secili_yil = -1L;
+        else
+            secili_yil = Long.valueOf(yil_spinner.getSelectedItem().toString());
+
+
+        if (harita_yil_spinner.getSelectedItem().toString().equalsIgnoreCase(""))
             secili_yil = -1L;
         else
             secili_yil = Long.valueOf(yil_spinner.getSelectedItem().toString());
@@ -251,7 +299,19 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
             });
         }
         if (gelenSayfaId.equalsIgnoreCase("1")) {
-            Call<List<HaritaArsiv>> call = refrofitRestApi.getHaritaArsivDepoDosyaListForMobil(parameters);
+
+            SendParametersForServer parameters_arsiv = new SendParametersForServer();
+            if (secilenBolgeId != null)
+                parameters_arsiv.prmBolgeId = secilenBolgeId.toString();
+            else
+                parameters_arsiv.prmBolgeId = "-1";
+            if (secilenIsletmeId != null)
+                parameters_arsiv.prmIsletmeId = secilenIsletmeId.toString();
+            else
+                parameters_arsiv.prmIsletmeId = "-1";
+            parameters_arsiv.prmSeflikId = secili_seflik_id.toString();
+            parameters_arsiv.prmYil = secili_yil.toString();
+            Call<List<HaritaArsiv>> call = refrofitRestApi.getHaritaArsivDepoDosyaListForMobil(parameters_arsiv);
             call.enqueue(new Callback<List<HaritaArsiv>>() {
                 @Override
                 public void onResponse(Call<List<HaritaArsiv>> call, Response<List<HaritaArsiv>> response) {
@@ -531,7 +591,58 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
             tefKonularAdapter.notifyDataSetChanged();
             listview.setClickable(true);
         }
-     
+
+    }
+
+
+    Long secilenBolgeId = -1L, secilenIsletmeId = -1L;
+    List<SOrgBirim> org_birim_list;
+
+    void autocomplete_birim() {
+
+        SOrgBirim_Data data = new SOrgBirim_Data(Kdm_Str_BilgiSis_SorgulamaActivity.this);
+        org_birim_list = new ArrayList<SOrgBirim>();
+        StringBuilder sqlStr = new StringBuilder();
+        sqlStr.append("SELECT * FROM S_ORG_BIRIM");
+        try {
+            org_birim_list = new ArrayList<SOrgBirim>();
+            org_birim_list = data.loadFromQuery(sqlStr.toString());
+        } catch (OrbisDefaultException e) {
+            e.printStackTrace();
+        }
+
+
+        BirimAutoCompleteAdapter adapter = new BirimAutoCompleteAdapter(this, R.layout.activity_main, R.layout.mr_simple_spinner_dropdown_item, org_birim_list);
+        adapter.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+        bolge_auto.setThreshold(2);
+        bolge_auto.setAdapter(adapter);
+        bolge_auto.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // final MuhStokLokasyon dty = (MuhStokLokasyon) parent.getItemAtPosition(position);
+                SOrgBirim dty = (SOrgBirim) parent.getAdapter().getItem(position);
+
+                if (dty != null) {
+                    secilenBolgeId = dty.getId();
+                }
+            }
+        });
+
+        isletme_acuto.setThreshold(2);
+        isletme_acuto.setAdapter(adapter);
+        isletme_acuto.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // final MuhStokLokasyon dty = (MuhStokLokasyon) parent.getItemAtPosition(position);
+                SOrgBirim dty = (SOrgBirim) parent.getAdapter().getItem(position);
+
+                if (dty != null) {
+                    secilenIsletmeId = dty.getId();
+                }
+            }
+        });
+
+
     }
 
 

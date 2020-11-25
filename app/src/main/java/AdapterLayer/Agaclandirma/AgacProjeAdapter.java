@@ -10,7 +10,11 @@ import android.widget.TextView;
 
 import com.konumsal.orbisozetmobil.R;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.List;
+import java.util.Locale;
 
 import EntityLayer.Agaclandirma.AgacProje;
 
@@ -84,24 +88,24 @@ public class AgacProjeAdapter extends ArrayAdapter<AgacProje> {
 
 
         if(dItem.getGerceklesmeMiktar() != null)
-            drawerHolder.dorduncu_item.setText(dItem.getGerceklesmeMiktar().toString());
+            drawerHolder.dorduncu_item.setText(decimalFormat(dItem.getGerceklesmeMiktar()).toString());
         else
             drawerHolder.dorduncu_item.setText("");
 
 
         if(dItem.getGerceklesmeTutar() != null)
-            drawerHolder.besinci_item.setText(dItem.getGerceklesmeTutar().toString());
+            drawerHolder.besinci_item.setText( decimalFormat(dItem.getGerceklesmeTutar()));
         else
             drawerHolder.besinci_item.setText("");
 
 
         if(dItem.getProgramMiktar() != null)
-            drawerHolder.altinci_item.setText(dItem.getProgramMiktar().toString());
+            drawerHolder.altinci_item.setText(decimalFormat(dItem.getProgramMiktar()));
         else
             drawerHolder.altinci_item.setText("");
 
         if(dItem.getProgramTutar() != null)
-            drawerHolder.yedinci_item.setText(dItem.getProgramTutar().toString());
+            drawerHolder.yedinci_item.setText(decimalFormat(dItem.getProgramTutar()));
         else
             drawerHolder.yedinci_item.setText("");
 
@@ -125,6 +129,13 @@ public class AgacProjeAdapter extends ArrayAdapter<AgacProje> {
 
 
 
+    }
+
+    String decimalFormat(BigDecimal sayi){
+        DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
+        decimalFormatSymbols.setDecimalSeparator(',');
+        decimalFormatSymbols.setGroupingSeparator('.');
+        return new DecimalFormat("#,##0.00", decimalFormatSymbols).format(new BigDecimal(String.valueOf(sayi)));
     }
 }
 

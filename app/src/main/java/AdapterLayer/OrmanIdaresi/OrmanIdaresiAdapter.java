@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.konumsal.orbisozetmobil.R;
 
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.List;
 
 import EntityLayer.OrmanIdaresi.OrmanIdaresi;
@@ -61,7 +63,7 @@ public class OrmanIdaresiAdapter extends ArrayAdapter<OrmanIdaresi> {
 
 
         if(dItem.getOrmanlikAlan() != null)
-            drawerHolder.birinci_item.setText(dItem.getOrmanlikAlan().toString());
+            drawerHolder.birinci_item.setText(decimalFormat(dItem.getOrmanlikAlan()).toString());
         else
             drawerHolder.birinci_item.setText("");
 
@@ -97,10 +99,13 @@ public class OrmanIdaresiAdapter extends ArrayAdapter<OrmanIdaresi> {
     {
         TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item ;
 
-
-
-
     }
-}
+
+    String decimalFormat(BigDecimal sayi){
+        DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
+        decimalFormatSymbols.setDecimalSeparator(',');
+        decimalFormatSymbols.setGroupingSeparator('.');
+        return new DecimalFormat("#,##0.00", decimalFormatSymbols).format(new BigDecimal(String.valueOf(sayi)));
+    }}
 
 

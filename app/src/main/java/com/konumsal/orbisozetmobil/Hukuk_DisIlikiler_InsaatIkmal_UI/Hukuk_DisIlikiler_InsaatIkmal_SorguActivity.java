@@ -30,11 +30,13 @@ import java.util.Calendar;
 import java.util.List;
 
 import AdapterLayer.DisIliskiler.BirimAutoCompleteAdapter;
+import AdapterLayer.DisIliskiler.EgitimKatilimciAdapter;
 import AdapterLayer.DisIliskiler.YurtdisiProtokolAdapter;
 import AdapterLayer.Hukuk.DavaAdapter;
 import AdapterLayer.InsaatIkmal.InikYolAdapter;
 import DataLayer.Ortak.ConfigData;
 import DataLayer.Sistem.SOrgBirim_Data;
+import EntityLayer.DisIliskiler.EgitimKatilimci;
 import EntityLayer.DisIliskiler.YurtdisiProtokol;
 import EntityLayer.Hukuk.Dava;
 import EntityLayer.InsaatIkmal.InikYol;
@@ -64,14 +66,16 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
     DavaAdapter davaAdapter;
     YurtdisiProtokolAdapter yurtdisiProtokolAdapter;
     InikYolAdapter ınikYolAdapter;
+    EgitimKatilimciAdapter egitimKatilimciAdapter;
     List<Dava> gelenDavaList;
     List<YurtdisiProtokol> gelenYurtDisiProtokolList;
     List<InikYol> gelenYolList;
+    List<EgitimKatilimci> gelenEgitimKatilimciList;
     AutoCompleteTextView egitim_birim_auto;
     String gelenSayfaId = " ", gelenEgitimPage = " ";
 
     ListView listview;
-    LinearLayout baslikLinear1, baslikLinear2, baslikLinear3, sorgu_egitim_linear, genel_sorgu_linear;
+    LinearLayout baslikLinear1, baslikLinear2, baslikLinear3, sorgu_egitim_linear, genel_sorgu_linear, yil_sorgu_linear;
 
 
     @Override
@@ -113,17 +117,16 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
                 baslikLinear3.setVisibility(View.GONE);
                 sorgu_egitim_linear.setVisibility(View.GONE);
                 genel_sorgu_linear.setVisibility(View.VISIBLE);
+                yil_sorgu_linear.setVisibility(View.GONE);
 
             }
-            if ( gelenEgitimPage.equalsIgnoreCase("0")) {
+            if (gelenEgitimPage.equalsIgnoreCase("0")) {
                 getSupportActionBar().setTitle("Yurtdışı Protokol Listesi");
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.VISIBLE);
                 baslikLinear3.setVisibility(View.GONE);
                 sorgu_egitim_linear.setVisibility(View.VISIBLE);
                 genel_sorgu_linear.setVisibility(View.GONE);
-
-
             }
 
             if (gelenSayfaId.equalsIgnoreCase("2")) {
@@ -137,8 +140,8 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
             }
 
 
-            if ( gelenEgitimPage.equalsIgnoreCase("1")) {
-                getSupportActionBar().setTitle("---");
+            if (gelenEgitimPage.equalsIgnoreCase("1")) {
+                getSupportActionBar().setTitle("Eğitim Katılımcı Listesi");
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.VISIBLE);
                 baslikLinear3.setVisibility(View.GONE);
@@ -200,6 +203,7 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
         baslikLinear3 = (LinearLayout) findViewById(R.id.ucuncu_baslik);
         sorgu_egitim_linear = (LinearLayout) findViewById(R.id.egitim);
         genel_sorgu_linear = (LinearLayout) findViewById(R.id.genel_sorgu);
+        yil_sorgu_linear= (LinearLayout) findViewById(R.id.yil_sorgu);
 
         pd2 = new ProgressDialog(Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.this);
         listview = (ListView) findViewById(R.id.oduh_listview);
@@ -219,9 +223,14 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
                 bolge_spinner.setSelection(0);
                 mudurluk_spinner.setSelection(0);
                 seflik_spinner.setSelection(0);
+                yil_spinner.setSelection(0);
+                egitim_yil_spinner.setSelection(0);
                 secili_mudurluk_id = -1L;
                 secili_bolge_id = -1L;
                 secili_seflik_id = -1L;
+                secili_yil = -1L;
+                egitim_birim_auto.setText("0");
+                secilenBirimId = -1L;
 
             }
         });
@@ -235,6 +244,12 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
     void getBalOrmaniServis() {
 
         if (yil_spinner.getSelectedItem().toString().equalsIgnoreCase(""))
+            secili_yil = -1L;
+        else
+            secili_yil = Long.valueOf(yil_spinner.getSelectedItem().toString());
+
+
+        if (egitim_yil_spinner.getSelectedItem().toString().equalsIgnoreCase(""))
             secili_yil = -1L;
         else
             secili_yil = Long.valueOf(yil_spinner.getSelectedItem().toString());
@@ -290,8 +305,15 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
                 }
             });
         }
-        if (gelenSayfaId.equalsIgnoreCase("1")) {
-            Call<List<YurtdisiProtokol>> call = refrofitRestApi.getYurtDisiListForMobil(parameters);
+        if (gelenEgitimPage.equalsIgnoreCase("0")) {
+
+            SendParametersForServer parameters_egitim = new SendParametersForServer();
+            if (secilenBirimId != null)
+                parameters_egitim.prmBirimId = secilenBirimId.toString();
+            else
+                parameters_egitim.prmBirimId = "-1";
+            parameters_egitim.prmYil = secili_yil.toString();
+            Call<List<YurtdisiProtokol>> call = refrofitRestApi.getYurtDisiListForMobil(parameters_egitim);
             call.enqueue(new Callback<List<YurtdisiProtokol>>() {
                 @Override
                 public void onResponse(Call<List<YurtdisiProtokol>> call, Response<List<YurtdisiProtokol>> response) {
@@ -354,7 +376,43 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
             });
 
         }
-        if (gelenSayfaId.equalsIgnoreCase("3")) {
+        if (gelenEgitimPage.equalsIgnoreCase("1")) {
+
+            SendParametersForServer parameters_egitim = new SendParametersForServer();
+            if (secilenBirimId != null)
+                parameters_egitim.prmBirimId = secilenBirimId.toString();
+            else
+                parameters_egitim.prmBirimId = "-1";
+            parameters_egitim.prmYil = secili_yil.toString();
+            Call<List<EgitimKatilimci>> call = refrofitRestApi.getGgitimKatilimciPersonelForMobil(parameters_egitim);
+            call.enqueue(new Callback<List<EgitimKatilimci>>() {
+                @Override
+                public void onResponse(Call<List<EgitimKatilimci>> call, Response<List<EgitimKatilimci>> response) {
+                    if (!response.isSuccessful()) {
+                        // textViewResult.setText("Code: " + response.code());
+                        progressDoalog.dismiss();
+                        MessageBox.showAlert(Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.this, "Hata Oluştu.. " + response.message(), false);
+                        return;
+                    }
+                    if (response.isSuccessful()) {
+                        progressDoalog.dismiss();
+                         gelenEgitimKatilimciList = response.body();
+                        if (gelenEgitimKatilimciList != null && gelenEgitimKatilimciList.size() > 0) {
+                            get_listview();
+
+                        } else
+                            MessageBox.showAlert(Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.this, "Kayıt bulunamamıştır..", false);
+
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<List<EgitimKatilimci>> call, Throwable t) {
+                    progressDoalog.dismiss();
+                    //textViewResult.setText(t.getMessage());
+                    MessageBox.showAlert(Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
+                }
+            });
 
         }
     }
@@ -572,10 +630,10 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
             listview.setClickable(true);
         }
         if (gelenEgitimPage.equalsIgnoreCase("1")) {
-           /* yurtdisiProtokolAdapter = new YurtdisiProtokolAdapter(Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.this, R.layout.item_dokuz, gelenYurtDisiProtokolList);
-            listview.setAdapter(yurtdisiProtokolAdapter);
-            yurtdisiProtokolAdapter.notifyDataSetChanged();
-            listview.setClickable(true);*/
+            egitimKatilimciAdapter = new EgitimKatilimciAdapter(Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.this, R.layout.item_uc, gelenEgitimKatilimciList);
+            listview.setAdapter(egitimKatilimciAdapter);
+            egitimKatilimciAdapter.notifyDataSetChanged();
+            listview.setClickable(true);
         }
 
     }
@@ -599,7 +657,7 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
 
         BirimAutoCompleteAdapter adapter = new BirimAutoCompleteAdapter(this, R.layout.activity_main, R.layout.mr_simple_spinner_dropdown_item, org_birim_list);
         adapter.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
-        egitim_birim_auto.setThreshold(3);
+        egitim_birim_auto.setThreshold(2);
         egitim_birim_auto.setAdapter(adapter);
 
 

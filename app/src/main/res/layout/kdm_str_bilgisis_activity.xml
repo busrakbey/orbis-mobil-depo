@@ -32,12 +32,15 @@
 
 
 
+
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/genel_sorgu"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -66,6 +69,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/mudurluk_linear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -76,17 +80,17 @@
                 <TextView
                     style="@style/oa_frag_text_style"
                     android:text=" Müdürlük"
-                    android:textStyle="bold"
                     android:textColor="@color/mr_toolbar2"
-                    android:textSize="@dimen/normal_definition_text_size" />
+                    android:textSize="@dimen/normal_definition_text_size"
+                    android:textStyle="bold" />
 
                 <Spinner
                     android:id="@+id/mudurluk_spinner"
                     style="@style/mr_fe_in_edittext"
-                    android:layout_weight="1"
                     android:layout_height="@dimen/spinner_heigh"
+                    android:layout_weight="1"
                     android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:singleLine="true" />
 
             </LinearLayout>
 
@@ -95,16 +99,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
                 android:weightSum="1"
+                android:id="@+id/seflik_linear"
+
                 android:orientation="vertical">
 
                 <TextView
                     style="@style/oa_frag_text_style"
                     android:text=" Şeflik"
-                    android:textStyle="bold"
                     android:textColor="@color/mr_toolbar2"
                     android:textSize="@dimen/normal_definition_text_size"
 
-                    />
+                    android:textStyle="bold" />
 
                 <Spinner
                     android:id="@+id/seflik_spinner"
@@ -132,6 +137,99 @@
 
                 <Spinner
                     android:id="@+id/yil_spinner"
+                    style="@style/mr_fe_in_edittext"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/spinner_heigh"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/egitim"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.7"
+                android:weightSum="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/oa_frag_text_style"
+                    android:text=" Bölge"
+                    android:textStyle="bold"
+                    android:textColor="@color/mr_toolbar2"
+                    android:textSize="@dimen/normal_definition_text_size" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/bolge_auto"
+                    style="@style/mr_fe_in_edittext"
+                    android:layout_height="@dimen/spinner_heigh"
+                    android:layout_weight="1"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.7"
+                android:weightSum="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/oa_frag_text_style"
+                    android:text=" Müdürlük"
+                    android:textStyle="bold"
+                    android:textColor="@color/mr_toolbar2"
+                    android:textSize="@dimen/normal_definition_text_size" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/mudurluk_auto"
+                    style="@style/mr_fe_in_edittext"
+                    android:layout_height="@dimen/spinner_heigh"
+                    android:layout_weight="1"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/oa_frag_text_style"
+                    android:text=" Yıl"
+                    android:textStyle="bold"
+                    android:textColor="@color/mr_toolbar2"
+                    android:textSize="@dimen/normal_definition_text_size" />
+
+                <Spinner
+                    android:id="@+id/egitim_yil_spinner"
                     style="@style/mr_fe_in_edittext"
                     android:layout_weight="1"
                     android:layout_height="@dimen/spinner_heigh"
@@ -219,7 +317,202 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_width="match_parent"
+            android:id="@+id/kdm_ana_baslik"
+            style="@style/listTable_satircontainerLinearwrapwraphoriz"
+            >
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0"
+                android:textSize="@dimen/smaller_textsize"
+                android:text=""
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:drawableBottom="@color/mr_toolbar"
+                android:layout_weight="0.2"
+                android:text="6831,3302,5304,6495"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0.2"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="4999,\nRevizyon,6292,7139"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0.2"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="30.Madde,6831 Ek16,7269 Ek10,6292 4.Madde,Mah.kar.Uyg. Sonuç. Dos."
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                android:layout_weight="0"
+                android:textSize="@dimen/smaller_textsize"
+                android:text=""
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+
+            <TextView
+                android:layout_weight="0."
+                android:textSize="@dimen/smaller_textsize"
+                android:text=""
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+
+
+            <TextView
+                android:layout_weight="0."
+                android:textSize="@dimen/smaller_textsize"
+                android:text=""
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <TextView
+                android:layout_weight="0."
+                android:textSize="@dimen/smaller_textsize"
+                android:text=""
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
             android:id="@+id/birinci_baslik"
+            style="@style/listTable_satircontainerLinearwrapwraphoriz"
+            >
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Bölge"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:drawableBottom="@color/mr_toolbar"
+                android:layout_weight="1.2"
+                android:text="Program Adet"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1.6"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Gerçekleşme Adet"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0.9"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Prog. Adet"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Gerçekleşme Adet"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1.6"
+                android:text="Prog. Adet"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0.9"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Gerçekleşme Adet"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Program Toplam"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Gerçekleşme Toplam"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Yıl"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:id="@+id/ucuncu_baslik"
             style="@style/listTable_satircontainerLinearwrapwraphoriz"
             >
 
@@ -247,48 +540,10 @@
             <TextView
                 android:layout_weight="1.6"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Şeflik"
+                android:text="Belge Kod"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-
-
-
-            <TextView
-                style="@style/listTable_SatirTextView"
-                android:layout_weight="1"
-                android:text="Gerçekleşme Miktar"
-                android:textColor="@color/text"
-                android:textSize="@dimen/smaller_textsize" />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-
-            <TextView
-                style="@style/listTable_SatirTextView"
-                android:layout_weight="1"
-                android:text="Gerçekleşme Tutar"
-                android:textColor="@color/text"
-                android:textSize="@dimen/smaller_textsize" />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                style="@style/listTable_SatirTextView"
-                android:layout_weight="1"
-                android:text="Program Miktar"
-                android:textColor="@color/text"
-                android:textSize="@dimen/smaller_textsize" />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-
-
-            <TextView
-                style="@style/listTable_SatirTextView"
-                android:layout_weight="1"
-                android:text="Program Tutar"
-                android:textColor="@color/text"
-                android:textSize="@dimen/smaller_textsize" />
             <View
                 style="@style/listTable_satirAyracView"></View>
             <TextView
@@ -300,9 +555,67 @@
                 />
             <View
                 style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Görev Emir No"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
 
+
+
+            <TextView
+                android:layout_weight="1.6"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Tebliğ Tarih"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0.9"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Durum"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Teftiş Baş. Tarih"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Teftiş Bit. Tarih"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Personel"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
 
         </LinearLayout>
+
 
 
         <LinearLayout
@@ -334,57 +647,20 @@
 
             <View
                 style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="1.6"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Şeflik"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
 
-
-
-            <TextView
-                style="@style/listTable_SatirTextView"
-                android:layout_weight="1"
-                android:text="Gerçekleşme Miktar"
-                android:textColor="@color/text"
-                android:textSize="@dimen/smaller_textsize" />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-
-            <TextView
-                style="@style/listTable_SatirTextView"
-                android:layout_weight="1"
-                android:text="Gerçekleşme Tutar"
-                android:textColor="@color/text"
-                android:textSize="@dimen/smaller_textsize" />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                style="@style/listTable_SatirTextView"
-                android:layout_weight="1"
-                android:text="Program Miktar"
-                android:textColor="@color/text"
-                android:textSize="@dimen/smaller_textsize" />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-
-
-            <TextView
-                style="@style/listTable_SatirTextView"
-                android:layout_weight="1"
-                android:text="Program Tutar"
-                android:textColor="@color/text"
-                android:textSize="@dimen/smaller_textsize" />
-            <View
-                style="@style/listTable_satirAyracView"></View>
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Yıl"
+                android:text="Hesap Adı"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Demirbaş \n Sayı"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -392,11 +668,15 @@
                 style="@style/listTable_satirAyracView"></View>
 
 
+
+
+
+
+
+
+
+
         </LinearLayout>
-
-
-
-
 
 
         <ListView

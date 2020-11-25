@@ -229,7 +229,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Bölge"
+                android:text="Dikili"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -239,7 +239,7 @@
             <TextView
                 style="@style/listTable_SatirTextView"
                 android:layout_weight="1.2"
-                android:text="Müdürlük"
+                android:text="Dikili Program"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
@@ -248,7 +248,7 @@
             <TextView
                 android:layout_weight="1.6"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Şeflik"
+                android:text="Üretime \n Verilen"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -257,7 +257,7 @@
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Yıl"
+                android:text="Toplam \n Program"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -266,7 +266,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Bal Ormanı Sayısı"
+                android:text="Toplam"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -275,25 +275,7 @@
 
 
 
-            <TextView
-                android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Toplam Alan"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
 
-            <TextView
-                android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Bal Toplam Kapasite"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
 
         </LinearLayout>
 
@@ -311,7 +293,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Bölge"
+                android:text="Ürün \nAdı"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -321,7 +303,7 @@
             <TextView
                 style="@style/listTable_SatirTextView"
                 android:layout_weight="1.2"
-                android:text="Müdürlük"
+                android:text="Program"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
@@ -330,7 +312,7 @@
             <TextView
                 android:layout_weight="1.6"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Şeflik"
+                android:text="Kalan \n Miktar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -339,7 +321,7 @@
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Yıl"
+                android:text="Kalan \n Tutar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -348,15 +330,74 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Mesire Yeri \nAlan"
+                android:text="S \n Miktar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
             <View
                 style="@style/listTable_satirAyracView"></View>
 
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1.2"
+                android:text="S \n Tutar"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
 
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1.6"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="T \n Miktar"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0.9"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="T \n Tutar"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Y \n Miktar"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1.2"
+                android:text="Y \n Tutar"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
 
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1.6"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="I \n Miktar"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0.9"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="I \n Tutar"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
 
 
         </LinearLayout>
@@ -374,7 +415,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Bölge"
+                android:text="Ürün \nAdı"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -384,7 +425,7 @@
             <TextView
                 style="@style/listTable_SatirTextView"
                 android:layout_weight="1.2"
-                android:text="Müdürlük"
+                android:text="T \n Miktar"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
@@ -393,7 +434,7 @@
             <TextView
                 android:layout_weight="1.6"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Şeflik"
+                android:text="T \n Tutar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -402,7 +443,7 @@
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Yıl"
+                android:text="Aa \n Miktar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -411,12 +452,47 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Mesire Yeri \nAlan"
+                android:text="Aa \n Tutar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
             <View
                 style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1.2"
+                android:text="K \n Miktar"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1.6"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="K \n Tutar"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0.9"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Program \n Miktar"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Program \n Tutar"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
 
 
 
@@ -439,7 +515,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Bölge"
+                android:text="Ürün Adı"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -449,7 +525,7 @@
             <TextView
                 style="@style/listTable_SatirTextView"
                 android:layout_weight="1.2"
-                android:text="Müdürlük"
+                android:text="G \n Miktar"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
@@ -458,32 +534,10 @@
             <TextView
                 android:layout_weight="1.6"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Şeflik"
+                android:text="P \n Miktar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="0.9"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Yıl"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Mesire Yeri \nAlan"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-
-
 
 
 

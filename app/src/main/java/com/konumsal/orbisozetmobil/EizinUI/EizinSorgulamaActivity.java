@@ -156,12 +156,13 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
         temizle_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bolge_spinner.setSelection(0);
                 mudurluk_spinner.setSelection(0);
                 seflik_spinner.setSelection(0);
+                yil_spinner.setSelection(0);
                 secili_mudurluk_id = -1L;
                 secili_bolge_id = -1L;
                 secili_seflik_id = -1L;
+                secili_yil = -1L;
 
             }
         });

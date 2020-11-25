@@ -6,6 +6,9 @@ public class SendParametersForServer {
     public String prmSeflikId;
     public String prmYil;
     public String prmBasMuhId;
+    public String prmBirimId;
+
+
 
     public String getPrmBolgeId() {
         return prmBolgeId;
@@ -45,6 +48,14 @@ public class SendParametersForServer {
 
     public void setPrmBasMuhId(String prmBasMuhId) {
         this.prmBasMuhId = prmBasMuhId;
+    }
+
+    public String getPrmBirimId() {
+        return prmBirimId;
+    }
+
+    public void setPrmBirimId(String prmBirimId) {
+        this.prmBirimId = prmBirimId;
     }
 }
 

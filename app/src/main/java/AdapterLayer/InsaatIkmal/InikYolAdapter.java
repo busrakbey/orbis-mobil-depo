@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import com.konumsal.orbisozetmobil.R;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.List;
 
 import EntityLayer.InsaatIkmal.InikYol;
@@ -94,36 +97,36 @@ public class InikYolAdapter extends ArrayAdapter<InikYol> {
 
 
         if(dItem.getGerceklesenTul() != null)
-            drawerHolder.besinci_item.setText(dItem.getGerceklesenTul().toString());
+            drawerHolder.besinci_item.setText(decimalFormat(dItem.getGerceklesenTul()).toString());
         else
             drawerHolder.besinci_item.setText("");
 
 
         if(dItem.getOrmanYoluTulu() != null)
-            drawerHolder.altinci_item.setText(dItem.getOrmanYoluTulu().toString());
+            drawerHolder.altinci_item.setText(decimalFormat(dItem.getOrmanYoluTulu()).toString());
         else
             drawerHolder.altinci_item.setText("");
 
 
         if(dItem.getMevcutTul() != null)
-            drawerHolder.yedinci_item.setText(dItem.getMevcutTul().toString());
+            drawerHolder.yedinci_item.setText(decimalFormat(dItem.getMevcutTul()).toString());
         else
             drawerHolder.yedinci_item.setText("");
 
 
         if(dItem.getYapilacakTul() != null)
-            drawerHolder.sekizinci_item.setText(dItem.getYapilacakTul().toString());
+            drawerHolder.sekizinci_item.setText(decimalFormat(dItem.getYapilacakTul()).toString());
         else
             drawerHolder.sekizinci_item.setText("");
 
         if(dItem.getYapilacakBuyukOnarimTulu() != null)
-            drawerHolder.dokuzuncu_item.setText(dItem.getYapilacakBuyukOnarimTulu().toString());
+            drawerHolder.dokuzuncu_item.setText(decimalFormat(dItem.getYapilacakBuyukOnarimTulu()).toString());
         else
             drawerHolder.dokuzuncu_item.setText("");
 
 
         if(dItem.getToplamTul() != null)
-            drawerHolder.onuncu_item.setText(dItem.getToplamTul().toString());
+            drawerHolder.onuncu_item.setText(decimalFormat(dItem.getToplamTul()).toString());
         else
             drawerHolder.onuncu_item.setText("");
 
@@ -151,6 +154,13 @@ public class InikYolAdapter extends ArrayAdapter<InikYol> {
 
 
 
+    }
+
+    String decimalFormat(BigDecimal sayi){
+        DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
+        decimalFormatSymbols.setDecimalSeparator(',');
+        decimalFormatSymbols.setGroupingSeparator('.');
+        return new DecimalFormat("#,##0.00", decimalFormatSymbols).format(new BigDecimal(String.valueOf(sayi)));
     }
 }
 

@@ -120,6 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
                 android:weightSum="1"
+                android:id="@+id/yil_sorgu"
                 android:layout_marginLeft="10dp"
                 android:orientation="vertical">
 
@@ -261,7 +262,7 @@
             <TextView
                 style="@style/listTable_SatirTextView"
                 android:layout_weight="1.2"
-                android:text="Müdürlük"
+                android:text="İşletme"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
@@ -288,7 +289,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Mesire Yeri \nAlan"
+                android:text=""
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -325,7 +326,7 @@
             <TextView
                 style="@style/listTable_SatirTextView"
                 android:layout_weight="1.2"
-                android:text="Müdürlük"
+                android:text="İşletme"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
@@ -352,7 +353,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Ziraat \n Yangını"
+                android:text="Ziraat\nYangını"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -364,7 +365,7 @@
             <TextView
                 android:layout_weight="1.6"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Milli Park \n Yangını"
+                android:text="Milli Park \nYangını"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />

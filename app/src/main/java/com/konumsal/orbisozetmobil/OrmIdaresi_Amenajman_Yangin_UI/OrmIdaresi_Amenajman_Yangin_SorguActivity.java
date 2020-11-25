@@ -61,7 +61,7 @@ public class OrmIdaresi_Amenajman_Yangin_SorguActivity extends AppCompatActivity
 
     ListView listview;
     String gelenSayfaId;
-    LinearLayout baslikLinear1, baslikLinear2, baslikLinear3;
+    LinearLayout baslikLinear1, baslikLinear2, baslikLinear3, yilLinear;
 
 
     @Override
@@ -97,7 +97,7 @@ public class OrmIdaresi_Amenajman_Yangin_SorguActivity extends AppCompatActivity
                 baslikLinear3.setVisibility(View.GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("1")) {
-                getSupportActionBar().setTitle("----");
+                getSupportActionBar().setTitle("Amenajman Plan Listesi");
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.VISIBLE);
                 baslikLinear3.setVisibility(View.GONE);
@@ -108,6 +108,9 @@ public class OrmIdaresi_Amenajman_Yangin_SorguActivity extends AppCompatActivity
                 getSupportActionBar().setTitle("Yangın Listesi");
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.GONE);
+                baslikLinear3.setVisibility(View.VISIBLE);
+                yilLinear.setVisibility(View.GONE);
+
             }
 
             getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -156,6 +159,7 @@ public class OrmIdaresi_Amenajman_Yangin_SorguActivity extends AppCompatActivity
         baslikLinear1 = (LinearLayout) findViewById(R.id.birinci_baslik);
         baslikLinear2 = (LinearLayout) findViewById(R.id.ikinci_baslik);
         baslikLinear3 = (LinearLayout) findViewById(R.id.ucuncu_baslik);
+        yilLinear = (LinearLayout) findViewById(R.id.yil_sorgu);
 
         pd2 = new ProgressDialog(OrmIdaresi_Amenajman_Yangin_SorguActivity.this);
         listview = (ListView) findViewById(R.id.oduh_listview);
@@ -172,12 +176,13 @@ public class OrmIdaresi_Amenajman_Yangin_SorguActivity extends AppCompatActivity
         temizle_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bolge_spinner.setSelection(0);
                 mudurluk_spinner.setSelection(0);
                 seflik_spinner.setSelection(0);
+                yil_spinner.setSelection(0);
                 secili_mudurluk_id = -1L;
                 secili_bolge_id = -1L;
                 secili_seflik_id = -1L;
+                secili_yil = -1L;
 
             }
         });

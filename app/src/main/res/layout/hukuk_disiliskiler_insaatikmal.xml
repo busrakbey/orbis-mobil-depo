@@ -123,6 +123,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
                 android:weightSum="1"
+                android:id="@+id/yil_sorgu"
                 android:layout_marginLeft="10dp"
                 android:orientation="vertical">
 
@@ -299,11 +300,68 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Ormanlık Alan"
+                android:text="Bölge"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
 
+
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="İşletme"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1.2"
+                android:text="Şeflik"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1.6"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Dava Konusu"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0.9"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Dava Türü"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Durum"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Dava Sayısı"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
 
         </LinearLayout>
 
@@ -413,7 +471,7 @@
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Tarih"
+                android:text="Sanat Yapısı Adet"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -422,7 +480,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Ziraat \n Yangını"
+                android:text="Gerçekleşen\nTul"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -434,7 +492,7 @@
             <TextView
                 android:layout_weight="1.6"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Milli Park \n Yangını"
+                android:text="Orman Yolu\nTulu"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -443,7 +501,7 @@
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Orman Yangını"
+                android:text="Mevcut\nTul"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -452,7 +510,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Toplam Yangın"
+                android:text="Yapilacak\nTul"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -462,7 +520,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Toplam Yanan Alan"
+                android:text="Yapılacak\nBüyük\nOnarım\nTulu"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />

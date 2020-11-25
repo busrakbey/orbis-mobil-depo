@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import com.konumsal.orbisozetmobil.R;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.List;
 
 import EntityLayer.IsletmePazarlama.Odenek;
@@ -70,76 +73,75 @@ public class OdenekAdapter extends ArrayAdapter<Odenek> {
         }
 
 
-        if(dItem.getImiktar() != null)
-            drawerHolder.birinci_item.setText(dItem.getImiktar().toString());
+
+        if(dItem.getUrunAdi() != null)
+            drawerHolder.birinci_item.setText(dItem.getUrunAdi().toString());
         else
             drawerHolder.birinci_item.setText("");
 
-
-        if(dItem.getItutar() != null)
-            drawerHolder.ikinci_item.setText(dItem.getItutar().toString());
+        if(dItem.getProgram() != null)
+            drawerHolder.ikinci_item.setText(dItem.getProgram().toString());
         else
             drawerHolder.ikinci_item.setText("");
 
 
         if(dItem.getKmiktar() != null)
-            drawerHolder.ucuncu_item.setText(dItem.getKmiktar().toString());
+            drawerHolder.ucuncu_item.setText(decimalFormat(dItem.getKmiktar()));
         else
             drawerHolder.ucuncu_item.setText("");
 
 
         if(dItem.getKtutar() != null)
-            drawerHolder.dorduncu_item.setText(dItem.getKtutar().toString());
+            drawerHolder.dorduncu_item.setText(decimalFormat(dItem.getKtutar()));
         else
             drawerHolder.dorduncu_item.setText("");
 
 
         if(dItem.getSmiktar() != null)
-            drawerHolder.besinci_item.setText(dItem.getSmiktar().toString());
+            drawerHolder.besinci_item.setText(decimalFormat(dItem.getSmiktar()));
         else
             drawerHolder.besinci_item.setText("");
 
 
        if(dItem.getStutar() != null)
-            drawerHolder.altinci_item.setText(dItem.getStutar().toString());
+            drawerHolder.altinci_item.setText(decimalFormat(dItem.getStutar()));
         else
             drawerHolder.altinci_item.setText("");
 
 
         if(dItem.getTmiktar() != null)
-            drawerHolder.yedinci_item.setText(dItem.getTmiktar().toString());
+            drawerHolder.yedinci_item.setText(decimalFormat(dItem.getTmiktar()).toString());
         else
             drawerHolder.yedinci_item.setText("");
 
 
         if(dItem.getTtutar() != null)
-            drawerHolder.sekizinci_item.setText(dItem.getTtutar().toString());
+            drawerHolder.sekizinci_item.setText(decimalFormat(dItem.getTtutar()).toString());
         else
             drawerHolder.sekizinci_item.setText("");
 
         if(dItem.getYmiktar() != null)
-            drawerHolder.dokuzuncu_item.setText(dItem.getYmiktar().toString());
+            drawerHolder.dokuzuncu_item.setText(decimalFormat(dItem.getYmiktar()));
         else
             drawerHolder.dokuzuncu_item.setText("");
 
 
         if(dItem.getYtutar() != null)
-            drawerHolder.onuncu_item.setText(dItem.getYtutar().toString());
+            drawerHolder.onuncu_item.setText(decimalFormat(dItem.getYtutar()).toString());
         else
             drawerHolder.onuncu_item.setText("");
 
 
-
-        if(dItem.getUrunAdi() != null)
-            drawerHolder.on_birinci_item.setText(dItem.getUrunAdi().toString());
+        if(dItem.getImiktar() != null)
+            drawerHolder.on_birinci_item.setText(decimalFormat(dItem.getImiktar()).toString());
         else
             drawerHolder.on_birinci_item.setText("");
 
-        if(dItem.getProgram() != null)
-            drawerHolder.on_ikinci_item.setText(dItem.getProgram().toString());
+
+        if(dItem.getItutar() != null)
+            drawerHolder.on_ikinci_item.setText(decimalFormat(dItem.getItutar()));
         else
             drawerHolder.on_ikinci_item.setText("");
-
 
 
 
@@ -154,9 +156,15 @@ public class OdenekAdapter extends ArrayAdapter<Odenek> {
                 altinci_item , yedinci_item, sekizinci_item, dokuzuncu_item,
                 onuncu_item , on_birinci_item, on_ikinci_item;
 
-
-
-
     }
+
+    String decimalFormat(BigDecimal sayi){
+        DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
+        decimalFormatSymbols.setDecimalSeparator(',');
+        decimalFormatSymbols.setGroupingSeparator('.');
+        return new DecimalFormat("#,##0.00", decimalFormatSymbols).format(new BigDecimal(String.valueOf(sayi)));
+    }
+
+
 }
 

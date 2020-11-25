@@ -6,6 +6,7 @@ import EntityLayer.Agaclandirma.AgacProje;
 import EntityLayer.Agaclandirma.ToprakProje;
 import EntityLayer.Amenajman.Amenajman;
 import EntityLayer.BilgiSistemleri.HaritaArsiv;
+import EntityLayer.DisIliskiler.EgitimKatilimci;
 import EntityLayer.DisIliskiler.YurtdisiProtokol;
 import EntityLayer.Eizin.Izin;
 import EntityLayer.Eizin.Talep;
@@ -105,6 +106,9 @@ public interface RefrofitRestApi {
 
     @POST("rest/EgitimRS/yurtDisiListForMobil")
     Call<List<YurtdisiProtokol>>  getYurtDisiListForMobil(@Body SendParametersForServer parameter);
+
+    @POST("rest/EgitimRS/egitimKatilimciPersonelForMobil")
+    Call<List<EgitimKatilimci>>  getGgitimKatilimciPersonelForMobil(@Body SendParametersForServer parameter);
 
 }
 

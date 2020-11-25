@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import com.konumsal.orbisozetmobil.R;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.List;
 
 import EntityLayer.IsletmePazarlama.Uretim;
@@ -51,10 +54,7 @@ public class UretimAdapter extends ArrayAdapter<Uretim> {
             drawerHolder.birinci_item = (TextView) view.findViewById(R.id.birinci_item);
             drawerHolder.ikinci_item = (TextView) view.findViewById(R.id.ikinci_item);
             drawerHolder.ucuncu_item = (TextView) view.findViewById(R.id.ucuncu_item);
-            drawerHolder.dorduncu_item = (TextView) view.findViewById(R.id.dorduncu_item);
-            drawerHolder.besinci_item = (TextView) view.findViewById(R.id.besinci_item);
-            drawerHolder.altinci_item = (TextView) view.findViewById(R.id.altinci_item);
-            drawerHolder.yedinci_item = (TextView) view.findViewById(R.id.yedinci_item);
+
 
             view.setTag(drawerHolder);
 
@@ -71,13 +71,13 @@ public class UretimAdapter extends ArrayAdapter<Uretim> {
 
 
         if(dItem.getGmiktar() != null)
-            drawerHolder.ikinci_item.setText(dItem.getGmiktar().toString());
+            drawerHolder.ikinci_item.setText(decimalFormat(dItem.getGmiktar()).toString());
         else
             drawerHolder.ikinci_item.setText("");
 
 
         if(dItem.getPmiktar() != null)
-            drawerHolder.ucuncu_item.setText(dItem.getPmiktar().toString());
+            drawerHolder.ucuncu_item.setText(decimalFormat(dItem.getPmiktar()).toString());
         else
             drawerHolder.ucuncu_item.setText("");
 
@@ -94,9 +94,14 @@ public class UretimAdapter extends ArrayAdapter<Uretim> {
         TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item ,     altinci_item , yedinci_item, sekizinci_item, dokuzuncu_item,
                 onuncu_item , on_birinci_item, on_ikinci_item;
 
+    }
 
 
-
+    String decimalFormat(BigDecimal sayi){
+        DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
+        decimalFormatSymbols.setDecimalSeparator(',');
+        decimalFormatSymbols.setGroupingSeparator('.');
+        return new DecimalFormat("#,##0.00", decimalFormatSymbols).format(new BigDecimal(String.valueOf(sayi)));
     }
 }
 
