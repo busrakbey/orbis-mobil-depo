@@ -374,7 +374,7 @@ public class OrtakFunction {
             ozetEkranModulAdlari.add("Yangın");
             ozetEkranModulAdlari.add("Hukuk");
             ozetEkranModulAdlari.add("Taşınmaz");
-            ozetEkranModulAdlari.add("Planlama");
+            ozetEkranModulAdlari.add("AmenajmanAdapter");
         }
         return ozetEkranModulList;
     }

@@ -20,9 +20,9 @@ import android.widget.GridView;
 import com.google.gson.reflect.TypeToken;
 import com.konumsal.orbisozetmobil.Agaclandirma.AgacAltMenuActivity;
 import com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPAltMenuActivity;
-import com.konumsal.orbisozetmobil.KadastroUI.KadastroSorgulamaActivity;
+import com.konumsal.orbisozetmobil.Kdm_Str_BilgiSis_UI.Kdm_Str_BilgiSis_SorgulamaActivity;
 import com.konumsal.orbisozetmobil.OduhUI.OduhAltMenuActivity;
-import com.konumsal.orbisozetmobil.OduhUI.OduhSorgulamaActivity;
+import com.konumsal.orbisozetmobil.OrmIdaresi_Amenajman_Yangin_UI.OrmIdaresi_Amenajman_Yangin_SorguActivity;
 import com.konumsal.orbisozetmobil.OzmUI.OzmAltMenuActivity;
 import com.konumsal.orbisozetmobil.R;
 
@@ -150,7 +150,6 @@ public class AnaMenuActivity extends AppCompatActivity {
         menuList.add("Orman Yangınları");
         menuList.add("Personel");
         menuList.add("Silvikültür");
-        menuList.add("Strateji");
         menuList.add("Teftiş");
 
     }
@@ -181,14 +180,14 @@ public class AnaMenuActivity extends AppCompatActivity {
                     startActivity(mintent);
 
                 } else if (position == 1) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, OrmIdaresi_Amenajman_Yangin_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", 1);
+                    mintent.putExtra("MODE", "1");  /// AMENAJMAN
                     startActivity(mintent);
                 } else if (position == 2) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, Kdm_Str_BilgiSis_SorgulamaActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", 2);
+                    mintent.putExtra("MODE", "1");  // bilgi sistemleri
                     startActivity(mintent);
                 } else if (position == 3) {
                     Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
@@ -226,9 +225,9 @@ public class AnaMenuActivity extends AppCompatActivity {
                     mintent.putExtra("MODE", 9);
                     startActivity(mintent);
                 } else if (position == 10) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, KadastroSorgulamaActivity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, Kdm_Str_BilgiSis_SorgulamaActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", 10);
+                    mintent.putExtra("MODE", "0"); // kadastro
                     startActivity(mintent);
                 } else if (position == 11) {
                     Intent mintent = new Intent(AnaMenuActivity.this, OduhAltMenuActivity.class);
@@ -246,14 +245,14 @@ public class AnaMenuActivity extends AppCompatActivity {
                     mintent.putExtra("MODE", 13);
                     startActivity(mintent);
                 } else if (position == 14) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, OrmIdaresi_Amenajman_Yangin_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", 14);
+                    mintent.putExtra("MODE", "0");  //// ORMAN İDARESİ
                     startActivity(mintent);
                 } else if (position == 15) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, OrmIdaresi_Amenajman_Yangin_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", 15);
+                    mintent.putExtra("MODE", "1");  ///YANGIN
                     startActivity(mintent);
                 } else if (position == 16) {
                     Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
@@ -266,19 +265,9 @@ public class AnaMenuActivity extends AppCompatActivity {
                     mintent.putExtra("MODE", 17);
                     startActivity(mintent);
                 } else if (position == 18) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, Kdm_Str_BilgiSis_SorgulamaActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", 18);
-                    startActivity(mintent);
-                } else if (position == 19) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
-                    mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", 19);
-                    startActivity(mintent);
-                } else if (position == 20) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
-                    mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", 20);
+                    mintent.putExtra("MODE", "2"); // teftis
                     startActivity(mintent);
                 }
 

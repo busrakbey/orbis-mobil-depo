@@ -116,7 +116,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.konumsal.orbisozetmobil.KadastroUI.KadastroSorgulamaActivity"
+            android:name="com.konumsal.orbisozetmobil.Kdm_Str_BilgiSis_UI.Kdm_Str_BilgiSis_SorgulamaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
 
@@ -155,6 +155,11 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
 
+
+        <activity
+            android:name="com.konumsal.orbisozetmobil.OrmIdaresi_Amenajman_Yangin_UI.OrmIdaresi_Amenajman_Yangin_SorguActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
 
 
         <meta-data
