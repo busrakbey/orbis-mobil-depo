@@ -104,9 +104,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.VISIBLE);
                 baslikLinear3.setVisibility(View.GONE);
-
             }
-
             if (gelenSayfaId.equalsIgnoreCase("2")) {
                 getSupportActionBar().setTitle("Orman Dışı Ürünleri Listesi");
                 baslikLinear1.setVisibility(View.GONE);
@@ -313,9 +311,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
             });
 
         }
-        if (gelenSayfaId.equalsIgnoreCase("3")) {
 
-        }
     }
 
 

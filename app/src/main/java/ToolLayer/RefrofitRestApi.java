@@ -24,7 +24,10 @@ import EntityLayer.Oduh.MesireYeri;
 import EntityLayer.Oduh.UretimPaket;
 import EntityLayer.OrmanIdaresi.OrmanIdaresi;
 import EntityLayer.Oym.Yangin;
+import EntityLayer.Ozm.KusKarinca;
+import EntityLayer.Ozm.Otlatma;
 import EntityLayer.Ozm.SucTutanagi;
+import EntityLayer.Ozm.Yirtici;
 import EntityLayer.SendParametersForServer;
 import EntityLayer.Strateji.TefKonular;
 import retrofit2.Call;
@@ -55,6 +58,15 @@ public interface RefrofitRestApi {
 
     @POST("rest/SaglikDurumuRS/ozmDepoSucTutanagiForMobil")
     Call<List<SucTutanagi>>  getOzmDepoSucTutanagiForMobil(@Body SendParametersForServer parameter);
+
+    @POST("rest/SaglikDurumuRS/ozmDepoOtlatmaPlaniForMobil")
+    Call<List<Otlatma>>  getOzmDepoOtlatmaPlaniForMobil(@Body SendParametersForServer parameter);
+
+    @POST("rest/SaglikDurumuRS/ozmDepoYirticiUretimForMobil")
+    Call<List<Yirtici>>  getozmDepoYirticiUretimForMobil(@Body SendParametersForServer parameter);
+
+    @POST("rest/SaglikDurumuRS/ozmDepokusKarincaForMobil")
+    Call<List<KusKarinca>>  getOzmDepokusKarincaForMobil(@Body SendParametersForServer parameter);
 
     @POST("rest/IsletmePazarlamaRS/mobilDamga")
     Call<List<Damga>>  getMobilDamga(@Body SendParametersForServer parameter);
