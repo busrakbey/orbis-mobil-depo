@@ -6,6 +6,11 @@ import EntityLayer.Agaclandirma.AgacProje;
 import EntityLayer.Agaclandirma.ToprakProje;
 import EntityLayer.Amenajman.Amenajman;
 import EntityLayer.BilgiSistemleri.HaritaArsiv;
+import EntityLayer.DisIliskiler.YurtdisiProtokol;
+import EntityLayer.Eizin.Izin;
+import EntityLayer.Eizin.Talep;
+import EntityLayer.Hukuk.Dava;
+import EntityLayer.InsaatIkmal.InikYol;
 import EntityLayer.IsletmePazarlama.Damga;
 import EntityLayer.IsletmePazarlama.Odenek;
 import EntityLayer.IsletmePazarlama.Satis;
@@ -81,10 +86,26 @@ public interface RefrofitRestApi {
     @POST("rest/GeoPortalRS/getBirimBazliAlan")
     Call<List<OrmanIdaresi>>  getBirimBazliAlan(@Body SendParametersForServer parameter);
 
-
-
-
     @POST("rest/GeoPortalRS/-------")
     Call<List<Amenajman>>  getAmenajman(@Body SendParametersForServer parameter);  ////// SERVİSİ EKLENMEDİİİİ
 
+
+    @POST("rest/EizinRS/izinSayiAlanKanunMaddesi")
+    Call<List<Izin>>  getIzinSayiAlanKanunMaddesi(@Body SendParametersForServer parameter);
+
+    @POST("rest/EizinRS/talepSayiAlanKanunMaddesi")
+    Call<List<Talep>>  getTalepSayiAlanKanunMaddesi(@Body SendParametersForServer parameter);
+
+
+    @POST("rest/HukukRS/davaBilgileriListForMobil")
+    Call<List<Dava>>  getDavaBilgileriListForMobil(@Body SendParametersForServer parameter);
+
+    @POST("rest/tasinmazRS/inikYolCalismalariListForMobil")
+    Call<List<InikYol>>  getInikYolCalismalariListForMobil(@Body SendParametersForServer parameter);
+
+    @POST("rest/EgitimRS/yurtDisiListForMobil")
+    Call<List<YurtdisiProtokol>>  getYurtDisiListForMobil(@Body SendParametersForServer parameter);
+
 }
+
+

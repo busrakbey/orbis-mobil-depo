@@ -19,6 +19,8 @@ import android.widget.GridView;
 
 import com.google.gson.reflect.TypeToken;
 import com.konumsal.orbisozetmobil.Agaclandirma.AgacAltMenuActivity;
+import com.konumsal.orbisozetmobil.EizinUI.EizinAltMenuActivity;
+import com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.Hukuk_DisIlikiler_InsaatIkmal_SorguActivity;
 import com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPAltMenuActivity;
 import com.konumsal.orbisozetmobil.Kdm_Str_BilgiSis_UI.Kdm_Str_BilgiSis_SorgulamaActivity;
 import com.konumsal.orbisozetmobil.OduhUI.OduhAltMenuActivity;
@@ -141,7 +143,7 @@ public class AnaMenuActivity extends AppCompatActivity {
         menuList.add("Hukuk");
         menuList.add("İşletme ve Pazarlama");
         menuList.add("İnşaat ve İkmal");
-        menuList.add("İzin İrtifak");
+        menuList.add("Izin İrtifak");
         menuList.add("Kadastro ve Mülkiyet");
         menuList.add("Odun Dışı");
         menuList.add("Orköy");
@@ -195,9 +197,9 @@ public class AnaMenuActivity extends AppCompatActivity {
                     mintent.putExtra("MODE", 3);
                     startActivity(mintent);
                 } else if (position == 4) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", 4);
+                    mintent.putExtra("MODE", "1"); // dış ilişkliler
                     startActivity(mintent);
                 } else if (position == 5) {
                     Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
@@ -205,9 +207,9 @@ public class AnaMenuActivity extends AppCompatActivity {
                     mintent.putExtra("MODE", 5);
                     startActivity(mintent);
                 } else if (position == 6) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", 6);
+                    mintent.putExtra("MODE", "0");  /// hukuk
                     startActivity(mintent);
                 } else if (position == 7) {
                     Intent mintent = new Intent(AnaMenuActivity.this, IPAltMenuActivity.class);
@@ -215,12 +217,12 @@ public class AnaMenuActivity extends AppCompatActivity {
                     mintent.putExtra("MODE", 7);
                     startActivity(mintent);
                 } else if (position == 8) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", 8);
+                    mintent.putExtra("MODE", "2");
                     startActivity(mintent);
                 } else if (position == 9) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, EizinAltMenuActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", 9);
                     startActivity(mintent);

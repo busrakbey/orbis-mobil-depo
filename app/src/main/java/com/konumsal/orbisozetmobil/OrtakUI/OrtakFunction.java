@@ -723,7 +723,7 @@ public class OrtakFunction {
         ozm_st_tutanak_durum_hashmap = new HashMap<Integer, String>();
         ozm_st_tutanak_durum_hashmap.put(0,"Yeni Kayit");
         ozm_st_tutanak_durum_hashmap.put(1,"Savciliga Gonderildi");
-        ozm_st_tutanak_durum_hashmap.put(2,"Savcilik Dava Acti");
+        ozm_st_tutanak_durum_hashmap.put(2,"Savcilik DavaAdapter Acti");
         ozm_st_tutanak_durum_hashmap.put(3,"Savcilik Reddetti");
 
         return ozm_st_tutanak_durum_hashmap;
@@ -734,7 +734,7 @@ public class OrtakFunction {
         List<String> tutanak_durum_string = new ArrayList<String>();
         tutanak_durum_string.add("Yeni Kayit");
         tutanak_durum_string.add("Savciliga Gonderildi");
-        tutanak_durum_string.add("Savcilik Dava Acti");
+        tutanak_durum_string.add("Savcilik DavaAdapter Acti");
         tutanak_durum_string.add("Savcilik Reddetti");
 
         return tutanak_durum_string;

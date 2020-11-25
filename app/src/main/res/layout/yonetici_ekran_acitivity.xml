@@ -1572,7 +1572,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="İzin"
+                    android:text="Izin"
                     android:layout_gravity="center_horizontal"
                     android:textSize="@dimen/normal_definition_text_size"
                     android:paddingLeft="10dp"
@@ -1585,7 +1585,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="İzin Sahası:"
+                        android:text="Izin Sahası:"
                         android:textSize="@dimen/small_textsize"
                         android:paddingLeft="5dp"
                         android:textColor="@color/blue"
@@ -1611,7 +1611,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Top.İzin Alanı:"
+                        android:text="Top.Izin Alanı:"
                         android:textSize="@dimen/small_textsize"
                         android:paddingLeft="5dp"
                         android:textColor="@color/blue"
@@ -1636,7 +1636,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="İzin Geliri:"
+                        android:text="Izin Geliri:"
                         android:textSize="@dimen/small_textsize"
                         android:paddingLeft="5dp"
                         android:textColor="@color/blue"
