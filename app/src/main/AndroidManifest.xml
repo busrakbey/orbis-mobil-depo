@@ -178,6 +178,11 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name="com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.DisIliskilerAltMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

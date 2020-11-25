@@ -1,4 +1,4 @@
-package com.konumsal.orbisozetmobil.Agaclandirma;
+package com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -19,7 +19,7 @@ import java.util.List;
 import AdapterLayer.Ortak.MenuAdapter;
 import ToolLayer.MessageBox;
 
-public class AgacAltMenuActivity extends AppCompatActivity {
+public class DisIliskilerAltMenuActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     ProgressDialog pd_main;
@@ -47,7 +47,7 @@ public class AgacAltMenuActivity extends AppCompatActivity {
             toolbar = (Toolbar) findViewById(R.id.ip_alt_menu_list_ui_toolbar);
             setSupportActionBar(toolbar);
             //  getSupportActionBar().setLogo(R.mipmap.ic_launcher_ogmlogo);
-            getSupportActionBar().setTitle("Ağaçlandırma ve Toprak Muhafaza");
+            getSupportActionBar().setTitle("İşletme Pazarlama");
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setDisplayShowTitleEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
@@ -56,17 +56,17 @@ public class AgacAltMenuActivity extends AppCompatActivity {
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    AgacAltMenuActivity.this.finish();
+                    DisIliskilerAltMenuActivity.this.finish();
                 }
             });
 
         } catch (Exception e) {
             e.printStackTrace();
-            MessageBox.showAlert(AgacAltMenuActivity.this, "Hata:" + e.toString(), false);
+            MessageBox.showAlert(DisIliskilerAltMenuActivity.this, "Hata:" + e.toString(), false);
 
         } catch (Throwable e) {
             e.printStackTrace();
-            MessageBox.showAlert(AgacAltMenuActivity.this, "Hata:" + e.toString(), false);
+            MessageBox.showAlert(DisIliskilerAltMenuActivity.this, "Hata:" + e.toString(), false);
         }
     }
 
@@ -78,7 +78,7 @@ public class AgacAltMenuActivity extends AppCompatActivity {
         menuList = new ArrayList<String>();
         menuEkle();
 
-        menuItemsAdapter = new MenuAdapter(AgacAltMenuActivity.this,R.layout.ana_menu_activity, menuList , 2);
+        menuItemsAdapter = new MenuAdapter(DisIliskilerAltMenuActivity.this,R.layout.ana_menu_activity, menuList , 2);
         listview.setAdapter(menuItemsAdapter);
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -86,28 +86,28 @@ public class AgacAltMenuActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(position == 0)
                 {
-                    Intent mintent = new Intent(AgacAltMenuActivity.this, AgacSorgulamaActivity.class);
+                    Intent mintent = new Intent(DisIliskilerAltMenuActivity.this, Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE","0"); //damga
+                    mintent.putExtra("EGITIM","0"); // yturtdisi
                     startActivity(mintent);
 
                 }
                 else if(position == 1)
                 {
-                    Intent mintent = new Intent(AgacAltMenuActivity.this, AgacSorgulamaActivity.class);
+                    Intent mintent = new Intent(DisIliskilerAltMenuActivity.this, Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE","1");   // ödenek
+                    mintent.putExtra("EGITIM","1");   //
                     startActivity(mintent);
                 }
 
-          
+
             }
         });
     }
 
     private void menuEkle() {
-        menuList.add("Ağaçlandırma Gerçekleşen Program");
-        menuList.add("Toprak Muh. Gerçekleşen Program");
+        menuList.add("Yurtdışı Protokol Listesi");
+        menuList.add("----");
 
 
     }

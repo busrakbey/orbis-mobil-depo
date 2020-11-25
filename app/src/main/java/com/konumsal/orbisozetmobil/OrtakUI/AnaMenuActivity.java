@@ -20,6 +20,7 @@ import android.widget.GridView;
 import com.google.gson.reflect.TypeToken;
 import com.konumsal.orbisozetmobil.Agaclandirma.AgacAltMenuActivity;
 import com.konumsal.orbisozetmobil.EizinUI.EizinAltMenuActivity;
+import com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.DisIliskilerAltMenuActivity;
 import com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.Hukuk_DisIlikiler_InsaatIkmal_SorguActivity;
 import com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPAltMenuActivity;
 import com.konumsal.orbisozetmobil.Kdm_Str_BilgiSis_UI.Kdm_Str_BilgiSis_SorgulamaActivity;
@@ -197,7 +198,7 @@ public class AnaMenuActivity extends AppCompatActivity {
                     mintent.putExtra("MODE", 3);
                     startActivity(mintent);
                 } else if (position == 4) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, DisIliskilerAltMenuActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", "1"); // dış ilişkliler
                     startActivity(mintent);
