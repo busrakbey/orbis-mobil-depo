@@ -1,4 +1,4 @@
-package AdapterLayer.Eizin;
+package AdapterLayer.DestekHizmetleri;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,21 +15,22 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.List;
 
-import EntityLayer.Eizin.Izin;
+import EntityLayer.DestekHizmetleri.PersonelGider;
 
-public class IzinAdapter  extends ArrayAdapter<Izin> {
+public class PersonelGiderAdapter extends ArrayAdapter<PersonelGider> {
 
     Context context;
 
-    public List<Izin> faaliyet_detay_tablo_list;
+    public List<PersonelGider> faaliyet_detay_tablo_list;
     int layoutResID;
     int NameID;
-    private int[] colors = new int[]{0x23755383, 0x22369620};
-    private int[] colors2 = new int[]{0x93755383, 0x10369620};
+    private int[] colors = new int[] { 0x23755383, 0x22369620};
+    private int[] colors2 = new int[] { 0x93755383, 0x10369620};
     View view;
     int mes_or_surutme_or_sevk;
 
-    public IzinAdapter(Context context, int layoutResourceID, List<Izin> listItems) {
+    public PersonelGiderAdapter(Context context, int layoutResourceID, List<PersonelGider> listItems)
+    {
         super(context, layoutResourceID, listItems);
         this.context = context;
         this.faaliyet_detay_tablo_list = listItems;
@@ -39,43 +40,38 @@ public class IzinAdapter  extends ArrayAdapter<Izin> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // TODO Auto-generated method stub
-        final Izin dItem = (Izin) this.faaliyet_detay_tablo_list.get(position);
-        final IzinAdapter.DetayBilgiOzetItemHolder drawerHolder;
+        final PersonelGider dItem = (PersonelGider) this.faaliyet_detay_tablo_list.get(position);
+        final PersonelGiderAdapter.DetayBilgiOzetItemHolder drawerHolder;
         view = convertView;
 
 
-        if (view == null) {
+        if (view == null)
+        {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-            drawerHolder = new IzinAdapter.DetayBilgiOzetItemHolder();
+            drawerHolder = new PersonelGiderAdapter.DetayBilgiOzetItemHolder();
 
             view = inflater.inflate(layoutResID, parent, false);
             drawerHolder.birinci_item = (TextView) view.findViewById(R.id.birinci_item);
             drawerHolder.ikinci_item = (TextView) view.findViewById(R.id.ikinci_item);
-            drawerHolder.ucuncu_item = (TextView) view.findViewById(R.id.ucuncu_item);
-
             view.setTag(drawerHolder);
 
-        } else {
-            drawerHolder = (IzinAdapter.DetayBilgiOzetItemHolder) view.getTag();
+        } else
+        {
+            drawerHolder = (PersonelGiderAdapter.DetayBilgiOzetItemHolder) view.getTag();
         }
 
 
-        if (dItem.getKanunMaddesi() != null)
-            drawerHolder.birinci_item.setText(dItem.getKanunMaddesi().toString());
+        if(dItem.getBakiye() != null)
+            drawerHolder.birinci_item.setText(decimalFormat(dItem.getBakiye()));
         else
             drawerHolder.birinci_item.setText("");
 
 
-        if (dItem.getSayi() != null)
-            drawerHolder.ikinci_item.setText(dItem.getSayi().toString());
+        if(dItem.getHarcamaTuru() != null)
+            drawerHolder.ikinci_item.setText(dItem.getHarcamaTuru());
         else
             drawerHolder.ikinci_item.setText("");
 
-
-        if (dItem.getAlanHa() != null)
-            drawerHolder.ucuncu_item.setText(decimalFormat(dItem.getAlanHa()).toString());
-        else
-            drawerHolder.ucuncu_item.setText("");
 
 
 
@@ -83,12 +79,15 @@ public class IzinAdapter  extends ArrayAdapter<Izin> {
     }
 
 
-    private static class DetayBilgiOzetItemHolder {
-        TextView birinci_item, ikinci_item, ucuncu_item;
+
+    private static class DetayBilgiOzetItemHolder
+    {
+        TextView birinci_item , ikinci_item  ;
+
+
 
 
     }
-
 
     String decimalFormat(BigDecimal sayi){
         DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();

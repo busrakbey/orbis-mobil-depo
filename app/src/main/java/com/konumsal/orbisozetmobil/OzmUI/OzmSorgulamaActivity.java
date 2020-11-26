@@ -23,9 +23,15 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import AdapterLayer.Ozm.KusKarincaAdapter;
+import AdapterLayer.Ozm.OtlatmaAdapter;
 import AdapterLayer.Ozm.SucTutanagiAdapter;
+import AdapterLayer.Ozm.YirticiAdapter;
 import DataLayer.Ortak.ConfigData;
+import EntityLayer.Ozm.KusKarinca;
+import EntityLayer.Ozm.Otlatma;
 import EntityLayer.Ozm.SucTutanagi;
+import EntityLayer.Ozm.Yirtici;
 import EntityLayer.SendParametersForServer;
 import EntityLayer.Sistem.SOrgBirim;
 import ToolLayer.MessageBox;
@@ -49,10 +55,17 @@ public class OzmSorgulamaActivity  extends AppCompatActivity {
     List<SOrgBirim> item_souce_mudurluk;
     List<SOrgBirim> item_source_seflik;
     SucTutanagiAdapter sucTutanagiAdapter;
+    KusKarincaAdapter kusKarincaAdapter;
+    OtlatmaAdapter otlatmaAdapter;
+    YirticiAdapter yirticiAdapter;
     List<SucTutanagi> gelenSucTutanagiList;
+    List<KusKarinca> gelenKusKarincaList;
+    List<Yirtici> gelenYirticiaList;
+    List<Otlatma> gelenOtlatmaList;
+
     ListView listview;
     String gelenSayfaId;
-    LinearLayout  baslikLinear1, baslikLinear2;
+    LinearLayout  baslikLinear1, baslikLinear2, baslikLinear3, baslikLinear4;
     Long secili_yil = -1L;
 
 
@@ -88,21 +101,29 @@ public class OzmSorgulamaActivity  extends AppCompatActivity {
                 getSupportActionBar().setTitle("Suç Tutanağı Listesi");
                 baslikLinear1.setVisibility(View.VISIBLE);
                 baslikLinear2.setVisibility(View.GONE);
+                baslikLinear3.setVisibility(View.GONE);
+                baslikLinear4.setVisibility(View.GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("1")) {
-              /*  getSupportActionBar().setTitle("Mesire Yeri Listesi");
+                getSupportActionBar().setTitle("Kuş Yuvası - Karınca Nakli");
                 baslikLinear1.setVisibility(View.GONE);
-                baslikLinear2.setVisibility(View.VISIBLE);*/
+                baslikLinear2.setVisibility(View.VISIBLE);
+                baslikLinear3.setVisibility(View.GONE);
+                baslikLinear4.setVisibility(View.GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("2")) {
-               /* getSupportActionBar().setTitle("Şehir Ormanları Listesi");
+                getSupportActionBar().setTitle("Otlatma Planları Listesi");
                 baslikLinear1.setVisibility(View.GONE);
-                baslikLinear2.setVisibility(View.GONE);*/
+                baslikLinear2.setVisibility(View.GONE);
+                baslikLinear3.setVisibility(View.VISIBLE);
+                baslikLinear4.setVisibility(View.GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("3")) {
-              /*  getSupportActionBar().setTitle("Orman Ürünleri Listesi");
+                getSupportActionBar().setTitle("Yırtıcı Böcek Üretimi Listesi");
                 baslikLinear1.setVisibility(View.GONE);
-                baslikLinear2.setVisibility(View.GONE);*/
+                baslikLinear2.setVisibility(View.GONE);
+                baslikLinear3.setVisibility(View.GONE);
+                baslikLinear4.setVisibility(View.VISIBLE);
             }
 
             getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -149,7 +170,10 @@ public class OzmSorgulamaActivity  extends AppCompatActivity {
         item_source_seflik = new ArrayList<SOrgBirim>();
 
         baslikLinear1 = (LinearLayout) findViewById(R.id.birinci_baslik);
-        //baslikLinear2 = (LinearLayout) findViewById(R.id.ikinci_baslik);
+        baslikLinear2 = (LinearLayout) findViewById(R.id.ikinci_baslik);
+        baslikLinear3 = (LinearLayout) findViewById(R.id.ucuncu_baslik);
+        baslikLinear4 = (LinearLayout) findViewById(R.id.dorduncu_baslik);
+
 
         pd2 = new ProgressDialog(OzmSorgulamaActivity.this);
         listview = (ListView) findViewById(R.id.oduh_listview);
@@ -241,11 +265,11 @@ public class OzmSorgulamaActivity  extends AppCompatActivity {
                 }
             });
         }
-       /* if (gelenSayfaId.equalsIgnoreCase("1")) {
-            Call<List<MesireYeri>> call = refrofitRestApi.getOduhDepoMesireService(parameters);
-            call.enqueue(new Callback<List<MesireYeri>>() {
+        if (gelenSayfaId.equalsIgnoreCase("1")) {
+            Call<List<KusKarinca>> call = refrofitRestApi.getOzmDepokusKarincaForMobil(parameters);
+            call.enqueue(new Callback<List<KusKarinca>>() {
                 @Override
-                public void onResponse(Call<List<MesireYeri>> call, Response<List<MesireYeri>> response) {
+                public void onResponse(Call<List<KusKarinca>> call, Response<List<KusKarinca>> response) {
                     if (!response.isSuccessful()) {
                         // textViewResult.setText("Code: " + response.code());
                         progressDoalog.dismiss();
@@ -254,8 +278,8 @@ public class OzmSorgulamaActivity  extends AppCompatActivity {
                     }
                     if (response.isSuccessful()) {
                         progressDoalog.dismiss();
-                        gelenMesireYeriList = response.body();
-                        if (gelenMesireYeriList != null && gelenMesireYeriList.size() > 0) {
+                        gelenKusKarincaList = response.body();
+                        if (gelenKusKarincaList != null && gelenKusKarincaList.size() > 0) {
                             get_listview();
 
                         } else
@@ -265,17 +289,77 @@ public class OzmSorgulamaActivity  extends AppCompatActivity {
                 }
 
                 @Override
-                public void onFailure(Call<List<MesireYeri>> call, Throwable t) {
+                public void onFailure(Call<List<KusKarinca>> call, Throwable t) {
                     progressDoalog.dismiss();
                     //textViewResult.setText(t.getMessage());
                     MessageBox.showAlert(OzmSorgulamaActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
                 }
             });
-        }*/
+        }
         if (gelenSayfaId.equalsIgnoreCase("2")) {
+
+            Call<List<Otlatma>> call = refrofitRestApi.getOzmDepoOtlatmaPlaniForMobil(parameters);
+            call.enqueue(new Callback<List<Otlatma>>() {
+                @Override
+                public void onResponse(Call<List<Otlatma>> call, Response<List<Otlatma>> response) {
+                    if (!response.isSuccessful()) {
+                        // textViewResult.setText("Code: " + response.code());
+                        progressDoalog.dismiss();
+                        MessageBox.showAlert(OzmSorgulamaActivity.this, "Hata Oluştu.. " + response.message(), false);
+                        return;
+                    }
+                    if (response.isSuccessful()) {
+                        progressDoalog.dismiss();
+                        gelenOtlatmaList = response.body();
+                        if (gelenOtlatmaList != null && gelenOtlatmaList.size() > 0) {
+                            get_listview();
+
+                        } else
+                            MessageBox.showAlert(OzmSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
+
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<List<Otlatma>> call, Throwable t) {
+                    progressDoalog.dismiss();
+                    //textViewResult.setText(t.getMessage());
+                    MessageBox.showAlert(OzmSorgulamaActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
+                }
+            });
 
         }
         if (gelenSayfaId.equalsIgnoreCase("3")) {
+
+            Call<List<Yirtici>> call = refrofitRestApi.getozmDepoYirticiUretimForMobil(parameters);
+            call.enqueue(new Callback<List<Yirtici>>() {
+                @Override
+                public void onResponse(Call<List<Yirtici>> call, Response<List<Yirtici>> response) {
+                    if (!response.isSuccessful()) {
+                        // textViewResult.setText("Code: " + response.code());
+                        progressDoalog.dismiss();
+                        MessageBox.showAlert(OzmSorgulamaActivity.this, "Hata Oluştu.. " + response.message(), false);
+                        return;
+                    }
+                    if (response.isSuccessful()) {
+                        progressDoalog.dismiss();
+                        gelenYirticiaList = response.body();
+                        if (gelenYirticiaList != null && gelenYirticiaList.size() > 0) {
+                            get_listview();
+
+                        } else
+                            MessageBox.showAlert(OzmSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
+
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<List<Yirtici>> call, Throwable t) {
+                    progressDoalog.dismiss();
+                    //textViewResult.setText(t.getMessage());
+                    MessageBox.showAlert(OzmSorgulamaActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
+                }
+            });
 
         }
     }
@@ -482,22 +566,22 @@ public class OzmSorgulamaActivity  extends AppCompatActivity {
             listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("1")) {
-           /* mesireYeriAdapter = new MesireYeriAdapter(OzmSorgulamaActivity.this, R.layout.item_bes, gelenMesireYeriList);
-            listview.setAdapter(mesireYeriAdapter);
-            mesireYeriAdapter.notifyDataSetChanged();
-            listview.setClickable(true);*/
+            kusKarincaAdapter = new KusKarincaAdapter(OzmSorgulamaActivity.this, R.layout.item_yedi, gelenKusKarincaList);
+            listview.setAdapter(kusKarincaAdapter);
+            kusKarincaAdapter.notifyDataSetChanged();
+            listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("2")) {
-            /*balOrmaniAdapter = new BalOrmaniAdapter(OzmSorgulamaActivity.this, R.layout.item_yedi, gelenBalOrmaniList);
-            listview.setAdapter(balOrmaniAdapter);
-            balOrmaniAdapter.notifyDataSetChanged();
-            listview.setClickable(true);*/
+            otlatmaAdapter = new OtlatmaAdapter(OzmSorgulamaActivity.this, R.layout.item_dokuz, gelenOtlatmaList);
+            listview.setAdapter(otlatmaAdapter);
+            otlatmaAdapter.notifyDataSetChanged();
+            listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("3")) {
-            /*balOrmaniAdapter = new BalOrmaniAdapter(OzmSorgulamaActivity.this, R.layout.item_yedi, gelenBalOrmaniList);
-            listview.setAdapter(balOrmaniAdapter);
-            balOrmaniAdapter.notifyDataSetChanged();
-            listview.setClickable(true);*/
+            yirticiAdapter = new YirticiAdapter(OzmSorgulamaActivity.this, R.layout.item_yedi, gelenYirticiaList);
+            listview.setAdapter(yirticiAdapter);
+            yirticiAdapter.notifyDataSetChanged();
+            listview.setClickable(true);
         }
     }
 

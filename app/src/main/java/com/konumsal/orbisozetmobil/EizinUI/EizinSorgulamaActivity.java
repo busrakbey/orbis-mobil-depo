@@ -459,16 +459,16 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
 
     void get_listview() {
         if (gelenSayfaId.equalsIgnoreCase("0")) {
-          /*  damgaAdapter = new DamgaAdapter(EizinSorgulamaActivity.this, R.layout.item_bes, gelenDamgaList);
-            listview.setAdapter(damgaAdapter);
-            damgaAdapter.notifyDataSetChanged();
-            listview.setClickable(true);*/
+           izinAdapter = new IzinAdapter(EizinSorgulamaActivity.this, R.layout.item_uc, gelenIzinList);
+            listview.setAdapter(izinAdapter);
+            izinAdapter.notifyDataSetChanged();
+            listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("1")) {
-          /*  odenekAdapter = new OdenekAdapter(EizinSorgulamaActivity.this, R.layout.item_on_iki, gelenOdenekList);
-            listview.setAdapter(odenekAdapter);
-            odenekAdapter.notifyDataSetChanged();
-            listview.setClickable(true);*/
+            talepAdapter = new TalepAdapter(EizinSorgulamaActivity.this, R.layout.item_uc, gelenTalepList);
+            listview.setAdapter(talepAdapter);
+            talepAdapter.notifyDataSetChanged();
+            listview.setClickable(true);
         }
 
     }

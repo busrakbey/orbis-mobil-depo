@@ -96,7 +96,7 @@ public class OzmAltMenuActivity extends AppCompatActivity {
                 {
                     Intent mintent = new Intent(OzmAltMenuActivity.this, OzmSorgulamaActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE","1");   //
+                    mintent.putExtra("MODE","1");   //  kuş yuvası
                     startActivity(mintent);
                 }
 
@@ -104,14 +104,14 @@ public class OzmAltMenuActivity extends AppCompatActivity {
                 {
                     Intent mintent = new Intent(OzmAltMenuActivity.this, OzmSorgulamaActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE","2");  //
+                    mintent.putExtra("MODE","2");  // otlatma
                     startActivity(mintent);
                 }
                 else if(position == 3)
                 {
                     Intent mintent = new Intent(OzmAltMenuActivity.this, OzmSorgulamaActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE","3");  //
+                    mintent.putExtra("MODE","3");  //  yırtıcı
                     startActivity(mintent);
                 }
             }
@@ -120,9 +120,9 @@ public class OzmAltMenuActivity extends AppCompatActivity {
 
     private void menuEkle() {
         menuList.add("Suç Tutanağı Listesi");
-        menuList.add("");
-        menuList.add("");
-        menuList.add("");
+        menuList.add("Kuş Yuvası - Karınca Nakli");
+        menuList.add("Otlatma Planları Listesi");
+        menuList.add("Yırtıcı Böcek Üretimi Listesi");
     }
 
 }
