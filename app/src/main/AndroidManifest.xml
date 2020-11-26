@@ -185,6 +185,38 @@
             android:screenOrientation="portrait" />
 
 
+        <activity
+            android:name="com.konumsal.orbisozetmobil.DestekHizmetleriUI.MuhAltMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+
+
+
+        <activity
+            android:name="com.konumsal.orbisozetmobil.DestekHizmetleriUI.MuhSorgulamaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
+
+
+
+        <activity
+            android:name="com.konumsal.orbisozetmobil.SilvikulturUI.SilAltMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+
+
+
+        <activity
+            android:name="com.konumsal.orbisozetmobil.SilvikulturUI.SilSorgulamaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
+
+
+
+
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_api_key" />

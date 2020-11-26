@@ -58,7 +58,6 @@ public class MaliGelirAdapter extends ArrayAdapter<MaliGelir> {
             drawerHolder.besinci_item = (TextView) view.findViewById(R.id.besinci_item);
             drawerHolder.altinci_item = (TextView) view.findViewById(R.id.altinci_item);
             drawerHolder.yedinci_item = (TextView) view.findViewById(R.id.yedinci_item);
-            drawerHolder.sekizinci_item = (TextView) view.findViewById(R.id.sekizinci_item);
 
 
             view.setTag(drawerHolder);
@@ -69,52 +68,47 @@ public class MaliGelirAdapter extends ArrayAdapter<MaliGelir> {
         }
 
 
+
         if(dItem.getDaireKodu() != null)
             drawerHolder.birinci_item.setText(dItem.getDaireKodu());
         else
             drawerHolder.birinci_item.setText("");
 
 
-        if(dItem.getEskiDaireKodu() != null)
-            drawerHolder.ikinci_item.setText(dItem.getEskiDaireKodu());
+        if(dItem.getEskigelir() != null)
+            drawerHolder.ikinci_item.setText(decimalFormat(dItem.getEskigelir()));
         else
             drawerHolder.ikinci_item.setText("");
 
 
-        if(dItem.getEskigelir() != null)
-            drawerHolder.ucuncu_item.setText(decimalFormat(dItem.getEskigelir()));
+        if(dItem.getSimdikigelir() != null)
+            drawerHolder.ucuncu_item.setText(decimalFormat(dItem.getSimdikigelir()));
         else
             drawerHolder.ucuncu_item.setText("");
 
 
-        if(dItem.getSimdikigelir() != null)
-            drawerHolder.dorduncu_item.setText(decimalFormat(dItem.getSimdikigelir()));
+        if(dItem.getEskiGerceklesme() != null)
+            drawerHolder.dorduncu_item.setText(decimalFormat(dItem.getEskiGerceklesme()));
         else
             drawerHolder.dorduncu_item.setText("");
 
 
-        if(dItem.getEskiGerceklesme() != null)
-            drawerHolder.besinci_item.setText(decimalFormat(dItem.getEskiGerceklesme()));
+       if(dItem.getSimdikiGerceklesme() != null)
+            drawerHolder.besinci_item.setText(decimalFormat(dItem.getSimdikiGerceklesme()).toString());
         else
             drawerHolder.besinci_item.setText("");
 
 
-       if(dItem.getSimdikiGerceklesme() != null)
-            drawerHolder.altinci_item.setText(decimalFormat(dItem.getSimdikiGerceklesme()).toString());
+        if(dItem.getEskiOran() != null)
+            drawerHolder.altinci_item.setText(decimalFormat(dItem.getEskiOran()).toString());
         else
             drawerHolder.altinci_item.setText("");
 
 
-        if(dItem.getEskiOran() != null)
-            drawerHolder.yedinci_item.setText(decimalFormat(dItem.getEskiOran()).toString());
+        if(dItem.getSimdikiOran() != null)
+            drawerHolder.yedinci_item.setText(decimalFormat(dItem.getSimdikiOran()).toString());
         else
             drawerHolder.yedinci_item.setText("");
-
-
-        if(dItem.getSimdikiOran() != null)
-            drawerHolder.sekizinci_item.setText(decimalFormat(dItem.getSimdikiOran()).toString());
-        else
-            drawerHolder.sekizinci_item.setText("");
 
 
         return view;
@@ -124,7 +118,7 @@ public class MaliGelirAdapter extends ArrayAdapter<MaliGelir> {
 
     private static class DetayBilgiOzetItemHolder
     {
-        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item, sekizinci_item  ;
+        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item ;
 
 
 

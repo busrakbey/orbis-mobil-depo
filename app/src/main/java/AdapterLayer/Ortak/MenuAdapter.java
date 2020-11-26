@@ -101,6 +101,17 @@ public class MenuAdapter extends ArrayAdapter<String> {
                 menu_img.setImageResource(R.drawable.list_icon);
             }
         }
+        if (fromMenu == 4) {  // muhasabe
+            if (position == 0) {
+                menu_img.setImageResource(R.drawable.list_icon);
+            } else if (position == 1) {
+                menu_img.setImageResource(R.drawable.list_icon);
+            } else if (position == 2) {
+                menu_img.setImageResource(R.drawable.list_icon);
+            } else if (position == 3) {
+                menu_img.setImageResource(R.drawable.list_icon);
+            }
+        }
         return view;
 
     }

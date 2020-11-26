@@ -19,6 +19,7 @@ import android.widget.GridView;
 
 import com.google.gson.reflect.TypeToken;
 import com.konumsal.orbisozetmobil.Agaclandirma.AgacAltMenuActivity;
+import com.konumsal.orbisozetmobil.DestekHizmetleriUI.MuhAltMenuActivity;
 import com.konumsal.orbisozetmobil.EizinUI.EizinAltMenuActivity;
 import com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.DisIliskilerAltMenuActivity;
 import com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.Hukuk_DisIlikiler_InsaatIkmal_SorguActivity;
@@ -28,6 +29,7 @@ import com.konumsal.orbisozetmobil.OduhUI.OduhAltMenuActivity;
 import com.konumsal.orbisozetmobil.OrmIdaresi_Amenajman_Yangin_UI.OrmIdaresi_Amenajman_Yangin_SorguActivity;
 import com.konumsal.orbisozetmobil.OzmUI.OzmAltMenuActivity;
 import com.konumsal.orbisozetmobil.R;
+import com.konumsal.orbisozetmobil.SilvikulturUI.SilAltMenuActivity;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -193,7 +195,7 @@ public class AnaMenuActivity extends AppCompatActivity {
                     mintent.putExtra("MODE", "1");  // bilgi sistemleri
                     startActivity(mintent);
                 } else if (position == 3) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, MuhAltMenuActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", 3);
                     startActivity(mintent);
@@ -263,7 +265,7 @@ public class AnaMenuActivity extends AppCompatActivity {
                     mintent.putExtra("MODE", 16);
                     startActivity(mintent);
                 } else if (position == 17) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, SilAltMenuActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", 17);
                     startActivity(mintent);

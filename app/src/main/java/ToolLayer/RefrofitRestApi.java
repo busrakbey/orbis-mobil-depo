@@ -6,6 +6,10 @@ import EntityLayer.Agaclandirma.AgacProje;
 import EntityLayer.Agaclandirma.ToprakProje;
 import EntityLayer.Amenajman.Amenajman;
 import EntityLayer.BilgiSistemleri.HaritaArsiv;
+import EntityLayer.DestekHizmetleri.MaliGelir;
+import EntityLayer.DestekHizmetleri.MaliGider;
+import EntityLayer.DestekHizmetleri.MaliHesap;
+import EntityLayer.DestekHizmetleri.PersonelGider;
 import EntityLayer.DisIliskiler.EgitimKatilimci;
 import EntityLayer.DisIliskiler.YurtdisiProtokol;
 import EntityLayer.Eizin.Izin;
@@ -18,7 +22,6 @@ import EntityLayer.IsletmePazarlama.Satis;
 import EntityLayer.IsletmePazarlama.Uretim;
 import EntityLayer.Kadastro.KdmDosya;
 import EntityLayer.Kadastro.KdmGerceklesme;
-import EntityLayer.Muhasebe.MaliHesaplar;
 import EntityLayer.Oduh.BalOrmani;
 import EntityLayer.Oduh.MesireYeri;
 import EntityLayer.Oduh.UretimPaket;
@@ -29,6 +32,7 @@ import EntityLayer.Ozm.Otlatma;
 import EntityLayer.Ozm.SucTutanagi;
 import EntityLayer.Ozm.Yirtici;
 import EntityLayer.SendParametersForServer;
+import EntityLayer.SilviKultur.SilUygulama;
 import EntityLayer.Strateji.TefKonular;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -90,7 +94,17 @@ public interface RefrofitRestApi {
     Call<List<HaritaArsiv>>  getHaritaArsivDepoDosyaListForMobil(@Body SendParametersForServer parameter);
 
     @POST("rest/muhasebeRS/getOzetHesaplar")
-    Call<List<MaliHesaplar>>  getOzetHesaplar(@Body SendParametersForServer parameter);
+    Call<List<MaliHesap>>  getOzetHesaplar(@Body SendParametersForServer parameter);
+
+    @POST("rest/muhasebeRS/getMaliTabLoGelirler")
+    Call<List<MaliGelir>>  getMaliTabLoGelirler(@Body SendParametersForServer parameter);
+
+    @POST("rest/muhasebeRS/getMaliTabloGiderler")
+    Call<List<MaliGider>>  getMaliTabloGiderler(@Body SendParametersForServer parameter);
+
+    @POST("rest/muhasebeRS/getPersonelHarcamalari")
+    Call<List<PersonelGider>>  getPersonelHarcamalari(@Body SendParametersForServer parameter);
+
 
     @POST("rest/ormanYanginlariRS/oymDepoYanginForMobil")
     Call<List<Yangin>>  getOymDepoYanginForMobil(@Body SendParametersForServer parameter);
@@ -121,6 +135,10 @@ public interface RefrofitRestApi {
 
     @POST("rest/EgitimRS/egitimKatilimciPersonelForMobil")
     Call<List<EgitimKatilimci>>  getGgitimKatilimciPersonelForMobil(@Body SendParametersForServer parameter);
+
+    @POST("rest/YetismeOrtamiRS/silDepoAylikUygulamaSonucListForMobil")
+    Call<List<SilUygulama>>  getSilDepoAylikUygulamaSonucListForMobil(@Body SendParametersForServer parameter);
+
 
 }
 

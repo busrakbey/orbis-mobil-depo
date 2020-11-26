@@ -54,9 +54,7 @@ public class MaliHesapAdapter extends ArrayAdapter<MaliHesap> {
             drawerHolder.birinci_item = (TextView) view.findViewById(R.id.birinci_item);
             drawerHolder.ikinci_item = (TextView) view.findViewById(R.id.ikinci_item);
             drawerHolder.ucuncu_item = (TextView) view.findViewById(R.id.ucuncu_item);
-            drawerHolder.dorduncu_item = (TextView) view.findViewById(R.id.dorduncu_item);
-            drawerHolder.besinci_item = (TextView) view.findViewById(R.id.besinci_item);
-            drawerHolder.altinci_item = (TextView) view.findViewById(R.id.altinci_item);
+
 
             view.setTag(drawerHolder);
 
@@ -72,37 +70,18 @@ public class MaliHesapAdapter extends ArrayAdapter<MaliHesap> {
             drawerHolder.birinci_item.setText("");
 
 
-        if(dItem.getHesapAdiEski() != null)
-            drawerHolder.ikinci_item.setText(dItem.getHesapAdiEski());
+
+
+        if(dItem.getTutar() != null)
+            drawerHolder.ikinci_item.setText(decimalFormat(new BigDecimal(dItem.getTutar())));
         else
             drawerHolder.ikinci_item.setText("");
 
 
-        if(dItem.getTutar() != null)
-            drawerHolder.ucuncu_item.setText(dItem.getTutar().toString());
+        if(dItem.getTutarEski() != null)
+            drawerHolder.ucuncu_item.setText(decimalFormat(dItem.getTutarEski()).toString());
         else
             drawerHolder.ucuncu_item.setText("");
-
-
-        if(dItem.getTutarEski() != null)
-            drawerHolder.dorduncu_item.setText(decimalFormat(dItem.getTutarEski()).toString());
-        else
-            drawerHolder.dorduncu_item.setText("");
-
-
-        if(dItem.getYili() != null)
-            drawerHolder.besinci_item.setText(dItem.getYili());
-        else
-            drawerHolder.besinci_item.setText("");
-
-
-        if(dItem.getYiliEski() != null)
-            drawerHolder.altinci_item.setText(decimalFormat(dItem.getYiliEski()).toString());
-        else
-            drawerHolder.altinci_item.setText("");
-
-
-
 
 
 
@@ -113,7 +92,7 @@ public class MaliHesapAdapter extends ArrayAdapter<MaliHesap> {
 
     private static class DetayBilgiOzetItemHolder
     {
-        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item  ;
+        TextView birinci_item , ikinci_item , ucuncu_item   ;
 
 
 
