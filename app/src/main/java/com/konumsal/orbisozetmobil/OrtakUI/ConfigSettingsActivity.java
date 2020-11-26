@@ -695,7 +695,7 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                                     if (messages_ortakAgacTuru.isStatus()) {
 
                                         publishProgress("OrtakAgacTuru cihaza kaydedilen veri adedi:" + list_ortakAgacTuru.size());
-                                        publishProgress("Veri indirme bilgisi: %10 tamamlandı. Lütfen bekleyiniz..");
+                                        publishProgress(" Lütfen bekleyiniz..");
                                         list_ortakAgacTuru = null;
 
 
@@ -863,7 +863,7 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                                     if (messages_ortakOdunTuru.isStatus()) {
 
                                         publishProgress("Ortak odun türü cihaza kaydedilen veri:" + list_ortakOdunTuru.size());
-                                        publishProgress("Veri indirme bilgisi: %40 tamamlandı." + "\n" + "Yükleme devam ediyor lütfen bekleyiniz...");
+                                        publishProgress("Yükleme devam ediyor lütfen bekleyiniz...");
                                     } else {
                                         publishProgress("Hata !\nOrtak odun türü cihaza kaydedilemedi");
                                     }
@@ -896,7 +896,7 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                                     if (messages_ilce.isStatus()) {
 
                                         publishProgress("İlçe cihaza kaydedilen veri:" + list_STown.size());
-                                        publishProgress("Veri indirme bilgisi: %50 tamamlandı." + "\n" + "Yükleme devam ediyor lütfen bekleyiniz...");
+                                        publishProgress("Yükleme devam ediyor lütfen bekleyiniz...");
                                     } else {
                                         publishProgress("Hata !\nİlçeler cihaza kaydedilemedi");
                                     }
@@ -1290,6 +1290,9 @@ public class ConfigSettingsActivity extends AppCompatActivity {
             if (!result) {
                 //  MessageBox.showAlert(OzmSorgulamaMainActivity.this,"Sorgulama için gerekli temel veriler indirilemedi!",false);
 
+                // finish();
+            }else{
+
                 new AlertDialog.Builder(ConfigSettingsActivity.this)
                         .setTitle("Orbis Mobile Sistem Bilgisi")
                         .setMessage("İşlem Tamamlandı ")
@@ -1304,7 +1307,6 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                         })
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .show();
-                // finish();
             }
         }
 
@@ -1322,7 +1324,10 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                 all_jsonSOrgBirim = operator.CreateToRSUrlConnection(HttpRequestType.POST, null, servisURL, null);
                 if (all_jsonSOrgBirim.trim().length() > 1) {
                     all_list_SOrgBirim = operator.convertJSONToEntity(all_jsonSOrgBirim, typeOf_SOrgBirim, all_list_SOrgBirim);
-                    dasorg2.insertFromContent(all_list_SOrgBirim);
+                    Boolean durum = false;
+                    durum = dasorg2.deleteAllBirim();
+                    if (durum)
+                        dasorg2.insertFromContent(all_list_SOrgBirim);
                     all_jsonSOrgBirim = null;
 
                     if (all_list_SOrgBirim.size() > 0) {

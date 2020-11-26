@@ -67,7 +67,7 @@ public class PersonelSayiAdapter extends ArrayAdapter<PersonelSayi> {
 
 
         if(dItem.getKadroBirimAdi() != null)
-            drawerHolder.birinci_item.setText(dItem.getBolgeAdi());
+            drawerHolder.birinci_item.setText(dItem.getKadroBirimAdi());
         else
             drawerHolder.birinci_item.setText("");
 

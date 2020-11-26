@@ -82,14 +82,16 @@ public class BirimAutoCompleteAdapter extends ArrayAdapter<SOrgBirim> {
 
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
+            clear();
             List<SOrgBirim> filterList = (ArrayList<SOrgBirim>) results.values;
             if (results != null && results.count > 0) {
-                clear();
-                for (SOrgBirim SOrgBirim : filterList) {
+                addAll(filterList);
+               /* for (SOrgBirim SOrgBirim : filterList) {
                     add(SOrgBirim);
-                    notifyDataSetChanged();
-                }
+                }*/
             }
+            notifyDataSetChanged();
+
         }
     };
 }

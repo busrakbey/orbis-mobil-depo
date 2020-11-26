@@ -155,7 +155,6 @@ public class PersonelSorguActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
 
@@ -172,9 +171,9 @@ public class PersonelSorguActivity extends AppCompatActivity {
         String url = configData.getSERVICURL() + "/";
 
         final OkHttpClient okHttpClient = new OkHttpClient.Builder()
-                .connectTimeout(20, TimeUnit.SECONDS)
-                .writeTimeout(20, TimeUnit.SECONDS)
-                .readTimeout(30, TimeUnit.SECONDS)
+                .connectTimeout(4, TimeUnit.MINUTES)
+                .writeTimeout(60, TimeUnit.SECONDS)
+                .readTimeout(60, TimeUnit.SECONDS)
                 .build();
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -256,12 +255,11 @@ public class PersonelSorguActivity extends AppCompatActivity {
         }
 
 
-        BirimAutoCompleteAdapter adapter = new BirimAutoCompleteAdapter(this, R.layout.activity_main, R.layout.mr_simple_spinner_dropdown_item, org_birim_list);
-        adapter.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
-        egitim_birim_auto.setThreshold(2);
+       BirimAutoCompleteAdapter adapter = new BirimAutoCompleteAdapter(this, R.layout.activity_main, R.layout.mr_simple_spinner_dropdown_item, org_birim_list);
+       // ArrayAdapter<SOrgBirim> adapter=new ArrayAdapter<SOrgBirim>(this,android.R.layout.simple_dropdown_item_1line,org_birim_list);
+       adapter.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+        egitim_birim_auto.setThreshold(3);
         egitim_birim_auto.setAdapter(adapter);
-
-
         egitim_birim_auto.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

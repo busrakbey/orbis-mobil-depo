@@ -181,7 +181,7 @@
 
             <TextView
                 style="@style/listTable_SatirTextView"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:text="Kadro Birim"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />

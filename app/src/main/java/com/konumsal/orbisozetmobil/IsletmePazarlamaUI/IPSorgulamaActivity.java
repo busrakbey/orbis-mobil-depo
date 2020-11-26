@@ -217,7 +217,7 @@ public class IPSorgulamaActivity extends AppCompatActivity {
         ConfigData configData = new ConfigData(this);
         String url = configData.getSERVICURL() + "/";
         final OkHttpClient okHttpClient = new OkHttpClient.Builder()
-                .connectTimeout(20, TimeUnit.SECONDS)
+                .connectTimeout(4, TimeUnit.MINUTES)
                 .writeTimeout(20, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS)
                 .build();
