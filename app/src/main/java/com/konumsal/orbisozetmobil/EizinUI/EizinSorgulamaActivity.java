@@ -66,7 +66,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.ip_sorgulama_activity);
+        setContentView(R.layout.eizin_activity);
 
         Intent i = getIntent();
         gelenSayfaId = i.getStringExtra("MODE");

@@ -446,6 +446,15 @@ public class AnaMenuActivity extends AppCompatActivity {
                     OrtakFunction.seflik_list.add(item);
                     OrtakFunction.seflik_list_string.add(item.getAdi());
                 }
+                 if (String.valueOf(item.getKategori()).equals("6") || String.valueOf(item.getKategori()).equals("9")) {
+                    OrtakFunction.mudurluk_list_fid.add(item);
+                    OrtakFunction.mudurluk_list_string_fid.add(item.getAdi());
+                }
+
+                 if (String.valueOf(item.getKategori()).equals("7") || String.valueOf(item.getKategori()).equals("12")) {
+                    OrtakFunction.seflik_list_fid.add(item);
+                    OrtakFunction.seflik_list_string_fid.add(item.getAdi());
+                }
             }
             Log.v("BIRIM", "=>" + item.getAdi());
         }

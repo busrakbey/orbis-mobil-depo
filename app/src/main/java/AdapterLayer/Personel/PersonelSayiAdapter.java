@@ -55,6 +55,8 @@ public class PersonelSayiAdapter extends ArrayAdapter<PersonelSayi> {
             drawerHolder.besinci_item = (TextView) view.findViewById(R.id.besinci_item);
             drawerHolder.altinci_item = (TextView) view.findViewById(R.id.altinci_item);
             drawerHolder.yedinci_item = (TextView) view.findViewById(R.id.yedinci_item);
+            drawerHolder.sekizinci_item = (TextView) view.findViewById(R.id.sekizinci_item);
+
 
             view.setTag(drawerHolder);
 
@@ -64,52 +66,41 @@ public class PersonelSayiAdapter extends ArrayAdapter<PersonelSayi> {
         }
 
 
-        if(dItem.getBolgeAdi() != null)
+        if(dItem.getKadroBirimAdi() != null)
             drawerHolder.birinci_item.setText(dItem.getBolgeAdi());
         else
             drawerHolder.birinci_item.setText("");
 
 
-        if(dItem.getIsletmeAdi() != null)
-            drawerHolder.ikinci_item.setText(dItem.getIsletmeAdi());
+
+        if(dItem.getYil() != null)
+            drawerHolder.ikinci_item.setText(dItem.getYil().toString());
         else
             drawerHolder.ikinci_item.setText("");
 
 
-        if(dItem.getSeflikAdi() != null)
-            drawerHolder.ucuncu_item.setText(dItem.getSeflikAdi());
+        if(dItem.getMemur4a() != null)
+            drawerHolder.ucuncu_item.setText(dItem.getMemur4a().toString());
         else
             drawerHolder.ucuncu_item.setText("");
 
 
-        if(dItem.getYil() != null)
-            drawerHolder.dorduncu_item.setText(dItem.getYil().toString());
+        if(dItem.getMemur4b() != null)
+            drawerHolder.dorduncu_item.setText(dItem.getMemur4b().toString());
         else
             drawerHolder.dorduncu_item.setText("");
 
 
-        if(dItem.getMemur4a() != null)
-            drawerHolder.besinci_item.setText(dItem.getMemur4a().toString());
+          if(dItem.getIsciDaimi() != null)
+            drawerHolder.besinci_item.setText(dItem.getIsciDaimi().toString());
         else
             drawerHolder.besinci_item.setText("");
 
 
-        if(dItem.getMemur4b() != null)
-            drawerHolder.altinci_item.setText(dItem.getMemur4b().toString());
+        if(dItem.getIsciGecici() != null)
+            drawerHolder.altinci_item.setText(dItem.getIsciGecici().toString());
         else
             drawerHolder.altinci_item.setText("");
-
-
-          if(dItem.getIsciDaimi() != null)
-            drawerHolder.yedinci_item.setText(dItem.getIsciDaimi().toString());
-        else
-            drawerHolder.yedinci_item.setText("");
-
-
-        if(dItem.getIsciGecici() != null)
-            drawerHolder.yedinci_item.setText(dItem.getIsciGecici().toString());
-        else
-            drawerHolder.yedinci_item.setText("");
 
 
 
@@ -120,9 +111,9 @@ public class PersonelSayiAdapter extends ArrayAdapter<PersonelSayi> {
 
 
         if(dItem.getMemurToplam() != null)
-            drawerHolder.yedinci_item.setText(dItem.getMemurToplam().toString());
+            drawerHolder.sekizinci_item.setText(dItem.getMemurToplam().toString());
         else
-            drawerHolder.yedinci_item.setText("");
+            drawerHolder.sekizinci_item.setText("");
 
 
 
@@ -134,7 +125,7 @@ public class PersonelSayiAdapter extends ArrayAdapter<PersonelSayi> {
 
     private static class DetayBilgiOzetItemHolder
     {
-        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item ;
+        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item, sekizinci_item ;
 
 
 

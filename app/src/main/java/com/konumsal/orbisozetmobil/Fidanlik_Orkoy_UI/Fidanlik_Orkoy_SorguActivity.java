@@ -68,7 +68,7 @@ public class Fidanlik_Orkoy_SorguActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.ormidare_amenajman_yangin_activity);
+        setContentView(R.layout.fidanlik_orkoy_activity);
 
         Intent i = getIntent();
         gelenSayfaId = i.getStringExtra("MODE");
@@ -89,13 +89,13 @@ public class Fidanlik_Orkoy_SorguActivity extends AppCompatActivity {
             setSupportActionBar(toolbar);
             //  getSupportActionBar().setLogo(R.mipmap.ic_launcher_ogmlogo);
             if (gelenSayfaId.equalsIgnoreCase("0")) {
-                getSupportActionBar().setTitle("Ormalık Alan Listesi");
+                getSupportActionBar().setTitle("Tohum Üretim Listesi");
                 baslikLinear1.setVisibility(View.VISIBLE);
                 baslikLinear2.setVisibility(View.GONE);
                 baslikLinear3.setVisibility(View.GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("1")) {
-                getSupportActionBar().setTitle("Amenajman Plan Listesi");
+                getSupportActionBar().setTitle("Kredi Hibe Listesi");
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.VISIBLE);
                 baslikLinear3.setVisibility(View.GONE);
@@ -349,7 +349,7 @@ public class Fidanlik_Orkoy_SorguActivity extends AppCompatActivity {
                         item_souce_mudurluk.add(null);
                         item_source_str_mudurluk.add("");
 
-                        for (SOrgBirim item : OrtakFunction.mudurluk_list) {
+                        for (SOrgBirim item : OrtakFunction.mudurluk_list_fid) {
                             if (item == null)
                                 continue;
                             if (String.valueOf(item.getUstId()).equals(String.valueOf(bolge_mud_id))) {
@@ -446,7 +446,7 @@ public class Fidanlik_Orkoy_SorguActivity extends AppCompatActivity {
                         item_source_str_seflik.add("");
 
 
-                        for (SOrgBirim item : OrtakFunction.seflik_list) {
+                        for (SOrgBirim item : OrtakFunction.seflik_list_fid) {
                             if (item == null)
                                 continue;
                             if (String.valueOf(item.getUstId()).equals(String.valueOf(mud_id))) {

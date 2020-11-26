@@ -24,6 +24,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 import AdapterLayer.Oduh.BalOrmaniAdapter;
@@ -38,6 +39,7 @@ import EntityLayer.Sistem.SOrgBirim;
 import ToolLayer.NullOnEmptyConverterFactory;
 import ToolLayer.RefrofitRestApi;
 import ToolLayer.MessageBox;
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -173,6 +175,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
         temizle_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                bolge_spinner.setSelection(0);
                 mudurluk_spinner.setSelection(0);
                 seflik_spinner.setSelection(0);
                 yil_spinner.setSelection(0);
@@ -199,10 +202,17 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
         ConfigData configData = new ConfigData(this);
         String url = configData.getSERVICURL() + "/";
 
+        final OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .connectTimeout(20, TimeUnit.SECONDS)
+                .writeTimeout(20, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .build();
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(url)
                 .addConverterFactory(new NullOnEmptyConverterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient)
                 .build();
         RefrofitRestApi refrofitRestApi = retrofit.create(RefrofitRestApi.class);
 
@@ -293,7 +303,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
                     if (response.isSuccessful()) {
                         progressDoalog.dismiss();
                         gelenUretimList = response.body();
-                        if (gelenMesireYeriList != null && gelenMesireYeriList.size() > 0) {
+                        if (gelenUretimList != null && gelenUretimList.size() > 0) {
                             get_listview();
 
                         } else

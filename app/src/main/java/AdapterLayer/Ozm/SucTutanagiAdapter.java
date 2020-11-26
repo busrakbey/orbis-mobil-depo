@@ -52,9 +52,6 @@ public class SucTutanagiAdapter  extends ArrayAdapter<SucTutanagi> {
             drawerHolder.ikinci_item = (TextView) view.findViewById(R.id.ikinci_item);
             drawerHolder.ucuncu_item = (TextView) view.findViewById(R.id.ucuncu_item);
             drawerHolder.dorduncu_item = (TextView) view.findViewById(R.id.dorduncu_item);
-            drawerHolder.besinci_item = (TextView) view.findViewById(R.id.besinci_item);
-            drawerHolder.altinci_item = (TextView) view.findViewById(R.id.altinci_item);
-            drawerHolder.yedinci_item = (TextView) view.findViewById(R.id.yedinci_item);
 
             view.setTag(drawerHolder);
 
@@ -82,16 +79,12 @@ public class SucTutanagiAdapter  extends ArrayAdapter<SucTutanagi> {
             drawerHolder.ucuncu_item.setText("");
 
 
-        if(dItem.getTarih() != null)
-            drawerHolder.dorduncu_item.setText(dItem.getTarih().toString());
+        if(dItem.getSucSayisi() != null)
+            drawerHolder.dorduncu_item.setText(dItem.getSucSayisi().toString());
         else
             drawerHolder.dorduncu_item.setText("");
 
 
-        if(dItem.getSucSayisi() != null)
-            drawerHolder.besinci_item.setText(dItem.getSucSayisi().toString());
-        else
-            drawerHolder.besinci_item.setText("");
 
 
         /*if(dItem.getOrmanDisiAlan() != null)

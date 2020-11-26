@@ -22,6 +22,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import AdapterLayer.Ozm.KusKarincaAdapter;
 import AdapterLayer.Ozm.OtlatmaAdapter;
@@ -37,6 +38,7 @@ import EntityLayer.Sistem.SOrgBirim;
 import ToolLayer.MessageBox;
 import ToolLayer.NullOnEmptyConverterFactory;
 import ToolLayer.RefrofitRestApi;
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -157,7 +159,7 @@ public class OzmSorgulamaActivity  extends AppCompatActivity {
         ArrayList<String> years = new ArrayList<String>();
         years.add("");
         int thisYear = Calendar.getInstance().get(Calendar.YEAR);
-        for (int i = 1900; i <= thisYear; i++) {
+        for (int i = 2000; i <= thisYear; i++) {
             years.add(Integer.toString(i));
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, years);
@@ -217,10 +219,17 @@ public class OzmSorgulamaActivity  extends AppCompatActivity {
         ConfigData configData = new ConfigData(this);
         String url = configData.getSERVICURL() + "/";
 
+        final OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .connectTimeout(20, TimeUnit.SECONDS)
+                .writeTimeout(20, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .build();
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(url)
                 .addConverterFactory(new NullOnEmptyConverterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient)
                 .build();
         RefrofitRestApi refrofitRestApi = retrofit.create(RefrofitRestApi.class);
 
@@ -560,7 +569,7 @@ public class OzmSorgulamaActivity  extends AppCompatActivity {
 
     void get_listview() {
         if (gelenSayfaId.equalsIgnoreCase("0")) {
-            sucTutanagiAdapter = new SucTutanagiAdapter(OzmSorgulamaActivity.this, R.layout.item_bes, gelenSucTutanagiList);
+            sucTutanagiAdapter = new SucTutanagiAdapter(OzmSorgulamaActivity.this, R.layout.item_dort, gelenSucTutanagiList);
             listview.setAdapter(sucTutanagiAdapter);
             sucTutanagiAdapter.notifyDataSetChanged();
             listview.setClickable(true);

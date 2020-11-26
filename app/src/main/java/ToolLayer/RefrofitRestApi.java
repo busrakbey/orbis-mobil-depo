@@ -120,10 +120,10 @@ public interface RefrofitRestApi {
     Call<List<Amenajman>>  getAmenajman(@Body SendParametersForServer parameter);  ////// SERVİSİ EKLENMEDİİİİ
 
 
-    @POST("rest/EizinRS/izinSayiAlanKanunMaddesi")
+    @POST("rest/EizinRS/istatistik/izinSayiAlanKanunMaddesi")
     Call<List<Izin>>  getIzinSayiAlanKanunMaddesi(@Body SendParametersForServer parameter);
 
-    @POST("rest/EizinRS/talepSayiAlanKanunMaddesi")
+    @POST("rest/EizinRS/istatistik/talepSayiAlanKanunMaddesi")
     Call<List<Talep>>  getTalepSayiAlanKanunMaddesi(@Body SendParametersForServer parameter);
 
 

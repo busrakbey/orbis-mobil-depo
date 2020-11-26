@@ -231,7 +231,7 @@ public class PersonelSorguActivity extends AppCompatActivity {
 
     void get_listview() {
 
-        personelSayiAdapter = new PersonelSayiAdapter(PersonelSorguActivity.this, R.layout.item_yedi, gelenPersonelSayiList);
+        personelSayiAdapter = new PersonelSayiAdapter(PersonelSorguActivity.this, R.layout.item_sekiz, gelenPersonelSayiList);
         listview.setAdapter(personelSayiAdapter);
         personelSayiAdapter.notifyDataSetChanged();
         listview.setClickable(true);

@@ -108,6 +108,12 @@ public class OrtakFunction {
     public static List<SOrgBirim> seflik_list = new ArrayList<SOrgBirim>();
     public static  List<String> seflik_list_string = new ArrayList<String>();
 
+
+    public static List<SOrgBirim> mudurluk_list_fid = new ArrayList<SOrgBirim>();
+    public static  List<String> mudurluk_list_string_fid = new ArrayList<String>();
+    public static List<SOrgBirim> seflik_list_fid = new ArrayList<SOrgBirim>();
+    public static  List<String> seflik_list_string_fid = new ArrayList<String>();
+
     public static List<Integer> ozetEkranModulList;
     public static List<String> ozetEkranModulAdlari;
     public static HashMap<Integer,List<Integer>> ozetEkranConstantHashMap = new HashMap<Integer,List<Integer>>();
