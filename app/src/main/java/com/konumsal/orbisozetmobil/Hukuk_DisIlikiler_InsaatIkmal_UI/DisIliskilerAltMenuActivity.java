@@ -47,7 +47,7 @@ public class DisIliskilerAltMenuActivity extends AppCompatActivity {
             toolbar = (Toolbar) findViewById(R.id.ip_alt_menu_list_ui_toolbar);
             setSupportActionBar(toolbar);
             //  getSupportActionBar().setLogo(R.mipmap.ic_launcher_ogmlogo);
-            getSupportActionBar().setTitle("İşletme Pazarlama");
+            getSupportActionBar().setTitle("Dış İlişkiler");
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setDisplayShowTitleEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
@@ -107,7 +107,7 @@ public class DisIliskilerAltMenuActivity extends AppCompatActivity {
 
     private void menuEkle() {
         menuList.add("Yurtdışı Protokol Listesi");
-        menuList.add("----");
+        menuList.add("Eğitim Katılımcı Listesi");
 
 
     }

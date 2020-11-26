@@ -32,15 +32,12 @@
 
 
 
-
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:id="@+id/genel_sorgu"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -123,7 +120,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
                 android:weightSum="1"
-                android:id="@+id/yil_sorgu"
                 android:layout_marginLeft="10dp"
                 android:orientation="vertical">
 
@@ -136,73 +132,6 @@
 
                 <Spinner
                     android:id="@+id/yil_spinner"
-                    style="@style/mr_fe_in_edittext"
-                    android:layout_weight="1"
-                    android:layout_height="@dimen/spinner_heigh"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-
-            </LinearLayout>
-
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:id="@+id/egitim"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="0.7"
-                android:weightSum="1"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/oa_frag_text_style"
-                    android:text=" Birim"
-                    android:textStyle="bold"
-                    android:textColor="@color/mr_toolbar2"
-                    android:textSize="@dimen/normal_definition_text_size" />
-
-                <AutoCompleteTextView
-                    android:id="@+id/birim_auto"
-                    style="@style/mr_fe_in_edittext"
-                    android:layout_height="@dimen/spinner_heigh"
-                    android:layout_weight="1"
-                    android:selectAllOnFocus="true"
-                    android:singleLine="true"
-                    android:textSize="10dp" />
-
-            </LinearLayout>
-
-
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.7"
-                android:weightSum="1"
-                android:layout_marginLeft="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/oa_frag_text_style"
-                    android:text=" Yıl"
-                    android:textStyle="bold"
-                    android:textColor="@color/mr_toolbar2"
-                    android:textSize="@dimen/normal_definition_text_size" />
-
-                <Spinner
-                    android:id="@+id/egitim_yil_spinner"
                     style="@style/mr_fe_in_edittext"
                     android:layout_weight="1"
                     android:layout_height="@dimen/spinner_heigh"
@@ -291,6 +220,85 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_width="match_parent"
+            android:id="@+id/birinci_baslik_detay"
+            style="@style/listTable_satircontainerLinearwrapwraphoriz"
+            >
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text=""
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1.5"
+                android:text=""
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+
+
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Tabii Gençleştirme"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Diri Örtü(Orman Gülü) Temizliği"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0.9"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Suni Gençleştirme"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                android:layout_weight="0.9"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Suni Genç.(Devreden Dikim)"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
             android:id="@+id/birinci_baslik"
             style="@style/listTable_satircontainerLinearwrapwraphoriz"
             >
@@ -304,25 +312,13 @@
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
-
-
-
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="İşletme"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
             <View
                 style="@style/listTable_satirAyracView"></View>
 
             <TextView
                 style="@style/listTable_SatirTextView"
                 android:layout_weight="1.2"
-                android:text="Şeflik"
+                android:text="İşletme"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
@@ -331,188 +327,183 @@
             <TextView
                 android:layout_weight="1.6"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Dava Konusu"
+                android:text="Şeflik"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Yıl"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Ay"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Harcama"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Miktar"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
             <View
                 style="@style/listTable_satirAyracView"></View>
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Dava Türü"
+                android:text="Harcama"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Miktar"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Harcama"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0.9"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Miktar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
             <View
                 style="@style/listTable_satirAyracView"></View>
             <TextView
+                style="@style/listTable_SatirTextView"
                 android:layout_weight="1"
+                android:text="Harcama"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Durum"
+                android:text="Miktar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
             <View
                 style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Dava Sayısı"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
+
+
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:id="@+id/ikinci_baslik_detay"
+            style="@style/listTable_satircontainerLinearwrapwraphoriz"
+            >
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="@dimen/smaller_textsize"
+                android:text=""
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+
+
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Gençlik Bakım"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Kültür Bakım"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+
+
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                android:layout_weight="0.9"
+                android:textSize="@dimen/smaller_textsize"
+                android:text="Rehabilitasyon"
+                android:textColor="@color/text"
+                style="@style/listTable_SatirTextView"
+                />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_width="match_parent"
             android:id="@+id/ikinci_baslik"
-            style="@style/listTable_satircontainerLinearwrapwraphoriz"
-            >
-
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="1.5"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Birim"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-
-            <TextView
-                style="@style/listTable_SatirTextView"
-                android:layout_weight="1.2"
-                android:text="Kişi"
-                android:textColor="@color/text"
-                android:textSize="@dimen/smaller_textsize" />
-
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="1.6"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Kurum"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="0.9"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Görev Türü"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Konu"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-
-            <TextView
-                style="@style/listTable_SatirTextView"
-                android:layout_weight="1.2"
-                android:text="Ülke Adı"
-                android:textColor="@color/text"
-                android:textSize="@dimen/smaller_textsize" />
-
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="1.6"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Gidiş Tarihi"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="0.9"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Geliş Tarihi"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-
-            <View
-                style="@style/listTable_satirAyracView"></View>
-
-
-
-
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_width="match_parent"
-            android:id="@+id/dorduncu_baslik"
-            style="@style/listTable_satircontainerLinearwrapwraphoriz"
-            >
-
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Birim"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-
-            <TextView
-                style="@style/listTable_SatirTextView"
-                android:layout_weight="1.2"
-                android:text="Eğitim"
-                android:textColor="@color/text"
-                android:textSize="@dimen/smaller_textsize" />
-
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="1.6"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Katılımcı"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-
-            <View
-                style="@style/listTable_satirAyracView"></View>
-
-
-
-
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_width="match_parent"
-            android:id="@+id/ucuncu_baslik"
             style="@style/listTable_satircontainerLinearwrapwraphoriz"
             >
 
@@ -531,7 +522,7 @@
             <TextView
                 style="@style/listTable_SatirTextView"
                 android:layout_weight="1.2"
-                android:text="Müdürlük"
+                android:text="İşletme"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
@@ -546,64 +537,89 @@
                 />
             <View
                 style="@style/listTable_satirAyracView"></View>
+
+
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Yıl"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Ay"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Harcama"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+            <View
+                style="@style/listTable_satirAyracView"></View>
+
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Miktar"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+            <View
+                style="@style/listTable_satirAyracView"></View>
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Sanat Yapısı Adet"
+                android:text="Harcama"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
             <View
                 style="@style/listTable_satirAyracView"></View>
+
             <TextView
+                style="@style/listTable_SatirTextView"
                 android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Gerçekleşen\nTul"
+                android:text="Miktar"
                 android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
+                android:textSize="@dimen/smaller_textsize" />
             <View
                 style="@style/listTable_satirAyracView"></View>
 
 
-
             <TextView
-                android:layout_weight="1.6"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Orman Yolu\nTulu"
-                android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
-                />
+                android:layout_weight="1"
+                android:text="Harcama"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
             <View
                 style="@style/listTable_satirAyracView"></View>
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Mevcut\nTul"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
-            <TextView
-                android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Yapilacak\nTul"
+                android:text="Miktar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
             <View
                 style="@style/listTable_satirAyracView"></View>
 
-            <TextView
-                android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
-                android:text="Yapılacak\nBüyük\nOnarım\nTulu"
-                android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
+
 
         </LinearLayout>
+
+
+
+
 
 
         <ListView

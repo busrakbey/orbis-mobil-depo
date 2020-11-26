@@ -63,6 +63,8 @@ public class GenclestirmeAdapter extends ArrayAdapter<SilUygulama> {
             drawerHolder.onuncu_item = (TextView) view.findViewById(R.id.onuncu_item);
             drawerHolder.on_birinci_item = (TextView) view.findViewById(R.id.onbirinci_item);
             drawerHolder.on_ikinci_item = (TextView) view.findViewById(R.id.onikinci_item);
+            drawerHolder.onucuncu_item = (TextView) view.findViewById(R.id.onucuncu_item);
+
 
             view.setTag(drawerHolder);
 
@@ -133,17 +135,25 @@ public class GenclestirmeAdapter extends ArrayAdapter<SilUygulama> {
             drawerHolder.onuncu_item.setText("");
 
 
-
-        if(dItem.getDevredenDikimMiktar() != null)
-            drawerHolder.on_birinci_item.setText(dItem.getDevredenDikimMiktar().toString());
+        if(dItem.getSuniGencMiktar() != null)
+            drawerHolder.on_birinci_item.setText(dItem.getSuniGencMiktar().toString());
         else
             drawerHolder.on_birinci_item.setText("");
 
 
-        if(dItem.getDevredenDikimHarcama() != null)
-            drawerHolder.on_ikinci_item.setText(dItem.getDevredenDikimHarcama().toString());
+
+        if(dItem.getDevredenDikimMiktar() != null)
+            drawerHolder.on_ikinci_item.setText(dItem.getDevredenDikimMiktar().toString());
         else
             drawerHolder.on_ikinci_item.setText("");
+
+
+        if(dItem.getDevredenDikimHarcama() != null)
+            drawerHolder.onucuncu_item.setText(dItem.getDevredenDikimHarcama().toString());
+        else
+            drawerHolder.onucuncu_item.setText("");
+
+
 
 
 
@@ -155,7 +165,8 @@ public class GenclestirmeAdapter extends ArrayAdapter<SilUygulama> {
 
     private static class DetayBilgiOzetItemHolder
     {
-        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item ,     altinci_item , yedinci_item, sekizinci_item, dokuzuncu_item, onuncu_item, on_birinci_item, on_ikinci_item;
+        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item ,     altinci_item , yedinci_item, sekizinci_item, dokuzuncu_item, onuncu_item,
+                on_birinci_item, on_ikinci_item, onucuncu_item;
 
 
 

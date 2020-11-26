@@ -1,4 +1,4 @@
-package com.konumsal.orbisozetmobil.EizinUI;
+package com.konumsal.orbisozetmobil.Fidanlik_Orkoy_UI;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -13,7 +13,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Spinner;import com.konumsal.orbisozetmobil.OrtakUI.OrtakFunction;
+import android.widget.Spinner;
+
+import com.konumsal.orbisozetmobil.OrtakUI.OrtakFunction;
 import com.konumsal.orbisozetmobil.R;
 
 import java.lang.reflect.Field;
@@ -22,11 +24,11 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import AdapterLayer.Eizin.IzinAdapter;
-import AdapterLayer.Eizin.TalepAdapter;
+import AdapterLayer.Fidanlik.FidTohumUretimAdapter;
+import AdapterLayer.Orkoy.OrkoyAdapter;
 import DataLayer.Ortak.ConfigData;
-import EntityLayer.Eizin.Izin;
-import EntityLayer.Eizin.Talep;
+import EntityLayer.Fidanlik.FidTohumUretim;
+import EntityLayer.Orkoy.Orkoy;
 import EntityLayer.SendParametersForServer;
 import EntityLayer.Sistem.SOrgBirim;
 import ToolLayer.MessageBox;
@@ -39,7 +41,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class EizinSorgulamaActivity extends AppCompatActivity {
+public class Fidanlik_Orkoy_SorguActivity extends AppCompatActivity {
     Toolbar toolbar;
     Spinner bolge_spinner, mudurluk_spinner, seflik_spinner, yil_spinner;
     Button sorgula_button, temizle_button;
@@ -50,14 +52,14 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
     List<String> item_source_str_seflik;
     List<SOrgBirim> item_souce_mudurluk;
     List<SOrgBirim> item_source_seflik;
-    IzinAdapter izinAdapter;
-    TalepAdapter talepAdapter;
-    List<Izin> gelenIzinList;
-    List<Talep> gelenTalepList;
+    FidTohumUretimAdapter fidTohumUretimAdapter;
+    OrkoyAdapter orkoyAdapter;
+    List<FidTohumUretim> gelenFidTohumUretimList;
+    List<Orkoy> gelenOrkoyList;
 
     ListView listview;
     String gelenSayfaId;
-    LinearLayout baslikLinear1, baslikLinear2;
+    LinearLayout baslikLinear1, baslikLinear2, baslikLinear3, yilLinear;
 
 
     @Override
@@ -66,7 +68,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.ip_sorgulama_activity);
+        setContentView(R.layout.ormidare_amenajman_yangin_activity);
 
         Intent i = getIntent();
         gelenSayfaId = i.getStringExtra("MODE");
@@ -87,16 +89,28 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
             setSupportActionBar(toolbar);
             //  getSupportActionBar().setLogo(R.mipmap.ic_launcher_ogmlogo);
             if (gelenSayfaId.equalsIgnoreCase("0")) {
-                getSupportActionBar().setTitle("İzin Listesi");
+                getSupportActionBar().setTitle("Ormalık Alan Listesi");
                 baslikLinear1.setVisibility(View.VISIBLE);
                 baslikLinear2.setVisibility(View.GONE);
+                baslikLinear3.setVisibility(View.GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("1")) {
-                getSupportActionBar().setTitle("Talep Listesi");
+                getSupportActionBar().setTitle("Amenajman Plan Listesi");
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.VISIBLE);
+                baslikLinear3.setVisibility(View.GONE);
+
             }
-    
+
+            if (gelenSayfaId.equalsIgnoreCase("2")) {
+                getSupportActionBar().setTitle("Yangın Listesi");
+                baslikLinear1.setVisibility(View.GONE);
+                baslikLinear2.setVisibility(View.GONE);
+                baslikLinear3.setVisibility(View.VISIBLE);
+                yilLinear.setVisibility(View.GONE);
+
+            }
+
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setDisplayShowTitleEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
@@ -105,17 +119,17 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    EizinSorgulamaActivity.this.finish();
+                    Fidanlik_Orkoy_SorguActivity.this.finish();
                 }
             });
 
         } catch (Exception e) {
             e.printStackTrace();
-            MessageBox.showAlert(EizinSorgulamaActivity.this, "Hata:" + e.toString(), false);
+            MessageBox.showAlert(Fidanlik_Orkoy_SorguActivity.this, "Hata:" + e.toString(), false);
 
         } catch (Throwable e) {
             e.printStackTrace();
-            MessageBox.showAlert(EizinSorgulamaActivity.this, "Hata:" + e.toString(), false);
+            MessageBox.showAlert(Fidanlik_Orkoy_SorguActivity.this, "Hata:" + e.toString(), false);
         }
     }
 
@@ -142,8 +156,10 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
 
         baslikLinear1 = (LinearLayout) findViewById(R.id.birinci_baslik);
         baslikLinear2 = (LinearLayout) findViewById(R.id.ikinci_baslik);
+        baslikLinear3 = (LinearLayout) findViewById(R.id.ucuncu_baslik);
+        yilLinear = (LinearLayout) findViewById(R.id.yil_sorgu);
 
-        pd2 = new ProgressDialog(EizinSorgulamaActivity.this);
+        pd2 = new ProgressDialog(Fidanlik_Orkoy_SorguActivity.this);
         listview = (ListView) findViewById(R.id.oduh_listview);
         sorgula_button = (Button) findViewById(R.id.oduh_sorgula_button);
         sorgula_button.setOnClickListener(new View.OnClickListener() {
@@ -206,76 +222,110 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
         parameters.prmYil = secili_yil.toString();
 
         final ProgressDialog progressDoalog;
-        progressDoalog = new ProgressDialog(EizinSorgulamaActivity.this);
+        progressDoalog = new ProgressDialog(Fidanlik_Orkoy_SorguActivity.this);
         progressDoalog.setMessage("Lütfen bekleyiniz..");
         progressDoalog.setTitle("ORBİS");
         progressDoalog.setProgressStyle(ProgressDialog.BUTTON_NEGATIVE);
         progressDoalog.show();
 
         if (gelenSayfaId.equalsIgnoreCase("0")) {
-            Call<List<Izin>> call = refrofitRestApi.getIzinSayiAlanKanunMaddesi(parameters);
-            call.enqueue(new Callback<List<Izin>>() {
+            Call<List<FidTohumUretim>> call = refrofitRestApi.fidTohumUretimiListForMobil(parameters);
+            call.enqueue(new Callback<List<FidTohumUretim>>() {
                 @Override
-                public void onResponse(Call<List<Izin>> call, Response<List<Izin>> response) {
+                public void onResponse(Call<List<FidTohumUretim>> call, Response<List<FidTohumUretim>> response) {
                     if (!response.isSuccessful()) {
                         progressDoalog.dismiss();
-                        MessageBox.showAlert(EizinSorgulamaActivity.this, "Servisle bağlantı sırasında hata oluştu...", false);
+                        MessageBox.showAlert(Fidanlik_Orkoy_SorguActivity.this, "Servisle bağlantı sırasında hata oluştu...", false);
                         return;
                     }
                     if (response.isSuccessful()) {
                         progressDoalog.dismiss();
-                        gelenIzinList = response.body();
-                        if (gelenIzinList != null && gelenIzinList.size() > 0) {
+                        gelenFidTohumUretimList = response.body();
+                        if (gelenFidTohumUretimList != null && gelenFidTohumUretimList.size() > 0) {
                             get_listview();
 
                         } else
-                            MessageBox.showAlert(EizinSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
+                            MessageBox.showAlert(Fidanlik_Orkoy_SorguActivity.this, "Kayıt bulunamamıştır..", false);
                     }
                 }
 
                 @Override
-                public void onFailure(Call<List<Izin>> call, Throwable t) {
+                public void onFailure(Call<List<FidTohumUretim>> call, Throwable t) {
                     progressDoalog.dismiss();
-                    MessageBox.showAlert(EizinSorgulamaActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
+                    MessageBox.showAlert(Fidanlik_Orkoy_SorguActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
                 }
             });
         }
         if (gelenSayfaId.equalsIgnoreCase("1")) {
-            Call<List<Talep>> call = refrofitRestApi.getTalepSayiAlanKanunMaddesi(parameters);
-            call.enqueue(new Callback<List<Talep>>() {
+            Call<List<Orkoy>> call = refrofitRestApi.orkoyKrediHibeBilgi(parameters);
+            call.enqueue(new Callback<List<Orkoy>>() {
                 @Override
-                public void onResponse(Call<List<Talep>> call, Response<List<Talep>> response) {
+                public void onResponse(Call<List<Orkoy>> call, Response<List<Orkoy>> response) {
                     if (!response.isSuccessful()) {
                         // textViewResult.setText("Code: " + response.code());
                         progressDoalog.dismiss();
-                        MessageBox.showAlert(EizinSorgulamaActivity.this, "Hata Oluştu.. " + response.message(), false);
+                        MessageBox.showAlert(Fidanlik_Orkoy_SorguActivity.this, "Hata Oluştu.. " + response.message(), false);
                         return;
                     }
                     if (response.isSuccessful()) {
                         progressDoalog.dismiss();
-                        gelenTalepList = response.body();
-                        if (gelenTalepList != null && gelenTalepList.size() > 0) {
+                        gelenOrkoyList = response.body();
+                        if (gelenOrkoyList != null && gelenOrkoyList.size() > 0) {
                             get_listview();
 
                         } else
-                            MessageBox.showAlert(EizinSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
+                            MessageBox.showAlert(Fidanlik_Orkoy_SorguActivity.this, "Kayıt bulunamamıştır..", false);
 
                     }
                 }
 
                 @Override
-                public void onFailure(Call<List<Talep>> call, Throwable t) {
+                public void onFailure(Call<List<Orkoy>> call, Throwable t) {
                     progressDoalog.dismiss();
                     //textViewResult.setText(t.getMessage());
-                    MessageBox.showAlert(EizinSorgulamaActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
+                    MessageBox.showAlert(Fidanlik_Orkoy_SorguActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
                 }
             });
         }
+        if (gelenSayfaId.equalsIgnoreCase("2")) {
+
+          /*  Call<List<Yangin>> call = refrofitRestApi.getOymDepoYanginForMobil(parameters);
+            call.enqueue(new Callback<List<Yangin>>() {
+                @Override
+                public void onResponse(Call<List<Yangin>> call, Response<List<Yangin>> response) {
+                    if (!response.isSuccessful()) {
+                        // textViewResult.setText("Code: " + response.code());
+                        progressDoalog.dismiss();
+                        MessageBox.showAlert(Fidanlik_Orkoy_SorguActivity.this, "Hata Oluştu.. " + response.message(), false);
+                        return;
+                    }
+                    if (response.isSuccessful()) {
+                        progressDoalog.dismiss();
+                        gelenYanginList = response.body();
+                        if (gelenYanginList != null && gelenYanginList.size() > 0) {
+                            get_listview();
+
+                        } else
+                            MessageBox.showAlert(Fidanlik_Orkoy_SorguActivity.this, "Kayıt bulunamamıştır..", false);
+
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<List<Yangin>> call, Throwable t) {
+                    progressDoalog.dismiss();
+                    //textViewResult.setText(t.getMessage());
+                    MessageBox.showAlert(Fidanlik_Orkoy_SorguActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
+                }
+            });*/
+
+        }
+
     }
 
 
     void filtre_spinner() {
-        ArrayAdapter<String> dataAdapter_bolge = new ArrayAdapter<String>(EizinSorgulamaActivity.this, android.R.layout.simple_spinner_item, OrtakFunction.bolge_list_string);
+        ArrayAdapter<String> dataAdapter_bolge = new ArrayAdapter<String>(Fidanlik_Orkoy_SorguActivity.this, android.R.layout.simple_spinner_item, OrtakFunction.bolge_list_string);
         dataAdapter_bolge.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
         bolge_spinner.setAdapter(dataAdapter_bolge);
         bolge_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -309,13 +359,13 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
                         }
 
 
-                        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(EizinSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
+                        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(Fidanlik_Orkoy_SorguActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
                         dataAdapter_mudurluk.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
                         mudurluk_spinner.setAdapter(dataAdapter_mudurluk);
                         mudurluk_spinner.setSelection(0);
 
 
-                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(EizinSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
+                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(Fidanlik_Orkoy_SorguActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
                         dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
                         seflik_spinner.setAdapter(dataAdapter_seflik);
                         seflik_spinner.setSelection(0);
@@ -373,7 +423,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
         }*/
 
 
-        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(EizinSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
+        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(Fidanlik_Orkoy_SorguActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
         dataAdapter_mudurluk.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
 
         mudurluk_spinner.setAdapter(dataAdapter_mudurluk);
@@ -406,7 +456,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
                         }
 
 
-                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(EizinSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
+                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(Fidanlik_Orkoy_SorguActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
                         dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
                         seflik_spinner.setAdapter(dataAdapter_seflik);
                         seflik_spinner.setSelection(0);
@@ -439,7 +489,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
         });
 
 
-        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(EizinSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
+        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(Fidanlik_Orkoy_SorguActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
         dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
 
         seflik_spinner.setAdapter(dataAdapter_seflik);
@@ -468,16 +518,22 @@ public class EizinSorgulamaActivity extends AppCompatActivity {
 
     void get_listview() {
         if (gelenSayfaId.equalsIgnoreCase("0")) {
-           izinAdapter = new IzinAdapter(EizinSorgulamaActivity.this, R.layout.item_uc, gelenIzinList);
-            listview.setAdapter(izinAdapter);
-            izinAdapter.notifyDataSetChanged();
+            fidTohumUretimAdapter = new FidTohumUretimAdapter(Fidanlik_Orkoy_SorguActivity.this, R.layout.item_yedi, gelenFidTohumUretimList);
+            listview.setAdapter(fidTohumUretimAdapter);
+            fidTohumUretimAdapter.notifyDataSetChanged();
             listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("1")) {
-            talepAdapter = new TalepAdapter(EizinSorgulamaActivity.this, R.layout.item_uc, gelenTalepList);
-            listview.setAdapter(talepAdapter);
-            talepAdapter.notifyDataSetChanged();
+            orkoyAdapter = new OrkoyAdapter(Fidanlik_Orkoy_SorguActivity.this, R.layout.item_dokuz, gelenOrkoyList);
+            listview.setAdapter(orkoyAdapter);
+            orkoyAdapter.notifyDataSetChanged();
             listview.setClickable(true);
+        }
+        if (gelenSayfaId.equalsIgnoreCase("2")) {
+           /* yanginAdapter = new YanginAdapter(Fidanlik_Orkoy_SorguActivity.this, R.layout.item_dokuz, gelenYanginList);
+            listview.setAdapter(yanginAdapter);
+            yanginAdapter.notifyDataSetChanged();
+            listview.setClickable(true);*/
         }
 
     }

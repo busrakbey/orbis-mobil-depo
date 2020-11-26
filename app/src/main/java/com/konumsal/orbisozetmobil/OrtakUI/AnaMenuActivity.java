@@ -21,6 +21,7 @@ import com.google.gson.reflect.TypeToken;
 import com.konumsal.orbisozetmobil.Agaclandirma.AgacAltMenuActivity;
 import com.konumsal.orbisozetmobil.DestekHizmetleriUI.MuhAltMenuActivity;
 import com.konumsal.orbisozetmobil.EizinUI.EizinAltMenuActivity;
+import com.konumsal.orbisozetmobil.Fidanlik_Orkoy_UI.Fidanlik_Orkoy_SorguActivity;
 import com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.DisIliskilerAltMenuActivity;
 import com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.Hukuk_DisIlikiler_InsaatIkmal_SorguActivity;
 import com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPAltMenuActivity;
@@ -28,6 +29,7 @@ import com.konumsal.orbisozetmobil.Kdm_Str_BilgiSis_UI.Kdm_Str_BilgiSis_Sorgulam
 import com.konumsal.orbisozetmobil.OduhUI.OduhAltMenuActivity;
 import com.konumsal.orbisozetmobil.OrmIdaresi_Amenajman_Yangin_UI.OrmIdaresi_Amenajman_Yangin_SorguActivity;
 import com.konumsal.orbisozetmobil.OzmUI.OzmAltMenuActivity;
+import com.konumsal.orbisozetmobil.PersonelUI.PersonelSorguActivity;
 import com.konumsal.orbisozetmobil.R;
 import com.konumsal.orbisozetmobil.SilvikulturUI.SilAltMenuActivity;
 
@@ -205,9 +207,9 @@ public class AnaMenuActivity extends AppCompatActivity {
                     mintent.putExtra("MODE", "1"); // dış ilişkliler
                     startActivity(mintent);
                 } else if (position == 5) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, Fidanlik_Orkoy_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", 5);
+                    mintent.putExtra("MODE", "0");  //fidanlık
                     startActivity(mintent);
                 } else if (position == 6) {
                     Intent mintent = new Intent(AnaMenuActivity.this, Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.class);
@@ -240,9 +242,9 @@ public class AnaMenuActivity extends AppCompatActivity {
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(mintent);
                 } else if (position == 12) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, Fidanlik_Orkoy_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE", 12);
+                    mintent.putExtra("MODE", "1");  ///orkoy
                     startActivity(mintent);
                 } else if (position == 13) {
                     Intent mintent = new Intent(AnaMenuActivity.this, OzmAltMenuActivity.class);
@@ -260,7 +262,7 @@ public class AnaMenuActivity extends AppCompatActivity {
                     mintent.putExtra("MODE", "2");  ///YANGIN
                     startActivity(mintent);
                 } else if (position == 16) {
-                    Intent mintent = new Intent(AnaMenuActivity.this, Home2Activity.class);
+                    Intent mintent = new Intent(AnaMenuActivity.this, PersonelSorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", 16);
                     startActivity(mintent);

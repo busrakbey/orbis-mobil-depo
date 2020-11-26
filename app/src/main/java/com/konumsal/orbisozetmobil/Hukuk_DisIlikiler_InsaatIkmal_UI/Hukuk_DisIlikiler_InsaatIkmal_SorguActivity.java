@@ -28,6 +28,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import AdapterLayer.DisIliskiler.BirimAutoCompleteAdapter;
 import AdapterLayer.DisIliskiler.EgitimKatilimciAdapter;
@@ -46,6 +47,7 @@ import ToolLayer.MessageBox;
 import ToolLayer.NullOnEmptyConverterFactory;
 import ToolLayer.OrbisDefaultException;
 import ToolLayer.RefrofitRestApi;
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -75,7 +77,7 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
     String gelenSayfaId = " ", gelenEgitimPage = " ";
 
     ListView listview;
-    LinearLayout baslikLinear1, baslikLinear2, baslikLinear3, sorgu_egitim_linear, genel_sorgu_linear, yil_sorgu_linear;
+    LinearLayout baslikLinear1, baslikLinear2, baslikLinear3, baslikLinear4, sorgu_egitim_linear, genel_sorgu_linear, yil_sorgu_linear;
 
 
     @Override
@@ -115,6 +117,7 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
                 baslikLinear1.setVisibility(View.VISIBLE);
                 baslikLinear2.setVisibility(View.GONE);
                 baslikLinear3.setVisibility(View.GONE);
+                baslikLinear4.setVisibility(View.GONE);
                 sorgu_egitim_linear.setVisibility(View.GONE);
                 genel_sorgu_linear.setVisibility(View.VISIBLE);
                 yil_sorgu_linear.setVisibility(View.GONE);
@@ -125,6 +128,7 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.VISIBLE);
                 baslikLinear3.setVisibility(View.GONE);
+                baslikLinear4.setVisibility(View.GONE);
                 sorgu_egitim_linear.setVisibility(View.VISIBLE);
                 genel_sorgu_linear.setVisibility(View.GONE);
             }
@@ -134,6 +138,7 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.GONE);
                 baslikLinear3.setVisibility(View.VISIBLE);
+                baslikLinear4.setVisibility(View.GONE);
                 sorgu_egitim_linear.setVisibility(View.GONE);
                 genel_sorgu_linear.setVisibility(View.VISIBLE);
 
@@ -143,8 +148,9 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
             if (gelenEgitimPage.equalsIgnoreCase("1")) {
                 getSupportActionBar().setTitle("Eğitim Katılımcı Listesi");
                 baslikLinear1.setVisibility(View.GONE);
-                baslikLinear2.setVisibility(View.VISIBLE);
+                baslikLinear2.setVisibility(View.GONE);
                 baslikLinear3.setVisibility(View.GONE);
+                baslikLinear4.setVisibility(View.VISIBLE);
                 sorgu_egitim_linear.setVisibility(View.VISIBLE);
                 genel_sorgu_linear.setVisibility(View.GONE);
 
@@ -201,6 +207,7 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
         baslikLinear1 = (LinearLayout) findViewById(R.id.birinci_baslik);
         baslikLinear2 = (LinearLayout) findViewById(R.id.ikinci_baslik);
         baslikLinear3 = (LinearLayout) findViewById(R.id.ucuncu_baslik);
+        baslikLinear4 = (LinearLayout) findViewById(R.id.dorduncu_baslik);
         sorgu_egitim_linear = (LinearLayout) findViewById(R.id.egitim);
         genel_sorgu_linear = (LinearLayout) findViewById(R.id.genel_sorgu);
         yil_sorgu_linear= (LinearLayout) findViewById(R.id.yil_sorgu);
@@ -252,15 +259,22 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
         if (egitim_yil_spinner.getSelectedItem().toString().equalsIgnoreCase(""))
             secili_yil = -1L;
         else
-            secili_yil = Long.valueOf(yil_spinner.getSelectedItem().toString());
+            secili_yil = Long.valueOf(egitim_yil_spinner.getSelectedItem().toString());
 
         ConfigData configData = new ConfigData(this);
         String url = configData.getSERVICURL() + "/";
+
+        final OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .connectTimeout(20, TimeUnit.SECONDS)
+                .writeTimeout(20, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .build();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(url)
                 .addConverterFactory(new NullOnEmptyConverterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient)
                 .build();
         RefrofitRestApi refrofitRestApi = retrofit.create(RefrofitRestApi.class);
 
@@ -618,7 +632,7 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
             listview.setClickable(true);
         }
         if (gelenEgitimPage.equalsIgnoreCase("0")) {
-            yurtdisiProtokolAdapter = new YurtdisiProtokolAdapter(Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.this, R.layout.item_dokuz, gelenYurtDisiProtokolList);
+            yurtdisiProtokolAdapter = new YurtdisiProtokolAdapter(Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.this, R.layout.item_sekiz, gelenYurtDisiProtokolList);
             listview.setAdapter(yurtdisiProtokolAdapter);
             yurtdisiProtokolAdapter.notifyDataSetChanged();
             listview.setClickable(true);

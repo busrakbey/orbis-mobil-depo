@@ -14,6 +14,7 @@ import EntityLayer.DisIliskiler.EgitimKatilimci;
 import EntityLayer.DisIliskiler.YurtdisiProtokol;
 import EntityLayer.Eizin.Izin;
 import EntityLayer.Eizin.Talep;
+import EntityLayer.Fidanlik.FidTohumUretim;
 import EntityLayer.Hukuk.Dava;
 import EntityLayer.InsaatIkmal.InikYol;
 import EntityLayer.IsletmePazarlama.Damga;
@@ -25,12 +26,14 @@ import EntityLayer.Kadastro.KdmGerceklesme;
 import EntityLayer.Oduh.BalOrmani;
 import EntityLayer.Oduh.MesireYeri;
 import EntityLayer.Oduh.UretimPaket;
+import EntityLayer.Orkoy.Orkoy;
 import EntityLayer.OrmanIdaresi.OrmanIdaresi;
 import EntityLayer.Oym.Yangin;
 import EntityLayer.Ozm.KusKarinca;
 import EntityLayer.Ozm.Otlatma;
 import EntityLayer.Ozm.SucTutanagi;
 import EntityLayer.Ozm.Yirtici;
+import EntityLayer.Personel.PersonelSayi;
 import EntityLayer.SendParametersForServer;
 import EntityLayer.SilviKultur.SilUygulama;
 import EntityLayer.Strateji.TefKonular;
@@ -138,6 +141,16 @@ public interface RefrofitRestApi {
 
     @POST("rest/YetismeOrtamiRS/silDepoAylikUygulamaSonucListForMobil")
     Call<List<SilUygulama>>  getSilDepoAylikUygulamaSonucListForMobil(@Body SendParametersForServer parameter);
+
+    @POST("rest/FidanlikRS/fidTohumUretimiListForMobil")
+    Call<List<FidTohumUretim>>  fidTohumUretimiListForMobil(@Body SendParametersForServer parameter);
+
+    @POST("rest/SosyoEkonomikRS/orkoyKrediHibeBilgi")
+    Call<List<Orkoy>>  orkoyKrediHibeBilgi(@Body SendParametersForServer parameter);
+
+    @POST("rest/PersonelRS/depoGetPersonelSayisiForMobil")
+    Call<List<PersonelSayi>>  depoGetPersonelSayisiForMobil(@Body SendParametersForServer parameter);
+
 
 
 }

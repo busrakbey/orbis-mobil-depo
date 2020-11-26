@@ -312,7 +312,7 @@
             <TextView
                 android:layout_weight="1.6"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Kalan \n Miktar"
+                android:text="Kesme Miktar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -321,7 +321,7 @@
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Kalan \n Tutar"
+                android:text="Kesme Tutar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -330,7 +330,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="S \n Miktar"
+                android:text="Sür. Miktar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -340,7 +340,7 @@
             <TextView
                 style="@style/listTable_SatirTextView"
                 android:layout_weight="1.2"
-                android:text="S \n Tutar"
+                android:text="Sür. Tutar"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
@@ -349,7 +349,7 @@
             <TextView
                 android:layout_weight="1.6"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="T \n Miktar"
+                android:text="Taşıma Mik."
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -358,7 +358,7 @@
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="T \n Tutar"
+                android:text="Taşıma Tutar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -367,7 +367,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Y \n Miktar"
+                android:text="Yük. Miktar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -376,7 +376,7 @@
             <TextView
                 style="@style/listTable_SatirTextView"
                 android:layout_weight="1.2"
-                android:text="Y \n Tutar"
+                android:text="Yük. Tutar"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
@@ -385,7 +385,7 @@
             <TextView
                 android:layout_weight="1.6"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="I \n Miktar"
+                android:text="İstif Miktar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -394,7 +394,7 @@
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="I \n Tutar"
+                android:text="İstif Tutar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -425,7 +425,7 @@
             <TextView
                 style="@style/listTable_SatirTextView"
                 android:layout_weight="1.2"
-                android:text="T \n Miktar"
+                android:text="Tahsisli Miktar"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
@@ -434,7 +434,7 @@
             <TextView
                 android:layout_weight="1.6"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="T \n Tutar"
+                android:text="Tahsisli Tutar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -443,7 +443,7 @@
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Aa \n Miktar"
+                android:text="Açık Art. Miktar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -452,7 +452,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Aa \n Tutar"
+                android:text="Açık Art. Tutar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -462,7 +462,7 @@
             <TextView
                 style="@style/listTable_SatirTextView"
                 android:layout_weight="1.2"
-                android:text="K \n Miktar"
+                android:text="Kps Miktar"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
@@ -471,7 +471,7 @@
             <TextView
                 android:layout_weight="1.6"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="K \n Tutar"
+                android:text="Kps Tutar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -480,7 +480,7 @@
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Program \n Miktar"
+                android:text="Prog. Miktar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />
@@ -489,7 +489,7 @@
             <TextView
                 android:layout_weight="1"
                 android:textSize="@dimen/smaller_textsize"
-                android:text="Program \n Tutar"
+                android:text="Prog. Tutar"
                 android:textColor="@color/text"
                 style="@style/listTable_SatirTextView"
                 />

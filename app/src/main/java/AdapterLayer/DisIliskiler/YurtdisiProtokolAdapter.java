@@ -54,7 +54,6 @@ public class YurtdisiProtokolAdapter extends ArrayAdapter<YurtdisiProtokol> {
             drawerHolder.altinci_item = (TextView) view.findViewById(R.id.altinci_item);
             drawerHolder.yedinci_item = (TextView) view.findViewById(R.id.yedinci_item);
             drawerHolder.sekizinci_item = (TextView) view.findViewById(R.id.sekizinci_item);
-            drawerHolder.dokuzuncu_item = (TextView) view.findViewById(R.id.dokuzuncu_item);
 
 
             view.setTag(drawerHolder);
@@ -110,11 +109,6 @@ public class YurtdisiProtokolAdapter extends ArrayAdapter<YurtdisiProtokol> {
             drawerHolder.sekizinci_item.setText(dItem.getGelisTarihi().toString());
         else
             drawerHolder.sekizinci_item.setText("");
-
-        if (dItem.getYil() != null)
-            drawerHolder.dokuzuncu_item.setText(dItem.getYil().toString());
-        else
-            drawerHolder.dokuzuncu_item.setText("");
 
 
 

@@ -216,6 +216,21 @@
 
 
 
+        <activity
+            android:name="com.konumsal.orbisozetmobil.Fidanlik_Orkoy_UI.Fidanlik_Orkoy_SorguActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
+
+
+        <activity
+            android:name="com.konumsal.orbisozetmobil.PersonelUI.PersonelSorguActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
+
+
+
+
+
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

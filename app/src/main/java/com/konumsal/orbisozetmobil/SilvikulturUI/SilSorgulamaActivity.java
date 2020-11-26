@@ -22,6 +22,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import AdapterLayer.Agaclandirma.AgacProjeAdapter;
 import AdapterLayer.Agaclandirma.ToprakProjeAdapter;
@@ -36,6 +37,7 @@ import EntityLayer.Sistem.SOrgBirim;
 import ToolLayer.MessageBox;
 import ToolLayer.NullOnEmptyConverterFactory;
 import ToolLayer.RefrofitRestApi;
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -58,7 +60,7 @@ public class SilSorgulamaActivity extends AppCompatActivity {
     List<SilUygulama> gelenUygulamaList;
     ListView listview;
     String gelenSayfaId;
-    LinearLayout baslikLinear1, baslikLinear2;
+    LinearLayout baslikLinear1, baslikLinear2, birin_detay_linear, ikinci_detay_linear;
 
 
     @Override
@@ -67,7 +69,7 @@ public class SilSorgulamaActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.agac_sorgulama_activity);
+        setContentView(R.layout.sil_sorgulama_activity);
 
         Intent i = getIntent();
         gelenSayfaId = i.getStringExtra("MODE");
@@ -91,6 +93,8 @@ public class SilSorgulamaActivity extends AppCompatActivity {
                 getSupportActionBar().setTitle("Gençleştirme Listesi");
                 baslikLinear1.setVisibility(View.VISIBLE);
                 baslikLinear2.setVisibility(View.GONE);
+                birin_detay_linear.setVisibility(View.VISIBLE);
+                ikinci_detay_linear.setVisibility(View.GONE);
 
 
             }
@@ -98,6 +102,8 @@ public class SilSorgulamaActivity extends AppCompatActivity {
                 getSupportActionBar().setTitle("Bakım Listesi");
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.VISIBLE);
+                birin_detay_linear.setVisibility(View.GONE);
+                ikinci_detay_linear.setVisibility(View.VISIBLE);
 
             }
 
@@ -146,6 +152,8 @@ public class SilSorgulamaActivity extends AppCompatActivity {
 
         baslikLinear1 = (LinearLayout) findViewById(R.id.birinci_baslik);
         baslikLinear2 = (LinearLayout) findViewById(R.id.ikinci_baslik);
+        birin_detay_linear = (LinearLayout) findViewById(R.id.birinci_baslik_detay);
+        ikinci_detay_linear = (LinearLayout) findViewById(R.id.ikinci_baslik_detay);
 
 
         pd2 = new ProgressDialog(SilSorgulamaActivity.this);
@@ -166,9 +174,11 @@ public class SilSorgulamaActivity extends AppCompatActivity {
                 bolge_spinner.setSelection(0);
                 mudurluk_spinner.setSelection(0);
                 seflik_spinner.setSelection(0);
+                yil_spinner.setSelection(0);
                 secili_mudurluk_id = -1L;
                 secili_bolge_id = -1L;
                 secili_seflik_id = -1L;
+                secili_yil = -1L;
 
             }
         });
@@ -189,10 +199,17 @@ public class SilSorgulamaActivity extends AppCompatActivity {
         ConfigData configData = new ConfigData(this);
         String url = configData.getSERVICURL() + "/";
 
+        final OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .connectTimeout(20, TimeUnit.SECONDS)
+                .writeTimeout(20, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .build();
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(url)
                 .addConverterFactory(new NullOnEmptyConverterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient)
                 .build();
         RefrofitRestApi refrofitRestApi = retrofit.create(RefrofitRestApi.class);
 
@@ -209,34 +226,33 @@ public class SilSorgulamaActivity extends AppCompatActivity {
         progressDoalog.setProgressStyle(ProgressDialog.BUTTON_NEGATIVE);
         progressDoalog.show();
 
-        if (gelenSayfaId.equalsIgnoreCase("0")) {
-            Call<List<SilUygulama>> call = refrofitRestApi.getSilDepoAylikUygulamaSonucListForMobil(parameters);
-            call.enqueue(new Callback<List<SilUygulama>>() {
-                @Override
-                public void onResponse(Call<List<SilUygulama>> call, Response<List<SilUygulama>> response) {
-                    if (!response.isSuccessful()) {
-                        progressDoalog.dismiss();
-                        MessageBox.showAlert(SilSorgulamaActivity.this, "Servisle bağlantı sırasında hata oluştu...", false);
-                        return;
-                    }
-                    if (response.isSuccessful()) {
-                        progressDoalog.dismiss();
-                        gelenUygulamaList = response.body();
-                        if (gelenUygulamaList != null && gelenUygulamaList.size() > 0) {
-                            get_listview();
-
-                        } else
-                            MessageBox.showAlert(SilSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
-                    }
-                }
-
-                @Override
-                public void onFailure(Call<List<SilUygulama>> call, Throwable t) {
+        Call<List<SilUygulama>> call = refrofitRestApi.getSilDepoAylikUygulamaSonucListForMobil(parameters);
+        call.enqueue(new Callback<List<SilUygulama>>() {
+            @Override
+            public void onResponse(Call<List<SilUygulama>> call, Response<List<SilUygulama>> response) {
+                if (!response.isSuccessful()) {
                     progressDoalog.dismiss();
-                    MessageBox.showAlert(SilSorgulamaActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
+                    MessageBox.showAlert(SilSorgulamaActivity.this, "Servisle bağlantı sırasında hata oluştu...", false);
+                    return;
                 }
-            });
-        }
+                if (response.isSuccessful()) {
+                    progressDoalog.dismiss();
+                    gelenUygulamaList = response.body();
+                    if (gelenUygulamaList != null && gelenUygulamaList.size() > 0) {
+                        get_listview();
+
+                    } else
+                        MessageBox.showAlert(SilSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<SilUygulama>> call, Throwable t) {
+                progressDoalog.dismiss();
+                MessageBox.showAlert(SilSorgulamaActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
+            }
+        });
+
 
     }
 
@@ -435,7 +451,7 @@ public class SilSorgulamaActivity extends AppCompatActivity {
 
     void get_listview() {
         if (gelenSayfaId.equalsIgnoreCase("0")) {
-            genclestirmeAdapter = new GenclestirmeAdapter(SilSorgulamaActivity.this, R.layout.item_on_iki, gelenUygulamaList);
+            genclestirmeAdapter = new GenclestirmeAdapter(SilSorgulamaActivity.this, R.layout.item_on_uc, gelenUygulamaList);
             listview.setAdapter(genclestirmeAdapter);
             genclestirmeAdapter.notifyDataSetChanged();
             listview.setClickable(true);

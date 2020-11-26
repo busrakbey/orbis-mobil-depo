@@ -27,6 +27,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 import AdapterLayer.BilgiSistemleri.HaritaArsivAdapter;
@@ -44,6 +45,7 @@ import ToolLayer.NullOnEmptyConverterFactory;
 import ToolLayer.OrbisDefaultException;
 import ToolLayer.RefrofitRestApi;
 import ToolLayer.MessageBox;
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -250,10 +252,17 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
         ConfigData configData = new ConfigData(this);
         String url = configData.getSERVICURL() + "/";
 
+        final OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .connectTimeout(20, TimeUnit.SECONDS)
+                .writeTimeout(20, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .build();
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(url)
                 .addConverterFactory(new NullOnEmptyConverterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient)
                 .build();
         RefrofitRestApi refrofitRestApi = retrofit.create(RefrofitRestApi.class);
 
