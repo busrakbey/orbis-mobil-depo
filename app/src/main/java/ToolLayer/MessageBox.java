@@ -48,7 +48,7 @@ public final class MessageBox
                     Button positiveButton = ((AlertDialog)dialog).getButton(DialogInterface.BUTTON_POSITIVE);
 
 
-                    final Drawable positiveButtonDrawable = context.getResources().getDrawable(R.drawable.mr_custd_button_selector);
+                    final Drawable positiveButtonDrawable = context.getResources().getDrawable(R.drawable.my_grass_button);
                     if (Build.VERSION.SDK_INT >= 16) {
                         positiveButton.setBackground(positiveButtonDrawable);
                     } else {
