@@ -19,7 +19,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 
-import com.esri.core.geometry.Line;
 import com.konumsal.orbisozetmobil.OrtakUI.OrtakFunction;
 import com.konumsal.orbisozetmobil.R;
 

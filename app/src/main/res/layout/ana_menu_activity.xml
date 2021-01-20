@@ -30,6 +30,11 @@
             android:background="@drawable/shadow"/>
 
 
+        <include layout="@layout/include_filter" />
+
+
+
+
 
         <LinearLayout
             android:background="@drawable/list_gradient"

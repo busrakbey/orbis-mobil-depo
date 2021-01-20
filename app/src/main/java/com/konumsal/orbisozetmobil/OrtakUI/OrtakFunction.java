@@ -114,6 +114,27 @@ public class OrtakFunction {
     public static List<SOrgBirim> seflik_list_fid = new ArrayList<SOrgBirim>();
     public static  List<String> seflik_list_string_fid = new ArrayList<String>();
 
+
+
+    ///////////////
+    public static  List<String> genel_mud_bolge_list_string = new ArrayList<String>();
+    public static  List<String> genel_mud_mudurluk_list_string = new ArrayList<String>();
+    public static List<String> genel_mud_seflik_list_string = new ArrayList<String>();
+    public static  List<String> teskilat_bolge_list_string = new ArrayList<String>();
+    public static  List<String> teskilat_mudurluk_list_string = new ArrayList<String>();
+    public static List<String> teskilat_seflik_list_string = new ArrayList<String>();
+
+
+    public static List<SOrgBirim> genel_mud_bolge_list = new ArrayList<SOrgBirim>();
+    public static List<SOrgBirim> genel_mud_mudurluk_list = new ArrayList<SOrgBirim>();
+    public static List<SOrgBirim> genel_mud_seflik_list= new ArrayList<SOrgBirim>();
+    public static List<SOrgBirim> teskilat_bolge_list= new ArrayList<SOrgBirim>();
+    public static List<SOrgBirim> teskilat_mudurluk_list = new ArrayList<SOrgBirim>();
+    public static List<SOrgBirim> teskilat_seflik_list = new ArrayList<SOrgBirim>();
+
+    //////////////
+
+
     public static List<Integer> ozetEkranModulList;
     public static List<String> ozetEkranModulAdlari;
     public static HashMap<Integer,List<Integer>> ozetEkranConstantHashMap = new HashMap<Integer,List<Integer>>();

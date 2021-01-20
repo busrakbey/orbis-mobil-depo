@@ -15,6 +15,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 import com.konumsal.orbisozetmobil.OrtakUI.OrtakFunction;
@@ -36,6 +38,7 @@ import EntityLayer.Oduh.MesireYeri;
 import EntityLayer.Oduh.UretimPaket;
 import EntityLayer.SendParametersForServer;
 import EntityLayer.Sistem.SOrgBirim;
+import EnumsLayer.LocalDataManager;
 import ToolLayer.NullOnEmptyConverterFactory;
 import ToolLayer.RefrofitRestApi;
 import ToolLayer.MessageBox;
@@ -57,16 +60,20 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
     List<String> item_source_str_seflik;
     List<SOrgBirim> item_souce_mudurluk;
     List<SOrgBirim> item_source_seflik;
+    RadioButton genelMudRadioButton, bolgeRadioButton, teskilatRadioButton;
+    RadioGroup birimRadioGrup;
+    LocalDataManager localDataManager;
     BalOrmaniAdapter balOrmaniAdapter;
     MesireYeriAdapter mesireYeriAdapter;
     UretimPaketAdapter uretimPaketAdapter;
     List<BalOrmani> gelenBalOrmaniList;
     List<MesireYeri> gelenMesireYeriList;
     List<UretimPaket> gelenUretimList;
-
     ListView listview;
     String gelenSayfaId;
     LinearLayout baslikLinear1, baslikLinear2, baslikLinear3;
+
+
 
 
     @Override
@@ -82,11 +89,18 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
 
         Init();
         initToolBar();
-        filtre_spinner();
-        bolge_spinner.setSelection(0);
+        filtre_spinner(OrtakFunction.bolge_list_string, OrtakFunction.bolge_list, OrtakFunction.mudurluk_list,
+                OrtakFunction.seflik_list);
+      /*  bolge_spinner.setSelection(0);
         mudurluk_spinner.setSelection(0);
-        seflik_spinner.setSelection(0);
+        seflik_spinner.setSelection(0);*/
         yil_spinner.setSelection(0);
+
+        bolge_spinner.setSelection(localDataManager.getValues(getApplicationContext(), "bolgeId"));
+        mudurluk_spinner.setSelection(localDataManager.getValues(getApplicationContext(), "mudurlukId"));
+        seflik_spinner.setSelection(localDataManager.getValues(getApplicationContext(), "seflikId"));
+        birimRadioGrup.check(localDataManager.getValues(getApplicationContext(), "radioButton") == 0 ? null : localDataManager.getValues(getApplicationContext(), "radioButton"));
+
     }
 
     private void initToolBar() {
@@ -140,7 +154,10 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
         mudurluk_spinner = (Spinner) findViewById(R.id.mudurluk_spinner);
         seflik_spinner = (Spinner) findViewById(R.id.seflik_spinner);
         yil_spinner = (Spinner) findViewById(R.id.yil_spinner);
-
+        genelMudRadioButton = (RadioButton) findViewById(R.id.radio_gen_mud);
+        bolgeRadioButton = (RadioButton) findViewById(R.id.radio_bolge);
+        teskilatRadioButton = (RadioButton) findViewById(R.id.radio_teskilat);
+        birimRadioGrup = (RadioGroup) findViewById(R.id.birim_radio_group);
         ArrayList<String> years = new ArrayList<String>();
         years.add("");
         int thisYear = Calendar.getInstance().get(Calendar.YEAR);
@@ -150,11 +167,22 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, years);
         adapter.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
         yil_spinner.setAdapter(adapter);
-
         item_source_str_mudurluk = new ArrayList<String>();
         item_source_str_seflik = new ArrayList<String>();
         item_souce_mudurluk = new ArrayList<SOrgBirim>();
         item_source_seflik = new ArrayList<SOrgBirim>();
+
+        birimRadioGrup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                radioGrupChange(group, checkedId);
+            }
+        });
+
+        localDataManager = new LocalDataManager();
+
+
+
 
         baslikLinear1 = (LinearLayout) findViewById(R.id.birinci_baslik);
         baslikLinear2 = (LinearLayout) findViewById(R.id.ikinci_baslik);
@@ -185,6 +213,8 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
                 secili_yil = -1L;
             }
         });
+
+
 
 
     }
@@ -325,19 +355,19 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
     }
 
 
-    void filtre_spinner() {
-        ArrayAdapter<String> dataAdapter_bolge = new ArrayAdapter<String>(OduhSorgulamaActivity.this, android.R.layout.simple_spinner_item, OrtakFunction.bolge_list_string);
+    void filtre_spinner(final List<String> gelenBolgeListString, final List<SOrgBirim> gelenBolgeList, final List<SOrgBirim> gelenMudList, final List<SOrgBirim> gelenSeflikList) {
+        ArrayAdapter<String> dataAdapter_bolge = new ArrayAdapter<String>(OduhSorgulamaActivity.this, android.R.layout.simple_spinner_item, gelenBolgeListString);
         dataAdapter_bolge.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
         bolge_spinner.setAdapter(dataAdapter_bolge);
         bolge_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position > 0) {
-                    String valInfo = OrtakFunction.bolge_list_string.get(position);
+                    String valInfo = gelenBolgeListString.get(position);
                     if (valInfo != null) {
                         selected_bolge_index = position;
 
-                        Long bolge_mud_id = OrtakFunction.bolge_list.get(selected_bolge_index).getId();
+                        Long bolge_mud_id = gelenBolgeList.get(selected_bolge_index).getId();
                         secili_bolge_id = bolge_mud_id;
                         secili_mudurluk_id = -1L;
                         secili_seflik_id = -1L;
@@ -350,7 +380,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
                         item_souce_mudurluk.add(null);
                         item_source_str_mudurluk.add("");
 
-                        for (SOrgBirim item : OrtakFunction.mudurluk_list) {
+                        for (SOrgBirim item : gelenMudList) {
                             if (item == null)
                                 continue;
                             if (String.valueOf(item.getUstId()).equals(String.valueOf(bolge_mud_id))) {
@@ -370,6 +400,8 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
                         dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
                         seflik_spinner.setAdapter(dataAdapter_seflik);
                         seflik_spinner.setSelection(0);
+
+                        localDataManager.setSharedPreference(getApplicationContext(), "bolgeId", String.valueOf(selected_bolge_index));
 
 
                        /* if (OrtakFunction.s_org_birim_path.size() == 4) {
@@ -447,7 +479,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
                         item_source_str_seflik.add("");
 
 
-                        for (SOrgBirim item : OrtakFunction.seflik_list) {
+                        for (SOrgBirim item : gelenSeflikList) {
                             if (item == null)
                                 continue;
                             if (String.valueOf(item.getUstId()).equals(String.valueOf(mud_id))) {
@@ -461,6 +493,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
                         dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
                         seflik_spinner.setAdapter(dataAdapter_seflik);
                         seflik_spinner.setSelection(0);
+                        localDataManager.setSharedPreference(getApplicationContext(), "mudurlukId", String.valueOf(selected_mudurluk_index));
 
 
                       /*  if (OrtakFunction.s_org_birim_path.size() == 4) {
@@ -503,6 +536,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
                         selected_seflik_index = position;
                         secili_seflik_id = item_source_seflik.get(selected_seflik_index).getId();
                     }
+                    localDataManager.setSharedPreference(getApplicationContext(), "seflikId", String.valueOf(selected_seflik_index));
                 } else {
                     secili_seflik_id = -1L;
                 }
@@ -513,6 +547,9 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
 
             }
         });
+
+
+
 
 
     }
@@ -544,6 +581,27 @@ public class OduhSorgulamaActivity extends AppCompatActivity {
         }
     }
 
+
+    void radioGrupChange(RadioGroup group, int checkedId) {
+        switch (checkedId) {
+            case R.id.radio_gen_mud:
+                filtre_spinner(OrtakFunction.genel_mud_bolge_list_string, OrtakFunction.genel_mud_bolge_list, OrtakFunction.genel_mud_mudurluk_list, OrtakFunction.genel_mud_seflik_list);
+                localDataManager.setSharedPreference(getApplicationContext(), "radioButton", String.valueOf(R.id.radio_gen_mud));
+                break;
+            case R.id.radio_bolge:
+                filtre_spinner(OrtakFunction.bolge_list_string, OrtakFunction.bolge_list, OrtakFunction.mudurluk_list,
+                        OrtakFunction.seflik_list);
+                localDataManager.setSharedPreference(getApplicationContext(), "radioButton", String.valueOf(R.id.radio_bolge));
+
+                break;
+            case R.id.radio_teskilat:
+                filtre_spinner(OrtakFunction.teskilat_bolge_list_string, OrtakFunction.teskilat_bolge_list, OrtakFunction.teskilat_mudurluk_list,
+                        OrtakFunction.teskilat_seflik_list);
+                localDataManager.setSharedPreference(getApplicationContext(), "radioButton", String.valueOf(R.id.radio_teskilat));
+                break;
+        }
+
+    }
 
 }
 

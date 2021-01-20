@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="5dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/list_gradient"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5">
+
+            <RadioGroup
+                android:id="@+id/birim_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_gen_mud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Genel Müdürlük   "
+                    android:textColor="@color/light_gray_header_color"
+                    android:textSize="@dimen/normal_definition_text_size"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_bolge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bölge   "
+                    android:textColor="@color/light_gray_header_color"
+                    android:textSize="@dimen/normal_definition_text_size"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_teskilat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tüm Teşkilat  "
+                    android:textColor="@color/light_gray_header_color"
+                    android:textSize="@dimen/normal_definition_text_size"></RadioButton>
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    style="@style/oa_frag_text_style"
+                    android:text=" Bölge"
+                    android:textColor="@color/mr_toolbar2"
+                    android:textSize="@dimen/normal_definition_text_size"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/bolge_spinner"
+                    style="@style/mr_fe_in_edittext"
+                    android:layout_height="@dimen/spinner_heigh"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    style="@style/oa_frag_text_style"
+                    android:text=" Müdürlük"
+                    android:textColor="@color/mr_toolbar2"
+                    android:textSize="@dimen/normal_definition_text_size"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/mudurluk_spinner"
+                    style="@style/mr_fe_in_edittext"
+                    android:layout_height="@dimen/spinner_heigh"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    style="@style/oa_frag_text_style"
+                    android:text=" Şeflik"
+                    android:textColor="@color/mr_toolbar2"
+                    android:textSize="@dimen/normal_definition_text_size"
+                    android:textStyle="bold"
+
+                    />
+
+                <Spinner
+                    android:id="@+id/seflik_spinner"
+                    style="@style/mr_fe_in_edittext"
+                    android:layout_height="@dimen/spinner_heigh"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    style="@style/oa_frag_text_style"
+                    android:text=" İl"
+                    android:textColor="@color/mr_toolbar2"
+                    android:textSize="@dimen/normal_definition_text_size"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/il_spinner"
+                    style="@style/mr_fe_in_edittext"
+                    android:layout_height="@dimen/spinner_heigh"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    style="@style/oa_frag_text_style"
+                    android:text=" İlçe"
+                    android:textColor="@color/mr_toolbar2"
+                    android:textSize="@dimen/normal_definition_text_size"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/ilce_spinner"
+                    style="@style/mr_fe_in_edittext"
+                    android:layout_height="@dimen/spinner_heigh"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    style="@style/oa_frag_text_style"
+                    android:text=" Köy"
+                    android:textColor="@color/mr_toolbar2"
+                    android:textSize="@dimen/normal_definition_text_size"
+                    android:textStyle="bold"
+
+                    />
+
+                <Spinner
+                    android:id="@+id/koy_spinner"
+                    style="@style/mr_fe_in_edittext"
+                    android:layout_height="@dimen/spinner_heigh"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    style="@style/oa_frag_text_style"
+                    android:text=" Yıl"
+                    android:textColor="@color/mr_toolbar2"
+                    android:textSize="@dimen/normal_definition_text_size"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/yil_spinner"
+                    style="@style/mr_fe_in_edittext"
+                    android:layout_height="@dimen/spinner_heigh"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

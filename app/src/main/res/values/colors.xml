@@ -122,7 +122,9 @@
     <color name="yesil_shape">#50B050</color>
 
     <color name="mr_haki">#BDB76B</color>
-    <color name="mr_toolbar">#5D9BB8</color>
+  <!--  <color name="mr_toolbar">#5D9BB8</color> -->
+     <color name="mr_toolbar">#5D9BB8</color> -->
+
     <color name="mr_toolbar2">#44728A</color>
 
     <color name="mr_haki2">#C3CB7F</color>

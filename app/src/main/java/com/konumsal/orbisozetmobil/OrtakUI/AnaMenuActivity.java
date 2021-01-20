@@ -15,7 +15,11 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 
 import com.google.gson.reflect.TypeToken;
 import com.konumsal.orbisozetmobil.Agaclandirma.AgacAltMenuActivity;
@@ -33,8 +37,10 @@ import com.konumsal.orbisozetmobil.PersonelUI.PersonelSorguActivity;
 import com.konumsal.orbisozetmobil.R;
 import com.konumsal.orbisozetmobil.SilvikulturUI.SilAltMenuActivity;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -64,6 +70,7 @@ import DataLayer.Sistem.SModulKodDeger_Data;
 import DataLayer.Sistem.SOrgBirim_Data;
 import EntityLayer.Ortak.User;
 import EntityLayer.Sistem.SOrgBirim;
+import EnumsLayer.LocalDataManager;
 import ToolLayer.MessageBox;
 import ToolLayer.OrbisDefaultException;
 
@@ -79,6 +86,18 @@ public class AnaMenuActivity extends AppCompatActivity {
     Type typeOf_SOrgBirim = null;
     String all_jsonSOrgBirim = "";
     List<SOrgBirim> org_birim_list;
+
+    int selected_bolge_index = 0, selected_mudurluk_index = 0, selected_seflik_index = 0;
+    Long secili_bolge_id = -1L, secili_mudurluk_id = -1L, secili_seflik_id = -1L, secili_yil = -1L;
+    List<String> item_source_str_mudurluk;
+    List<String> item_source_str_seflik;
+    List<SOrgBirim> item_souce_mudurluk;
+    List<SOrgBirim> item_source_seflik;
+    RadioButton genelMudRadioButton, bolgeRadioButton, teskilatRadioButton;
+    RadioGroup birimRadioGrup;
+    LocalDataManager localDataManager;
+    Spinner bolge_spinner, mudurluk_spinner, seflik_spinner, yil_spinner;
+
 
 
     @Override
@@ -106,6 +125,26 @@ public class AnaMenuActivity extends AppCompatActivity {
             // new getBaseDataServiceForSorgulamalar().execute();
         }
 
+        bolge_spinner.setSelection(!localDataManager.getSharedPreference(getApplicationContext(), "bolgeId", "").equalsIgnoreCase("") ?
+                Integer.valueOf(localDataManager.getSharedPreference(getApplicationContext(), "bolgeId", "")) : 0 );
+        mudurluk_spinner.setSelection(!localDataManager.getSharedPreference(getApplicationContext(), "mudurlukId", "").equalsIgnoreCase("") ?
+                Integer.valueOf(localDataManager.getSharedPreference(getApplicationContext(), "mudurlukId", "")) : 0 );
+        seflik_spinner.setSelection(!localDataManager.getSharedPreference(getApplicationContext(), "seflikId", "").equalsIgnoreCase("") ?
+                Integer.valueOf(localDataManager.getSharedPreference(getApplicationContext(), "seflikId", "")) : 0 );
+        birimRadioGrup.check(!localDataManager.getSharedPreference(getApplicationContext(), "radioButton", "").equalsIgnoreCase("") ?
+                Integer.valueOf(localDataManager.getSharedPreference(getApplicationContext(), "radioButton", "")): null);
+        filtre_spinner(OrtakFunction.bolge_list_string, OrtakFunction.bolge_list, OrtakFunction.mudurluk_list,
+                OrtakFunction.seflik_list);
+        yil_spinner.setSelection(0);
+
+        bolge_spinner.setSelection(!localDataManager.getSharedPreference(getApplicationContext(), "bolgeId", "").equalsIgnoreCase("") ?
+                Integer.valueOf(localDataManager.getSharedPreference(getApplicationContext(), "bolgeId", "")) : 0 );
+        mudurluk_spinner.setSelection(!localDataManager.getSharedPreference(getApplicationContext(), "mudurlukId", "").equalsIgnoreCase("") ?
+                Integer.valueOf(localDataManager.getSharedPreference(getApplicationContext(), "mudurlukId", "")) : 0 );
+        seflik_spinner.setSelection(!localDataManager.getSharedPreference(getApplicationContext(), "seflikId", "").equalsIgnoreCase("") ?
+                Integer.valueOf(localDataManager.getSharedPreference(getApplicationContext(), "seflikId", "")) : 0 );
+        birimRadioGrup.check(!localDataManager.getSharedPreference(getApplicationContext(), "radioButton", "").equalsIgnoreCase("") ?
+                Integer.valueOf(localDataManager.getSharedPreference(getApplicationContext(), "radioButton", "")): null);
 
     }
 
@@ -164,6 +203,36 @@ public class AnaMenuActivity extends AppCompatActivity {
 
     private void Init() {
 
+        bolge_spinner = (Spinner) findViewById(R.id.bolge_spinner);
+        mudurluk_spinner = (Spinner) findViewById(R.id.mudurluk_spinner);
+        seflik_spinner = (Spinner) findViewById(R.id.seflik_spinner);
+        yil_spinner = (Spinner) findViewById(R.id.yil_spinner);
+        genelMudRadioButton = (RadioButton) findViewById(R.id.radio_gen_mud);
+        bolgeRadioButton = (RadioButton) findViewById(R.id.radio_bolge);
+        teskilatRadioButton = (RadioButton) findViewById(R.id.radio_teskilat);
+        birimRadioGrup = (RadioGroup) findViewById(R.id.birim_radio_group);
+        ArrayList<String> years = new ArrayList<String>();
+        years.add("");
+        int thisYear = Calendar.getInstance().get(Calendar.YEAR);
+        for (int i = 2000; i <= thisYear; i++) {
+            years.add(Integer.toString(i));
+        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, years);
+        adapter.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+        yil_spinner.setAdapter(adapter);
+        item_source_str_mudurluk = new ArrayList<String>();
+        item_source_str_seflik = new ArrayList<String>();
+        item_souce_mudurluk = new ArrayList<SOrgBirim>();
+        item_source_seflik = new ArrayList<SOrgBirim>();
+
+        birimRadioGrup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                radioGrupChange(group, checkedId);
+            }
+        });
+
+        localDataManager = new LocalDataManager();
 
         lst_alt_menu_listview = (GridView) findViewById(R.id.ip_alt_menu_list_listView);
         menuList = new ArrayList<String>();
@@ -446,15 +515,53 @@ public class AnaMenuActivity extends AppCompatActivity {
                     OrtakFunction.seflik_list.add(item);
                     OrtakFunction.seflik_list_string.add(item.getAdi());
                 }
-                 if (String.valueOf(item.getKategori()).equals("6") || String.valueOf(item.getKategori()).equals("9")) {
+                if (String.valueOf(item.getKategori()).equals("6") || String.valueOf(item.getKategori()).equals("9")) {
                     OrtakFunction.mudurluk_list_fid.add(item);
                     OrtakFunction.mudurluk_list_string_fid.add(item.getAdi());
                 }
 
-                 if (String.valueOf(item.getKategori()).equals("7") || String.valueOf(item.getKategori()).equals("12")) {
+                if (String.valueOf(item.getKategori()).equals("7") || String.valueOf(item.getKategori()).equals("12")) {
                     OrtakFunction.seflik_list_fid.add(item);
                     OrtakFunction.seflik_list_string_fid.add(item.getAdi());
                 }
+
+                if (item.getUstId() != null && item.getUstId().toString().equalsIgnoreCase("1769")) {
+                    OrtakFunction.genel_mud_mudurluk_list.add(item);
+                    OrtakFunction.genel_mud_mudurluk_list_string.add(item.getAdi());
+                }
+                if (item.getId().toString().equalsIgnoreCase("1769")) {
+                    OrtakFunction.genel_mud_bolge_list.add(item);
+                    OrtakFunction.genel_mud_bolge_list_string.add(item.getAdi());
+                }
+
+                /*for (SOrgBirim i : OrtakFunction.genel_mud_mudurluk_list) {
+                    if (i.getId() == item.getUstId()) {
+                        OrtakFunction.genel_mud_seflik_list.add(item);
+                        OrtakFunction.genel_mud_seflik_list_string.add(item.getAdi());
+                    }
+                }*/
+
+                if (String.valueOf(item.getKategori()).equals("-1") || String.valueOf(item.getKategori()).equals("0") || String.valueOf(item.getKategori()).equals("1")
+                        || String.valueOf(item.getKategori()).equals("2") || String.valueOf(item.getKategori()).equals("5")) {
+                    OrtakFunction.teskilat_bolge_list.add(item);
+                    OrtakFunction.teskilat_bolge_list_string.add(item.getAdi());
+                }
+
+
+               /* for (SOrgBirim i : OrtakFunction.teskilat_bolge_list) {
+                    if (i.getId() == item.getUstId()) {
+                        OrtakFunction.teskilat_mudurluk_list.add(item);
+                        OrtakFunction.teskilat_mudurluk_list_string.add(item.getAdi());
+                    }
+                }*/
+
+              /*  for (SOrgBirim i : OrtakFunction.teskilat_mudurluk_list) {
+                    if (i.getId() == item.getUstId()) {
+                        OrtakFunction.teskilat_seflik_list.add(item);
+                        OrtakFunction.teskilat_seflik_list_string.add(item.getAdi());
+                    }
+                }*/
+
             }
             Log.v("BIRIM", "=>" + item.getAdi());
         }
@@ -479,12 +586,383 @@ public class AnaMenuActivity extends AppCompatActivity {
         OrtakFunction.bolge_list_string.add(0, "");*/
 
 
-        if (OrtakFunction.bolge_list != null && OrtakFunction.bolge_list.size() >0 &&  OrtakFunction.bolge_list.get(0) != null)
+
+
+        getAltBirim();
+    }
+
+
+    void getAltBirim() {
+
+        SOrgBirim_Data data = new SOrgBirim_Data(AnaMenuActivity.this);
+        List<SOrgBirim> milli_park_bolge_mud = new ArrayList<SOrgBirim>();
+        StringBuilder sqlStr = new StringBuilder();
+        sqlStr.append("SELECT * FROM S_ORG_BIRIM");
+        try {
+            org_birim_list = new ArrayList<SOrgBirim>();
+            org_birim_list = data.loadFromQuery(sqlStr.toString());
+        } catch (OrbisDefaultException e) {
+            e.printStackTrace();
+        }
+        for (SOrgBirim item : org_birim_list) {
+            //  if (item.getKategori() != null) {
+
+            for (SOrgBirim i : OrtakFunction.genel_mud_mudurluk_list) {
+                if (i.getId().toString().equalsIgnoreCase(item.getUstId().toString())) {
+                    OrtakFunction.genel_mud_seflik_list.add(item);
+                    OrtakFunction.genel_mud_seflik_list_string.add(item.getAdi());
+                }
+            }
+
+
+            for (SOrgBirim i : OrtakFunction.teskilat_bolge_list) {
+                if (i.getId().toString().equalsIgnoreCase(item.getUstId().toString())) {
+                    OrtakFunction.teskilat_mudurluk_list.add(item);
+                    OrtakFunction.teskilat_mudurluk_list_string.add(item.getAdi());
+                }
+            }
+
+
+            //   }
+            Log.v("BIRIM", "=>" + item.getAdi());
+        }
+
+
+
+        getAltBirim2();
+
+    }
+
+
+    void getAltBirim2() {
+
+        SOrgBirim_Data data = new SOrgBirim_Data(AnaMenuActivity.this);
+        List<SOrgBirim> milli_park_bolge_mud = new ArrayList<SOrgBirim>();
+        StringBuilder sqlStr = new StringBuilder();
+        sqlStr.append("SELECT * FROM S_ORG_BIRIM");
+        try {
+            org_birim_list = new ArrayList<SOrgBirim>();
+            org_birim_list = data.loadFromQuery(sqlStr.toString());
+        } catch (OrbisDefaultException e) {
+            e.printStackTrace();
+        }
+        for (SOrgBirim item : org_birim_list) {
+            //if (item.getKategori() != null) {
+
+            for (SOrgBirim i : OrtakFunction.teskilat_mudurluk_list) {
+                if (i.getId().toString().equalsIgnoreCase(item.getUstId().toString())) {
+                    OrtakFunction.teskilat_seflik_list.add(item);
+                    OrtakFunction.teskilat_seflik_list_string.add(item.getAdi());
+                }
+            }
+            //    }
+            Log.v("BIRIM", "=>" + item.getAdi());
+        }
+
+        if (OrtakFunction.genel_mud_seflik_list != null && OrtakFunction.genel_mud_seflik_list.size() > 0 && OrtakFunction.genel_mud_seflik_list.get(0) != null)
+            OrtakFunction.genel_mud_seflik_list.add(0, null);
+        if (OrtakFunction.genel_mud_seflik_list_string != null && OrtakFunction.genel_mud_seflik_list_string.size() > 0 && !OrtakFunction.genel_mud_seflik_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.genel_mud_seflik_list_string.add(0, "");
+
+        if (OrtakFunction.teskilat_mudurluk_list != null && OrtakFunction.teskilat_mudurluk_list.size() > 0 && OrtakFunction.teskilat_mudurluk_list.get(0) != null)
+            OrtakFunction.teskilat_mudurluk_list.add(0, null);
+        if (OrtakFunction.teskilat_mudurluk_list_string != null && OrtakFunction.teskilat_mudurluk_list_string.size() > 0 && !OrtakFunction.teskilat_mudurluk_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.teskilat_mudurluk_list_string.add(0, "");
+
+        if (OrtakFunction.bolge_list != null && OrtakFunction.bolge_list.size() > 0 && OrtakFunction.bolge_list.get(0) != null)
             OrtakFunction.bolge_list.add(0, null);
         if (OrtakFunction.bolge_list_string != null && OrtakFunction.bolge_list_string.size() > 0 && !OrtakFunction.bolge_list_string.get(0).equalsIgnoreCase(""))
             OrtakFunction.bolge_list_string.add(0, "");
 
+        if (OrtakFunction.genel_mud_bolge_list != null && OrtakFunction.genel_mud_bolge_list.size() > 0 && OrtakFunction.genel_mud_bolge_list.get(0) != null)
+            OrtakFunction.genel_mud_bolge_list.add(0, null);
+        if (OrtakFunction.genel_mud_bolge_list_string != null && OrtakFunction.genel_mud_bolge_list_string.size() > 0 && !OrtakFunction.genel_mud_bolge_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.genel_mud_bolge_list_string.add(0, "");
+
+        if (OrtakFunction.genel_mud_mudurluk_list != null && OrtakFunction.genel_mud_mudurluk_list.size() > 0 && OrtakFunction.genel_mud_mudurluk_list.get(0) != null)
+            OrtakFunction.genel_mud_mudurluk_list.add(0, null);
+        if (OrtakFunction.genel_mud_mudurluk_list_string != null && OrtakFunction.genel_mud_mudurluk_list_string.size() > 0 && !OrtakFunction.genel_mud_mudurluk_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.genel_mud_mudurluk_list_string.add(0, "");
+
+        if (OrtakFunction.teskilat_bolge_list != null && OrtakFunction.teskilat_bolge_list.size() > 0 && OrtakFunction.teskilat_bolge_list.get(0) != null)
+            OrtakFunction.teskilat_bolge_list.add(0, null);
+        if (OrtakFunction.teskilat_bolge_list_string != null && OrtakFunction.teskilat_bolge_list_string.size() > 0 && !OrtakFunction.teskilat_bolge_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.teskilat_bolge_list_string.add(0, "");
+
+        if (OrtakFunction.teskilat_seflik_list != null && OrtakFunction.teskilat_seflik_list.size() > 0 && OrtakFunction.teskilat_seflik_list.get(0) != null)
+            OrtakFunction.teskilat_seflik_list.add(0, null);
+        if (OrtakFunction.teskilat_seflik_list_string != null && OrtakFunction.teskilat_seflik_list_string.size() > 0 && !OrtakFunction.teskilat_seflik_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.teskilat_seflik_list_string.add(0, "");
+
+        Collections.sort(OrtakFunction.bolge_list_string);
+        Collections.sort(OrtakFunction.mudurluk_list_string);
+        Collections.sort(OrtakFunction.seflik_list_string);
+        Collections.sort(OrtakFunction.genel_mud_bolge_list_string);
+        Collections.sort(OrtakFunction.genel_mud_mudurluk_list_string);
+        Collections.sort(OrtakFunction.genel_mud_seflik_list_string);
+
+        Collections.sort(OrtakFunction.teskilat_seflik_list, new Comparator<SOrgBirim>() {
+            @Override
+            public int compare(final SOrgBirim object1, final SOrgBirim object2) {
+                if (object1 != null && object2 != null)
+                    return object1.getAdi().compareTo(object2.getAdi());
+                return 0;
+            }
+        });
+
+
+        Collections.sort(OrtakFunction.teskilat_bolge_list_string);
+        Collections.sort(OrtakFunction.teskilat_bolge_list, new Comparator<SOrgBirim>() {
+            @Override
+            public int compare(final SOrgBirim object1, final SOrgBirim object2) {
+                if (object1 != null && object2 != null)
+                    return object1.getAdi().compareTo(object2.getAdi());
+                return 0;
+            }
+        });
+
+        Collections.sort(OrtakFunction.teskilat_mudurluk_list_string);
+        Collections.sort(OrtakFunction.teskilat_mudurluk_list, new Comparator<SOrgBirim>() {
+            @Override
+            public int compare(final SOrgBirim object1, final SOrgBirim object2) {
+                if (object1 != null && object2 != null)
+                    return object1.getAdi().compareTo(object2.getAdi());
+                return 0;
+            }
+        });
+
+
+        Collections.sort(OrtakFunction.genel_mud_mudurluk_list_string);
+        Collections.sort(OrtakFunction.genel_mud_mudurluk_list, new Comparator<SOrgBirim>() {
+            @Override
+            public int compare(final SOrgBirim object1, final SOrgBirim object2) {
+                if (object1 != null && object2 != null)
+                    return object1.getAdi().compareTo(object2.getAdi());
+                return 0;
+            }
+        });
+
+
+
     }
 
+
+    void filtre_spinner(final List<String> gelenBolgeListString, final List<SOrgBirim> gelenBolgeList, final List<SOrgBirim> gelenMudList, final List<SOrgBirim> gelenSeflikList) {
+        ArrayAdapter<String> dataAdapter_bolge = new ArrayAdapter<String>(AnaMenuActivity.this, android.R.layout.simple_spinner_item, gelenBolgeListString);
+        dataAdapter_bolge.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+        bolge_spinner.setAdapter(dataAdapter_bolge);
+        bolge_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position > 0) {
+                    String valInfo = gelenBolgeListString.get(position);
+                    if (valInfo != null) {
+                        selected_bolge_index = position;
+
+                        Long bolge_mud_id = gelenBolgeList.get(selected_bolge_index).getId();
+                        secili_bolge_id = bolge_mud_id;
+                        secili_mudurluk_id = -1L;
+                        secili_seflik_id = -1L;
+
+                        item_source_str_mudurluk.clear();
+                        item_souce_mudurluk.clear();
+                        item_source_str_seflik.clear();
+                        item_source_seflik.clear();
+
+                        item_souce_mudurluk.add(null);
+                        item_source_str_mudurluk.add("");
+
+                        for (SOrgBirim item : gelenMudList) {
+                            if (item == null)
+                                continue;
+                            if (String.valueOf(item.getUstId()).equals(String.valueOf(bolge_mud_id))) {
+                                item_source_str_mudurluk.add(item.getAdi());
+                                item_souce_mudurluk.add(item);
+                            }
+                        }
+
+
+                        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(AnaMenuActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
+                        dataAdapter_mudurluk.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+                        mudurluk_spinner.setAdapter(dataAdapter_mudurluk);
+                        mudurluk_spinner.setSelection(0);
+
+
+                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(AnaMenuActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
+                        dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+                        seflik_spinner.setAdapter(dataAdapter_seflik);
+                        seflik_spinner.setSelection(0);
+
+                        localDataManager.setSharedPreference(getApplicationContext(), "bolgeId", String.valueOf(selected_bolge_index));
+
+
+                       /* if (OrtakFunction.s_org_birim_path.size() == 4) {
+                            for (int i = 1; i < item_souce_mudurluk.size(); i++) {
+                                if (String.valueOf(item_souce_mudurluk.get(i).getId()).equals(String.valueOf(OrtakFunction.s_org_birim_path.get(2)))) {
+                                    mudurluk_spinner.setSelection(i);
+                                    // mudurluk_spinner.setEnabled(false);
+                                    break;
+                                }
+                            }
+                        } else {
+                            mudurluk_spinner.setSelection(0);
+                        }*/
+
+
+                    }
+                } else {
+                    secili_bolge_id = -1L;
+                    secili_mudurluk_id = -1L;
+                    secili_seflik_id = -1L;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                bolge_spinner.setSelection(!localDataManager.getSharedPreference(getApplicationContext(), "bolgeId", "").equalsIgnoreCase("") ?
+                        Integer.valueOf(localDataManager.getSharedPreference(getApplicationContext(), "bolgeId", "")) : 0 );
+            }
+        });
+
+        try {
+            Field popup = Spinner.class.getDeclaredField("mPopup");
+            popup.setAccessible(true);
+            android.widget.ListPopupWindow popupWindow = (android.widget.ListPopupWindow) popup.get(bolge_spinner);
+            popupWindow.setHeight(700);
+        } catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
+        }
+
+
+      /*  for (Long item : OrtakFunction.s_org_birim_path)
+            Log.v("birim", "=>" + item);*/
+
+       /* if (OrtakFunction.s_org_birim_path.size() == 4) {
+            for (int i = 1; i < OrtakFunction.bolge_list.size(); i++) {
+                if (String.valueOf(OrtakFunction.bolge_list.get(i).getId()).equals(String.valueOf(OrtakFunction.s_org_birim_path.get(1)))) {
+                    bolge_spinner.setSelection(i);
+                    //bolge_spinner.setEnabled(false);
+                    break;
+                }
+            }
+        } else {
+            bolge_spinner.setSelection(0);
+        }*/
+
+
+        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(AnaMenuActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
+        dataAdapter_mudurluk.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+
+        mudurluk_spinner.setAdapter(dataAdapter_mudurluk);
+        mudurluk_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position > 0) {
+                    String valInfo = item_source_str_mudurluk.get(position);
+                    if (valInfo != null) {
+                        selected_mudurluk_index = position;
+
+                        Long mud_id = item_souce_mudurluk.get(selected_mudurluk_index).getId();
+                        secili_mudurluk_id = mud_id;
+                        secili_seflik_id = -1L;
+
+                        item_source_str_seflik.clear();
+                        item_source_seflik.clear();
+
+                        item_source_seflik.add(null);
+                        item_source_str_seflik.add("");
+
+
+                        for (SOrgBirim item : gelenSeflikList) {
+                            if (item == null)
+                                continue;
+                            if (String.valueOf(item.getUstId()).equals(String.valueOf(mud_id))) {
+                                item_source_str_seflik.add(item.getAdi());
+                                item_source_seflik.add(item);
+                            }
+                        }
+
+
+                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(AnaMenuActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
+                        dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+                        seflik_spinner.setAdapter(dataAdapter_seflik);
+                        seflik_spinner.setSelection(0);
+                        localDataManager.setSharedPreference(getApplicationContext(), "mudurlukId", String.valueOf(selected_mudurluk_index));
+
+
+                      /*  if (OrtakFunction.s_org_birim_path.size() == 4) {
+                            for (int i = 1; i < item_source_seflik.size(); i++) {
+                                if (String.valueOf(item_source_seflik.get(i).getId()).equals(String.valueOf(OrtakFunction.s_org_birim_path.get(3)))) {
+                                    seflik_spinner.setSelection(i);
+                                    //seflik_spinner.setEnabled(false);
+                                    break;
+                                }
+                            }
+                        } else {
+                            seflik_spinner.setSelection(0);
+                        }*/
+
+
+                    } else {
+                        secili_mudurluk_id = -1L;
+                        secili_seflik_id = -1L;
+                    }
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                mudurluk_spinner.setSelection(!localDataManager.getSharedPreference(getApplicationContext(), "mudurlukId", "").equalsIgnoreCase("") ?
+                        Integer.valueOf(localDataManager.getSharedPreference(getApplicationContext(), "mudurlukId", "")) : 0 );
+            }
+        });
+
+
+        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(AnaMenuActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
+        dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+
+        seflik_spinner.setAdapter(dataAdapter_seflik);
+        seflik_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position > 0) {
+                    String valInfo = item_source_str_seflik.get(position);
+                    if (valInfo != null) {
+                        selected_seflik_index = position;
+                        secili_seflik_id = item_source_seflik.get(selected_seflik_index).getId();
+                    }
+                    localDataManager.setSharedPreference(getApplicationContext(), "seflikId", String.valueOf(selected_seflik_index));
+                } else {
+                    secili_seflik_id = -1L;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+
+    void radioGrupChange(RadioGroup group, int checkedId) {
+        switch (checkedId) {
+            case R.id.radio_gen_mud:
+                filtre_spinner(OrtakFunction.genel_mud_bolge_list_string, OrtakFunction.genel_mud_bolge_list, OrtakFunction.genel_mud_mudurluk_list, OrtakFunction.genel_mud_seflik_list);
+                localDataManager.setSharedPreference(getApplicationContext(), "radioButton", String.valueOf(R.id.radio_gen_mud));
+                break;
+            case R.id.radio_bolge:
+                filtre_spinner(OrtakFunction.bolge_list_string, OrtakFunction.bolge_list, OrtakFunction.mudurluk_list,
+                        OrtakFunction.seflik_list);
+                localDataManager.setSharedPreference(getApplicationContext(), "radioButton", String.valueOf(R.id.radio_bolge));
+
+                break;
+            case R.id.radio_teskilat:
+                filtre_spinner(OrtakFunction.teskilat_bolge_list_string, OrtakFunction.teskilat_bolge_list, OrtakFunction.teskilat_mudurluk_list,
+                        OrtakFunction.teskilat_seflik_list);
+                localDataManager.setSharedPreference(getApplicationContext(), "radioButton", String.valueOf(R.id.radio_teskilat));
+                break;
+        }
+
+    }
 
 }
