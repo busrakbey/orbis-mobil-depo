@@ -1,554 +1,666 @@
 [
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\oym_alt_menu_list_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\oym_alt_menu_list_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress_indeterminate_horizontal.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_progress_indeterminate_horizontal.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ozm_sorgulama_activity.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\ozm_sorgulama_activity.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\silvikultur_alt_menu.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\silvikultur_alt_menu.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_bar_up_container.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ana_menu_list_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\ana_menu_list_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\agac_sorgulama_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\agac_sorgulama_activity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_stub_titleframe_lesspadding.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_stub_titleframe_lesspadding.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\oduh_sorgulama_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\oduh_sorgulama_activity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar_include.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_dialog_messagebox.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\mr_dialog_messagebox.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_config_settings.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\activity_config_settings.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_agac_act_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\ortak_agac_act_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_dialog_editdelete_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\mr_dialog_editdelete_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_custom.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_custom.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\kdm_str_bilgisis_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\kdm_str_bilgisis_activity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_icon.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fab_tool_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\fab_tool_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\message.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\message.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_on_iki.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\item_on_iki.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_custom.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_custom.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fab_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\fab_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_bir.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\item_bir.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\material_design_spinner.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\material_design_spinner.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_yedi.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\item_yedi.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_dort.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\item_dort.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\blue_main.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\blue_main.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\device_name.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\device_name.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_listitem_multichoice.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_listitem_multichoice.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_activit_esri.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\activity_activit_esri.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ana_menu_list_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ana_menu_list_item.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_alert_dialog_title_material.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_odun_act_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\ortak_odun_act_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_listitem_singlechoice.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_listitem_singlechoice.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_expanded_menu_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_list_menu_item_radio.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_basic_check.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_basic_check.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_calendar_popup.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\layout_calendar_popup.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_prediction.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\9.2.1\\res\\layout\\place_autocomplete_item_prediction.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\message.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\message.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_data_selector_popup_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\mr_data_selector_popup_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_media_route_chooser_dialog.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout\\mr_media_route_chooser_dialog.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\yonetici_ekran_acitivity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\yonetici_ekran_acitivity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_lines_media.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\login_activity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_custom_big.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_custom_big.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\select_dialog_item_material.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\material_design_spinner.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\material_design_spinner.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_on_uc.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\item_on_uc.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\orbis_string_picker.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\orbis_string_picker.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_media.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_dialog_confirmation_view.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\mr_dialog_confirmation_view.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_simple_spinner_dropdown_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\mr_simple_spinner_dropdown_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_calendar_popup.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\layout_calendar_popup.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_stub_titleframe.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_stub_titleframe.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_guzergah_list_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\ortak_guzergah_list_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_config_settings.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\activity_config_settings.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_window.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\popup_window.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fire_list_activity.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\fire_list_activity.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\include_list_viewpager.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\include_list_viewpager.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_progress.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\9.2.1\\res\\layout\\place_autocomplete_progress.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\oym_alt_menu.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\oym_alt_menu.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_list_check.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_list_check.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_guzergah_list_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ortak_guzergah_list_item.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\google_map_view_ly.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\google_map_view_ly.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_screen_toolbar.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\bluetooth_device_dialog.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\bluetooth_device_dialog.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\callout_map.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\callout_map.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\support-media-compat\\26.1.0\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_activity_chooser_view.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\hukuk_disiliskiler_insaatikmal.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\hukuk_disiliskiler_insaatikmal.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\card_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\card_activity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_mini_controller.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\layout\\cast_mini_controller.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_not_list_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ortak_not_list_item.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\bluetooth_device_dialog.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\bluetooth_device_dialog.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_on.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\item_on.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\kadastro_sorgulama_activity.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\kadastro_sorgulama_activity.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_custom_big.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_custom_big.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_progress.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_fragment.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\9.2.1\\res\\layout\\place_autocomplete_fragment.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_prediction.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\9.2.1\\res\\layout\\place_autocomplete_item_prediction.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_help_text.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\layout\\cast_help_text.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\muh_sorgulama_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\muh_sorgulama_activity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_progress.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\9.2.1\\res\\layout\\place_autocomplete_progress.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\grafik_ana_ekran_activity.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\grafik_ana_ekran_activity.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_action_tombstone.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\simple_spinner_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\simple_spinner_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_input_check.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_input_check.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fab_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\fab_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_not_list_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\ortak_not_list_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_list.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_list.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress_indeterminate_horizontal.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_progress_indeterminate_horizontal.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_simple_spinner_dropdown_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\mr_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_register.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\layout_register.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow_custom.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\support-media-compat\\26.1.0\\res\\layout\\notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_bottom_sheet_dialog.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_menu_item_action_area.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_guzergah_fragment.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\ortak_guzergah_fragment.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\silvikultur_alt_menu.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\silvikultur_alt_menu.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_text.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\kadastro_sorgulama_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\kadastro_sorgulama_activity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_tracks_chooser_dialog_row_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\layout\\cast_tracks_chooser_dialog_row_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_header.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_uc.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\item_uc.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_listitem.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_listitem.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_media_route_controller_material_dialog_b.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout\\mr_media_route_controller_material_dialog_b.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_powered_by_google.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\9.2.1\\res\\layout\\place_autocomplete_item_powered_by_google.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_register.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\layout_register.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_list.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_list.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_lines_media.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\include_list_viewpager.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\include_list_viewpager.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_stub_actionbuttons.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_stub_actionbuttons.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\support-media-compat\\26.1.0\\res\\layout\\notification_media_action.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_basic.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_basic.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_list_check.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_list_check.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_tracks_chooser_dialog_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\layout\\cast_tracks_chooser_dialog_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_bes.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\item_bes.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_action.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_action.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_basic.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_basic.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_dialog_default_treelist.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\mr_dialog_default_treelist.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_on_iki.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\item_on_iki.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_icon_group.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_search_view.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_media_custom.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_mode_close_item_material.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\simple_spinner_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\simple_spinner_item.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_not_fragment.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\ortak_not_fragment.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\oym_alt_menu.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\oym_alt_menu.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_stub_titleframe_lesspadding.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_stub_titleframe_lesspadding.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_media_route_list_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout\\mr_media_route_list_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_part_chronometer.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\grafik_ana_ekran_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\grafik_ana_ekran_activity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_action_tombstone.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\blue_main.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\blue_main.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_home2_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\ortak_home2_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\google_map_view_ly.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\google_map_view_ly.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_dialog_editdelete_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\mr_dialog_editdelete_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_menu_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_media_route_chooser_dialog.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout\\mr_media_route_chooser_dialog.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_intro_overlay.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\layout\\cast_intro_overlay.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tooltip.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.1.0\\res\\layout\\tooltip.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\silvikultur_alt_menu_list_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\silvikultur_alt_menu_list_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_yedi.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\item_yedi.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\yonetici_ekran_acitivity.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\yonetici_ekran_acitivity.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_media_route_controller_material_dialog_b.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout\\mr_media_route_controller_material_dialog_b.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress_indeterminate.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_progress_indeterminate.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_iki.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\item_iki.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_media_custom.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\oym_alt_menu_list_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\oym_alt_menu_list_item.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_dialog_confirmation_view.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\mr_dialog_confirmation_view.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\deneme.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\deneme.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_bes.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\item_bes.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\select_dialog_multichoice_material.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\include_filter.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\include_filter.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_separator.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_home2_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ortak_home2_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_header.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_powered_by_google.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\9.2.1\\res\\layout\\place_autocomplete_item_powered_by_google.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_dialog_messagebox.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\mr_dialog_messagebox.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_data_selector_popup_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\mr_data_selector_popup_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fab_tool_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\fab_tool_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\select_dialog_item_material.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_sekiz.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\item_sekiz.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_dort.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\item_dort.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_not_fragment.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ortak_not_fragment.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\device_list.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\device_list.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_basic_check.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_basic_check.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_custom.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\support-media-compat\\26.1.0\\res\\layout\\notification_template_big_media_custom.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_part_time.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ozm_sorgulama_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ozm_sorgulama_activity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_fragment.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\9.2.1\\res\\layout\\place_autocomplete_fragment.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_intro_overlay.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\layout\\cast_intro_overlay.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_data_selector_list_iem.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\mr_data_selector_list_iem.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ana_menu_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ana_menu_activity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_list_menu_item_icon.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ormidare_amenajman_yangin_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ormidare_amenajman_yangin_activity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_list_menu_item_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\orbis_string_picker.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\orbis_string_picker.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_screen_content_include.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ana_menu_alt_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ana_menu_alt_activity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_not_popup_window.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\ortak_not_popup_window.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_icon_group.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_select_dialog_material.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_text.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_subheader.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_tracks_chooser_dialog_row_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\layout\\cast_tracks_chooser_dialog_row_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_activity.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\login_activity.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_tracks_chooser_dialog_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\layout\\cast_tracks_chooser_dialog_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_menu_item_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ayarlar_popup.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\ayarlar_popup.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\callout_map.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\callout_map.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_dialog_title_material.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_screen_simple.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\eizin_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\eizin_activity.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_dialog_config.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\layout_dialog_config.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_mini_controller.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\layout\\cast_mini_controller.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\oduh_sorgulama_activity.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\oduh_sorgulama_activity.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\silvikultur_alt_menu_list_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\silvikultur_alt_menu_list_item.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\select_dialog_singlechoice_material.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_mode_bar.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_alti.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\item_alti.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_listitem_singlechoice.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_listitem_singlechoice.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_dialog_config.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\layout_dialog_config.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\device_name.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\device_name.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_input_check.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_input_check.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ana_menu_activity.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\ana_menu_activity.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_help_text.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\layout\\cast_help_text.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_dia_def_treelist_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\mr_dia_def_treelist_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_bar_title_item.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_odun_act_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ortak_odun_act_layout.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_stub_titleframe.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_stub_titleframe.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\support-media-compat\\26.1.0\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_window.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\popup_window.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\device_list.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\device_list.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\card_activity.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\src\\main\\res\\layout\\card_activity.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_listitem.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_listitem.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress_indeterminate.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_progress_indeterminate.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_input.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_input.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_progress.xml"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_alert_dialog_material.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\personel.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\personel.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_guzergah_fragment.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ortak_guzergah_fragment.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_not_popup_window.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ortak_not_popup_window.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\row.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\row.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_media_route_list_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout\\mr_media_route_list_item.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_dialog_default_treelist.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\mr_dialog_default_treelist.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_data_selector_list_iem.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\mr_data_selector_list_iem.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_stub_actionbuttons.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_stub_actionbuttons.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ortak_agac_act_layout.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ortak_agac_act_layout.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\deneme.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\deneme.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ayarlar_popup.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ayarlar_popup.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ip_sorgulama_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\ip_sorgulama_activity.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_dokuz.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\item_dokuz.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_listitem_multichoice.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_listitem_multichoice.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_on_bir.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\item_on_bir.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fidanlik_orkoy_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\fidanlik_orkoy_activity.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_activit_esri.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\activity_activit_esri.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fire_list_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\fire_list_activity.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_input.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_input.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_uc.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\item_uc.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\support-media-compat\\26.1.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sil_sorgulama_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\sil_sorgulama_activity.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_dia_def_treelist_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\mr_dia_def_treelist_item.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_search_view.xml"
     }
 ]

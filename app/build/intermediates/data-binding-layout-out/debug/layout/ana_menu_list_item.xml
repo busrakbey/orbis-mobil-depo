@@ -23,29 +23,30 @@
     <!-- Rightend Arrow -->
     <ImageView
         android:id="@+id/fire_alt_menu_imageView1"
-        android:contentDescription="@string/app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/ic_arrow_right" />
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_arrow_right"
+        android:visibility="gone" />
 
 
     <TextView
         android:id="@+id/fire_alt_menu_list_item_text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dip"
+        android:layout_toEndOf="@+id/fire_image"
+        android:layout_toRightOf="@+id/fire_image"
+        android:gravity="center_vertical"
         android:text="-------"
         android:textColor="@color/mylabeltextcolor"
         android:textSize="14dip"
-        android:layout_marginLeft="10dp"
         android:textStyle="bold"
-        android:layout_marginTop="10dip"
-        android:gravity="center_vertical"
-        android:typeface="sans"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/fire_image"
-        android:layout_toEndOf="@+id/fire_image" />
+        android:typeface="sans" />
 
 
 

@@ -1,5 +1,5 @@
--injars 'D:\OrbisMobilDepoSon\app\build\intermediates\transforms\jarMerging\debug\jars\1\1f\combined.jar'
--outjars 'D:\OrbisMobilDepoSon\app\build\intermediates\multi-dex\debug\componentClasses.jar'
+-injars 'D:\DepoMobilSon\app\build\intermediates\transforms\jarMerging\debug\jars\1\1f\combined.jar'
+-outjars 'D:\DepoMobilSon\app\build\intermediates\multi-dex\debug\componentClasses.jar'
 
 -libraryjars 'C:\Users\busrakbey\AppData\Local\Android\Sdk\build-tools\23.0.3\lib\shrinkedAndroid.jar'
 
@@ -10,7 +10,7 @@
 -dontpreverify
 -dontnote **,com.android.tools.fd.**,android.support.multidex.MultiDexExtractor
 -dontwarn **
--printconfiguration 'D:\OrbisMobilDepoSon\app\build\intermediates\multi-dex\debug\components.flags'
+-printconfiguration 'D:\DepoMobilSon\app\build\intermediates\multi-dex\debug\components.flags'
 
 
 -keep class android.support.multidex.MultiDexApplication {
@@ -62,7 +62,7 @@
     <init>();
 }
 
--keep class com.konumsal.orbisozetmobil.KadastroUI.KadastroSorgulamaActivity {
+-keep class com.konumsal.orbisozetmobil.Kdm_Str_BilgiSis_UI.Kdm_Str_BilgiSis_SorgulamaActivity {
     <init>();
 }
 
@@ -70,7 +70,67 @@
     <init>();
 }
 
+-keep class com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPAltMenuActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPSorgulamaActivity {
+    <init>();
+}
+
 -keep class com.konumsal.orbisozetmobil.OzmUI.OzmSorgulamaActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.Agaclandirma.AgacSorgulamaActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.Agaclandirma.AgacAltMenuActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.OrmIdaresi_Amenajman_Yangin_UI.OrmIdaresi_Amenajman_Yangin_SorguActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.Hukuk_DisIlikiler_InsaatIkmal_SorguActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.EizinUI.EizinAltMenuActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.EizinUI.EizinSorgulamaActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.DisIliskilerAltMenuActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.DestekHizmetleriUI.MuhAltMenuActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.DestekHizmetleriUI.MuhSorgulamaActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.SilvikulturUI.SilAltMenuActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.SilvikulturUI.SilSorgulamaActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.Fidanlik_Orkoy_UI.Fidanlik_Orkoy_SorguActivity {
+    <init>();
+}
+
+-keep class com.konumsal.orbisozetmobil.PersonelUI.PersonelSorguActivity {
     <init>();
 }
 

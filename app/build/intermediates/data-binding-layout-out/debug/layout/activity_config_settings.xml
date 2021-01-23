@@ -10,13 +10,20 @@
     <!-- Action Bar Start-->
     <android.support.v7.widget.Toolbar
         android:id="@+id/config_settingact_toolbar"
-        android:background="@color/mr_haki"
+        android:background="@color/mr_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:layout_collapseMode="pin"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         />
+
+
+    <View android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/shadow"/>
+
+
     <!-- Action Bar End-->
     <ScrollView
         android:fillViewport="true"
@@ -53,55 +60,55 @@
 
 
                 <Button
-                    android:visibility="visible"
-                    android:onClick="gp_map_browse_click"
-                    android:textSize="12sp"
-                    android:text="Harita Seç"
-                    android:textColor="@color/kirlibeyaz"
-                    android:background="@drawable/my_green_button"
                     android:id="@+id/map_start_button"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/tool_bar_button_height"
-                    android:drawableLeft="@android:drawable/ic_dialog_map"
-                    android:paddingLeft="5dip"
                     android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:background="@drawable/my_green_button"
+                    android:drawableLeft="@android:drawable/ic_dialog_map"
+                    android:onClick="gp_map_browse_click"
+                    android:paddingLeft="5dip"
+                    android:text="Harita Seç"
+                    android:textColor="@color/kirlibeyaz"
+                    android:textSize="12sp"
+                    android:visibility="invisible" />
 
                 <Button
-                    android:visibility="visible"
-                    android:onClick="yedekle_click"
-                    android:textSize="12sp"
-                    android:text="Veri Yedekle  "
-                    android:textColor="@color/kirlibeyaz"
-                    android:background="@drawable/my_green_button"
                     android:id="@+id/yedekle_button"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/tool_bar_button_height"
-                    android:drawableLeft="@android:drawable/ic_menu_save"
-                    android:paddingLeft="5dip"
                     android:layout_alignParentTop="true"
                     android:layout_marginRight="@dimen/top_margin"
+                    android:layout_toStartOf="@+id/map_start_button"
                     android:layout_toLeftOf="@+id/map_start_button"
-                    android:layout_toStartOf="@+id/map_start_button" />
+                    android:background="@drawable/my_green_button"
+                    android:drawableLeft="@android:drawable/ic_menu_save"
+                    android:onClick="yedekle_click"
+                    android:paddingLeft="5dip"
+                    android:text="Veri Yedekle  "
+                    android:textColor="@color/kirlibeyaz"
+                    android:textSize="12sp"
+                    android:visibility="invisible" />
 
 
                 <Button
-                    android:visibility="visible"
-                    android:onClick="import_click"
-                    android:textSize="12sp"
-                    android:text="Veri İçe Al  "
-                    android:textColor="@color/kirlibeyaz"
-                    android:background="@drawable/my_green_button"
                     android:id="@+id/import_button"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/tool_bar_button_height"
-                    android:drawableLeft="@android:drawable/stat_sys_download_done"
-                    android:paddingLeft="5dip"
                     android:layout_alignParentTop="true"
                     android:layout_marginRight="@dimen/top_margin"
+                    android:layout_toStartOf="@+id/yedekle_button"
                     android:layout_toLeftOf="@+id/yedekle_button"
-                    android:layout_toStartOf="@+id/yedekle_button" />
+                    android:background="@drawable/my_green_button"
+                    android:drawableLeft="@android:drawable/stat_sys_download_done"
+                    android:onClick="import_click"
+                    android:paddingLeft="5dip"
+                    android:text="Veri İçe Al  "
+                    android:textColor="@color/kirlibeyaz"
+                    android:textSize="12sp"
+                    android:visibility="invisible" />
 
                 <LinearLayout  style="@style/topbarbottomviewline"
                     android:orientation="horizontal"

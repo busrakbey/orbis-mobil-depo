@@ -4,6 +4,8 @@
     android:id="@+id/drawerLayout_ip_alt_menu_list_ui"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/MyAlertDialogStyle"
+    android:background="@drawable/ic_bg_top"
     >
 
     <LinearLayout
@@ -15,41 +17,50 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/ip_alt_menu_list_ui_toolbar"
-            android:background="@color/mr_toolbar"
+            android:background="@color/whiteCardColor"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:layout_collapseMode="pin"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            />
+            app:theme="@style/ToolBarStyle"
+            app:popupTheme="@style/Theme.AppCompat.NoActionBar"
+            app:layout_collapseMode="pin"/>
 
 
 
-        <View android:layout_width="match_parent"
+
+
+      <View android:layout_width="match_parent"
             android:layout_height="5dp"
             android:background="@drawable/shadow"/>
 
 
+        <include
+            layout="@layout/include_filter"
+            />
+
+
+
+
 
         <LinearLayout
-            android:background="@drawable/list_gradient"
+            android:background="@drawable/ic_bg_top"
             android:layout_weight="1"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="0dp">
+
             <GridView
                 android:id="@+id/ip_alt_menu_list_listView"
-                android:numColumns="1"
-                android:horizontalSpacing="10dp"
-                android:verticalSpacing="10dp"
-                android:gravity="center"
-                android:stretchMode="columnWidth"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
                 android:minHeight="200dp"
-                android:layout_height="match_parent">
-            </GridView>
+                android:numColumns="1"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp"></GridView>
         </LinearLayout>
         <LinearLayout
             android:layout_margin="2dp"

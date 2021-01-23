@@ -1,10 +1,12 @@
 package com.konumsal.orbisozetmobil.OrtakUI;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
@@ -13,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -24,6 +27,9 @@ import android.widget.Toast;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.konumsal.orbisozetmobil.R;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -50,6 +56,8 @@ import DataLayer.Ortak.OrtakIsKalemleri_Data;
 import DataLayer.Ortak.OrtakNotKonu_Data;
 import DataLayer.Ortak.OrtakOdunTuru_Data;
 import DataLayer.Ortak.OtherUsers_Data;
+import DataLayer.Ortak.SCity_Data;
+import DataLayer.Ortak.SKoyBelde_Data;
 import DataLayer.Ortak.STown_Data;
 import DataLayer.Ortak.Unvan_Data;
 import DataLayer.Sistem.SModulKodDeger_Data;
@@ -64,6 +72,8 @@ import EntityLayer.Ortak.OrtakIsKalemleri;
 import EntityLayer.Ortak.OrtakNotKonu;
 import EntityLayer.Ortak.OrtakOdunTuru;
 import EntityLayer.Ortak.OtherUsers;
+import EntityLayer.Ortak.SCity;
+import EntityLayer.Ortak.SKoyBelde;
 import EntityLayer.Ortak.STown;
 import EntityLayer.Ortak.Unvan;
 import EntityLayer.Sistem.SCalisan;
@@ -101,7 +111,10 @@ public class ConfigSettingsActivity extends AppCompatActivity {
     List<OrtakIsKalemleri> list_ortak_is_kalemleri;
     List<OrtakNotKonu> list_ortak_konu;
     List<STown> list_STown;
-    // List<OzmKorumaEkip> list_korumaEkip;
+    List<SCity> list_city;
+    List<SKoyBelde> koyList;
+    // List<OzmKorumaEkip> list
+    //_korumaEkip;
     List<FidanAjaxTur> list_fidanTur;
 
     Type typeOf_SOrgBirim = null;
@@ -119,6 +132,10 @@ public class ConfigSettingsActivity extends AppCompatActivity {
     Type typeof_Town = null;
     Type typeof_korumaEkip = null;
     Type typeof_fidanTur = null;
+    Type typeOf_Koy = null;
+    String jsonSCity = "";
+
+
 
     HorizontalScrollView hsv;
 
@@ -165,6 +182,9 @@ public class ConfigSettingsActivity extends AppCompatActivity {
             mprogress.setMessage("Dosya kopyalanıyor.\n Lütfen Bekleyiniz ...");
             mprogress.setCancelable(false);
 
+            koyList = new ArrayList<SKoyBelde>();
+            typeOf_Koy = new TypeToken<List<SKoyBelde>>() {
+            }.getType();
 
             Utils.HideKeyboard(getWindow());
             in_url = (AutoCompleteTextView) findViewById(R.id.configset_act_urlActx);
@@ -252,6 +272,9 @@ public class ConfigSettingsActivity extends AppCompatActivity {
         }.getType();*/
         typeof_fidanTur = new TypeToken<List<FidanAjaxTur>>() {
         }.getType();
+        typeOf_SCity = new TypeToken<List<SCity>>() {
+        }.getType();
+
     }
 
     @Override
@@ -902,6 +925,24 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                                     }
 
 
+
+
+                                    for(STown item : list_STown){
+                                        OrtakFunction.ilce_list.add(item);
+                                        OrtakFunction.ilce_list_string.add(item.getAdi());
+                                    }
+
+                                    Collections.sort(OrtakFunction.ilce_list_string);
+                                    Collections.sort(OrtakFunction.ilce_list, new Comparator<STown>() {
+                                        @Override
+                                        public int compare(final STown object1, final STown object2) {
+                                            if (object1 != null && object2 != null && object2.getAdi() != null && object1.getAdi() != null)
+                                                return object1.getAdi().compareTo(object2.getAdi());
+                                            return 0;
+                                        }
+                                    });
+
+
                                 }
 
                             } else publishProgress("Hata !\nİlçe verisi alınamadı !\n");
@@ -1291,22 +1332,10 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                 //  MessageBox.showAlert(OzmSorgulamaMainActivity.this,"Sorgulama için gerekli temel veriler indirilemedi!",false);
 
                 // finish();
-            }else{
-
-                new AlertDialog.Builder(ConfigSettingsActivity.this)
-                        .setTitle("Orbis Mobile Sistem Bilgisi")
-                        .setMessage("İşlem Tamamlandı ")
-                        .setPositiveButton("Tamam", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                                if (ilk_giris.equals("1"))
-                                    ConfigSettingsActivity.this.finish();
+            } else {
+                new getCityFromService().execute();
 
 
-                            }
-                        })
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-                        .show();
             }
         }
 
@@ -1398,4 +1427,189 @@ public class ConfigSettingsActivity extends AppCompatActivity {
         }
     }
 
+
+    Type typeOf_SCity = null;
+
+    public class getCityFromService extends AsyncTask {
+        StringBuilder sb = new StringBuilder();
+        Boolean result = true;
+
+        @Override
+        protected void onPreExecute() {
+            list_city = new ArrayList<SCity>();
+            pd2.setMessage("Lütfen bekleyiniz..");
+            pd2.setTitle("Orbis Mobile");
+            pd2.show();
+        }
+
+        @Override
+        protected void onPostExecute(Object o) {
+            pd2.dismiss();
+            if (!result) {
+                MessageBox.showAlert(ConfigSettingsActivity.this, "İl verileri yüklenirken hata oluştu!", false);
+            } else {
+                new getKoyFromService().execute();
+
+            }
+        }
+
+        @Override
+        protected Object doInBackground(Object[] params) {
+
+            ConfigData configData = new ConfigData(ConfigSettingsActivity.this);
+            String surl = configData.getSERVICURL();
+            String servisURL = surl + getResources().getString(R.string.OrtakRS_il_get);
+            RSOperator operator = new RSOperator();
+            SCity_Data dasorg2 = new SCity_Data(ConfigSettingsActivity.this);
+
+
+            try {
+                jsonSCity = operator.CreateToRSUrlConnection(HttpRequestType.POST, null, servisURL, null);
+                if (jsonSCity.trim().length() > 1) {
+                    list_city = operator.convertJSONToEntity(jsonSCity, typeOf_SCity, list_city);
+                    jsonSCity = null;
+                    Log.v("city size", "=>" + list_city.size());
+                    Boolean durum = false;
+                    durum = dasorg2.deleteAllBirim();
+                    if (durum)
+                        dasorg2.insertFromContent(list_city);
+                    jsonSCity = null;
+
+                    /*OrtakFunction.il_list.add(null);
+                    OrtakFunction.il_list_string.add("");*/
+                    for(SCity item : list_city){
+                        OrtakFunction.il_list.add(item);
+                        OrtakFunction.il_list_string.add(item.getAdi());
+                    }
+
+                    Collections.sort(OrtakFunction.il_list_string);
+                    Collections.sort(OrtakFunction.il_list, new Comparator<SCity>() {
+                        @Override
+                        public int compare(final SCity object1, final SCity object2) {
+                            if (object1 != null && object2 != null && object2.getAdi() != null && object1.getAdi() != null)
+                                return object1.getAdi().compareTo(object2.getAdi());
+                            return 0;
+                        }
+                    });
+
+                    publishProgress("İl verileri yüklendi..");
+
+
+                } else
+                    MessageBox.showAlert(ConfigSettingsActivity.this, "Hata !\nİl verisi alinamadi !\n", false);
+            } catch (
+                    OrbisDefaultException e) {
+                e.printStackTrace();
+                result = false;
+            } catch (Throwable e) {
+                e.printStackTrace();
+                result = false;
+            }
+            return null;
+        }
+    }
+
+
+    String jsonKoy = "";
+
+    public class getKoyFromService extends AsyncTask {
+        StringBuilder sb = new StringBuilder();
+        Boolean result = true;
+
+        @Override
+        protected void onPreExecute() {
+            koyList = new ArrayList<SKoyBelde>();
+            pd2.setMessage("Köyler yükleniyor lütfen bekleyiniz..");
+            pd2.setTitle("Orbis Mobile");
+            pd2.show();
+        }
+
+        @Override
+        protected void onPostExecute(Object o) {
+            pd2.dismiss();
+            if (!result) {
+                MessageBox.showAlert(ConfigSettingsActivity.this, "Köy verileri yüklenirken hata oluştu!", false);
+            } else {
+
+                new AlertDialog.Builder(ConfigSettingsActivity.this)
+                        .setTitle("Orbis Mobile Sistem Bilgisi")
+                        .setMessage("İşlem Tamamlandı ")
+                        .setPositiveButton("Tamam", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                                if (ilk_giris.equals("1"))
+                                    ConfigSettingsActivity.this.finish();
+
+
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+
+            }
+
+
+        }
+
+        @Override
+        protected Object doInBackground(Object[] params) {
+
+            ConfigData configData = new ConfigData(ConfigSettingsActivity.this);
+            String surl = configData.getSERVICURL();
+            String servisURL = surl + getResources().getString(R.string.ortakRS_mobil_sorgu_koy_belde);
+            RSOperator operator = new RSOperator();
+            SKoyBelde_Data dasorg2 = new SKoyBelde_Data(ConfigSettingsActivity.this);
+
+
+            try {
+                jsonKoy = operator.CreateToRSUrlConnection(HttpRequestType.POST, null, servisURL, "%%");
+                Log.v("JSONkoy", "=>" + jsonKoy);
+                if (jsonKoy.trim().length() > 1) {
+                    koyList = operator.convertJSONToEntity(jsonKoy, typeOf_Koy, koyList);
+                    jsonKoy = null;
+                    Boolean durum = false;
+                    durum = dasorg2.deleteAllBirim();
+                    if (durum)
+                        dasorg2.insertFromContent(koyList);
+                    jsonSCity = null;
+
+                    OrtakFunction.koy_list.add(null);
+                    OrtakFunction.koy_list_string.add("");
+                    for(SKoyBelde item : koyList){
+                        OrtakFunction.koy_list.add(item);
+                        OrtakFunction.koy_list_string.add(item.getKoyAdi());
+                    }
+
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    Collections.sort(OrtakFunction.koy_list_string);
+                    Collections.sort(OrtakFunction.koy_list, new Comparator<SKoyBelde>() {
+                        @Override
+                        public int compare(final SKoyBelde object1, final SKoyBelde object2) {
+                            if (object1 != null && object2 != null && object2.getKoyAdi() != null && object1.getKoyAdi() != null)
+                                return object1.getKoyAdi().compareTo(object2.getKoyAdi());
+                            return 0;
+                        }
+                    });
+                    publishProgress("Köy verileri yüklendi..");
+
+
+                } else
+                    MessageBox.showAlert(ConfigSettingsActivity.this, "Hata !\nKöy/Belde model verisi alinamadi !\n", false);
+
+            } catch (
+                    OrbisDefaultException e) {
+                e.printStackTrace();
+                result = false;
+            } catch (Throwable e) {
+                e.printStackTrace();
+                result = false;
+            }
+
+            return null;
+        }
+    }
 }

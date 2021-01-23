@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:background="@color/mr_haki"
+        android:background="@color/myformcellbordercolor"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -15,12 +15,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@mipmap/ic_launcher"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                 android:src="@mipmap/ic_launcher"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
             <TextView
                 style="@style/mr_dialog_title_textview"
                 android:id="@+id/mr_dialog_title_textbox"
+                android:textColor="@color/text"
                 />
         </LinearLayout>
 
@@ -30,12 +31,12 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-          <TextView
-              android:layout_margin="10dp"
-              android:id="@+id/mr_dia_messagebox_messtxt"
-              android:text="Message"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content" />
+            <TextView
+                android:layout_margin="10dp"
+                android:id="@+id/mr_dia_messagebox_messtxt"
+                android:text="Message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
         <RelativeLayout
             android:layout_margin="20dp"

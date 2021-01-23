@@ -1,11 +1,14 @@
 package EntityLayer.Ortak;
 
+import AnnotationLayer.Column;
+import AnnotationLayer.Table;
+
 /**
  * Created by isahin on 23.3.2017.
  */
-public class SCity {
 
-
+@Table(name = "S_IL")
+public class SCity extends BaseEntity{
 
     @Override
     public String toString()
@@ -13,7 +16,10 @@ public class SCity {
         return  adi;
     }
 
+    @Column(name = "id", nullable = false)
     public Long id = null;
+
+    @Column(name = "adi", nullable = false)
     public String adi = null;
 
     public Long getId() {

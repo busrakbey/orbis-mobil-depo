@@ -46,6 +46,8 @@ import EntityLayer.Ortak.OrtakNot;
 import EntityLayer.Ortak.OrtakNotKonu;
 import EntityLayer.Ortak.OrtakOdunTuru;
 import EntityLayer.Ortak.OtherUsers;
+import EntityLayer.Ortak.SCity;
+import EntityLayer.Ortak.SKoyBelde;
 import EntityLayer.Ortak.STown;
 import EntityLayer.Ortak.SanatYapisi;
 import EntityLayer.Ortak.Unvan;
@@ -174,6 +176,12 @@ public class DbHelper extends SQLiteOpenHelper
 
             String s_town = new SqlBuilder<STown>(new STown()).createTable(true);
             db.execSQL(new SqlBuilder<STown>(new STown()).createTable(true));
+
+            String s_il = new SqlBuilder<SCity>(new SCity()).createTable(true);
+            db.execSQL(new SqlBuilder<SCity>(new SCity()).createTable(true));
+
+            String s_koy = new SqlBuilder<SKoyBelde>(new SKoyBelde()).createTable(true);
+            db.execSQL(new SqlBuilder<SKoyBelde>(new SKoyBelde()).createTable(true));
 
             String ortak_kamera = new SqlBuilder<OrtakKamera>(new OrtakKamera()).createTable(true);
             db.execSQL(new SqlBuilder<OrtakKamera>(new OrtakKamera()).createTable(true));

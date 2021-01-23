@@ -21,7 +21,8 @@ android {
         jcenter()
         // add the esri arcgis maven repo
         maven {
-            url 'http://esri.bintray.com/arcgis'
+            url 'https://jitpack.io'
+
         }
     }
     packagingOptions {
@@ -88,6 +89,11 @@ dependencies {
     compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+
+    compile 'com.github.iammert:ExpandableLayout:1.4.1'
+    compile 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
+
+
 
 
 

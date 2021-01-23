@@ -13,8 +13,8 @@
     <dimen name="mes_detay_giris_top_margin">35dp</dimen>
     <dimen name="mr_inputsizebig">25sp</dimen>
     <dimen name="mr_navbar_heigth">60dp</dimen>
-    <dimen name="mr_navbar_label_textviewsize">15dp</dimen>
-    <dimen name="normal_definition_text_size">15sp</dimen>
+    <dimen name="mr_navbar_label_textviewsize">14dp</dimen>
+    <dimen name="normal_definition_text_size">14sp</dimen>
     <dimen name="normal_hint_text_size">20sp</dimen>
     <dimen name="normal_list_item_image_height">70sp</dimen>
     <dimen name="normal_listview_height">120dp</dimen>

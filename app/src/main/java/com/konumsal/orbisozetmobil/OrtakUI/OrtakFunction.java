@@ -24,6 +24,9 @@ import java.util.Locale;
 import EntityLayer.GeoPortal.ORNEK_ALAN;
 import EntityLayer.Ortak.MobilGuzergah;
 import EntityLayer.Ortak.OrtakAgacTuru;
+import EntityLayer.Ortak.SCity;
+import EntityLayer.Ortak.SKoyBelde;
+import EntityLayer.Ortak.STown;
 import EntityLayer.Sistem.SModulKodDeger;
 
 import EntityLayer.Sistem.SOrgBirim;
@@ -131,6 +134,16 @@ public class OrtakFunction {
     public static List<SOrgBirim> teskilat_bolge_list= new ArrayList<SOrgBirim>();
     public static List<SOrgBirim> teskilat_mudurluk_list = new ArrayList<SOrgBirim>();
     public static List<SOrgBirim> teskilat_seflik_list = new ArrayList<SOrgBirim>();
+
+
+    public static  List<String> il_list_string = new ArrayList<String>();
+    public static  List<String> ilce_list_string = new ArrayList<String>();
+    public static List<String> koy_list_string = new ArrayList<String>();
+
+    public static List<SCity> il_list= new ArrayList<SCity>();
+    public static List<STown> ilce_list = new ArrayList<STown>();
+    public static List<SKoyBelde> koy_list = new ArrayList<SKoyBelde>();
+
 
     //////////////
 

@@ -117,23 +117,84 @@
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
             android:name="com.konumsal.orbisozetmobil.OduhUI.OduhSorgulamaActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize" />
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
         <activity
             android:name="com.konumsal.orbisozetmobil.OduhUI.OduhAltMenuActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.konumsal.orbisozetmobil.KadastroUI.KadastroSorgulamaActivity"
+            android:name="com.konumsal.orbisozetmobil.Kdm_Str_BilgiSis_UI.Kdm_Str_BilgiSis_SorgulamaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name="com.konumsal.orbisozetmobil.OzmUI.OzmAltMenuActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.konumsal.orbisozetmobil.OzmUI.OzmSorgulamaActivity"
+            android:name="com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPAltMenuActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPSorgulamaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.OzmUI.OzmSorgulamaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.Agaclandirma.AgacSorgulamaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.Agaclandirma.AgacAltMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.OrmIdaresi_Amenajman_Yangin_UI.OrmIdaresi_Amenajman_Yangin_SorguActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.Hukuk_DisIlikiler_InsaatIkmal_SorguActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.EizinUI.EizinAltMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.EizinUI.EizinSorgulamaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.DisIliskilerAltMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.DestekHizmetleriUI.MuhAltMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.DestekHizmetleriUI.MuhSorgulamaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.SilvikulturUI.SilAltMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.SilvikulturUI.SilSorgulamaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.Fidanlik_Orkoy_UI.Fidanlik_Orkoy_SorguActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.konumsal.orbisozetmobil.PersonelUI.PersonelSorguActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

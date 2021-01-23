@@ -1,29 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginTop="5dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:layout_marginTop="10dp">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:background="@drawable/list_gradient"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="6dp">
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_marginLeft="10dp"
-            android:layout_weight="0.5">
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/expand_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:background="?selectableItemBackgroundBorderless"
+                android:onClick="detayOnClick"
+                android:scaleType="center"
+                android:src="@drawable/ic_chevron_right_black_24dp" />
+
 
             <RadioGroup
                 android:id="@+id/birim_radio_group"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight="0.9"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -49,17 +64,33 @@
                     android:text="Tüm Teşkilat  "
                     android:textColor="@color/light_gray_header_color"
                     android:textSize="@dimen/normal_definition_text_size"></RadioButton>
+
             </RadioGroup>
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandable_layout"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:el_duration="1000"
+            app:el_expanded="false">
+
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_bir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="10dp"
             android:layout_weight="0.5"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -140,12 +171,15 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linear_iki"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="10dp"
-            android:orientation="horizontal">
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -223,6 +257,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/yil_sorgu"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -252,4 +287,4 @@
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

@@ -1,14 +1,26 @@
 [
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\md_nav_back.png",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\drawable-ldpi-v4\\md_nav_back.png"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\md_nav_back.png",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\drawable-ldpi-v4\\md_nav_back.png"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\common_ic_googleplayservices.png",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable-ldpi-v4\\common_ic_googleplayservices.png"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_bg_top.png",
+        "source": "D:\\DepoMobilSon\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_bg_top.png"
     },
     {
-        "merged": "D:\\OrbisMobilDepoSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_login_bk.png",
-        "source": "D:\\OrbisMobilDepoSon\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_login_bk.png"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_chevron_right_black_24dp.png",
+        "source": "D:\\DepoMobilSon\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_chevron_right_black_24dp.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_login_bk.png",
+        "source": "D:\\DepoMobilSon\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_login_bk.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_expansion_header_indicator_grey_24dp.png",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.github.florent37\\expansionpanel\\1.0.3\\res\\drawable-ldpi-v4\\ic_expansion_header_indicator_grey_24dp.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\common_ic_googleplayservices.png",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable-ldpi-v4\\common_ic_googleplayservices.png"
     }
 ]

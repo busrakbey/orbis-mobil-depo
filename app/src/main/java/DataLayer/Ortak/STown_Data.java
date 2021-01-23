@@ -115,4 +115,27 @@ public class STown_Data  extends DataController<STown> {
         }
     }
 
+
+    public Boolean deleteAllBirim() throws OrbisDefaultException {
+        Boolean status = true;
+        try {
+            db = helper.getWritableDatabase();
+            db.beginTransaction();
+            db.execSQL("DELETE FROM S_ILCE");
+            Log.v("DD "," tablosunda  kayıtlar silindi. ");
+        } catch (SQLiteException e) {
+            e.printStackTrace();
+            status = false;
+            throw new OrbisDefaultException("DataController:clearDataTable->" + e.getMessage());
+        } catch (Throwable e) {
+            e.printStackTrace();
+            status = false;
+            throw new OrbisDefaultException("DataController:clearDataTable->" + e.getMessage());
+        }
+        db.setTransactionSuccessful();
+        db.endTransaction();
+        db.close();
+        return status;
+    }
+
 }

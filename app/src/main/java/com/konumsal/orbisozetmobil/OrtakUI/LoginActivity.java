@@ -86,26 +86,26 @@ import ToolLayer.StateReceiver;
 import ToolLayer.Utils;
 
 
-public class LoginActivity extends Activity implements DialogConfigFragment.serviceUrlListener{
+public class LoginActivity extends Activity implements DialogConfigFragment.serviceUrlListener {
 
     Button loginBtn;
     ImageView logoimage;
     List<ORNEK_ALAN> ornek_alanList;
-    EditText login_act_txtUserName,login_act_txtPassword;
+    EditText login_act_txtUserName, login_act_txtPassword;
     //FrameLayout rootView;
-    String uname=null;
+    String uname = null;
     String upwd = null;
     ConfigData configData;
 
-    String jsonSOrgBirim="";
-    String jsonOduhTurKayitAile="";
-    String jsonSKullanici="";
-    String jsonSCalisan="";
-    String jsonSModulKodDeger="";
-    String jsonOrtakAgacTur="";
-    String jsonGpPlanHazirlik="";
-    String jsonOrnekAlanNokta="";
-    String jsonOrtakAgacTuru="";
+    String jsonSOrgBirim = "";
+    String jsonOduhTurKayitAile = "";
+    String jsonSKullanici = "";
+    String jsonSCalisan = "";
+    String jsonSModulKodDeger = "";
+    String jsonOrtakAgacTur = "";
+    String jsonGpPlanHazirlik = "";
+    String jsonOrnekAlanNokta = "";
+    String jsonOrtakAgacTuru = "";
     public static String serviceUrl = "https://orbis.ogm.gov.tr/orbis";//"https://linkobs.ogm.gov.tr/orbis";
     NotificationManager nm;
     TextView version_txt;
@@ -117,14 +117,15 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
     List<SModulKodDeger> list_SModulKodDeger;
     List<OrtakAgacTuru> list_ortakAgacTuru;
 
-    Type typeOf_SOrgBirim=null;
-    Type typeOf_SModulKodDeger=null;
-    Type typeOf_SKullanici=null;
-    Type typeOf_SCalisan=null;
-    Type typeof_OrtakAgacTuru =null;
+    Type typeOf_SOrgBirim = null;
+    Type typeOf_SModulKodDeger = null;
+    Type typeOf_SKullanici = null;
+    Type typeOf_SCalisan = null;
+    Type typeof_OrtakAgacTuru = null;
     ProgressDialog progressDialog;
 
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.00F);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -132,13 +133,13 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.login_activity);
-        Log.v("login","activity");
+        Log.v("login", "activity");
         Utils.HideKeyboard(getWindow());
         configData = new ConfigData(this);
         loginBtn = (Button) findViewById(R.id.login_act_btnLogin);
         //rootView=(FrameLayout)findViewById(R.id.login_act_container);
-        login_act_txtUserName = (EditText)findViewById(R.id.login_act_txtUserName);
-        login_act_txtPassword =(EditText)findViewById(R.id.login_act_txtPassword);
+        login_act_txtUserName = (EditText) findViewById(R.id.login_act_txtUserName);
+        login_act_txtPassword = (EditText) findViewById(R.id.login_act_txtPassword);
 
         animation_count = 0;
         progressDialog = new ProgressDialog(LoginActivity.this);
@@ -162,25 +163,29 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
         list_SModulKodDeger = new ArrayList<SModulKodDeger>();
         list_ortakAgacTuru = new ArrayList<OrtakAgacTuru>();
 
-        typeOf_SOrgBirim = new TypeToken<List<SOrgBirim>>(){}.getType();
+        typeOf_SOrgBirim = new TypeToken<List<SOrgBirim>>() {
+        }.getType();
 
-        typeOf_SModulKodDeger = new TypeToken<List<SModulKodDeger>>(){}.getType();
-        typeOf_SKullanici = new TypeToken<List<SKullanici>>(){}.getType();
-        typeOf_SCalisan = new TypeToken<List<SCalisan>>(){}.getType();
-        typeof_OrtakAgacTuru = new TypeToken<List<OrtakAgacTuru>>(){}.getType();
+        typeOf_SModulKodDeger = new TypeToken<List<SModulKodDeger>>() {
+        }.getType();
+        typeOf_SKullanici = new TypeToken<List<SKullanici>>() {
+        }.getType();
+        typeOf_SCalisan = new TypeToken<List<SCalisan>>() {
+        }.getType();
+        typeof_OrtakAgacTuru = new TypeToken<List<OrtakAgacTuru>>() {
+        }.getType();
         firstOpenHelper();
         User usr = defUser();
-        if (usr!=null)
-        {
+        if (usr != null) {
             login_act_txtUserName.setText(usr.getMadi());
             login_act_txtPassword.setText(usr.getMsifre());
         }
 
-       // version_txt = (TextView) findViewById(R.id.version_txt);
+        // version_txt = (TextView) findViewById(R.id.version_txt);
 
     }
-    public void login_Act_ayarOnClick(final View v)
-    {
+
+    public void login_Act_ayarOnClick(final View v) {
         v.startAnimation(buttonClick);
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.m_my2anim);
         v.clearAnimation();
@@ -208,12 +213,12 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
 
 
     int animation_count = 0;
-    public void LoginOnClick(final View v)
-    {
+
+    public void LoginOnClick(final View v) {
         uname = login_act_txtUserName.getText().toString().trim();
         upwd = login_act_txtPassword.getText().toString().trim();
 
-        Log.v("login click","button click");
+        Log.v("login click", "button click");
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.m_move_anim);
         v.clearAnimation();
         v.startAnimation(animation);
@@ -222,7 +227,7 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
         animation.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-                Log.v("login click","start animation");
+                Log.v("login click", "start animation");
             }
 
             @Override
@@ -263,76 +268,60 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
     }
 
 
-    public void checkUser()
-    {
-        if (login_act_txtUserName.getText().toString().trim().length()>1 && login_act_txtPassword.getText().toString().trim().length()>0)
-        {
+    public void checkUser() {
+        if (login_act_txtUserName.getText().toString().trim().length() > 1 && login_act_txtPassword.getText().toString().trim().length() > 0) {
             String name = login_act_txtUserName.getText().toString().trim();
             String pwd = login_act_txtPassword.getText().toString().trim();
             Boolean success = false;
-            success =hasUser(name,pwd);
-            if (success)
-            {
-                Log.v("check user","user kayıtlı");
+            success = hasUser(name, pwd);
+            if (success) {
+                Log.v("check user", "user kayıtlı");
                 progressDialog.dismiss();
                 goHome();
-            }
-            else
-            {
+            } else {
 
-                if (StateReceiver.isNetworkAvailable(LoginActivity.this))
-                {
-                    if (configData.getSERVICURL().trim().length()>10)
-                    {
+                if (StateReceiver.isNetworkAvailable(LoginActivity.this)) {
+                    if (configData.getSERVICURL().trim().length() > 10) {
                         new userTask().execute();
-                    }
-                    else
-                    {
+                    } else {
                         progressDialog.dismiss();
-                        MessageBox.showAlert(LoginActivity.this,"Bağlantı için server url adresi bulunamadı  !\n Lütfen ayarlarınızı kontrol ediniz..",false);
+                        MessageBox.showAlert(LoginActivity.this, "Bağlantı için server url adresi bulunamadı  !\n Lütfen ayarlarınızı kontrol ediniz..", false);
                     }
 
-                }
-                else
-                {
+                } else {
                     progressDialog.dismiss();
-                    MessageBox.showAlert(LoginActivity.this,"İnternet  bağlantınız mevcut değil !\n Lütfen bağlantı ayarlarınızı kontrol ediniz..",false);
+                    MessageBox.showAlert(LoginActivity.this, "İnternet  bağlantınız mevcut değil !\n Lütfen bağlantı ayarlarınızı kontrol ediniz..", false);
                 }
             }
 
-        }
-        else
-        {
-            MessageBox.showAlert(LoginActivity.this,"Kullanıcı adı ve parola bilgisini eksiksiz giriniz !",false);
+        } else {
+            MessageBox.showAlert(LoginActivity.this, "Kullanıcı adı ve parola bilgisini eksiksiz giriniz !", false);
             progressDialog.dismiss();
         }
 
 
-
     }
-    public class userTask extends AsyncTask<Void,Void,Result<User>>
-    {
-        Result<SKullanici> resKull=null;
-        Boolean sKullanciDurum=true;
+
+    public class userTask extends AsyncTask<Void, Void, Result<User>> {
+        Result<SKullanici> resKull = null;
+        Boolean sKullanciDurum = true;
+
         @Override
         protected void onPostExecute(Result<User> result) {
-            if (result.getResult()!=null)
-            {
+            if (result.getResult() != null) {
                 progressDialog.dismiss();
                 User kullanici = result.getResult();
-                if (kullanici!=null)
-                {
-                    if (!sKullanciDurum)
-                    {
-                        MessageBox.showToast(LoginActivity.this,"Kullanıcı çevrim hatası oluştu !");
+                if (kullanici != null) {
+                    if (!sKullanciDurum) {
+                        MessageBox.showToast(LoginActivity.this, "Kullanıcı çevrim hatası oluştu !");
                     }
                     kullanici.setMadi(uname);
                     kullanici.setMsifre(upwd);
                     kullanici.setOrgId(kullanici.getId());
-                    Log.v("kullanici Id = >>",String.valueOf(kullanici.getId()));
+                    Log.v("kullanici Id = >>", String.valueOf(kullanici.getId()));
                     OrtakFunction.kullanici_id = kullanici.getId();
                     OrtakFunction.kullanici_adi = uname;
-                    if(OrtakFunction.get_vip_user_list().contains(OrtakFunction.kullanici_adi))
+                    if (OrtakFunction.get_vip_user_list().contains(OrtakFunction.kullanici_adi))
                         OrtakFunction.birim_id = OrtakFunction.admine_ozel_birim_id;
                     else
                         OrtakFunction.birim_id = String.valueOf(kullanici.getOrgBirimId());
@@ -343,14 +332,14 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
                     try {
                         configData.setBaseConfigData();
                     } catch (OrbisDefaultException e) {
-                        Log.v("cathch","retval");
+                        Log.v("cathch", "retval");
                         e.printStackTrace();
                     }
 
 
                     //Log.v("path","=>"+configData.getIlgiliBirim().getYol());
 
-                    if(configData.getIlgiliBirim() != null && configData.getIlgiliBirim().getYol() != null ) {
+                    if (configData.getIlgiliBirim() != null && configData.getIlgiliBirim().getYol() != null) {
                         String path = configData.getIlgiliBirim().getYol();
                         String output[] = path.split("\\.");
 
@@ -364,55 +353,49 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
                     }
 
                     new saveUserTask().execute(kullanici);
-                }
-                else
-                {
+                } else {
                     progressDialog.dismiss();
-                    MessageBox.showAlert(LoginActivity.this,"Kullanıcı girişi hatalı Hata kodu:3 !\n"+"Kullanıcı bulunamadı",false);
+                    MessageBox.showAlert(LoginActivity.this, "Kullanıcı girişi hatalı Hata kodu:3 !\n" + "Kullanıcı bulunamadı", false);
                 }
 
-            }
-            else
-            {
+            } else {
                 progressDialog.dismiss();
                 MessageBox.showAlert(LoginActivity.this, "Kullanıcı girişi hatalı\nHata kodu:4 !\n" + "Kullanıcı adı veya şifre hatalı!", false);
             }
         }
 
         @Override
-        protected Result<User> doInBackground(Void... params)
-        {
+        protected Result<User> doInBackground(Void... params) {
             ConfigData cd = new ConfigData(LoginActivity.this);
-            resKull=new Result<SKullanici>();
-            String input = uname+","+upwd;
-            input = set_input_parameter_list(uname , upwd);
-            String url = cd.getSERVICURL()+getResources().getString(R.string.loginActivity_kullaniciDogrulamaPost);
+            resKull = new Result<SKullanici>();
+            String input = uname + "," + upwd;
+            input = set_input_parameter_list(uname, upwd);
+            String url = cd.getSERVICURL() + getResources().getString(R.string.loginActivity_kullaniciDogrulamaPost);
             RSOperator operator = new RSOperator();
-            String retVal=null;
+            String retVal = null;
             Result<User> sr = new Result<User>();
-            Type typeOf_val=null;
-            List<String> valList= new ArrayList<String>();
-            Result<User> res= new Result<User>();
+            Type typeOf_val = null;
+            List<String> valList = new ArrayList<String>();
+            Result<User> res = new Result<User>();
 
-            typeOf_val = new TypeToken<Result<User>>(){}.getType();
+            typeOf_val = new TypeToken<Result<User>>() {
+            }.getType();
             try {
-                Log.v("login connection url","=>"+url);
-                retVal = operator.CreateToRSUrlConnection(HttpRequestType.POST, null, url,input);
-                if (retVal!=null)
-                {
-                    sr = operator.convertJSONToEntity(retVal,typeOf_val,sr);
+                Log.v("login connection url", "=>" + url);
+                retVal = operator.CreateToRSUrlConnection(HttpRequestType.POST, null, url, input);
+                if (retVal != null) {
+                    sr = operator.convertJSONToEntity(retVal, typeOf_val, sr);
 
-                    typeOf_val = new TypeToken<Result<SKullanici>>(){}.getType();
-                    resKull =operator.convertJSONToEntity(retVal,typeOf_val,resKull);
-                    if (resKull!=null)
-                    {
-                        SKullanici kullnanc= resKull.getResult();
-                        if (kullnanc!=null)
-                        {
+                    typeOf_val = new TypeToken<Result<SKullanici>>() {
+                    }.getType();
+                    resKull = operator.convertJSONToEntity(retVal, typeOf_val, resKull);
+                    if (resKull != null) {
+                        SKullanici kullnanc = resKull.getResult();
+                        if (kullnanc != null) {
                             SKullanici_Data sKullanici_data = new SKullanici_Data(LoginActivity.this);
                             sKullanici_data.clearDatabaseTable();
                             sKullanici_data.getDataList().add(kullnanc);
-                            sKullanciDurum=   sKullanici_data.insert();
+                            sKullanciDurum = sKullanici_data.insert();
                         }
 
                     }
@@ -422,14 +405,11 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
                 }
 
 
-            } catch (OrbisDefaultException e)
-            {
-                sr.addError("Hata1\n"+e.toString());
+            } catch (OrbisDefaultException e) {
+                sr.addError("Hata1\n" + e.toString());
                 e.printStackTrace();
-            }
-            catch (Throwable e)
-            {
-                sr.addError("Hata2\n"+e.toString());
+            } catch (Throwable e) {
+                sr.addError("Hata2\n" + e.toString());
                 e.printStackTrace();
             }
             return sr;
@@ -437,7 +417,7 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
     }
 
 
-    private String set_input_parameter_list(String kulAdi , String sifre) {
+    private String set_input_parameter_list(String kulAdi, String sifre) {
 
         String s1 = "\"username\":";
         String s2 = "{";
@@ -456,53 +436,48 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
         return input1;
     }
 
-    public Boolean hasUser(String name , String pwd)  {
-        User_Data ud= new User_Data(LoginActivity.this,new User());
+    public Boolean hasUser(String name, String pwd) {
+        User_Data ud = new User_Data(LoginActivity.this, new User());
         User u = null;
-        Boolean durum =false;
-        try
-        {
+        Boolean durum = false;
+        try {
             List<User> uList = ud.list();
-            if (uList !=null && uList.size()>0)
-            {
-                for (User user:uList) {
-                    if(user.getMadi().equals(name))
-                    {
+            if (uList != null && uList.size() > 0) {
+                for (User user : uList) {
+                    if (user.getMadi().equals(name)) {
                         u = user;
                         break;
                     }
                 }
                 //u=uList.get(0);
-                if (u!=null)
-                {
+                if (u != null) {
 
-                    if (u.getMadi()!=null && u.getMsifre()!=null)
-                    {
-                        String  _ad=u.getMadi();
-                        String  _pwd =u.getMsifre();
+                    if (u.getMadi() != null && u.getMsifre() != null) {
+                        String _ad = u.getMadi();
+                        String _pwd = u.getMsifre();
                         String kullanici_id = String.valueOf(u.getId());
-                        Log.v("mevcut kullanici ==>>","id="+kullanici_id+" birim="+String.valueOf(u.getOrgBirimId())+" name="+name);
+                        Log.v("mevcut kullanici ==>>", "id=" + kullanici_id + " birim=" + String.valueOf(u.getOrgBirimId()) + " name=" + name);
                         OrtakFunction.kullanici_id = u.getId();
                         OrtakFunction.kullanici_adi = name;
-                        if(OrtakFunction.get_vip_user_list().contains(OrtakFunction.kullanici_adi))
+                        if (OrtakFunction.get_vip_user_list().contains(OrtakFunction.kullanici_adi))
                             OrtakFunction.birim_id = OrtakFunction.admine_ozel_birim_id;
                         else
                             OrtakFunction.birim_id = String.valueOf(u.getOrgBirimId());
                         OrtakFunction.kullanici_unvan_id = u.getUnvanId();
                         OrtakFunction.kullanici_gercek_adi = u.getAdi();
                         OrtakFunction.kullanici_soyadi = u.getSoyadi();
-                        Log.v("ad soyad","=>"+u.getAdi()+"-"+u.getSoyadi()+"-"+u.getAdiSoyadi()+"-"+login_act_txtPassword.getText().toString());
+                        Log.v("ad soyad", "=>" + u.getAdi() + "-" + u.getSoyadi() + "-" + u.getAdiSoyadi() + "-" + login_act_txtPassword.getText().toString());
 
                         try {
                             configData.setBaseConfigData();
                         } catch (OrbisDefaultException e) {
-                            Log.v("cathch","retval");
+                            Log.v("cathch", "retval");
                             e.printStackTrace();
                         }
 
                         //Log.v("path","=>"+configData.getIlgiliBirim().getYol());
 
-                        if(configData.getIlgiliBirim() != null  && configData.getIlgiliBirim().getYol() != null ) {
+                        if (configData.getIlgiliBirim() != null && configData.getIlgiliBirim().getYol() != null) {
                             String path = configData.getIlgiliBirim().getYol();
                             String output[] = path.split("\\.");
 
@@ -515,14 +490,10 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
                         }
 
 
-
-                        if (_ad.equals(name)&&_pwd.equals(pwd))
-                        {
-                            durum=true;
-                        }else
-                        {
-                            if (!_ad.equals(name))
-                            {
+                        if (_ad.equals(name) && _pwd.equals(pwd)) {
+                            durum = true;
+                        } else {
+                            if (!_ad.equals(name)) {
                                /* PLAN_Data plan_data = new PLAN_Data(LoginActivity.this);
                                 EN_KAR_AGAC_Data en_kar_agac_data = new EN_KAR_AGAC_Data(LoginActivity.this);
                                 ORNEK_ALAN_Data ornek_alan_data = new ORNEK_ALAN_Data(LoginActivity.this);
@@ -533,7 +504,7 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
 
                         }
                     }
-                    Boolean dm =durum;
+                    Boolean dm = durum;
                 }
             }
 
@@ -541,32 +512,26 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
         } catch (OrbisDefaultException e) {
             e.printStackTrace();
             MessageBox.showAlert(LoginActivity.this, "Kullanıcı sorgulama hatalı Hata:1!\n" + "", false);
-            durum=false;
-        }
-        catch (Exception e)
-        {
+            durum = false;
+        } catch (Exception e) {
             e.printStackTrace();
             MessageBox.showAlert(LoginActivity.this, "Kullanıcı sorgulama hatalı Hata:2!\n" + "", false);
-            durum=false;
-        }
-        catch (Throwable e)
-        {
+            durum = false;
+        } catch (Throwable e) {
             e.printStackTrace();
-            MessageBox.showAlert(LoginActivity.this, "Kullanıcı sorgulama hatalı Hata:3!\n" +"", false);
-            durum=false;
+            MessageBox.showAlert(LoginActivity.this, "Kullanıcı sorgulama hatalı Hata:3!\n" + "", false);
+            durum = false;
         }
         return durum;
     }
-    public User defUser()
-    {
-        User_Data ud= new User_Data(LoginActivity.this,new User());
+
+    public User defUser() {
+        User_Data ud = new User_Data(LoginActivity.this, new User());
         User u = null;
-        try
-        {
+        try {
             List<User> uList = ud.list();
-            if (uList !=null && uList.size()>0)
-            {
-                u=uList.get(0);
+            if (uList != null && uList.size() > 0) {
+                u = uList.get(0);
             }
 
 
@@ -575,65 +540,58 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
             MessageBox.showAlert(LoginActivity.this, "Kullanıcı sorgulama hatalı def1 !\n" + "", false);
             return u;
 
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
             MessageBox.showAlert(LoginActivity.this, "Kullanıcı sorgulama hatalı def2!\n" + "", false);
             return u;
 
-        }
-        catch (Throwable e)
-        {
+        } catch (Throwable e) {
             e.printStackTrace();
             MessageBox.showAlert(LoginActivity.this, "Kullanıcı sorgulama hatalı def3!\n" + "", false);
             return u;
         }
         return u;
     }
-    public void goHome()
-    {
+
+    public void goHome() {
         if (StateReceiver.isNetworkAvailable(LoginActivity.this))//SÜRÜM KONTROL EDİLİYOR
             //new getVersionInfo().execute();
 
-            Log.v("go home","yankess");
-        Intent inst_ = new Intent(LoginActivity.this,AnaMenuActivity.class);
+            Log.v("go home", "yankess");
+
+
+        Intent inst_ = new Intent(LoginActivity.this, AnaMenuActivity.class);
         startActivity(inst_);
 
+
     }
-    public class saveUserTask extends AsyncTask<User,Void,Void>
-    {
-        Boolean status =false;
+
+    public class saveUserTask extends AsyncTask<User, Void, Void> {
+        Boolean status = false;
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            if (status)
-            {
+            if (status) {
                 goHome();
-            }
-            else
-            {
-                MessageBox.showAlert(LoginActivity.this,"Giriş işlemi başarısız ! \nKullanıcı sistem senkronizasyon başarısız..",false);
+            } else {
+                MessageBox.showAlert(LoginActivity.this, "Giriş işlemi başarısız ! \nKullanıcı sistem senkronizasyon başarısız..", false);
             }
         }
 
         @Override
         protected Void doInBackground(User... params) {
             User u = params[0];
-            if (u!=null)
-            {
-                User_Data data = new User_Data(LoginActivity.this,new User());
+            if (u != null) {
+                User_Data data = new User_Data(LoginActivity.this, new User());
 
                 try {
-                    status =  data.clearDatabaseTable();
-                    if (status)
-                    {
+                    status = data.clearDatabaseTable();
+                    if (status) {
                         List<User> ul = data.list();
                         data.getDataList().add(u);
-                        status= data.insert();
-                        if (status)
-                        {
-                            status =true;
+                        status = data.insert();
+                        if (status) {
+                            status = true;
                         }
                     }
 
@@ -645,27 +603,22 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
         }
     }
 
-    public void showConnectionPopup()
-    {
-        try
-        {
+    public void showConnectionPopup() {
+        try {
 
             FragmentManager manager = getFragmentManager();
-            int count =0;
-            DialogConfigFragment kd = new DialogConfigFragment(LoginActivity.this,configData.getSERVICURL());
+            int count = 0;
+            DialogConfigFragment kd = new DialogConfigFragment(LoginActivity.this, configData.getSERVICURL());
 
-            kd.show(manager,"");
+            kd.show(manager, "");
 
-        }
-        catch (Throwable th)
-        {
-            MessageBox.showAlert(LoginActivity.this,th.toString(),true);
+        } catch (Throwable th) {
+            MessageBox.showAlert(LoginActivity.this, th.toString(), true);
         }
     }
-    public void firstOpenHelper()
-    {
-        if (configData.getFirsttime())
-        {
+
+    public void firstOpenHelper() {
+        if (configData.getFirsttime()) {
             configData.setFirsttime(false);
             configData.setSERVICURL(serviceUrl);
         /*  new AlertDialog.Builder(LoginActivity.this)
@@ -687,10 +640,10 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
 
 
     String current_db_verison = "";
-    class getVersionInfo extends AsyncTask
-    {
-        Boolean status=true;
-        StringBuilder strMess= new StringBuilder();
+
+    class getVersionInfo extends AsyncTask {
+        Boolean status = true;
+        StringBuilder strMess = new StringBuilder();
 
         @Override
         protected void onPreExecute() {
@@ -699,15 +652,13 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
         @Override
         protected void onPostExecute(Object o) {
 
-            Log.v("SERVER DB/LOCAL DB","=>"+current_db_verison+"-"+DbHelper.DATABASE_VERSION);
+            Log.v("SERVER DB/LOCAL DB", "=>" + current_db_verison + "-" + DbHelper.DATABASE_VERSION);
 
-            if(!current_db_verison.equals(""))
-            {
-                if(Integer.valueOf(current_db_verison) > DbHelper.DATABASE_VERSION)
-                {
+            if (!current_db_verison.equals("")) {
+                if (Integer.valueOf(current_db_verison) > DbHelper.DATABASE_VERSION) {
                     String ticker = "Orbis mobil uygulamasının yeni sürümü mevcut...";
-                    String contentTitle =  "Orbis Notification";
-                    String contentText =  "Orbis mobil uygulamasının yeni sürümü mevcut...";
+                    String contentTitle = "Orbis Notification";
+                    String contentText = "Orbis mobil uygulamasının yeni sürümü mevcut...";
                     //bildirimGonder(ticker , contentText , contentTitle);
                     //nm = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
                     //OrtakFunction.bildirimGonder(ticker , contentText , contentTitle , getApplicationContext() , nm , MyBroadcastReceiver.class , false , false , null);
@@ -722,10 +673,9 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
                 ConfigData cd = new ConfigData(LoginActivity.this);
                 String url = cd.getSERVICURL() + LoginActivity.this.getResources().getString(R.string.OrtakRS_version_control);
                 current_db_verison = rsOperator.CreateToRSUrlConnection(HttpRequestType.POST, null, url, null);
-                Log.v("CURRENT DB VERSION","SERVER RESPONSE="+current_db_verison);
+                Log.v("CURRENT DB VERSION", "SERVER RESPONSE=" + current_db_verison);
 
-            }
-            catch (OrbisDefaultException e) {
+            } catch (OrbisDefaultException e) {
                 e.printStackTrace();
                 publishProgress("HATA:" + e.getMessage());
             }
@@ -993,11 +943,10 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
     public class MyBroadcastReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Log.v("notification","broadcast");
+            Log.v("notification", "broadcast");
             nm.cancel(11); // Notification ID to cancel
         }
     }
-
 
 
 }

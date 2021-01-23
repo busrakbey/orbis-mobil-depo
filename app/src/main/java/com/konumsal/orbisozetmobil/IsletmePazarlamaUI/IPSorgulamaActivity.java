@@ -5,18 +5,24 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 import com.konumsal.orbisozetmobil.OrtakUI.OrtakFunction;
 import com.konumsal.orbisozetmobil.R;
+
+import net.cachapa.expandablelayout.ExpandableLayout;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -33,8 +39,12 @@ import EntityLayer.IsletmePazarlama.Damga;
 import EntityLayer.IsletmePazarlama.Odenek;
 import EntityLayer.IsletmePazarlama.Satis;
 import EntityLayer.IsletmePazarlama.Uretim;
+import EntityLayer.Ortak.SCity;
+import EntityLayer.Ortak.SKoyBelde;
+import EntityLayer.Ortak.STown;
 import EntityLayer.SendParametersForServer;
 import EntityLayer.Sistem.SOrgBirim;
+import EnumsLayer.LocalDataManager;
 import ToolLayer.MessageBox;
 import ToolLayer.NullOnEmptyConverterFactory;
 import ToolLayer.RefrofitRestApi;
@@ -45,7 +55,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class IPSorgulamaActivity extends AppCompatActivity {
+public class IPSorgulamaActivity extends AppCompatActivity implements ExpandableLayout.OnExpansionUpdateListener{
     Toolbar toolbar;
     Spinner bolge_spinner, mudurluk_spinner, seflik_spinner, yil_spinner;
     Button sorgula_button, temizle_button;
@@ -69,6 +79,25 @@ public class IPSorgulamaActivity extends AppCompatActivity {
     LinearLayout baslikLinear1, baslikLinear2, baslikLinear3, baslikLinear4;
 
 
+    Spinner il_spinner, ilce_spinner, koy_spinner;
+    List<SCity> il_list;
+    List<STown> ilce_list;
+    List<SKoyBelde> koy_list;
+    List<String> item_source_str_ilce;
+    List<String> item_source_str_koy;
+    int selected_il_index = 0, selected_ilce_index = 0, selected_koy_index = 0;
+    int shared_il_index = 0, shared_ilce_index = 0, shared_koy_index = 0;
+    Long secili_il_id = -1L, secili_ilce_id = -1L, secili_koy_id = -1L;
+    int shared_bolge_index = 0, shared_mudurluk_index = 0, shared_seflik_index = 0;
+    RadioButton genelMudRadioButton, bolgeRadioButton, teskilatRadioButton;
+    RadioGroup birimRadioGrup;
+    LocalDataManager localDataManager;
+    private ExpandableLayout expandableLayout;
+    private ImageView expandButton;
+    LinearLayout linearLayout_bir, linearLayout_iki;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,14 +108,9 @@ public class IPSorgulamaActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         gelenSayfaId = i.getStringExtra("MODE");
-
         Init();
         initToolBar();
-        filtre_spinner();
-        bolge_spinner.setSelection(0);
-        mudurluk_spinner.setSelection(0);
-        seflik_spinner.setSelection(0);
-        yil_spinner.setSelection(0);
+        shared_values();
     }
 
     private void initToolBar() {
@@ -149,11 +173,22 @@ public class IPSorgulamaActivity extends AppCompatActivity {
     }
 
     void Init() {
+        expandableLayout = (ExpandableLayout) findViewById(R.id.expandable_layout);
+        expandButton = (ImageView) findViewById(R.id.expand_button);
+        expandableLayout.setOnExpansionUpdateListener(this);
+        linearLayout_bir = (LinearLayout) findViewById(R.id.linear_bir);
+        linearLayout_iki = (LinearLayout) findViewById(R.id.linear_iki);
+        il_spinner = (Spinner) findViewById(R.id.il_spinner);
+        ilce_spinner = (Spinner) findViewById(R.id.ilce_spinner);
+        koy_spinner = (Spinner) findViewById(R.id.koy_spinner);
         bolge_spinner = (Spinner) findViewById(R.id.bolge_spinner);
         mudurluk_spinner = (Spinner) findViewById(R.id.mudurluk_spinner);
         seflik_spinner = (Spinner) findViewById(R.id.seflik_spinner);
         yil_spinner = (Spinner) findViewById(R.id.yil_spinner);
-
+        genelMudRadioButton = (RadioButton) findViewById(R.id.radio_gen_mud);
+        bolgeRadioButton = (RadioButton) findViewById(R.id.radio_bolge);
+        teskilatRadioButton = (RadioButton) findViewById(R.id.radio_teskilat);
+        birimRadioGrup = (RadioGroup) findViewById(R.id.birim_radio_group);
         ArrayList<String> years = new ArrayList<String>();
         years.add("");
         int thisYear = Calendar.getInstance().get(Calendar.YEAR);
@@ -163,11 +198,27 @@ public class IPSorgulamaActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, years);
         adapter.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
         yil_spinner.setAdapter(adapter);
-
         item_source_str_mudurluk = new ArrayList<String>();
         item_source_str_seflik = new ArrayList<String>();
         item_souce_mudurluk = new ArrayList<SOrgBirim>();
         item_source_seflik = new ArrayList<SOrgBirim>();
+
+        item_source_str_ilce = new ArrayList<String>();
+        item_source_str_koy = new ArrayList<String>();
+        ilce_list = new ArrayList<STown>();
+        koy_list = new ArrayList<SKoyBelde>();
+        il_list = new ArrayList<SCity>();
+
+
+        birimRadioGrup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                radioGrupChange(group, checkedId);
+            }
+        });
+
+        localDataManager = new LocalDataManager();
 
         baslikLinear1 = (LinearLayout) findViewById(R.id.birinci_baslik);
         baslikLinear2 = (LinearLayout) findViewById(R.id.ikinci_baslik);
@@ -368,200 +419,7 @@ public class IPSorgulamaActivity extends AppCompatActivity {
             });
         }
     }
-
-
-    void filtre_spinner() {
-        ArrayAdapter<String> dataAdapter_bolge = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, OrtakFunction.bolge_list_string);
-        dataAdapter_bolge.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
-        bolge_spinner.setAdapter(dataAdapter_bolge);
-        bolge_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position > 0) {
-                    String valInfo = OrtakFunction.bolge_list_string.get(position);
-                    if (valInfo != null) {
-                        selected_bolge_index = position;
-
-                        Long bolge_mud_id = OrtakFunction.bolge_list.get(selected_bolge_index).getId();
-                        secili_bolge_id = bolge_mud_id;
-                        secili_mudurluk_id = -1L;
-                        secili_seflik_id = -1L;
-
-                        item_source_str_mudurluk.clear();
-                        item_souce_mudurluk.clear();
-                        item_source_str_seflik.clear();
-                        item_source_seflik.clear();
-
-                        item_souce_mudurluk.add(null);
-                        item_source_str_mudurluk.add("");
-
-                        for (SOrgBirim item : OrtakFunction.mudurluk_list) {
-                            if (item == null)
-                                continue;
-                            if (String.valueOf(item.getUstId()).equals(String.valueOf(bolge_mud_id))) {
-                                item_source_str_mudurluk.add(item.getAdi());
-                                item_souce_mudurluk.add(item);
-                            }
-                        }
-
-
-                        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
-                        dataAdapter_mudurluk.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
-                        mudurluk_spinner.setAdapter(dataAdapter_mudurluk);
-                        mudurluk_spinner.setSelection(0);
-
-
-                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
-                        dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
-                        seflik_spinner.setAdapter(dataAdapter_seflik);
-                        seflik_spinner.setSelection(0);
-
-
-                       /* if (OrtakFunction.s_org_birim_path.size() == 4) {
-                            for (int i = 1; i < item_souce_mudurluk.size(); i++) {
-                                if (String.valueOf(item_souce_mudurluk.get(i).getId()).equals(String.valueOf(OrtakFunction.s_org_birim_path.get(2)))) {
-                                    mudurluk_spinner.setSelection(i);
-                                    // mudurluk_spinner.setEnabled(false);
-                                    break;
-                                }
-                            }
-                        } else {
-                            mudurluk_spinner.setSelection(0);
-                        }*/
-
-
-                    }
-                } else {
-                    secili_bolge_id = -1L;
-                    secili_mudurluk_id = -1L;
-                    secili_seflik_id = -1L;
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        try {
-            Field popup = Spinner.class.getDeclaredField("mPopup");
-            popup.setAccessible(true);
-            android.widget.ListPopupWindow popupWindow = (android.widget.ListPopupWindow) popup.get(bolge_spinner);
-            popupWindow.setHeight(700);
-        } catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
-        }
-
-
-      /*  for (Long item : OrtakFunction.s_org_birim_path)
-            Log.v("birim", "=>" + item);*/
-
-       /* if (OrtakFunction.s_org_birim_path.size() == 4) {
-            for (int i = 1; i < OrtakFunction.bolge_list.size(); i++) {
-                if (String.valueOf(OrtakFunction.bolge_list.get(i).getId()).equals(String.valueOf(OrtakFunction.s_org_birim_path.get(1)))) {
-                    bolge_spinner.setSelection(i);
-                    //bolge_spinner.setEnabled(false);
-                    break;
-                }
-            }
-        } else {
-            bolge_spinner.setSelection(0);
-        }*/
-
-
-        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
-        dataAdapter_mudurluk.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
-
-        mudurluk_spinner.setAdapter(dataAdapter_mudurluk);
-        mudurluk_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position > 0) {
-                    String valInfo = item_source_str_mudurluk.get(position);
-                    if (valInfo != null) {
-                        selected_mudurluk_index = position;
-
-                        Long mud_id = item_souce_mudurluk.get(selected_mudurluk_index).getId();
-                        secili_mudurluk_id = mud_id;
-                        secili_seflik_id = -1L;
-
-                        item_source_str_seflik.clear();
-                        item_source_seflik.clear();
-
-                        item_source_seflik.add(null);
-                        item_source_str_seflik.add("");
-
-
-                        for (SOrgBirim item : OrtakFunction.seflik_list) {
-                            if (item == null)
-                                continue;
-                            if (String.valueOf(item.getUstId()).equals(String.valueOf(mud_id))) {
-                                item_source_str_seflik.add(item.getAdi());
-                                item_source_seflik.add(item);
-                            }
-                        }
-
-
-                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
-                        dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
-                        seflik_spinner.setAdapter(dataAdapter_seflik);
-                        seflik_spinner.setSelection(0);
-
-
-                      /*  if (OrtakFunction.s_org_birim_path.size() == 4) {
-                            for (int i = 1; i < item_source_seflik.size(); i++) {
-                                if (String.valueOf(item_source_seflik.get(i).getId()).equals(String.valueOf(OrtakFunction.s_org_birim_path.get(3)))) {
-                                    seflik_spinner.setSelection(i);
-                                    //seflik_spinner.setEnabled(false);
-                                    break;
-                                }
-                            }
-                        } else {
-                            seflik_spinner.setSelection(0);
-                        }*/
-
-
-                    } else {
-                        secili_mudurluk_id = -1L;
-                        secili_seflik_id = -1L;
-                    }
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-
-        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
-        dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
-
-        seflik_spinner.setAdapter(dataAdapter_seflik);
-        seflik_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position > 0) {
-                    String valInfo = item_source_str_seflik.get(position);
-                    if (valInfo != null) {
-                        selected_seflik_index = position;
-                        secili_seflik_id = item_source_seflik.get(selected_seflik_index).getId();
-                    }
-                } else {
-                    secili_seflik_id = -1L;
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-
-    }
-
+    
     void get_listview() {
         if (gelenSayfaId.equalsIgnoreCase("0")) {
             damgaAdapter = new DamgaAdapter(IPSorgulamaActivity.this, R.layout.item_bes, gelenDamgaList);
@@ -587,6 +445,417 @@ public class IPSorgulamaActivity extends AppCompatActivity {
             uretimAdapter.notifyDataSetChanged();
             listview.setClickable(true);
         }
+    }
+
+    void filtre_spinner(final List<String> gelenBolgeListString, final List<SOrgBirim> gelenBolgeList, final List<SOrgBirim> gelenMudList, final List<SOrgBirim> gelenSeflikList) {
+        ArrayAdapter<String> dataAdapter_bolge = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, gelenBolgeListString);
+        dataAdapter_bolge.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+        bolge_spinner.setAdapter(dataAdapter_bolge);
+        bolge_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position > 0) {
+                    String valInfo = gelenBolgeListString.get(position);
+                    if (valInfo != null) {
+                        selected_bolge_index = position;
+
+                        Long bolge_mud_id = gelenBolgeList.get(selected_bolge_index).getId();
+                        secili_bolge_id = bolge_mud_id;
+                        secili_mudurluk_id = -1L;
+                        secili_seflik_id = -1L;
+
+                        item_source_str_mudurluk.clear();
+                        item_souce_mudurluk.clear();
+                        item_source_str_seflik.clear();
+                        item_source_seflik.clear();
+
+                        item_souce_mudurluk.add(null);
+                        item_source_str_mudurluk.add("");
+
+                        for (SOrgBirim item : gelenMudList) {
+                            if (item == null)
+                                continue;
+                            if (String.valueOf(item.getUstId()).equals(String.valueOf(bolge_mud_id))) {
+                                item_source_str_mudurluk.add(item.getAdi());
+                                item_souce_mudurluk.add(item);
+                            }
+                        }
+
+
+                        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
+                        dataAdapter_mudurluk.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+                        mudurluk_spinner.setAdapter(dataAdapter_mudurluk);
+
+
+                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
+                        dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+                        seflik_spinner.setAdapter(dataAdapter_seflik);
+                        seflik_spinner.setSelection(0);
+
+
+                        if (!localDataManager.getValues(getApplicationContext(), "bolgeId").toString().equalsIgnoreCase(String.valueOf(selected_bolge_index))) {
+                            mudurluk_spinner.setSelection(0);
+                        } else {
+                            selected_mudurluk_index = shared_mudurluk_index;
+                            selected_seflik_index = shared_seflik_index;
+                            mudurluk_spinner.setSelection(selected_mudurluk_index);
+
+                        }
+                    }
+                } else {
+                    secili_bolge_id = -1L;
+                    secili_mudurluk_id = -1L;
+                    secili_seflik_id = -1L;
+
+                }
+                localDataManager.setSharedPreference(getApplicationContext(), "bolgeId", String.valueOf(selected_bolge_index));
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        try {
+            Field popup = Spinner.class.getDeclaredField("mPopup");
+            popup.setAccessible(true);
+            android.widget.ListPopupWindow popupWindow = (android.widget.ListPopupWindow) popup.get(bolge_spinner);
+            popupWindow.setHeight(700);
+        } catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
+        }
+
+
+        ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
+        dataAdapter_mudurluk.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+
+        mudurluk_spinner.setAdapter(dataAdapter_mudurluk);
+        mudurluk_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position > 0) {
+                    String valInfo = item_source_str_mudurluk.get(position);
+                    if (valInfo != null) {
+                        selected_mudurluk_index = position;
+
+                        Long mud_id = item_souce_mudurluk.get(selected_mudurluk_index).getId();
+                        secili_mudurluk_id = mud_id;
+                        secili_seflik_id = -1L;
+
+                        item_source_str_seflik.clear();
+                        item_source_seflik.clear();
+
+                        item_source_seflik.add(null);
+                        item_source_str_seflik.add("");
+
+
+                        for (SOrgBirim item : gelenSeflikList) {
+                            if (item == null)
+                                continue;
+                            if (String.valueOf(item.getUstId()).equals(String.valueOf(mud_id))) {
+                                item_source_str_seflik.add(item.getAdi());
+                                item_source_seflik.add(item);
+                            }
+                        }
+
+
+                        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
+                        dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+                        seflik_spinner.setAdapter(dataAdapter_seflik);
+
+                        if (!localDataManager.getValues(getApplicationContext(), "mudurlukId").toString().equalsIgnoreCase(String.valueOf(selected_mudurluk_index))) {
+                            seflik_spinner.setSelection(0);
+                        } else {
+                            selected_seflik_index = shared_seflik_index;
+                            seflik_spinner.setSelection(selected_seflik_index);
+                        }
+
+                    } else {
+                        secili_mudurluk_id = -1L;
+                        secili_seflik_id = -1L;
+                    }
+                }
+                localDataManager.setSharedPreference(getApplicationContext(), "mudurlukId", String.valueOf(selected_mudurluk_index));
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
+        dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+
+        seflik_spinner.setAdapter(dataAdapter_seflik);
+        seflik_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position > 0) {
+                    String valInfo = item_source_str_seflik.get(position);
+                    if (valInfo != null) {
+                        selected_seflik_index = position;
+                        secili_seflik_id = item_source_seflik.get(selected_seflik_index).getId();
+                    }
+                } else {
+                    secili_seflik_id = -1L;
+                }
+                localDataManager.setSharedPreference(getApplicationContext(), "seflikId", String.valueOf(selected_seflik_index));
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+
+    public void filtre_spinner_il_ilce_koy() {
+        ArrayAdapter<String> dataAdapter_bolge = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, OrtakFunction.il_list_string);
+        dataAdapter_bolge.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+        il_spinner.setAdapter(dataAdapter_bolge);
+        il_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position > 0) {
+                    String valInfo = OrtakFunction.il_list_string.get(position);
+                    if (valInfo != null) {
+                        selected_il_index = position;
+
+                        Long il_id = OrtakFunction.il_list.get(selected_il_index).getId();
+                        secili_il_id = il_id;
+                        secili_ilce_id = -1L;
+                        secili_koy_id = -1L;
+
+                        item_source_str_ilce.clear();
+                        ilce_list.clear();
+                        item_source_str_koy.clear();
+                        koy_list.clear();
+
+                        ilce_list.add(null);
+                        item_source_str_ilce.add("");
+
+                        for (STown item : OrtakFunction.ilce_list) {
+                            if (item == null)
+                                continue;
+                            if (String.valueOf(item.getIlId()).equals(String.valueOf(il_id))) {
+                                item_source_str_ilce.add(item.getAdi());
+                                ilce_list.add(item);
+                            }
+                        }
+
+
+                        ArrayAdapter<String> dataAdapter_ilce = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_ilce);
+                        dataAdapter_ilce.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+                        ilce_spinner.setAdapter(dataAdapter_ilce);
+
+
+                        ArrayAdapter<String> dataAdapter_koy = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_koy);
+                        dataAdapter_koy.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+                        koy_spinner.setAdapter(dataAdapter_koy);
+                        koy_spinner.setSelection(0);
+
+
+                        if (!localDataManager.getValues(getApplicationContext(), "ilId").toString().equalsIgnoreCase(String.valueOf(selected_il_index))) {
+                            ilce_spinner.setSelection(0);
+                        } else {
+                            selected_ilce_index = shared_ilce_index;
+                            selected_koy_index = shared_koy_index;
+                            ilce_spinner.setSelection(selected_ilce_index);
+
+                        }
+
+                    }
+                } else {
+                    secili_il_id = -1L;
+                    secili_ilce_id = -1L;
+                    secili_koy_id = -1L;
+
+                }
+                localDataManager.setSharedPreference(getApplicationContext(), "ilId", String.valueOf(selected_il_index));
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        try {
+            Field popup = Spinner.class.getDeclaredField("mPopup");
+            popup.setAccessible(true);
+            android.widget.ListPopupWindow popupWindow = (android.widget.ListPopupWindow) popup.get(il_spinner);
+            popupWindow.setHeight(700);
+        } catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
+        }
+
+        ArrayAdapter<String> dataAdapter_ilce = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_ilce);
+        dataAdapter_ilce.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+
+        ilce_spinner.setAdapter(dataAdapter_ilce);
+        ilce_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position > 0) {
+                    String valInfo = item_source_str_ilce.get(position);
+                    if (valInfo != null) {
+                        selected_ilce_index = position;
+
+                        Long ilce_id = ilce_list.get(selected_ilce_index).getId();
+                        secili_ilce_id = ilce_id;
+                        secili_koy_id = -1L;
+
+                        item_source_str_koy.clear();
+                        koy_list.clear();
+
+                        koy_list.add(null);
+                        item_source_str_koy.add("");
+
+
+                        for (SKoyBelde item : OrtakFunction.koy_list) {
+                            if (item == null)
+                                continue;
+                            if (String.valueOf(item.getMulkiYerAdi()).equalsIgnoreCase(ilce_list.get(selected_ilce_index).getAdi()) &&
+                                    ilce_list.get(selected_ilce_index).getGorunum().contains(item.getIlAdi())) {
+                                item_source_str_koy.add(item.getKoyAdi());
+                                koy_list.add(item);
+                            }
+                        }
+
+
+                        ArrayAdapter<String> dataAdapter_koy = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_koy);
+                        dataAdapter_koy.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+                        koy_spinner.setAdapter(dataAdapter_koy);
+
+                        if (!localDataManager.getValues(getApplicationContext(), "ilceId").toString().equalsIgnoreCase(String.valueOf(selected_ilce_index))) {
+                            koy_spinner.setSelection(0);
+                        } else {
+                            selected_koy_index = shared_koy_index;
+                            koy_spinner.setSelection(selected_koy_index);
+                        }
+                    } else {
+                        secili_ilce_id = -1L;
+                        secili_koy_id = -1L;
+                    }
+                }
+                localDataManager.setSharedPreference(getApplicationContext(), "ilceId", String.valueOf(selected_ilce_index));
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        ArrayAdapter<String> dataAdapter_koy = new ArrayAdapter<String>(IPSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_koy);
+        dataAdapter_koy.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
+
+        koy_spinner.setAdapter(dataAdapter_koy);
+        koy_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position > 0) {
+                    String valInfo = item_source_str_koy.get(position);
+                    if (valInfo != null) {
+                        selected_koy_index = position;
+                        secili_koy_id = koy_list.get(selected_koy_index).getId();
+                    }
+                } else {
+                    secili_koy_id = -1L;
+                }
+                localDataManager.setSharedPreference(getApplicationContext(), "koyId", String.valueOf(selected_koy_index));
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+
+    public void radioGrupChange(RadioGroup group, int checkedId) {
+        switch (checkedId) {
+            case R.id.radio_gen_mud:
+                filtre_spinner(OrtakFunction.genel_mud_bolge_list_string, OrtakFunction.genel_mud_bolge_list, OrtakFunction.genel_mud_mudurluk_list, OrtakFunction.genel_mud_seflik_list);
+                localDataManager.setSharedPreference(getApplicationContext(), "radioButton", String.valueOf(R.id.radio_gen_mud));
+                break;
+            case R.id.radio_bolge:
+                filtre_spinner(OrtakFunction.bolge_list_string, OrtakFunction.bolge_list, OrtakFunction.mudurluk_list,
+                        OrtakFunction.seflik_list);
+                localDataManager.setSharedPreference(getApplicationContext(), "radioButton", String.valueOf(R.id.radio_bolge));
+
+                break;
+            case R.id.radio_teskilat:
+                filtre_spinner(OrtakFunction.teskilat_bolge_list_string, OrtakFunction.teskilat_bolge_list, OrtakFunction.teskilat_mudurluk_list,
+                        OrtakFunction.teskilat_seflik_list);
+                localDataManager.setSharedPreference(getApplicationContext(), "radioButton", String.valueOf(R.id.radio_teskilat));
+                break;
+        }
+
+    }
+
+
+    @Override
+    public void onExpansionUpdate(float expansionFraction, int state) {
+        Log.d("ExpandableLayout", "State: " + state);
+        expandButton.setRotation(expansionFraction * 90);
+    }
+
+    public void detayOnClick(View view) {
+        expandableLayout.toggle();
+
+        if (expandableLayout.getState() == 2) {
+            linearLayout_iki.setVisibility(View.VISIBLE);
+            linearLayout_bir.setVisibility(View.VISIBLE);
+        } else {
+            expandableLayout.collapse();
+
+            linearLayout_iki.setVisibility(View.GONE);
+            linearLayout_bir.setVisibility(View.GONE);
+
+        }
+    }
+
+    public void shared_values() {
+
+        shared_bolge_index = localDataManager.getValues(getApplicationContext(), "bolgeId");
+        shared_mudurluk_index = localDataManager.getValues(getApplicationContext(), "mudurlukId");
+        shared_seflik_index = localDataManager.getValues(getApplicationContext(), "seflikId");
+
+        shared_il_index = localDataManager.getValues(getApplicationContext(), "ilId");
+        shared_ilce_index = localDataManager.getValues(getApplicationContext(), "ilceId");
+        shared_koy_index = localDataManager.getValues(getApplicationContext(), "koyId");
+
+        birimRadioGrup.check(localDataManager.getValues(getApplicationContext(), "radioButton") == null ? null : localDataManager.getValues(getApplicationContext(), "radioButton"));
+        if (localDataManager.getValues(getApplicationContext(), "radioButton").equals(R.id.radio_gen_mud))
+            birimRadioGrup.check(R.id.radio_gen_mud);
+        else if (localDataManager.getValues(getApplicationContext(), "radioButton").equals(R.id.radio_bolge))
+            birimRadioGrup.check(R.id.radio_bolge);
+        else if (localDataManager.getValues(getApplicationContext(), "radioButton").equals(R.id.radio_teskilat))
+            birimRadioGrup.check(R.id.radio_teskilat);
+        else
+            filtre_spinner(OrtakFunction.bolge_list_string, OrtakFunction.bolge_list, OrtakFunction.mudurluk_list,
+                    OrtakFunction.seflik_list);
+
+
+        bolge_spinner.setSelection(shared_bolge_index);
+        mudurluk_spinner.setSelection(shared_mudurluk_index);
+        seflik_spinner.setSelection(shared_seflik_index);
+        //     yil_spinner.setSelection(localDataManager.getValues(getApplicationContext(), "yil"));
+        filtre_spinner_il_ilce_koy();
+        il_spinner.setSelection(shared_il_index);
+        ilce_spinner.setSelection(shared_ilce_index);
+        koy_spinner.setSelection(shared_koy_index);
     }
 
 

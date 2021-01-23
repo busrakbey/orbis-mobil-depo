@@ -1,22 +1,23 @@
 package EntityLayer.Ortak;
 
 import AnnotationLayer.Column;
+import AnnotationLayer.Table;
 
 /**
- * Created by isahin on 24.5.2017.
+ * Created by busrakbey on 22.02.2021.
  */
-public class SKoyBelde {
 
+@Table(name = "S_KOY_BELDE")
+public class SKoyBelde extends BaseEntity {
 
 
     @Override
-    public String toString()
-    {
-        return koyAdi+"-"+mulkiYerAdi+"-"+ilAdi;
+    public String toString() {
+        return koyAdi + "-" + mulkiYerAdi + "-" + ilAdi;
     }
 
     @Column(name = "id", nullable = false)
-    private Long	id	= null;
+    private Long id = null;
 
     public Long getId() {
         return this.id;
@@ -27,7 +28,7 @@ public class SKoyBelde {
     }
 
     @Column(name = "koy_adi", nullable = false)
-    private String	koyAdi	= null;
+    private String koyAdi = null;
 
     public String getKoyAdi() {
         return this.koyAdi;
@@ -38,7 +39,7 @@ public class SKoyBelde {
     }
 
     @Column(name = "mulki_yer_id", nullable = false)
-    private Long	mulkiYerId	= null;
+    private Long mulkiYerId = null;
 
     public Long getMulkiYerId() {
         return this.mulkiYerId;
@@ -50,7 +51,7 @@ public class SKoyBelde {
 
 
     @Column(name = "ilgili_birim_id", nullable = true)
-    private Long	ilgiliBirimId	= null;
+    private Long ilgiliBirimId = null;
 
     public Long getIlgiliBirimId() {
         return this.ilgiliBirimId;
@@ -62,7 +63,7 @@ public class SKoyBelde {
 
 
     @Column(name = "il_id", nullable = true)
-    private Long	ilId	= null;
+    private Long ilId = null;
 
     public Long getIlId() {
         return this.ilId;
@@ -74,7 +75,7 @@ public class SKoyBelde {
 
 
     @Column(name = "IL_ADI", insertable = false, updatable = false)
-    private String	ilAdi;
+    private String ilAdi;
 
     public String getIlAdi() {
         return this.ilAdi;
@@ -85,7 +86,7 @@ public class SKoyBelde {
     }
 
     @Column(name = "BIRIM_ADI", insertable = false, updatable = false)
-    private String	birimAdi;
+    private String birimAdi;
 
     public String getBirimAdi() {
         return this.birimAdi;
@@ -97,7 +98,7 @@ public class SKoyBelde {
 
 
     @Column(name = "MULKI_YER_ADI", insertable = false, updatable = false)
-    private String	mulkiYerAdi;
+    private String mulkiYerAdi;
 
     public String getMulkiYerAdi() {
         return this.mulkiYerAdi;

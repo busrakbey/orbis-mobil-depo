@@ -67,7 +67,7 @@
     <dimen name="mr_navbar_heigth_en_kucuk">30dp</dimen>
     <dimen name="mr_navbar_imgbutton_heigth">50dp</dimen>
     <dimen name="mr_navbar_imgbutton_width">50dp</dimen>
-    <dimen name="mr_navbar_label_textviewsize">20dp</dimen>
+    <dimen name="mr_navbar_label_textviewsize">16dp</dimen>
     <dimen name="mr_navbar_button_textsize">20dp</dimen>
 
     <dimen name="home_act_label_size">32sp</dimen>
