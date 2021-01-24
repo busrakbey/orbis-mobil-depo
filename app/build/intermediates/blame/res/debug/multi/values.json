@@ -3134,7 +3134,14 @@
                     "endOffset": 18251
                 },
                 "from": {
-                    "file": "D:\\DepoMobilSon\\app\\src\\main\\res\\values\\colors.xml"
+                    "file": "D:\\DepoMobilSon\\app\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 125,
+                        "startColumn": 5,
+                        "startOffset": 5071,
+                        "endColumn": 45,
+                        "endOffset": 5111
+                    }
                 }
             },
             {
@@ -15016,15 +15023,7 @@
                     "endOffset": 196392
                 },
                 "from": {
-                    "file": "D:\\DepoMobilSon\\app\\src\\main\\res\\values\\styles.xml",
-                    "position": {
-                        "startLine": 1076,
-                        "startColumn": 4,
-                        "startOffset": 51385,
-                        "endLine": 1079,
-                        "endColumn": 12,
-                        "endOffset": 51604
-                    }
+                    "file": "D:\\DepoMobilSon\\app\\src\\main\\res\\values\\styles.xml"
                 }
             },
             {

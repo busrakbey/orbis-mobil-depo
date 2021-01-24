@@ -1,9 +1,5 @@
 [
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_expansion_header_indicator_grey_24dp.xml",
-        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.github.florent37\\expansionpanel\\1.0.3\\res\\drawable-anydpi-v21\\ic_expansion_header_indicator_grey_24dp.xml"
-    },
-    {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_login_bk.xml",
         "source": "D:\\DepoMobilSon\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_login_bk.xml"
     },

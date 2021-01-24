@@ -4,7 +4,6 @@
     android:id="@+id/drawerLayout_ip_alt_menu_list_ui"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/MyAlertDialogStyle"
     android:background="@drawable/ic_bg_top"
     >
 
@@ -15,14 +14,15 @@
         android:layout_height="match_parent">
 
 
-        <android.support.v7.widget.Toolbar
+               <android.support.v7.widget.Toolbar
             android:id="@+id/ip_alt_menu_list_ui_toolbar"
-            android:background="@color/whiteCardColor"
+            android:background="@color/mr_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:theme="@style/ToolBarStyle"
-            app:popupTheme="@style/Theme.AppCompat.NoActionBar"
-            app:layout_collapseMode="pin"/>
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            />
 
 
 

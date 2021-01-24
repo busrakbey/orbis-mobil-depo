@@ -185,6 +185,7 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, years);
         adapter.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
         yil_spinner.setAdapter(adapter);
+
         harita_yil_spinner.setAdapter(adapter);
 
         item_source_str_mudurluk = new ArrayList<String>();

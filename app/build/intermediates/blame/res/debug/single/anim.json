@@ -1,9 +1,5 @@
 [
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\tooltip_enter.xml",
-        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.1.0\\res\\anim\\tooltip_enter.xml"
-    },
-    {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\fab_tool_1_show.xml",
         "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\fab_tool_1_show.xml"
     },
@@ -16,20 +12,16 @@
         "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\m_move_anim.xml"
     },
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\shake_anim_interpolator.xml",
-        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\shake_anim_interpolator.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\shakeanim.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\shakeanim.xml"
     },
     {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\fab_tool_5_show.xml",
         "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\fab_tool_5_show.xml"
     },
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\shakeanim.xml",
-        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\shakeanim.xml"
-    },
-    {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\tooltip_exit.xml",
-        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.1.0\\res\\anim\\tooltip_exit.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\shake_anim_interpolator.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\shake_anim_interpolator.xml"
     },
     {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\dialog_animation.xml",
@@ -116,20 +108,20 @@
         "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\fade_in.xml"
     },
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\anim\\abc_popup_enter.xml"
-    },
-    {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_down.xml",
-        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\slide_down.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_up.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\slide_up.xml"
     },
     {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\fab_tool_5_hide.xml",
         "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\fab_tool_5_hide.xml"
     },
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_up.xml",
-        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\slide_up.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_down.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\slide_down.xml"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\anim\\abc_popup_enter.xml"
     },
     {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",

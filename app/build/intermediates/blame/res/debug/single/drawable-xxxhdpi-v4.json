@@ -148,10 +148,6 @@
         "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\ic_expansion_header_indicator_grey_24dp.png",
-        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.github.florent37\\expansionpanel\\1.0.3\\res\\drawable-xxxhdpi-v4\\ic_expansion_header_indicator_grey_24dp.png"
-    },
-    {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\ic_login_bk.png",
         "source": "D:\\DepoMobilSon\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_login_bk.png"
     },

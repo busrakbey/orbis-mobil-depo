@@ -167,6 +167,24 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, years);
         adapter.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
         yil_spinner.setAdapter(adapter);
+        yil_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if (yil_spinner.getSelectedItem().toString().equalsIgnoreCase(""))
+                    secili_yil = -1L;
+                else
+                    secili_yil = Long.valueOf(yil_spinner.getSelectedItem().toString());
+
+                localDataManager.setSharedPreference(getApplicationContext(), "yil", String.valueOf(yil_spinner.getSelectedItemId()));
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         item_source_str_mudurluk = new ArrayList<String>();
         item_source_str_seflik = new ArrayList<String>();
         item_souce_mudurluk = new ArrayList<SOrgBirim>();
@@ -376,6 +394,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
                         ArrayAdapter<String> dataAdapter_mudurluk = new ArrayAdapter<String>(EizinSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_mudurluk);
                         dataAdapter_mudurluk.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
                         mudurluk_spinner.setAdapter(dataAdapter_mudurluk);
+                        mudurluk_spinner.setSelection(0);
 
 
                         ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(EizinSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
@@ -385,7 +404,6 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
 
 
                         if (!localDataManager.getValues(getApplicationContext(), "bolgeId").toString().equalsIgnoreCase(String.valueOf(selected_bolge_index))) {
-                            mudurluk_spinner.setSelection(0);
                         } else {
                             selected_mudurluk_index = shared_mudurluk_index;
                             selected_seflik_index = shared_seflik_index;
@@ -399,7 +417,8 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
                     secili_seflik_id = -1L;
 
                 }
-                localDataManager.setSharedPreference(getApplicationContext(), "bolgeId", String.valueOf(selected_bolge_index));
+                localDataManager.setSharedPreference(getApplicationContext(), "bolgeId", String.valueOf(position));
+
 
             }
 
@@ -454,9 +473,9 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
                         ArrayAdapter<String> dataAdapter_seflik = new ArrayAdapter<String>(EizinSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_seflik);
                         dataAdapter_seflik.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
                         seflik_spinner.setAdapter(dataAdapter_seflik);
+                        seflik_spinner.setSelection(0);
 
                         if (!localDataManager.getValues(getApplicationContext(), "mudurlukId").toString().equalsIgnoreCase(String.valueOf(selected_mudurluk_index))) {
-                            seflik_spinner.setSelection(0);
                         } else {
                             selected_seflik_index = shared_seflik_index;
                             seflik_spinner.setSelection(selected_seflik_index);
@@ -467,7 +486,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
                         secili_seflik_id = -1L;
                     }
                 }
-                localDataManager.setSharedPreference(getApplicationContext(), "mudurlukId", String.valueOf(selected_mudurluk_index));
+                localDataManager.setSharedPreference(getApplicationContext(), "mudurlukId", String.valueOf(position));
 
             }
 
@@ -494,7 +513,8 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
                 } else {
                     secili_seflik_id = -1L;
                 }
-                localDataManager.setSharedPreference(getApplicationContext(), "seflikId", String.valueOf(selected_seflik_index));
+                localDataManager.setSharedPreference(getApplicationContext(), "seflikId", String.valueOf(position));
+
 
             }
 
@@ -506,7 +526,8 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
 
     }
 
-    public void filtre_spinner_il_ilce_koy() {
+
+    void filtre_spinner_il_ilce_koy() {
         ArrayAdapter<String> dataAdapter_bolge = new ArrayAdapter<String>(EizinSorgulamaActivity.this, android.R.layout.simple_spinner_item, OrtakFunction.il_list_string);
         dataAdapter_bolge.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
         il_spinner.setAdapter(dataAdapter_bolge);
@@ -544,6 +565,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
                         ArrayAdapter<String> dataAdapter_ilce = new ArrayAdapter<String>(EizinSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_ilce);
                         dataAdapter_ilce.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
                         ilce_spinner.setAdapter(dataAdapter_ilce);
+                        ilce_spinner.setSelection(0);
 
 
                         ArrayAdapter<String> dataAdapter_koy = new ArrayAdapter<String>(EizinSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_koy);
@@ -553,7 +575,6 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
 
 
                         if (!localDataManager.getValues(getApplicationContext(), "ilId").toString().equalsIgnoreCase(String.valueOf(selected_il_index))) {
-                            ilce_spinner.setSelection(0);
                         } else {
                             selected_ilce_index = shared_ilce_index;
                             selected_koy_index = shared_koy_index;
@@ -568,7 +589,8 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
                     secili_koy_id = -1L;
 
                 }
-                localDataManager.setSharedPreference(getApplicationContext(), "ilId", String.valueOf(selected_il_index));
+                localDataManager.setSharedPreference(getApplicationContext(), "ilId", String.valueOf(position));
+
 
             }
 
@@ -623,9 +645,10 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
                         ArrayAdapter<String> dataAdapter_koy = new ArrayAdapter<String>(EizinSorgulamaActivity.this, android.R.layout.simple_spinner_item, item_source_str_koy);
                         dataAdapter_koy.setDropDownViewResource(R.layout.mr_simple_spinner_dropdown_item);
                         koy_spinner.setAdapter(dataAdapter_koy);
+                        koy_spinner.setSelection(0);
+
 
                         if (!localDataManager.getValues(getApplicationContext(), "ilceId").toString().equalsIgnoreCase(String.valueOf(selected_ilce_index))) {
-                            koy_spinner.setSelection(0);
                         } else {
                             selected_koy_index = shared_koy_index;
                             koy_spinner.setSelection(selected_koy_index);
@@ -635,7 +658,8 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
                         secili_koy_id = -1L;
                     }
                 }
-                localDataManager.setSharedPreference(getApplicationContext(), "ilceId", String.valueOf(selected_ilce_index));
+                localDataManager.setSharedPreference(getApplicationContext(), "ilceId", String.valueOf(position));
+                localDataManager.setSharedPreference(getApplicationContext(), "koyId", String.valueOf(0));
 
             }
 
@@ -662,7 +686,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
                 } else {
                     secili_koy_id = -1L;
                 }
-                localDataManager.setSharedPreference(getApplicationContext(), "koyId", String.valueOf(selected_koy_index));
+                localDataManager.setSharedPreference(getApplicationContext(), "koyId", String.valueOf(position));
 
             }
 
@@ -671,6 +695,8 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
 
             }
         });
+
+
 
     }
 
@@ -742,7 +768,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
         bolge_spinner.setSelection(shared_bolge_index);
         mudurluk_spinner.setSelection(shared_mudurluk_index);
         seflik_spinner.setSelection(shared_seflik_index);
-        //     yil_spinner.setSelection(localDataManager.getValues(getApplicationContext(), "yil"));
+        yil_spinner.setSelection(localDataManager.getValues(getApplicationContext(), "yil"));
         filtre_spinner_il_ilce_koy();
         il_spinner.setSelection(shared_il_index);
         ilce_spinner.setSelection(shared_ilce_index);

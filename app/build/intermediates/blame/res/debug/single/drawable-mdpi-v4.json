@@ -292,10 +292,6 @@
         "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_pressed.9.png"
     },
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_expansion_header_indicator_grey_24dp.png",
-        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.github.florent37\\expansionpanel\\1.0.3\\res\\drawable-mdpi-v4\\ic_expansion_header_indicator_grey_24dp.png"
-    },
-    {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_media_route_disabled_mono_dark.png",
         "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable-mdpi\\ic_media_route_disabled_mono_dark.png"
     },
