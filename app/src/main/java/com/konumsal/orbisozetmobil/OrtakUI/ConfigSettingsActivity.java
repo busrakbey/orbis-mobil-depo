@@ -1526,11 +1526,13 @@ public class ConfigSettingsActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Object o) {
-            pd2.dismiss();
             if (!result) {
+                pd2.dismiss();
+
                 MessageBox.showAlert(ConfigSettingsActivity.this, "Köy verileri yüklenirken hata oluştu!", false);
             } else {
 
+                pd2.dismiss();
                 new AlertDialog.Builder(ConfigSettingsActivity.this)
                         .setTitle("Orbis Mobile Sistem Bilgisi")
                         .setMessage("İşlem Tamamlandı ")
@@ -1612,4 +1614,14 @@ public class ConfigSettingsActivity extends AppCompatActivity {
             return null;
         }
     }
+
+
+
+
+
+
+
+
+
+
 }

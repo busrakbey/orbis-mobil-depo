@@ -183,7 +183,8 @@ public class OzmSorgulamaActivity  extends AppCompatActivity implements Expandab
         ilce_spinner = (Spinner) findViewById(R.id.ilce_spinner);
         koy_spinner = (Spinner) findViewById(R.id.koy_spinner);
         bolge_spinner = (Spinner) findViewById(R.id.bolge_spinner);
-        mudurluk_spinner = (Spinner) findViewById(R.id.mudurluk_spinner);
+        mudurluk_spinner
+                = (Spinner) findViewById(R.id.mudurluk_spinner);
         seflik_spinner = (Spinner) findViewById(R.id.seflik_spinner);
         yil_spinner = (Spinner) findViewById(R.id.yil_spinner);
         genelMudRadioButton = (RadioButton) findViewById(R.id.radio_gen_mud);
@@ -242,6 +243,7 @@ public class OzmSorgulamaActivity  extends AppCompatActivity implements Expandab
         temizle_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                bolge_spinner.setSelection(0);
                 mudurluk_spinner.setSelection(0);
                 seflik_spinner.setSelection(0);
                 yil_spinner.setSelection(0);
@@ -249,6 +251,12 @@ public class OzmSorgulamaActivity  extends AppCompatActivity implements Expandab
                 secili_bolge_id = -1L;
                 secili_seflik_id = -1L;
                 secili_yil = -1L;
+                il_spinner.setSelection(0);
+                ilce_spinner.setSelection(0);
+                koy_spinner.setSelection(0);
+                secili_il_id=-1L;
+                secili_ilce_id = -1L;
+                secili_koy_id = -1L;
 
             }
         });

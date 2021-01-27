@@ -139,13 +139,13 @@
 
             <View
                 style="@style/listTable_satirAyracView"></View>
+
             <TextView
+                style="@style/listTable_SatirTextView"
                 android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
                 android:text="Bölge"
                 android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
+                android:textSize="@dimen/smaller_textsize" />
             <View
                 style="@style/listTable_satirAyracView"></View>
 

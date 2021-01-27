@@ -2,6 +2,7 @@ package com.konumsal.orbisozetmobil.OrtakUI;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -11,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -138,17 +140,33 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
 
         Init();
         initToolBar();
+
         if (kontrol == 0 && OrtakFunction.s_org_birim_path == null) {
             kontrol = 1;
             Log.v("home2", "2");
             ortakVeriIndir("1");
 
         } else {
-            // new getBaseDataServiceForSorgulamalar().execute();
         }
 
         if (OrtakFunction.mContext == null)
             OrtakFunction.mContext = getBaseContext();
+
+
+
+     /*   pd = ProgressDialog.show(
+                AnaMenuActivity.this, "", "İlgili veriler yükleniyor..", true);
+        pd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+
+        new Handler(Looper.getMainLooper()).post(new Runnable() {
+            @Override
+            public void run() {
+                getBolgeMudurlukSeflik();
+                shared_values();
+
+
+            }
+        });*/
 
 
     }
@@ -626,10 +644,10 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
             }
         });
 
-        for (int i = 0; i < milli_park_bolge_mud.size(); i++) {
+        /*for (int i = 0; i < milli_park_bolge_mud.size(); i++) {
             OrtakFunction.bolge_list.add(milli_park_bolge_mud.get(i));
             OrtakFunction.bolge_list_string.add(milli_park_bolge_mud.get(i).getAdi());
-        }
+        }*/
 
         getAltBirim();
 
@@ -755,7 +773,7 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
             //  if (item.getKategori() != null) {
 
             for (SOrgBirim i : OrtakFunction.genel_mud_mudurluk_list) {
-                if (i.getId().toString().equalsIgnoreCase(item.getUstId().toString())) {
+                if (i != null && i.getId().toString().equalsIgnoreCase(item.getUstId().toString())) {
                     OrtakFunction.genel_mud_seflik_list.add(item);
                     OrtakFunction.genel_mud_seflik_list_string.add(item.getAdi());
                 }
@@ -763,13 +781,13 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
 
 
             for (SOrgBirim i : OrtakFunction.teskilat_bolge_list) {
-                if (i.getId().toString().equalsIgnoreCase(item.getUstId().toString())) {
+                if (i != null && i.getId().toString().equalsIgnoreCase(item.getUstId().toString())) {
                     OrtakFunction.teskilat_mudurluk_list.add(item);
                     OrtakFunction.teskilat_mudurluk_list_string.add(item.getAdi());
                 }
             }
 
-            Log.v("BIRIM", "=>" + item.getAdi());
+            Log.v("BIRIM1", "=>" + item.getAdi());
         }
 
 
@@ -783,24 +801,34 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
         SOrgBirim_Data data = new SOrgBirim_Data(AnaMenuActivity.this);
         List<SOrgBirim> milli_park_bolge_mud = new ArrayList<SOrgBirim>();
         StringBuilder sqlStr = new StringBuilder();
-        sqlStr.append("SELECT * FROM S_ORG_BIRIM");
+        sqlStr.append("SELECT * FROM S_ORG_BIRIM WHERE KATEGORI != 5 AND KATEGORI != 6 AND  kategori != 7  AND KATEGORI != 9");
         try {
             org_birim_list = new ArrayList<SOrgBirim>();
             org_birim_list = data.loadFromQuery(sqlStr.toString());
         } catch (OrbisDefaultException e) {
             e.printStackTrace();
         }
+
+        for (SOrgBirim item : OrtakFunction.seflik_list) {
+            if(item != null && item.getAdi() != null ) {
+                OrtakFunction.teskilat_seflik_list.add(item);
+                OrtakFunction.teskilat_seflik_list_string.add(item.getAdi());
+            }
+        }
+
+
         for (SOrgBirim item : org_birim_list) {
             //if (item.getKategori() != null) {
 
             for (SOrgBirim i : OrtakFunction.teskilat_mudurluk_list) {
-                if (i.getId().toString().equalsIgnoreCase(item.getUstId().toString())) {
+                if (i != null && i.getId().toString().equalsIgnoreCase(item.getUstId().toString())) {
                     OrtakFunction.teskilat_seflik_list.add(item);
                     OrtakFunction.teskilat_seflik_list_string.add(item.getAdi());
+                    break;
                 }
             }
             //    }
-            Log.v("BIRIM", "=>" + item.getAdi());
+            Log.v("BIRIM2", "=>" + item.getAdi());
         }
 
         if (OrtakFunction.genel_mud_seflik_list != null && OrtakFunction.genel_mud_seflik_list.size() > 0 && OrtakFunction.genel_mud_seflik_list.get(0) != null)
@@ -1280,26 +1308,36 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
         }
     }
 
+    Handler handle;
+
     @Override
     public void onResume() {
         super.onResume();
-        //  shared_values();
+        if (OrtakFunction.bolge_list == null || OrtakFunction.bolge_list.size() == 0) {
+            pd = ProgressDialog.show(AnaMenuActivity.this, "Lütfen bekleyiniz",
+                    "Birim ve köy bilgileri listeleniyor..", true);
+            pd.setCancelable(false);
+            pd.show();
+            new Handler().postDelayed(new Runnable() {
 
-
-        pd = ProgressDialog.show(
-                AnaMenuActivity.this, "", "İlgili veriler yükleniyor..", true);
-        pd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-
-        new Handler(Looper.getMainLooper()).post(new Runnable() {
-            @Override
-            public void run() {
-                if (OrtakFunction.bolge_list == null || OrtakFunction.bolge_list.size() == 0)
+                @Override
+                public void run() {
                     getBolgeMudurlukSeflik();
-                shared_values();
+                    shared_values();
 
 
-            }
-        });
+                }
+            }, 8);
+
+
+
+
+
+
+        } else
+            shared_values();
+
+
     }
 
 

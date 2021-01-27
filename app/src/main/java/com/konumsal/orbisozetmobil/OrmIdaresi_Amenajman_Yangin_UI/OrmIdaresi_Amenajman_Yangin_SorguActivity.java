@@ -245,6 +245,7 @@ public class OrmIdaresi_Amenajman_Yangin_SorguActivity extends AppCompatActivity
         temizle_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                bolge_spinner.setSelection(0);
                 mudurluk_spinner.setSelection(0);
                 seflik_spinner.setSelection(0);
                 yil_spinner.setSelection(0);
@@ -252,6 +253,12 @@ public class OrmIdaresi_Amenajman_Yangin_SorguActivity extends AppCompatActivity
                 secili_bolge_id = -1L;
                 secili_seflik_id = -1L;
                 secili_yil = -1L;
+                il_spinner.setSelection(0);
+                ilce_spinner.setSelection(0);
+                koy_spinner.setSelection(0);
+                secili_il_id=-1L;
+                secili_ilce_id = -1L;
+                secili_koy_id = -1L;
 
             }
         });
@@ -404,7 +411,7 @@ public class OrmIdaresi_Amenajman_Yangin_SorguActivity extends AppCompatActivity
             listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("1")) {
-            /*amenajmanAdapter = new AmenajmanAdapter(OrmIdaresi_Amenajman_Yangin_SorguActivity.this, R.layout.item_dort, gelenAmenajmanList);
+          /*  amenajmanAdapter = new AmenajmanAdapter(OrmIdaresi_Amenajman_Yangin_SorguActivity.this, R.layout.item_dort, gelenAmenajmanList);
             listview.setAdapter(amenajmanAdapter);
             amenajmanAdapter.notifyDataSetChanged();
             listview.setClickable(true);*/

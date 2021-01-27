@@ -1,5 +1,6 @@
 package com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.databinding.tool.util.L;
@@ -206,6 +207,7 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
         }
     }
 
+    @SuppressLint("WrongViewCast")
     void Init() {
         bolge_spinner = (Spinner) findViewById(R.id.bolge_spinner);
         mudurluk_spinner = (Spinner) findViewById(R.id.mudurluk_spinner);
@@ -316,6 +318,21 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
                 egitim_birim_auto.setText("0");
                 secilenBirimId = -1L;
 
+                bolge_spinner.setSelection(0);
+                mudurluk_spinner.setSelection(0);
+                seflik_spinner.setSelection(0);
+                yil_spinner.setSelection(0);
+                secili_mudurluk_id = -1L;
+                secili_bolge_id = -1L;
+                secili_seflik_id = -1L;
+                secili_yil = -1L;
+                il_spinner.setSelection(0);
+                ilce_spinner.setSelection(0);
+                koy_spinner.setSelection(0);
+                secili_il_id=-1L;
+                secili_ilce_id = -1L;
+                secili_koy_id = -1L;
+
             }
         });
 
@@ -333,7 +350,7 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
             secili_yil = Long.valueOf(yil_spinner.getSelectedItem().toString());
 
 
-        if (egitim_yil_spinner.getSelectedItem().toString().equalsIgnoreCase(""))
+        if (egitim_yil_spinner.getSelectedItem() == null || egitim_yil_spinner.getSelectedItem().toString().equalsIgnoreCase(""))
             secili_yil = -1L;
         else
             secili_yil = Long.valueOf(egitim_yil_spinner.getSelectedItem().toString());

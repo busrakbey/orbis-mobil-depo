@@ -242,9 +242,17 @@ public class AgacSorgulamaActivity extends AppCompatActivity implements Expandab
                 bolge_spinner.setSelection(0);
                 mudurluk_spinner.setSelection(0);
                 seflik_spinner.setSelection(0);
+                yil_spinner.setSelection(0);
                 secili_mudurluk_id = -1L;
                 secili_bolge_id = -1L;
                 secili_seflik_id = -1L;
+                secili_yil = -1L;
+                il_spinner.setSelection(0);
+                ilce_spinner.setSelection(0);
+                koy_spinner.setSelection(0);
+                secili_il_id=-1L;
+                secili_ilce_id = -1L;
+                secili_koy_id = -1L;
 
             }
         });

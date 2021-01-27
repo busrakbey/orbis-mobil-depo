@@ -226,6 +226,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
         temizle_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                bolge_spinner.setSelection(0);
                 mudurluk_spinner.setSelection(0);
                 seflik_spinner.setSelection(0);
                 yil_spinner.setSelection(0);
@@ -233,6 +234,12 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
                 secili_bolge_id = -1L;
                 secili_seflik_id = -1L;
                 secili_yil = -1L;
+                il_spinner.setSelection(0);
+                ilce_spinner.setSelection(0);
+                koy_spinner.setSelection(0);
+                secili_il_id=-1L;
+                secili_ilce_id = -1L;
+                secili_koy_id = -1L;
 
             }
         });

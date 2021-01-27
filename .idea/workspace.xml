@@ -19,7 +19,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="BookmarkManager">
@@ -40,25 +40,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/dataBinding/debug/android/databinding/layouts/DataBindingInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/dataBinding/debug/android/databinding/layouts/DataBindingInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-normal-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-normal-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/anim.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/anim.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-anydpi-v21.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-anydpi-v21.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-tvdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-tvdpi-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-mdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-mdpi-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$7.class" afterDir="false" />
@@ -71,44 +54,36 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/drawable/gradient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/drawable/gradient.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/layout/ana_menu_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/layout/ana_menu_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/layout/kadastro_sorgulama_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/layout/kadastro_sorgulama_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/values-normal-v4/values-normal-v4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/values-normal-v4/values-normal-v4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/9.2.1/jars/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/9.2.1/jars/classes.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/componentClasses.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/componentClasses.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/maindexlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/maindexlist.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/gradient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/gradient.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/ana_menu_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/ana_menu_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/kadastro_sorgulama_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/kadastro_sorgulama_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-normal-v4/values-normal-v4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-normal-v4/values-normal-v4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/AdapterLayer/Amenajman/AmenajmanAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/AdapterLayer/Amenajman/AmenajmanAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/EntityLayer/Amenajman/Amenajman.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/EntityLayer/Amenajman/Amenajman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacSorgulamaActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/EizinUI/EizinSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/EizinUI/EizinSorgulamaActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Fidanlik_Orkoy_UI/Fidanlik_Orkoy_SorguActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Fidanlik_Orkoy_UI/Fidanlik_Orkoy_SorguActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/IsletmePazarlamaUI/IPSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/IsletmePazarlamaUI/IPSorgulamaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Kdm_Str_BilgiSis_UI/Kdm_Str_BilgiSis_SorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Kdm_Str_BilgiSis_UI/Kdm_Str_BilgiSis_SorgulamaActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/SilvikulturUI/SilSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/SilvikulturUI/SilSorgulamaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/gradient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/gradient.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/ana_menu_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/ana_menu_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/ana_menu_alt_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/ana_menu_alt_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/include_filter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/include_filter.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/kadastro_sorgulama_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/kadastro_sorgulama_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-normal/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-normal/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/ormidare_amenajman_yangin_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/ormidare_amenajman_yangin_activity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jxl/DepoMobilSon-jxl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jxl/DepoMobilSon-jxl.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -122,7 +97,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="192.168.1.33:5555" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="5200bd8359d56559" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -168,324 +143,55 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ana_menu_activity.xml">
-          <provider editor-type-id="android-designer2" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/SilvikulturUI/SilAltMenuActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ana_menu_alt_activity.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OzmUI/OzmAltMenuActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="125" column="37" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/agac_sorgulama_activity.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="1173" column="17" selection-start-line="1173" selection-start-column="17" selection-end-line="1173" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="135" column="41" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
+            <state relative-caret-position="-10923">
+              <caret line="290" column="72" lean-forward="true" selection-start-line="290" selection-start-column="72" selection-end-line="290" selection-end-column="72" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5779#5882#1" />
-                <element signature="e#6079#8032#0" />
-                <element signature="e#8955#9086#0" />
-                <element signature="e#9099#9886#0" />
-                <element signature="e#11246#11301#1" />
-                <element signature="class#12072:12728" />
-                <element signature="method#onItemSelected#0;class#12072:12728" />
-                <element signature="method#onNothingSelected#0;class#12072:12728" />
-                <element signature="class#13352:13392" />
-                <element signature="e#13912#14193#1" />
-                <element signature="e#14218#14537#1" />
-                <element signature="e#14905#15184#1" />
-                <element signature="e#15209#15517#1" />
-                <element signature="e#15542#15845#1" />
-                <element signature="e#15870#16187#1" />
-                <element signature="e#16212#16490#1" />
-                <element signature="e#16515#16821#1" />
-                <element signature="e#16846#17127#1" />
-                <element signature="e#17153#17462#1" />
-                <element signature="e#17488#17769#1" />
-                <element signature="e#17795#18096#1" />
-                <element signature="e#18122#18402#1" />
-                <element signature="e#18428#18752#1" />
-                <element signature="e#18778#19093#1" />
-                <element signature="e#19119#19402#1" />
-                <element signature="e#19428#19708#1" />
-                <element signature="e#19734#20041#1" />
-                <element signature="e#20081#20313#0" />
-                <element signature="e#20341#22119#0" />
-                <element signature="e#20443#22113#0" />
-                <element signature="e#21340#21427#0" />
-                <element signature="e#21460#21552#0" />
-                <element signature="e#22126#22350#0" />
-                <element signature="e#22357#25447#0" />
-                <element signature="e#25375#25416#1" />
-                <element signature="e#25454#32734#0" />
-                <element signature="e#25750#25886#0" />
-                <element signature="e#25919#25963#0" />
-                <element signature="e#26010#28473#1" />
-                <element signature="e#26056#28413#1" />
-                <element signature="e#26126#26449#1" />
-                <element signature="e#26186#26345#1" />
-                <element signature="e#26351#26430#1" />
-                <element signature="e#26507#26660#1" />
-                <element signature="e#26718#26867#1" />
-                <element signature="e#26986#27147#1" />
-                <element signature="e#27268#27425#1" />
-                <element signature="e#27527#27700#1" />
-                <element signature="e#27771#27938#1" />
-                <element signature="e#28233#28398#1" />
-                <element signature="e#28965#29134#1" />
-                <element signature="e#29344#29469#0" />
-                <element signature="e#29502#29546#0" />
-                <element signature="e#29670#29902#1" />
-                <element signature="e#29711#29892#1" />
-                <element signature="e#30088#30217#0" />
-                <element signature="e#30250#30294#0" />
-                <element signature="e#30497#30632#0" />
-                <element signature="e#30665#30709#0" />
-                <element signature="e#30840#31078#1" />
-                <element signature="e#30881#31068#1" />
-                <element signature="e#31210#31454#1" />
-                <element signature="e#31254#31444#1" />
-                <element signature="e#31520#31563#0" />
-                <element signature="e#31595#31639#0" />
-                <element signature="e#32741#34118#0" />
-                <element signature="e#33026#33162#0" />
-                <element signature="e#33195#33239#0" />
-                <element signature="e#33286#34085#1" />
-                <element signature="e#33409#33681#1" />
-                <element signature="e#33498#33667#1" />
-                <element signature="e#33750#34024#1" />
-                <element signature="e#33839#34010#1" />
-                <element signature="e#34125#40584#0" />
-                <element signature="e#34411#34547#0" />
-                <element signature="e#34580#34624#0" />
-                <element signature="e#34671#35141#1" />
-                <element signature="e#34791#35061#1" />
-                <element signature="e#34880#35047#1" />
-                <element signature="e#40591#48700#0" />
-                <element signature="class#41122:44268" />
-                <element signature="method#onItemSelected#0;class#41122:44268" />
-                <element signature="e#41315#43862#1" />
-                <element signature="e#41431#43844#1" />
-                <element signature="e#42134#42523#1" />
-                <element signature="e#42326#42497#1" />
-                <element signature="e#43560#43822#1" />
-                <element signature="e#43868#44021#1" />
-                <element signature="method#onNothingSelected#0;class#41122:44268" />
-                <element signature="e#44284#44558#0" />
-                <element signature="class#45048:47498" />
-                <element signature="method#onItemSelected#0;class#45048:47498" />
-                <element signature="e#45241#47249#1" />
-                <element signature="e#45361#47104#1" />
-                <element signature="e#45906#46286#1" />
-                <element signature="e#46092#46260#1" />
-                <element signature="e#46901#47081#1" />
-                <element signature="e#47110#47231#1" />
-                <element signature="method#onNothingSelected#0;class#45048:47498" />
-                <element signature="class#47866:48691" />
-                <element signature="method#onItemSelected#0;class#47866:48691" />
-                <element signature="e#48059#48374#1" />
-                <element signature="e#48177#48356#1" />
-                <element signature="e#48380#48443#1" />
-                <element signature="method#onNothingSelected#0;class#47866:48691" />
-                <element signature="e#48707#56658#0" />
-                <element signature="class#49100:52093" />
-                <element signature="method#onItemSelected#0;class#49100:52093" />
-                <element signature="e#49293#51700#1" />
-                <element signature="e#49417#51682#1" />
-                <element signature="e#50063#50430#1" />
-                <element signature="e#50247#50404#1" />
-                <element signature="e#51419#51659#1" />
-                <element signature="e#51706#51849#1" />
-                <element signature="method#onNothingSelected#0;class#49100:52093" />
-                <element signature="e#52109#52380#0" />
-                <element signature="class#52845:55447" />
-                <element signature="method#onItemSelected#0;class#52845:55447" />
-                <element signature="e#53038#55095#1" />
-                <element signature="e#53154#54957#1" />
-                <element signature="e#53657#54177#1" />
-                <element signature="e#53993#54151#1" />
-                <element signature="e#54767#54935#1" />
-                <element signature="e#54963#55077#1" />
-                <element signature="method#onNothingSelected#0;class#52845:55447" />
-                <element signature="class#55797:56593" />
-                <element signature="method#onItemSelected#0;class#55797:56593" />
-                <element signature="e#55990#56283#1" />
-                <element signature="e#56105#56265#1" />
-                <element signature="e#56289#56349#1" />
-                <element signature="method#onNothingSelected#0;class#55797:56593" />
-                <element signature="e#56665#57900#0" />
-                <element signature="e#56748#57893#0" />
-                <element signature="e#57907#58106#0" />
-                <element signature="e#58112#58535#0" />
-                <element signature="e#58232#58359#1" />
-                <element signature="e#58365#58529#1" />
-                <element signature="e#58541#59156#0" />
+                <element signature="e#4371#5078#0" />
+                <element signature="e#5086#8267#0" />
+                <element signature="e#5127#7900#0" />
+                <element signature="e#5361#5853#1" />
+                <element signature="e#5909#6356#1" />
+                <element signature="e#6410#6854#1" />
+                <element signature="e#6912#7360#1" />
+                <element signature="e#7921#8081#0" />
+                <element signature="e#8102#8261#0" />
+                <element signature="e#10062#10117#1" />
+                <element signature="class#10408:11064" />
+                <element signature="method#onItemSelected#0;class#10408:11064" />
+                <element signature="method#onNothingSelected#0;class#10408:11064" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacAltMenuActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacSorgulamaActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="113" column="67" selection-start-line="113" selection-start-column="67" selection-end-line="113" selection-end-column="67" />
+            <state relative-caret-position="311">
+              <caret line="775" column="53" lean-forward="true" selection-start-line="775" selection-start-column="53" selection-end-line="775" selection-end-column="53" />
               <folding>
                 <element signature="e#3325#3835#0" />
                 <element signature="e#4119#4335#1" />
                 <element signature="e#4388#4603#1" />
                 <element signature="e#5143#5281#0" />
                 <element signature="e#5302#5439#0" />
-                <element signature="e#5451#9893#0" />
                 <element signature="e#6794#6849#1" />
                 <element signature="class#7619:8275" />
                 <element signature="method#onItemSelected#0;class#7619:8275" />
                 <element signature="method#onNothingSelected#0;class#7619:8275" />
-                <element signature="e#9925#14199#0" />
-                <element signature="e#11279#12635#1" />
-                <element signature="class#11416:12623" />
-                <element signature="method#onResponse#0;class#11416:12623" />
-                <element signature="e#11627#11859#1" />
-                <element signature="e#11909#12307#1" />
-                <element signature="e#12097#12169#1" />
-                <element signature="method#onFailure#0;class#11416:12623" />
-                <element signature="e#12684#14193#1" />
-                <element signature="class#12825:14181" />
-                <element signature="method#onResponse#0;class#12825:14181" />
-                <element signature="e#13042#13346#1" />
-                <element signature="e#13396#13801#1" />
-                <element signature="e#13590#13662#1" />
-                <element signature="method#onFailure#0;class#12825:14181" />
-                <element signature="e#14208#14890#0" />
-                <element signature="e#14278#14551#1" />
-                <element signature="e#14600#14883#1" />
-                <element signature="e#14897#23042#0" />
-                <element signature="class#15434:18592" />
-                <element signature="method#onItemSelected#0;class#15434:18592" />
-                <element signature="e#15627#18186#1" />
-                <element signature="e#15743#18168#1" />
-                <element signature="e#16446#16835#1" />
-                <element signature="e#16638#16809#1" />
-                <element signature="e#17884#18146#1" />
-                <element signature="e#18192#18345#1" />
-                <element signature="method#onNothingSelected#0;class#15434:18592" />
-                <element signature="e#18608#18882#0" />
-                <element signature="class#19378:21834" />
-                <element signature="method#onItemSelected#0;class#19378:21834" />
-                <element signature="e#19571#21585#1" />
-                <element signature="e#19691#21440#1" />
-                <element signature="e#20236#20616#1" />
-                <element signature="e#20422#20590#1" />
-                <element signature="e#21237#21417#1" />
-                <element signature="e#21446#21567#1" />
-                <element signature="method#onNothingSelected#0;class#19378:21834" />
-                <element signature="class#22208:23033" />
-                <element signature="method#onItemSelected#0;class#22208:23033" />
-                <element signature="e#22401#22716#1" />
-                <element signature="e#22519#22698#1" />
-                <element signature="e#22722#22785#1" />
-                <element signature="method#onNothingSelected#0;class#22208:23033" />
-                <element signature="e#23049#30982#0" />
-                <element signature="class#23448:26453" />
-                <element signature="method#onItemSelected#0;class#23448:26453" />
-                <element signature="e#23641#26060#1" />
-                <element signature="e#23765#26042#1" />
-                <element signature="e#24411#24778#1" />
-                <element signature="e#24595#24752#1" />
-                <element signature="e#25779#26019#1" />
-                <element signature="e#26066#26209#1" />
-                <element signature="method#onNothingSelected#0;class#23448:26453" />
-                <element signature="e#26469#26740#0" />
-                <element signature="class#27211:29819" />
-                <element signature="method#onItemSelected#0;class#27211:29819" />
-                <element signature="e#27404#29467#1" />
-                <element signature="e#27520#29329#1" />
-                <element signature="e#28023#28543#1" />
-                <element signature="e#28359#28517#1" />
-                <element signature="e#29139#29307#1" />
-                <element signature="e#29335#29449#1" />
-                <element signature="method#onNothingSelected#0;class#27211:29819" />
-                <element signature="class#30175:30971" />
-                <element signature="method#onItemSelected#0;class#30175:30971" />
-                <element signature="e#30368#30661#1" />
-                <element signature="e#30483#30643#1" />
-                <element signature="e#30667#30727#1" />
-                <element signature="method#onNothingSelected#0;class#30175:30971" />
-                <element signature="e#30988#32230#0" />
-                <element signature="e#31078#32223#0" />
-                <element signature="e#32237#32436#0" />
-                <element signature="e#32442#32865#0" />
-                <element signature="e#32562#32689#1" />
-                <element signature="e#32695#32859#1" />
-                <element signature="e#32871#34778#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/hukuk_disiliskiler_insaatikmal.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -506,40 +212,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>gene</find>
-      <find>genel_s</find>
-      <find>genel_sorgu_linear</find>
-      <find>genel</find>
-      <find>Aname</find>
-      <find>expandbu</find>
-      <find>repository</find>
-      <find>ExpandableLayout</find>
-      <find>setOnExpansionUpdateListener</find>
-      <find>expandableLayout</find>
-      <find>köyler yük</find>
-      <find>Thread</find>
-      <find>pd.dis</find>
-      <find>pd</find>
-      <find>pd =</find>
-      <find>positi</find>
-      <find>getSelectedItemId</find>
-      <find>köy ver</find>
-      <find>bolge_s</find>
-      <find>anam</find>
-      <find>yil_spi</find>
-      <find>//     yil_spinner.setSelection(localDataManager.getValues(getApplicationContext(), &quot;yil&quot;));</find>
-      <find>yil_spinn</find>
-      <find>shared_</find>
-      <find>shared_v</find>
-      <find>AgacSorgulamaActivity</find>
+      <find>selected_bolge_index</find>
+      <find>milli_park_bolge_mud</find>
+      <find>BIRIM2: =&gt;ESKİŞEHİR ORMAN</find>
+      <find>BIRIM2: =&gt;ESKİŞEHİR ORMAN BÖLG</find>
+      <find>BIRIM2: =&gt;ESKİŞEHİR ORMAN İŞ</find>
+      <find>BIRIM</find>
+      <find>configsett</find>
+      <find>config</find>
+      <find>login</find>
+      <find>OrtakFunction.bolg</find>
+      <find>anamenuac</find>
+      <find>Intent</find>
+      <find>başarılı</find>
+      <find>KATE</find>
       <find>AnaMenuActivity</find>
-      <find>aname</find>
-      <find>Anamen</find>
-      <find>anamen</find>
+      <find>dismiss</find>
+      <find>Activit</find>
+      <find>İTEM.GETa</find>
+      <find>GETBOL</find>
+      <find>gelenMud</find>
+      <find>temizle_button.</find>
+      <find>gelenAmenajmanList</find>
+      <find>R.la</find>
+      <find>ikinci_bas</find>
+      <find>MaliGider</find>
+      <find>baslikLinear2</find>
+      <find>egitim_yil_spinner</find>
+      <find>expandableLayout</find>
+      <find>temiz</find>
+      <find>hukuk</find>
     </findStrings>
     <replaceStrings>
-      <replace>TalepAdapter</replace>
-      <replace>IzinAdapter</replace>
       <replace>MaliGelir</replace>
       <replace>MaliGiderAdapter</replace>
       <replace>MaliHesapAdapter</replace>
@@ -568,6 +272,8 @@
       <replace>OzmSorgulamaActivity</replace>
       <replace>AgacSorgulamaActivity</replace>
       <replace>SilSorgulamaActivity</replace>
+      <replace>ConfigSettingsActivity</replace>
+      <replace>Amenajman</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\C_eski\orbismobile\app\src\main\java\DataLayer\Ortak</dir>
@@ -597,9 +303,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/DataLayer/Ortak/STown_Data.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/DataLayer/Ortak/SKoyBelde_Data.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/OrtakFunction.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/EntityLayer/Ortak/SCity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity.java" />
@@ -622,32 +325,35 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/ip_sorgulama_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/muh_sorgulama_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/eizin_activity.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/ormidare_amenajman_yangin_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/hukuk_disiliskiler_insaatikmal.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/include_filter.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/gradient.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-normal/dimens.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Kdm_Str_BilgiSis_UI/Kdm_Str_BilgiSis_SorgulamaActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacSorgulamaActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/EizinUI/EizinSorgulamaActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Fidanlik_Orkoy_UI/Fidanlik_Orkoy_SorguActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/IsletmePazarlamaUI/IPSorgulamaActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/SilvikulturUI/SilSorgulamaActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/kdm_str_bilgisis_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/kadastro_sorgulama_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/agac_sorgulama_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/ana_menu_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/ana_menu_alt_activity.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/IsletmePazarlamaUI/IPSorgulamaActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/SilvikulturUI/SilSorgulamaActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/EizinUI/EizinSorgulamaActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacSorgulamaActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Fidanlik_Orkoy_UI/Fidanlik_Orkoy_SorguActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/ormidare_amenajman_yangin_activity.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/EntityLayer/Amenajman/Amenajman.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/AdapterLayer/Amenajman/AmenajmanAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/yeni_buton.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.java" />
       </list>
     </option>
   </component>
@@ -688,37 +394,7 @@
               <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
               <item name="app" type="616d4139:PackageViewModuleNode" />
               <item name="com.konumsal.orbisozetmobil" type="1f31426a:PackageElementNode" />
-              <item name="DestekHizmetleriUI" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
-              <item name="app" type="616d4139:PackageViewModuleNode" />
-              <item name="com.konumsal.orbisozetmobil" type="1f31426a:PackageElementNode" />
-              <item name="EizinUI" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
-              <item name="app" type="616d4139:PackageViewModuleNode" />
-              <item name="com.konumsal.orbisozetmobil" type="1f31426a:PackageElementNode" />
-              <item name="Fidanlik_Orkoy_UI" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
-              <item name="app" type="616d4139:PackageViewModuleNode" />
-              <item name="com.konumsal.orbisozetmobil" type="1f31426a:PackageElementNode" />
               <item name="Hukuk_DisIlikiler_InsaatIkmal_UI" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
-              <item name="app" type="616d4139:PackageViewModuleNode" />
-              <item name="com.konumsal.orbisozetmobil" type="1f31426a:PackageElementNode" />
-              <item name="IsletmePazarlamaUI" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
-              <item name="app" type="616d4139:PackageViewModuleNode" />
-              <item name="com.konumsal.orbisozetmobil" type="1f31426a:PackageElementNode" />
-              <item name="Kdm_Str_BilgiSis_UI" type="1f31426a:PackageElementNode" />
             </path>
             <path>
               <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
@@ -729,46 +405,30 @@
             <path>
               <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
               <item name="app" type="616d4139:PackageViewModuleNode" />
-              <item name="com.konumsal.orbisozetmobil" type="1f31426a:PackageElementNode" />
-              <item name="OrmIdaresi_Amenajman_Yangin_UI" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
-              <item name="app" type="616d4139:PackageViewModuleNode" />
-              <item name="com.konumsal.orbisozetmobil" type="1f31426a:PackageElementNode" />
-              <item name="OzmUI" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
-              <item name="app" type="616d4139:PackageViewModuleNode" />
-              <item name="com.konumsal.orbisozetmobil" type="1f31426a:PackageElementNode" />
-              <item name="SilvikulturUI" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
-              <item name="app" type="616d4139:PackageViewModuleNode" />
               <item name="EntityLayer" type="1f31426a:PackageElementNode" />
             </path>
             <path>
               <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
               <item name="app" type="616d4139:PackageViewModuleNode" />
               <item name="EntityLayer" type="1f31426a:PackageElementNode" />
-              <item name="Ortak" type="1f31426a:PackageElementNode" />
+              <item name="Agaclandirma" type="1f31426a:PackageElementNode" />
             </path>
             <path>
               <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
               <item name="app" type="616d4139:PackageViewModuleNode" />
-              <item name="EnumsLayer" type="1f31426a:PackageElementNode" />
+              <item name="EntityLayer" type="1f31426a:PackageElementNode" />
+              <item name="Amenajman" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
+              <item name="app" type="616d4139:PackageViewModuleNode" />
+              <item name="EntityLayer" type="1f31426a:PackageElementNode" />
+              <item name="GeoPortal" type="1f31426a:PackageElementNode" />
             </path>
             <path>
               <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
               <item name="app" type="616d4139:PackageViewModuleNode" />
               <item name="layout" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
-              <item name="app" type="616d4139:PackageViewModuleNode" />
-              <item name="menu" type="1f31426a:PackageElementNode" />
             </path>
             <path>
               <item name="DepoMobilSon" type="58d84e3e:PackageViewProjectNode" />
@@ -779,28 +439,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="DepoMobilSon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DepoMobilSon" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="DepoMobilSon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DepoMobilSon" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="DepoMobilSon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DepoMobilSon" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="gradle" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -1062,11 +700,33 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DepoMobilSon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DepoMobilSon" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="DepoMobilSon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DepoMobilSon" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="DepoMobilSon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DepoMobilSon" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="gradle" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="XPH0219909003111" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-24T14:11:01.922Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="5200bd8359d56559" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-27T13:37:45.080Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="run&#9;ACTION&#9;ActivateRunToolWindow" />
     <property name="android.project.structure.last.selected" value="jxl" />
@@ -1236,21 +896,21 @@
       <window_info id="Favorites" order="4" sideWeight="0.2611051" side_tool="true" weight="0.14978679" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Structure" order="6" sideWeight="0.5040917" side_tool="true" weight="0.25100672" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.7388949" visible="true" weight="0.21055438" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.7388949" visible="true" weight="0.1673774" />
       <window_info id="Resources Explorer" order="8" weight="0.32995737" />
-      <window_info anchor="bottom" id="Build" order="0" sideWeight="0.4968017" weight="0.35102925" />
+      <window_info anchor="bottom" id="Build" order="0" sideWeight="0.4968017" weight="0.5308776" />
       <window_info anchor="bottom" id="Android Profiler" order="1" sideWeight="0.49946696" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50959486" side_tool="true" weight="0.49729145" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32936078" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.32827735" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49946696" weight="0.33152762" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.17226435" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.5828819" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.4989339" weight="0.2112676" />
-      <window_info anchor="bottom" id="Run" order="11" sideWeight="0.4978678" visible="true" weight="0.41061756" />
-      <window_info anchor="bottom" id="Debug" order="12" sideWeight="0.4904051" weight="0.49837488" />
+      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.4989339" weight="0.27843988" />
+      <window_info anchor="bottom" id="Run" order="11" sideWeight="0.4978678" weight="0.43878657" />
+      <window_info anchor="bottom" id="Debug" order="12" sideWeight="0.4904051" weight="0.248104" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32936078" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Gradle" order="1" weight="0.32942432" />
@@ -1261,9 +921,9 @@
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="right" id="Assistant" order="8" visible="true" weight="0.32924527" />
-      <window_info anchor="right" id="Device File Explorer" order="9" sideWeight="0.5128676" side_tool="true" visible="true" weight="0.053304903" />
+      <window_info anchor="right" id="Device File Explorer" order="9" sideWeight="0.51570964" side_tool="true" visible="true" weight="0.053304903" />
       <window_info anchor="right" id="Gps Emulator" order="10" side_tool="true" />
-      <window_info anchor="right" id="Flutter Outline" order="11" sideWeight="0.48713234" visible="true" weight="0.053304903" />
+      <window_info anchor="right" id="Flutter Outline" order="11" sideWeight="0.48429036" visible="true" weight="0.053304903" />
       <window_info anchor="right" id="Flutter Performance" order="12" weight="0.015991472" />
       <window_info anchor="right" id="Flutter Inspector" order="13" sideWeight="0.49931973" weight="0.12953092" />
     </layout>
@@ -1311,560 +971,307 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity.java</url>
-          <line>118</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java</url>
+          <line>826</line>
           <properties />
-          <option name="timeStamp" value="1462" />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity.java</url>
+          <line>343</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity.java</url>
+          <line>348</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity.java</url>
+          <line>337</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity.java</url>
+          <line>361</line>
+          <properties />
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.java</url>
-          <line>335</line>
+          <line>352</line>
           <properties />
-          <option name="timeStamp" value="1464" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.java</url>
-          <line>946</line>
-          <properties />
-          <option name="timeStamp" value="1470" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java</url>
-          <line>1049</line>
-          <properties />
-          <option name="timeStamp" value="1488" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java</url>
-          <line>290</line>
-          <properties />
-          <option name="timeStamp" value="1489" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java</url>
-          <line>1022</line>
-          <properties />
-          <option name="timeStamp" value="1491" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java</url>
-          <line>181</line>
-          <properties />
-          <option name="timeStamp" value="1493" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/EizinUI/EizinSorgulamaActivity.java</url>
-          <line>143</line>
-          <properties class="com.konumsal.orbisozetmobil.EizinUI.EizinSorgulamaActivity" method="Init">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1463" />
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="dart-exception">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>egitim_yil_spinner.getSelectedItem()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>response.errorBody.toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>response.errorBody</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>response</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>parameters</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>OrtakFunction.bolge_list</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>org_birim_list</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>OrtakFunction.teskilat_seflik_list_string</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>aKey</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>yil_spinner.getSelectedItemId()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>koy_spinner.setSelection(shared_koy_index);</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ilce_spinner.setSelection(shared_ilce_index);</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>il_spinner.setSelection(shared_il_index);</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Log.d(&quot;ExpandableLayout&quot;, &quot;State: &quot; + state);</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>state</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>expansion</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>listener.onExpansionUpdate(expansion, state);</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>expandButton.setRotation(expansionFraction * 90);</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ana_menu_list_item.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/muh_sorgulama_activity.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhAltMenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/oduh_sorgulama_activity.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/IsletmePazarlamaUI/IPAltMenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/sil_sorgulama_activity.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ozm_sorgulama_activity.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/kdm_str_bilgisis_activity.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OduhUI/OduhAltMenuActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/kadastro_sorgulama_activity.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="36" column="35" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="35" />
+        <state relative-caret-position="238">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/EizinUI/EizinAltMenuActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ana_menu_activity.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/SilvikulturUI/SilAltMenuActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OzmUI/OzmAltMenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2125">
+          <caret line="125" column="37" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19941">
+          <caret line="1173" column="17" selection-start-line="1173" selection-start-column="17" selection-end-line="1173" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacAltMenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ana_menu_alt_activity.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1088">
+          <caret line="62" column="65" selection-start-line="62" selection-start-column="65" selection-end-line="62" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        </state>
+      </provider>
       <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-24/android.jar!/android/icu/util/ULocale.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+        <state relative-caret-position="184">
+          <caret line="370" column="26" selection-start-line="370" selection-start-column="26" selection-end-line="370" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#14099#0" expanded="true" />
+            <element signature="e#10929#10930#0" expanded="true" />
+            <element signature="e#10980#10981#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-24/android/app/ActivityThread.java">
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-24/android/os/LocaleList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="3890" selection-start-line="3890" selection-end-line="3890" />
+        <state relative-caret-position="312">
+          <caret line="321" column="44" selection-start-line="321" selection-start-column="44" selection-end-line="321" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/DisIliskilerAltMenuActivity.java">
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-24/android/content/res/TypedArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+        <state relative-caret-position="201">
+          <caret line="767" selection-start-line="767" selection-end-line="767" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/eizin_activity.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/personel.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/PersonelUI/PersonelSorguActivity.java">
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-24/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
+        <state relative-caret-position="201">
+          <caret line="520" selection-start-line="520" selection-end-line="520" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_activity.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-24/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="1980" selection-start-line="1980" selection-end-line="1980" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/gradient.xml">
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-24/android.jar!/dalvik/system/BaseDexClassLoader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        <state relative-caret-position="425">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="250">
+          <caret line="610" column="75" selection-start-line="610" selection-start-column="68" selection-end-line="610" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/OrtakAyarlar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.cachapa.expandablelayout/expandablelayout/2.9.2/9d1fbe53be5b4924baa24d34efb1394bd79bfed3/expandablelayout-2.9.2-sources.jar!/net/cachapa/expandablelayout/ExpandableLayout.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/EntityLayer/Sistem/SOrgBirim.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="234" selection-start-line="234" selection-end-line="234" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mr_simple_spinner_dropdown_item.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_filter.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="131" column="64" lean-forward="true" selection-start-line="131" selection-start-column="64" selection-end-line="131" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-normal/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/DataLayer/Ortak/SKoyBelde_Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="117" column="19" selection-start-line="117" selection-start-column="19" selection-end-line="117" selection-end-column="19" />
+        <state relative-caret-position="2431">
+          <caret line="211" column="26" selection-start-line="211" selection-start-column="22" selection-end-line="211" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23953">
-          <caret line="1570" column="40" selection-start-line="1570" selection-start-column="40" selection-end-line="1570" selection-end-column="40" />
-          <folding>
-            <element signature="e#72572#73037#0" expanded="true" />
-            <element signature="e#73036#73037#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="570">
+          <caret line="1626" selection-start-line="1626" selection-end-line="1626" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Kdm_Str_BilgiSis_UI/Kdm_Str_BilgiSis_SorgulamaActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="187" column="8" selection-start-line="187" selection-start-column="8" selection-end-line="187" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5560">
-          <caret line="796" column="93" selection-start-line="796" selection-start-column="93" selection-end-line="796" selection-end-column="93" />
+        <state relative-caret-position="200">
+          <caret line="211" column="8" selection-start-line="211" selection-start-column="8" selection-end-line="211" selection-end-column="8" />
           <folding>
-            <element signature="e#4207#4717#0" />
-            <element signature="e#4723#7250#0" />
-            <element signature="e#4764#6929#0" />
-            <element signature="e#4998#5311#1" />
-            <element signature="e#5364#5677#1" />
-            <element signature="e#5730#6042#1" />
-            <element signature="e#6095#6412#1" />
-            <element signature="e#6950#7087#0" />
-            <element signature="e#7108#7244#0" />
-            <element signature="e#7256#11923#0" />
-            <element signature="e#8599#8654#1" />
-            <element signature="class#8945:9601" />
-            <element signature="method#onItemSelected#0;class#8945:9601" />
-            <element signature="method#onNothingSelected#0;class#8945:9601" />
-            <element signature="e#11955#19784#0" />
-            <element signature="e#13782#15135#1" />
-            <element signature="class#13904:15123" />
-            <element signature="method#onResponse#0;class#13904:15123" />
-            <element signature="e#14115#14346#1" />
-            <element signature="e#14396#14808#1" />
-            <element signature="e#14599#14671#1" />
-            <element signature="method#onFailure#0;class#13904:15123" />
-            <element signature="e#15184#16672#1" />
-            <element signature="class#15306:16660" />
-            <element signature="method#onResponse#0;class#15306:16660" />
-            <element signature="e#15517#15820#1" />
-            <element signature="e#15870#16283#1" />
-            <element signature="e#16073#16145#1" />
-            <element signature="method#onFailure#0;class#15306:16660" />
-            <element signature="e#16721#18206#1" />
-            <element signature="class#16839:18193" />
-            <element signature="method#onResponse#0;class#16839:18193" />
-            <element signature="e#17050#17353#1" />
-            <element signature="e#17403#17816#1" />
-            <element signature="e#17606#17678#1" />
-            <element signature="method#onFailure#0;class#16839:18193" />
-            <element signature="e#18255#19778#1" />
-            <element signature="class#18384:19766" />
-            <element signature="method#onResponse#0;class#18384:19766" />
-            <element signature="e#18607#18910#1" />
-            <element signature="e#18960#19385#1" />
-            <element signature="e#19175#19247#1" />
-            <element signature="method#onFailure#0;class#18384:19766" />
-            <element signature="e#19792#21136#0" />
-            <element signature="e#19862#20138#1" />
-            <element signature="e#20187#20463#1" />
-            <element signature="e#20512#20786#1" />
-            <element signature="e#20835#21130#1" />
-            <element signature="e#23166#23174#0" expanded="true" />
-            <element signature="e#23596#23604#0" expanded="true" />
-            <element signature="e#25307#25315#0" expanded="true" />
-            <element signature="e#26942#26950#0" expanded="true" />
-            <element signature="e#28145#28153#0" expanded="true" />
-            <element signature="e#29389#29397#0" expanded="true" />
-            <element signature="e#31099#31107#0" expanded="true" />
-            <element signature="e#31506#31514#0" expanded="true" />
-            <element signature="e#33154#33162#0" expanded="true" />
-            <element signature="e#34860#34868#0" expanded="true" />
-            <element signature="e#36121#36129#0" expanded="true" />
-            <element signature="class#36420:37216" />
-            <element signature="method#onItemSelected#0;class#36420:37216" />
-            <element signature="e#36613#36906#1" />
-            <element signature="e#36728#36888#1" />
-            <element signature="e#36912#36972#1" />
-            <element signature="method#onNothingSelected#0;class#36420:37216" />
-            <element signature="e#37200#38442#0" />
-            <element signature="e#37290#38435#0" />
-            <element signature="e#38449#38648#0" />
-            <element signature="e#38654#39077#0" />
-            <element signature="e#38774#38901#1" />
-            <element signature="e#38907#39071#1" />
-            <element signature="e#39083#40990#0" />
+            <element signature="e#8883#9559#0" expanded="true" />
+            <element signature="e#9558#9559#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/EizinUI/EizinSorgulamaActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/PersonelUI/PersonelSorguActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5560">
-          <caret line="672" column="94" selection-start-line="672" selection-start-column="94" selection-end-line="672" selection-end-column="94" />
+        <state relative-caret-position="-7">
+          <caret line="143" column="8" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
           <folding>
-            <element signature="e#3301#3802#0" />
-            <element signature="e#3808#5373#0" />
-            <element signature="e#3849#5048#0" />
-            <element signature="e#4083#4277#1" />
-            <element signature="e#4330#4525#1" />
-            <element signature="e#5069#5208#0" />
-            <element signature="e#5229#5367#0" />
-            <element signature="e#5379#9621#0" />
-            <element signature="e#6722#6777#1" />
-            <element signature="class#7068:7724" />
-            <element signature="method#onItemSelected#0;class#7068:7724" />
-            <element signature="method#onNothingSelected#0;class#7068:7724" />
-            <element signature="e#9656#14152#0" />
-            <element signature="e#11301#12627#1" />
-            <element signature="class#11425:12615" />
-            <element signature="method#onResponse#0;class#11425:12615" />
-            <element signature="e#11621#11854#1" />
-            <element signature="e#11904#12303#1" />
-            <element signature="e#12092#12164#1" />
-            <element signature="method#onFailure#0;class#11425:12615" />
-            <element signature="e#12676#14146#1" />
-            <element signature="class#12802:14134" />
-            <element signature="method#onResponse#0;class#12802:14134" />
-            <element signature="e#13001#13306#1" />
-            <element signature="e#13356#13759#1" />
-            <element signature="e#13547#13619#1" />
-            <element signature="method#onFailure#0;class#12802:14134" />
-            <element signature="e#14162#14794#0" />
-            <element signature="e#14232#14482#1" />
-            <element signature="e#14531#14787#1" />
-            <element signature="e#16826#16834#0" expanded="true" />
-            <element signature="e#17258#17266#0" expanded="true" />
-            <element signature="e#18971#18979#0" expanded="true" />
-            <element signature="e#20608#20616#0" expanded="true" />
-            <element signature="e#21813#21821#0" expanded="true" />
-            <element signature="e#23059#23067#0" expanded="true" />
-            <element signature="e#24771#24779#0" expanded="true" />
-            <element signature="e#25180#25188#0" expanded="true" />
-            <element signature="e#26830#26838#0" expanded="true" />
-            <element signature="e#28538#28546#0" expanded="true" />
-            <element signature="e#29801#29809#0" expanded="true" />
-            <element signature="class#30075:30871" />
-            <element signature="method#onItemSelected#0;class#30075:30871" />
-            <element signature="e#30268#30561#1" />
-            <element signature="e#30383#30543#1" />
-            <element signature="e#30567#30627#1" />
-            <element signature="method#onNothingSelected#0;class#30075:30871" />
-            <element signature="e#30882#32124#0" />
-            <element signature="e#30972#32117#0" />
-            <element signature="e#32131#32330#0" />
-            <element signature="e#32336#32759#0" />
-            <element signature="e#32456#32583#1" />
-            <element signature="e#32589#32753#1" />
-            <element signature="e#32765#34672#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Fidanlik_Orkoy_UI/Fidanlik_Orkoy_SorguActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5560">
-          <caret line="734" column="100" selection-start-line="734" selection-start-column="100" selection-end-line="734" selection-end-column="100" />
-          <folding>
-            <element signature="e#3413#3923#0" />
-            <element signature="e#3929#5993#0" />
-            <element signature="e#3970#5656#0" />
-            <element signature="e#4204#4462#1" />
-            <element signature="e#4515#4772#1" />
-            <element signature="e#4826#5131#1" />
-            <element signature="e#5677#5822#0" />
-            <element signature="e#5843#5987#0" />
-            <element signature="e#5999#10618#0" />
-            <element signature="e#7342#7397#1" />
-            <element signature="class#7688:8344" />
-            <element signature="method#onItemSelected#0;class#7688:8344" />
-            <element signature="method#onNothingSelected#0;class#7688:8344" />
-            <element signature="e#10649#16806#0" />
-            <element signature="e#12300#13724#1" />
-            <element signature="class#12434:13712" />
-            <element signature="method#onResponse#0;class#12434:13712" />
-            <element signature="e#12660#12899#1" />
-            <element signature="e#12949#13384#1" />
-            <element signature="e#13167#13239#1" />
-            <element signature="method#onFailure#0;class#12434:13712" />
-            <element signature="e#13773#15252#1" />
-            <element signature="class#13890:15240" />
-            <element signature="method#onResponse#0;class#13890:15240" />
-            <element signature="e#14089#14400#1" />
-            <element signature="e#14450#14859#1" />
-            <element signature="e#14641#14713#1" />
-            <element signature="method#onFailure#0;class#13890:15240" />
-            <element signature="e#15314#16788#0" />
-            <element signature="e#16816#17839#0" />
-            <element signature="e#16886#17195#1" />
-            <element signature="e#17244#17509#1" />
-            <element signature="e#17571#17822#0" />
-            <element signature="e#19877#19885#0" expanded="true" />
-            <element signature="e#20315#20323#0" expanded="true" />
-            <element signature="e#22034#22042#0" expanded="true" />
-            <element signature="e#23677#23685#0" expanded="true" />
-            <element signature="e#24888#24896#0" expanded="true" />
-            <element signature="e#26140#26148#0" expanded="true" />
-            <element signature="e#27858#27866#0" expanded="true" />
-            <element signature="e#28273#28281#0" expanded="true" />
-            <element signature="e#29929#29937#0" expanded="true" />
-            <element signature="e#31643#31651#0" expanded="true" />
-            <element signature="e#32912#32920#0" expanded="true" />
-            <element signature="class#33120:33916" />
-            <element signature="method#onItemSelected#0;class#33120:33916" />
-            <element signature="e#33313#33606#1" />
-            <element signature="e#33428#33588#1" />
-            <element signature="e#33612#33672#1" />
-            <element signature="method#onNothingSelected#0;class#33120:33916" />
-            <element signature="e#33999#35241#0" />
-            <element signature="e#34089#35234#0" />
-            <element signature="e#35248#35447#0" />
-            <element signature="e#35453#35876#0" />
-            <element signature="e#35573#35700#1" />
-            <element signature="e#35706#35870#1" />
-            <element signature="e#35882#37789#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5560">
-          <caret line="891" column="115" selection-start-line="891" selection-start-column="115" selection-end-line="891" selection-end-column="115" />
-          <folding>
-            <element signature="e#4371#5078#0" />
-            <element signature="e#5086#8267#0" />
-            <element signature="e#5127#7900#0" />
-            <element signature="e#5361#5853#1" />
-            <element signature="e#5909#6356#1" />
-            <element signature="e#6410#6854#1" />
-            <element signature="e#6912#7360#1" />
-            <element signature="e#7921#8081#0" />
-            <element signature="e#8102#8261#0" />
-            <element signature="e#8273#13538#0" />
-            <element signature="e#10062#10117#1" />
-            <element signature="class#10408:11064" />
-            <element signature="method#onItemSelected#0;class#10408:11064" />
-            <element signature="method#onNothingSelected#0;class#10408:11064" />
-            <element signature="e#13570#22463#0" />
-            <element signature="e#15451#16841#1" />
-            <element signature="class#15576:16829" />
-            <element signature="method#onResponse#0;class#15576:16829" />
-            <element signature="e#15772#16026#1" />
-            <element signature="e#16076#16496#1" />
-            <element signature="e#16264#16336#1" />
-            <element signature="method#onFailure#0;class#15576:16829" />
-            <element signature="e#16893#18850#1" />
-            <element signature="class#17366:18838" />
-            <element signature="method#onResponse#0;class#17366:18838" />
-            <element signature="e#17598#17924#1" />
-            <element signature="e#17974#18431#1" />
-            <element signature="e#18198#18270#1" />
-            <element signature="method#onFailure#0;class#17366:18838" />
-            <element signature="e#18899#20443#1" />
-            <element signature="class#19033:20430" />
-            <element signature="method#onResponse#0;class#19033:20430" />
-            <element signature="e#19238#19564#1" />
-            <element signature="e#19614#20032#1" />
-            <element signature="e#19799#19871#1" />
-            <element signature="method#onFailure#0;class#19033:20430" />
-            <element signature="e#20495#22457#1" />
-            <element signature="class#20978:22444" />
-            <element signature="method#onResponse#0;class#20978:22444" />
-            <element signature="e#21207#21533#1" />
-            <element signature="e#21583#22038#1" />
-            <element signature="e#21805#21877#1" />
-            <element signature="method#onFailure#0;class#20978:22444" />
-            <element signature="e#22471#23924#0" />
-            <element signature="e#22541#22815#1" />
-            <element signature="e#22867#23202#1" />
-            <element signature="e#23251#23538#1" />
-            <element signature="e#23590#23917#1" />
-            <element signature="e#23998#25374#0" />
-            <element signature="e#24296#24432#0" />
-            <element signature="e#24465#24509#0" />
-            <element signature="e#25272#25341#1" />
-            <element signature="e#27427#27435#0" expanded="true" />
-            <element signature="e#27880#27888#0" expanded="true" />
-            <element signature="e#29614#29622#0" expanded="true" />
-            <element signature="e#31272#31280#0" expanded="true" />
-            <element signature="e#32498#32506#0" expanded="true" />
-            <element signature="e#33765#33773#0" expanded="true" />
-            <element signature="e#35498#35506#0" expanded="true" />
-            <element signature="e#35928#35936#0" expanded="true" />
-            <element signature="e#37599#37607#0" expanded="true" />
-            <element signature="e#39328#39336#0" expanded="true" />
-            <element signature="e#40612#40620#0" expanded="true" />
-            <element signature="class#40658:41454" />
-            <element signature="method#onItemSelected#0;class#40658:41454" />
-            <element signature="e#40851#41144#1" />
-            <element signature="e#40966#41126#1" />
-            <element signature="e#41150#41210#1" />
-            <element signature="method#onNothingSelected#0;class#40658:41454" />
-            <element signature="e#41714#42956#0" />
-            <element signature="e#41804#42949#0" />
-            <element signature="e#42963#43162#0" />
-            <element signature="e#43168#43591#0" />
-            <element signature="e#43288#43409#1" />
-            <element signature="e#43415#43585#1" />
-            <element signature="e#43597#45504#0" />
+            <element signature="e#5249#5659#0" expanded="true" />
+            <element signature="e#5658#5659#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/IsletmePazarlamaUI/IPSorgulamaActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5560">
-          <caret line="781" column="93" selection-start-line="781" selection-start-column="93" selection-end-line="781" selection-end-column="93" />
+        <state relative-caret-position="432">
+          <caret line="273" column="36" selection-start-line="273" selection-start-column="36" selection-end-line="273" selection-end-column="36" />
           <folding>
             <element signature="e#3718#4225#0" />
             <element signature="e#4231#6732#0" />
@@ -1875,11 +1282,12 @@
             <element signature="e#5589#5897#1" />
             <element signature="e#6434#6570#0" />
             <element signature="e#6591#6726#0" />
-            <element signature="e#6738#11171#0" />
             <element signature="e#8081#8136#1" />
             <element signature="class#8427:9083" />
             <element signature="method#onItemSelected#0;class#8427:9083" />
             <element signature="method#onNothingSelected#0;class#8427:9083" />
+            <element signature="e#10699#11161#0" expanded="true" />
+            <element signature="e#11160#11161#0" expanded="true" />
             <element signature="e#11203#18667#0" />
             <element signature="e#12844#14155#1" />
             <element signature="class#12955:14143" />
@@ -1925,244 +1333,14 @@
             <element signature="e#31939#31947#0" expanded="true" />
             <element signature="e#33644#33652#0" expanded="true" />
             <element signature="e#34904#34912#0" expanded="true" />
-            <element signature="class#35214:36010" />
-            <element signature="method#onItemSelected#0;class#35214:36010" />
-            <element signature="e#35407#35700#1" />
-            <element signature="e#35522#35682#1" />
-            <element signature="e#35706#35766#1" />
-            <element signature="method#onNothingSelected#0;class#35214:36010" />
-            <element signature="e#35982#37224#0" />
-            <element signature="e#36072#37217#0" />
-            <element signature="e#37231#37430#0" />
-            <element signature="e#37436#37859#0" />
-            <element signature="e#37556#37683#1" />
-            <element signature="e#37689#37853#1" />
-            <element signature="e#37865#39772#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6321">
-          <caret line="798" column="93" selection-start-line="798" selection-start-column="93" selection-end-line="798" selection-end-column="93" />
-          <folding>
-            <element signature="e#3564#4076#0" />
-            <element signature="e#5995#7936#0" />
-            <element signature="e#6036#7613#0" />
-            <element signature="e#6270#6526#1" />
-            <element signature="e#6579#6836#1" />
-            <element signature="e#6889#7095#1" />
-            <element signature="e#7634#7772#0" />
-            <element signature="e#7793#7930#0" />
-            <element signature="e#7942#12556#0" />
-            <element signature="e#9307#9362#1" />
-            <element signature="class#9653:10309" />
-            <element signature="method#onItemSelected#0;class#9653:10309" />
-            <element signature="method#onNothingSelected#0;class#9653:10309" />
-            <element signature="e#12588#18698#0" />
-            <element signature="e#14232#15587#1" />
-            <element signature="class#14353:15575" />
-            <element signature="method#onResponse#0;class#14353:15575" />
-            <element signature="e#14564#14796#1" />
-            <element signature="e#14846#15259#1" />
-            <element signature="e#15049#15121#1" />
-            <element signature="method#onFailure#0;class#14353:15575" />
-            <element signature="e#15636#17139#1" />
-            <element signature="class#15763:17127" />
-            <element signature="method#onResponse#0;class#15763:17127" />
-            <element signature="e#15977#16281#1" />
-            <element signature="e#16331#16748#1" />
-            <element signature="e#16537#16609#1" />
-            <element signature="method#onFailure#0;class#15763:17127" />
-            <element signature="e#17188#18691#1" />
-            <element signature="class#17322:18678" />
-            <element signature="method#onResponse#0;class#17322:18678" />
-            <element signature="e#17539#17843#1" />
-            <element signature="e#17893#18298#1" />
-            <element signature="e#18087#18159#1" />
-            <element signature="method#onFailure#0;class#17322:18678" />
-            <element signature="e#26902#28247#0" />
-            <element signature="e#26972#27249#1" />
-            <element signature="e#27298#27579#1" />
-            <element signature="e#27628#27911#1" />
-            <element signature="e#27974#28231#0" />
-            <element signature="e#28344#29489#0" />
-            <element signature="e#23332#23340#0" expanded="true" />
-            <element signature="e#23763#23771#0" expanded="true" />
-            <element signature="e#25475#25483#0" expanded="true" />
-            <element signature="e#27111#27119#0" expanded="true" />
-            <element signature="e#28315#28323#0" expanded="true" />
-            <element signature="e#29560#29568#0" expanded="true" />
-            <element signature="e#31271#31279#0" expanded="true" />
-            <element signature="e#31679#31687#0" expanded="true" />
-            <element signature="e#33328#33336#0" expanded="true" />
-            <element signature="e#35035#35043#0" expanded="true" />
-            <element signature="e#36297#36305#0" expanded="true" />
-            <element signature="class#36585:37381" />
-            <element signature="method#onItemSelected#0;class#36585:37381" />
-            <element signature="e#36778#37071#1" />
-            <element signature="e#36893#37053#1" />
-            <element signature="e#37077#37137#1" />
-            <element signature="method#onNothingSelected#0;class#36585:37381" />
-            <element signature="e#37377#37576#0" />
-            <element signature="e#37582#38005#0" />
-            <element signature="e#37702#37829#1" />
-            <element signature="e#37835#37999#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5560">
-          <caret line="734" column="113" selection-start-line="734" selection-start-column="113" selection-end-line="734" selection-end-column="113" />
-          <folding>
-            <element signature="e#3603#4124#0" />
-            <element signature="e#4130#6237#0" />
-            <element signature="e#4171#5874#0" />
-            <element signature="e#4405#4663#1" />
-            <element signature="e#4716#4977#1" />
-            <element signature="e#5031#5336#1" />
-            <element signature="e#5895#6053#0" />
-            <element signature="e#6074#6231#0" />
-            <element signature="e#6243#10640#0" />
-            <element signature="e#7586#7641#1" />
-            <element signature="class#7932:8588" />
-            <element signature="method#onItemSelected#0;class#7932:8588" />
-            <element signature="method#onNothingSelected#0;class#7932:8588" />
-            <element signature="e#10672#17014#0" />
-            <element signature="e#12336#13773#1" />
-            <element signature="class#12458:13761" />
-            <element signature="method#onResponse#0;class#12458:13761" />
-            <element signature="e#12678#12930#1" />
-            <element signature="e#12980#13422#1" />
-            <element signature="e#13192#13264#1" />
-            <element signature="method#onFailure#0;class#12458:13761" />
-            <element signature="e#13822#15365#1" />
-            <element signature="class#13936:15353" />
-            <element signature="method#onResponse#0;class#13936:15353" />
-            <element signature="e#14147#14471#1" />
-            <element signature="e#14521#14955#1" />
-            <element signature="e#14724#14796#1" />
-            <element signature="method#onFailure#0;class#13936:15353" />
-            <element signature="e#15414#16947#1" />
-            <element signature="class#15538:16934" />
-            <element signature="method#onResponse#0;class#15538:16934" />
-            <element signature="e#15740#16064#1" />
-            <element signature="e#16114#16539#1" />
-            <element signature="e#16308#16380#1" />
-            <element signature="method#onFailure#0;class#15538:16934" />
-            <element signature="e#17024#18094#0" />
-            <element signature="e#17094#17405#1" />
-            <element signature="e#17468#17745#0" />
-            <element signature="e#17804#18087#1" />
-            <element signature="e#20145#20153#0" expanded="true" />
-            <element signature="e#20596#20604#0" expanded="true" />
-            <element signature="e#22328#22336#0" expanded="true" />
-            <element signature="e#23984#23992#0" expanded="true" />
-            <element signature="e#25208#25216#0" expanded="true" />
-            <element signature="e#26473#26481#0" expanded="true" />
-            <element signature="e#28204#28212#0" expanded="true" />
-            <element signature="e#28632#28640#0" expanded="true" />
-            <element signature="e#30301#30309#0" expanded="true" />
-            <element signature="e#32028#32036#0" expanded="true" />
-            <element signature="e#33310#33318#0" expanded="true" />
-            <element signature="class#33378:34174" />
-            <element signature="method#onItemSelected#0;class#33378:34174" />
-            <element signature="e#33571#33864#1" />
-            <element signature="e#33686#33846#1" />
-            <element signature="e#33870#33930#1" />
-            <element signature="method#onNothingSelected#0;class#33378:34174" />
-            <element signature="e#34410#35652#0" />
-            <element signature="e#34500#35645#0" />
-            <element signature="e#35659#35858#0" />
-            <element signature="e#35864#36287#0" />
-            <element signature="e#35984#36111#1" />
-            <element signature="e#36117#36281#1" />
-            <element signature="e#36293#38200#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="839" column="24" selection-start-line="839" selection-start-column="16" selection-end-line="839" selection-end-column="24" />
-          <folding>
-            <element signature="e#3691#4202#0" />
-            <element signature="e#4483#4797#1" />
-            <element signature="e#4850#5170#1" />
-            <element signature="e#5223#5541#1" />
-            <element signature="e#5594#5917#1" />
-            <element signature="e#6613#6749#0" />
-            <element signature="e#8104#8159#1" />
-            <element signature="e#10472#18123#0" />
-            <element signature="e#12116#13494#1" />
-            <element signature="class#12249:13482" />
-            <element signature="method#onResponse#0;class#12249:13482" />
-            <element signature="e#12466#12697#1" />
-            <element signature="e#12747#13165#1" />
-            <element signature="e#12956#13028#1" />
-            <element signature="method#onFailure#0;class#12249:13482" />
-            <element signature="e#13543#15047#1" />
-            <element signature="class#13674:15035" />
-            <element signature="method#onResponse#0;class#13674:15035" />
-            <element signature="e#13888#14191#1" />
-            <element signature="e#14241#14657#1" />
-            <element signature="e#14447#14519#1" />
-            <element signature="method#onFailure#0;class#13674:15035" />
-            <element signature="e#15096#16580#1" />
-            <element signature="class#15227:16567" />
-            <element signature="method#onResponse#0;class#15227:16567" />
-            <element signature="e#15432#15735#1" />
-            <element signature="e#15785#16192#1" />
-            <element signature="e#15982#16054#1" />
-            <element signature="method#onFailure#0;class#15227:16567" />
-            <element signature="e#16629#18117#1" />
-            <element signature="class#16761:18104" />
-            <element signature="method#onResponse#0;class#16761:18104" />
-            <element signature="e#16966#17269#1" />
-            <element signature="e#17319#17729#1" />
-            <element signature="e#17519#17591#1" />
-            <element signature="method#onFailure#0;class#16761:18104" />
-            <element signature="e#18133#19457#0" />
-            <element signature="e#18203#18489#1" />
-            <element signature="e#18538#18819#1" />
-            <element signature="e#18868#19135#1" />
-            <element signature="e#19184#19451#1" />
-            <element signature="e#21487#21495#0" expanded="true" />
-            <element signature="e#21917#21925#0" expanded="true" />
-            <element signature="e#23628#23636#0" expanded="true" />
-            <element signature="e#25263#25271#0" expanded="true" />
-            <element signature="e#26466#26474#0" expanded="true" />
-            <element signature="e#27710#27718#0" expanded="true" />
-            <element signature="e#29420#29428#0" expanded="true" />
-            <element signature="e#29827#29835#0" expanded="true" />
-            <element signature="e#31475#31483#0" expanded="true" />
-            <element signature="e#33181#33189#0" expanded="true" />
-            <element signature="e#34442#34450#0" expanded="true" />
-            <element signature="class#34741:35537" />
-            <element signature="method#onItemSelected#0;class#34741:35537" />
-            <element signature="e#34934#35227#1" />
-            <element signature="e#35049#35209#1" />
-            <element signature="e#35233#35293#1" />
-            <element signature="method#onNothingSelected#0;class#34741:35537" />
-            <element signature="e#35521#36763#0" />
-            <element signature="e#35611#36756#0" />
-            <element signature="e#36770#36969#0" />
-            <element signature="e#36975#37398#0" />
-            <element signature="e#37095#37222#1" />
-            <element signature="e#37228#37392#1" />
-            <element signature="e#37404#39311#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/SilvikulturUI/SilSorgulamaActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6273">
-          <caret line="658" column="93" selection-start-line="658" selection-start-column="93" selection-end-line="658" selection-end-column="93" />
+        <state relative-caret-position="330">
+          <caret line="255" column="36" selection-start-line="255" selection-start-column="36" selection-end-line="255" selection-end-column="36" />
           <folding>
             <element signature="e#3538#4047#0" />
             <element signature="e#4053#5871#0" />
@@ -2171,11 +1349,12 @@
             <element signature="e#4711#5033#1" />
             <element signature="e#5571#5708#0" />
             <element signature="e#5729#5865#0" />
-            <element signature="e#5877#10335#0" />
             <element signature="e#7220#7275#1" />
             <element signature="class#7566:8222" />
             <element signature="method#onItemSelected#0;class#7566:8222" />
             <element signature="method#onNothingSelected#0;class#7566:8222" />
+            <element signature="e#9863#10325#0" expanded="true" />
+            <element signature="e#10324#10325#0" expanded="true" />
             <element signature="e#10367#13242#0" />
             <element signature="class#12096:13232" />
             <element signature="method#onResponse#0;class#12096:13232" />
@@ -2197,48 +1376,234 @@
             <element signature="e#25946#25954#0" expanded="true" />
             <element signature="e#27652#27660#0" expanded="true" />
             <element signature="e#28913#28921#0" expanded="true" />
-            <element signature="class#29212:30008" />
-            <element signature="method#onItemSelected#0;class#29212:30008" />
-            <element signature="e#29405#29698#1" />
-            <element signature="e#29520#29680#1" />
-            <element signature="e#29704#29764#1" />
-            <element signature="method#onNothingSelected#0;class#29212:30008" />
-            <element signature="e#29992#31234#0" />
-            <element signature="e#30082#31227#0" />
-            <element signature="e#31241#31440#0" />
-            <element signature="e#31446#31869#0" />
-            <element signature="e#31566#31693#1" />
-            <element signature="e#31699#31863#1" />
-            <element signature="e#31875#33782#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fidanlik_orkoy_activity.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/hukuk_disiliskiler_insaatikmal.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/EizinUI/EizinSorgulamaActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+        <state relative-caret-position="415">
+          <caret line="241" column="36" selection-start-line="241" selection-start-column="36" selection-end-line="241" selection-end-column="36" />
+          <folding>
+            <element signature="e#3301#3802#0" />
+            <element signature="e#3808#5373#0" />
+            <element signature="e#3849#5048#0" />
+            <element signature="e#4083#4277#1" />
+            <element signature="e#4330#4525#1" />
+            <element signature="e#5069#5208#0" />
+            <element signature="e#5229#5367#0" />
+            <element signature="e#6722#6777#1" />
+            <element signature="class#7068:7724" />
+            <element signature="method#onItemSelected#0;class#7068:7724" />
+            <element signature="method#onNothingSelected#0;class#7068:7724" />
+            <element signature="e#9196#9611#0" expanded="true" />
+            <element signature="e#9610#9611#0" expanded="true" />
+            <element signature="e#9656#14152#0" />
+            <element signature="e#11301#12627#1" />
+            <element signature="class#11425:12615" />
+            <element signature="method#onResponse#0;class#11425:12615" />
+            <element signature="e#11621#11854#1" />
+            <element signature="e#11904#12303#1" />
+            <element signature="e#12092#12164#1" />
+            <element signature="method#onFailure#0;class#11425:12615" />
+            <element signature="e#12676#14146#1" />
+            <element signature="class#12802:14134" />
+            <element signature="method#onResponse#0;class#12802:14134" />
+            <element signature="e#13001#13306#1" />
+            <element signature="e#13356#13759#1" />
+            <element signature="e#13547#13619#1" />
+            <element signature="method#onFailure#0;class#12802:14134" />
+            <element signature="e#14162#14794#0" />
+            <element signature="e#14232#14482#1" />
+            <element signature="e#14531#14787#1" />
+            <element signature="e#16826#16834#0" expanded="true" />
+            <element signature="e#17258#17266#0" expanded="true" />
+            <element signature="e#18971#18979#0" expanded="true" />
+            <element signature="e#20608#20616#0" expanded="true" />
+            <element signature="e#21813#21821#0" expanded="true" />
+            <element signature="e#23059#23067#0" expanded="true" />
+            <element signature="e#24771#24779#0" expanded="true" />
+            <element signature="e#25180#25188#0" expanded="true" />
+            <element signature="e#26830#26838#0" expanded="true" />
+            <element signature="e#28538#28546#0" expanded="true" />
+            <element signature="e#29801#29809#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ip_sorgulama_activity.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="258" column="36" selection-start-line="258" selection-start-column="36" selection-end-line="258" selection-end-column="36" />
+          <folding>
+            <element signature="e#3691#4202#0" />
+            <element signature="e#4483#4797#1" />
+            <element signature="e#4850#5170#1" />
+            <element signature="e#5223#5541#1" />
+            <element signature="e#5594#5917#1" />
+            <element signature="e#6613#6749#0" />
+            <element signature="e#10031#10446#0" expanded="true" />
+            <element signature="e#10445#10446#0" expanded="true" />
+            <element signature="e#21503#21511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/muh_sorgulama_activity.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="285" column="36" selection-start-line="285" selection-start-column="36" selection-end-line="285" selection-end-column="36" />
+          <folding>
+            <element signature="e#4207#4717#0" />
+            <element signature="e#4723#7250#0" />
+            <element signature="e#4764#6929#0" />
+            <element signature="e#4998#5311#1" />
+            <element signature="e#5364#5677#1" />
+            <element signature="e#5730#6042#1" />
+            <element signature="e#6095#6412#1" />
+            <element signature="e#6950#7087#0" />
+            <element signature="e#7108#7244#0" />
+            <element signature="e#8599#8654#1" />
+            <element signature="class#8945:9601" />
+            <element signature="method#onItemSelected#0;class#8945:9601" />
+            <element signature="method#onNothingSelected#0;class#8945:9601" />
+            <element signature="e#11451#11913#0" expanded="true" />
+            <element signature="e#11912#11913#0" expanded="true" />
+            <element signature="e#11955#19784#0" />
+            <element signature="e#13782#15135#1" />
+            <element signature="class#13904:15123" />
+            <element signature="method#onResponse#0;class#13904:15123" />
+            <element signature="e#14115#14346#1" />
+            <element signature="e#14396#14808#1" />
+            <element signature="e#14599#14671#1" />
+            <element signature="method#onFailure#0;class#13904:15123" />
+            <element signature="e#15184#16672#1" />
+            <element signature="class#15306:16660" />
+            <element signature="method#onResponse#0;class#15306:16660" />
+            <element signature="e#15517#15820#1" />
+            <element signature="e#15870#16283#1" />
+            <element signature="e#16073#16145#1" />
+            <element signature="method#onFailure#0;class#15306:16660" />
+            <element signature="e#16721#18206#1" />
+            <element signature="class#16839:18193" />
+            <element signature="method#onResponse#0;class#16839:18193" />
+            <element signature="e#17050#17353#1" />
+            <element signature="e#17403#17816#1" />
+            <element signature="e#17606#17678#1" />
+            <element signature="method#onFailure#0;class#16839:18193" />
+            <element signature="e#18255#19778#1" />
+            <element signature="class#18384:19766" />
+            <element signature="method#onResponse#0;class#18384:19766" />
+            <element signature="e#18607#18910#1" />
+            <element signature="e#18960#19385#1" />
+            <element signature="e#19175#19247#1" />
+            <element signature="method#onFailure#0;class#18384:19766" />
+            <element signature="e#19792#21136#0" />
+            <element signature="e#19862#20138#1" />
+            <element signature="e#20187#20463#1" />
+            <element signature="e#20512#20786#1" />
+            <element signature="e#20835#21130#1" />
+            <element signature="e#23166#23174#0" expanded="true" />
+            <element signature="e#23596#23604#0" expanded="true" />
+            <element signature="e#25307#25315#0" expanded="true" />
+            <element signature="e#26942#26950#0" expanded="true" />
+            <element signature="e#28145#28153#0" expanded="true" />
+            <element signature="e#29389#29397#0" expanded="true" />
+            <element signature="e#31099#31107#0" expanded="true" />
+            <element signature="e#31506#31514#0" expanded="true" />
+            <element signature="e#33154#33162#0" expanded="true" />
+            <element signature="e#34860#34868#0" expanded="true" />
+            <element signature="e#36121#36129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/oduh_sorgulama_activity.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Fidanlik_Orkoy_UI/Fidanlik_Orkoy_SorguActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="263" column="36" selection-start-line="263" selection-start-column="36" selection-end-line="263" selection-end-column="36" />
+          <folding>
+            <element signature="e#3413#3923#0" />
+            <element signature="e#3929#5993#0" />
+            <element signature="e#3970#5656#0" />
+            <element signature="e#4204#4462#1" />
+            <element signature="e#4515#4772#1" />
+            <element signature="e#4826#5131#1" />
+            <element signature="e#5677#5822#0" />
+            <element signature="e#5843#5987#0" />
+            <element signature="e#7342#7397#1" />
+            <element signature="class#7688:8344" />
+            <element signature="method#onItemSelected#0;class#7688:8344" />
+            <element signature="method#onNothingSelected#0;class#7688:8344" />
+            <element signature="e#10193#10608#0" expanded="true" />
+            <element signature="e#10607#10608#0" expanded="true" />
+            <element signature="e#10649#16806#0" />
+            <element signature="e#12300#13724#1" />
+            <element signature="class#12434:13712" />
+            <element signature="method#onResponse#0;class#12434:13712" />
+            <element signature="e#12660#12899#1" />
+            <element signature="e#12949#13384#1" />
+            <element signature="e#13167#13239#1" />
+            <element signature="method#onFailure#0;class#12434:13712" />
+            <element signature="e#13773#15252#1" />
+            <element signature="class#13890:15240" />
+            <element signature="method#onResponse#0;class#13890:15240" />
+            <element signature="e#14089#14400#1" />
+            <element signature="e#14450#14859#1" />
+            <element signature="e#14641#14713#1" />
+            <element signature="method#onFailure#0;class#13890:15240" />
+            <element signature="e#15314#16788#0" />
+            <element signature="e#16816#17839#0" />
+            <element signature="e#16886#17195#1" />
+            <element signature="e#17244#17509#1" />
+            <element signature="e#17571#17822#0" />
+            <element signature="e#19877#19885#0" expanded="true" />
+            <element signature="e#20315#20323#0" expanded="true" />
+            <element signature="e#22034#22042#0" expanded="true" />
+            <element signature="e#23677#23685#0" expanded="true" />
+            <element signature="e#24888#24896#0" expanded="true" />
+            <element signature="e#26140#26148#0" expanded="true" />
+            <element signature="e#27858#27866#0" expanded="true" />
+            <element signature="e#28273#28281#0" expanded="true" />
+            <element signature="e#29929#29937#0" expanded="true" />
+            <element signature="e#31643#31651#0" expanded="true" />
+            <element signature="e#32912#32920#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="823" column="33" selection-start-line="823" selection-start-column="33" selection-end-line="823" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ToolLayer/RefrofitRestApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/EntityLayer/Agaclandirma/AgacProje.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="40" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/AdapterLayer/DestekHizmetleri/MaliGiderAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="134" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/AdapterLayer/BilgiSistemleri/HaritaArsivAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-824">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -2246,330 +1611,207 @@
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/sil_sorgulama_activity.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ozm_sorgulama_activity.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/kdm_str_bilgisis_activity.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/kadastro_sorgulama_activity.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/AdapterLayer/OrmanIdaresi/OrmanIdaresiAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        <state relative-caret-position="-544">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacSorgulamaActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="113" column="67" selection-start-line="113" selection-start-column="67" selection-end-line="113" selection-end-column="67" />
-          <folding>
-            <element signature="e#3325#3835#0" />
-            <element signature="e#4119#4335#1" />
-            <element signature="e#4388#4603#1" />
-            <element signature="e#5143#5281#0" />
-            <element signature="e#5302#5439#0" />
-            <element signature="e#5451#9893#0" />
-            <element signature="e#6794#6849#1" />
-            <element signature="class#7619:8275" />
-            <element signature="method#onItemSelected#0;class#7619:8275" />
-            <element signature="method#onNothingSelected#0;class#7619:8275" />
-            <element signature="e#9925#14199#0" />
-            <element signature="e#11279#12635#1" />
-            <element signature="class#11416:12623" />
-            <element signature="method#onResponse#0;class#11416:12623" />
-            <element signature="e#11627#11859#1" />
-            <element signature="e#11909#12307#1" />
-            <element signature="e#12097#12169#1" />
-            <element signature="method#onFailure#0;class#11416:12623" />
-            <element signature="e#12684#14193#1" />
-            <element signature="class#12825:14181" />
-            <element signature="method#onResponse#0;class#12825:14181" />
-            <element signature="e#13042#13346#1" />
-            <element signature="e#13396#13801#1" />
-            <element signature="e#13590#13662#1" />
-            <element signature="method#onFailure#0;class#12825:14181" />
-            <element signature="e#14208#14890#0" />
-            <element signature="e#14278#14551#1" />
-            <element signature="e#14600#14883#1" />
-            <element signature="e#14897#23042#0" />
-            <element signature="class#15434:18592" />
-            <element signature="method#onItemSelected#0;class#15434:18592" />
-            <element signature="e#15627#18186#1" />
-            <element signature="e#15743#18168#1" />
-            <element signature="e#16446#16835#1" />
-            <element signature="e#16638#16809#1" />
-            <element signature="e#17884#18146#1" />
-            <element signature="e#18192#18345#1" />
-            <element signature="method#onNothingSelected#0;class#15434:18592" />
-            <element signature="e#18608#18882#0" />
-            <element signature="class#19378:21834" />
-            <element signature="method#onItemSelected#0;class#19378:21834" />
-            <element signature="e#19571#21585#1" />
-            <element signature="e#19691#21440#1" />
-            <element signature="e#20236#20616#1" />
-            <element signature="e#20422#20590#1" />
-            <element signature="e#21237#21417#1" />
-            <element signature="e#21446#21567#1" />
-            <element signature="method#onNothingSelected#0;class#19378:21834" />
-            <element signature="class#22208:23033" />
-            <element signature="method#onItemSelected#0;class#22208:23033" />
-            <element signature="e#22401#22716#1" />
-            <element signature="e#22519#22698#1" />
-            <element signature="e#22722#22785#1" />
-            <element signature="method#onNothingSelected#0;class#22208:23033" />
-            <element signature="e#23049#30982#0" />
-            <element signature="class#23448:26453" />
-            <element signature="method#onItemSelected#0;class#23448:26453" />
-            <element signature="e#23641#26060#1" />
-            <element signature="e#23765#26042#1" />
-            <element signature="e#24411#24778#1" />
-            <element signature="e#24595#24752#1" />
-            <element signature="e#25779#26019#1" />
-            <element signature="e#26066#26209#1" />
-            <element signature="method#onNothingSelected#0;class#23448:26453" />
-            <element signature="e#26469#26740#0" />
-            <element signature="class#27211:29819" />
-            <element signature="method#onItemSelected#0;class#27211:29819" />
-            <element signature="e#27404#29467#1" />
-            <element signature="e#27520#29329#1" />
-            <element signature="e#28023#28543#1" />
-            <element signature="e#28359#28517#1" />
-            <element signature="e#29139#29307#1" />
-            <element signature="e#29335#29449#1" />
-            <element signature="method#onNothingSelected#0;class#27211:29819" />
-            <element signature="class#30175:30971" />
-            <element signature="method#onItemSelected#0;class#30175:30971" />
-            <element signature="e#30368#30661#1" />
-            <element signature="e#30483#30643#1" />
-            <element signature="e#30667#30727#1" />
-            <element signature="method#onNothingSelected#0;class#30175:30971" />
-            <element signature="e#30988#32230#0" />
-            <element signature="e#31078#32223#0" />
-            <element signature="e#32237#32436#0" />
-            <element signature="e#32442#32865#0" />
-            <element signature="e#32562#32689#1" />
-            <element signature="e#32695#32859#1" />
-            <element signature="e#32871#34778#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="1173" column="17" selection-start-line="1173" selection-start-column="17" selection-end-line="1173" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="125" column="37" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacAltMenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="135" column="41" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5779#5882#1" />
-            <element signature="e#6079#8032#0" />
-            <element signature="e#8955#9086#0" />
-            <element signature="e#9099#9886#0" />
-            <element signature="e#11246#11301#1" />
-            <element signature="class#12072:12728" />
-            <element signature="method#onItemSelected#0;class#12072:12728" />
-            <element signature="method#onNothingSelected#0;class#12072:12728" />
-            <element signature="class#13352:13392" />
-            <element signature="e#13912#14193#1" />
-            <element signature="e#14218#14537#1" />
-            <element signature="e#14905#15184#1" />
-            <element signature="e#15209#15517#1" />
-            <element signature="e#15542#15845#1" />
-            <element signature="e#15870#16187#1" />
-            <element signature="e#16212#16490#1" />
-            <element signature="e#16515#16821#1" />
-            <element signature="e#16846#17127#1" />
-            <element signature="e#17153#17462#1" />
-            <element signature="e#17488#17769#1" />
-            <element signature="e#17795#18096#1" />
-            <element signature="e#18122#18402#1" />
-            <element signature="e#18428#18752#1" />
-            <element signature="e#18778#19093#1" />
-            <element signature="e#19119#19402#1" />
-            <element signature="e#19428#19708#1" />
-            <element signature="e#19734#20041#1" />
-            <element signature="e#20081#20313#0" />
-            <element signature="e#20341#22119#0" />
-            <element signature="e#20443#22113#0" />
-            <element signature="e#21340#21427#0" />
-            <element signature="e#21460#21552#0" />
-            <element signature="e#22126#22350#0" />
-            <element signature="e#22357#25447#0" />
-            <element signature="e#25375#25416#1" />
-            <element signature="e#25454#32734#0" />
-            <element signature="e#25750#25886#0" />
-            <element signature="e#25919#25963#0" />
-            <element signature="e#26010#28473#1" />
-            <element signature="e#26056#28413#1" />
-            <element signature="e#26126#26449#1" />
-            <element signature="e#26186#26345#1" />
-            <element signature="e#26351#26430#1" />
-            <element signature="e#26507#26660#1" />
-            <element signature="e#26718#26867#1" />
-            <element signature="e#26986#27147#1" />
-            <element signature="e#27268#27425#1" />
-            <element signature="e#27527#27700#1" />
-            <element signature="e#27771#27938#1" />
-            <element signature="e#28233#28398#1" />
-            <element signature="e#28965#29134#1" />
-            <element signature="e#29344#29469#0" />
-            <element signature="e#29502#29546#0" />
-            <element signature="e#29670#29902#1" />
-            <element signature="e#29711#29892#1" />
-            <element signature="e#30088#30217#0" />
-            <element signature="e#30250#30294#0" />
-            <element signature="e#30497#30632#0" />
-            <element signature="e#30665#30709#0" />
-            <element signature="e#30840#31078#1" />
-            <element signature="e#30881#31068#1" />
-            <element signature="e#31210#31454#1" />
-            <element signature="e#31254#31444#1" />
-            <element signature="e#31520#31563#0" />
-            <element signature="e#31595#31639#0" />
-            <element signature="e#32741#34118#0" />
-            <element signature="e#33026#33162#0" />
-            <element signature="e#33195#33239#0" />
-            <element signature="e#33286#34085#1" />
-            <element signature="e#33409#33681#1" />
-            <element signature="e#33498#33667#1" />
-            <element signature="e#33750#34024#1" />
-            <element signature="e#33839#34010#1" />
-            <element signature="e#34125#40584#0" />
-            <element signature="e#34411#34547#0" />
-            <element signature="e#34580#34624#0" />
-            <element signature="e#34671#35141#1" />
-            <element signature="e#34791#35061#1" />
-            <element signature="e#34880#35047#1" />
-            <element signature="e#40591#48700#0" />
-            <element signature="class#41122:44268" />
-            <element signature="method#onItemSelected#0;class#41122:44268" />
-            <element signature="e#41315#43862#1" />
-            <element signature="e#41431#43844#1" />
-            <element signature="e#42134#42523#1" />
-            <element signature="e#42326#42497#1" />
-            <element signature="e#43560#43822#1" />
-            <element signature="e#43868#44021#1" />
-            <element signature="method#onNothingSelected#0;class#41122:44268" />
-            <element signature="e#44284#44558#0" />
-            <element signature="class#45048:47498" />
-            <element signature="method#onItemSelected#0;class#45048:47498" />
-            <element signature="e#45241#47249#1" />
-            <element signature="e#45361#47104#1" />
-            <element signature="e#45906#46286#1" />
-            <element signature="e#46092#46260#1" />
-            <element signature="e#46901#47081#1" />
-            <element signature="e#47110#47231#1" />
-            <element signature="method#onNothingSelected#0;class#45048:47498" />
-            <element signature="class#47866:48691" />
-            <element signature="method#onItemSelected#0;class#47866:48691" />
-            <element signature="e#48059#48374#1" />
-            <element signature="e#48177#48356#1" />
-            <element signature="e#48380#48443#1" />
-            <element signature="method#onNothingSelected#0;class#47866:48691" />
-            <element signature="e#48707#56658#0" />
-            <element signature="class#49100:52093" />
-            <element signature="method#onItemSelected#0;class#49100:52093" />
-            <element signature="e#49293#51700#1" />
-            <element signature="e#49417#51682#1" />
-            <element signature="e#50063#50430#1" />
-            <element signature="e#50247#50404#1" />
-            <element signature="e#51419#51659#1" />
-            <element signature="e#51706#51849#1" />
-            <element signature="method#onNothingSelected#0;class#49100:52093" />
-            <element signature="e#52109#52380#0" />
-            <element signature="class#52845:55447" />
-            <element signature="method#onItemSelected#0;class#52845:55447" />
-            <element signature="e#53038#55095#1" />
-            <element signature="e#53154#54957#1" />
-            <element signature="e#53657#54177#1" />
-            <element signature="e#53993#54151#1" />
-            <element signature="e#54767#54935#1" />
-            <element signature="e#54963#55077#1" />
-            <element signature="method#onNothingSelected#0;class#52845:55447" />
-            <element signature="class#55797:56593" />
-            <element signature="method#onItemSelected#0;class#55797:56593" />
-            <element signature="e#55990#56283#1" />
-            <element signature="e#56105#56265#1" />
-            <element signature="e#56289#56349#1" />
-            <element signature="method#onNothingSelected#0;class#55797:56593" />
-            <element signature="e#56665#57900#0" />
-            <element signature="e#56748#57893#0" />
-            <element signature="e#57907#58106#0" />
-            <element signature="e#58112#58535#0" />
-            <element signature="e#58232#58359#1" />
-            <element signature="e#58365#58529#1" />
-            <element signature="e#58541#59156#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/SilvikulturUI/SilAltMenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OzmUI/OzmAltMenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/agac_sorgulama_activity.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ana_menu_activity.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/EntityLayer/Amenajman/Amenajman.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ana_menu_alt_activity.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/AdapterLayer/Amenajman/AmenajmanAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="85" column="53" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="416" column="42" selection-start-line="416" selection-start-column="42" selection-end-line="416" selection-end-column="42" />
+          <folding>
+            <element signature="e#3603#4124#0" />
+            <element signature="e#5895#6053#0" />
+            <element signature="e#6074#6231#0" />
+            <element signature="e#6243#10640#0" />
+            <element signature="e#7586#7641#1" />
+            <element signature="class#7932:8588" />
+            <element signature="method#onItemSelected#0;class#7932:8588" />
+            <element signature="method#onNothingSelected#0;class#7932:8588" />
+            <element signature="class#12458:13761" />
+            <element signature="method#onResponse#0;class#12458:13761" />
+            <element signature="e#12678#12930#1" />
+            <element signature="e#12980#13422#1" />
+            <element signature="e#13192#13264#1" />
+            <element signature="method#onFailure#0;class#12458:13761" />
+            <element signature="method#onFailure#0;class#15538:16934" />
+            <element signature="e#17094#17405#1" />
+            <element signature="e#17804#18087#1" />
+            <element signature="e#18100#26365#0" />
+            <element signature="class#18657:21855" />
+            <element signature="method#onItemSelected#0;class#18657:21855" />
+            <element signature="e#18850#21449#1" />
+            <element signature="e#18966#21431#1" />
+            <element signature="e#19669#20058#1" />
+            <element signature="e#19861#20032#1" />
+            <element signature="e#21147#21409#1" />
+            <element signature="e#21455#21608#1" />
+            <element signature="method#onNothingSelected#0;class#18657:21855" />
+            <element signature="e#21871#22145#0" />
+            <element signature="class#22661:25137" />
+            <element signature="method#onItemSelected#0;class#22661:25137" />
+            <element signature="e#22854#24888#1" />
+            <element signature="e#22974#24743#1" />
+            <element signature="e#23519#23899#1" />
+            <element signature="e#23705#23873#1" />
+            <element signature="e#24540#24720#1" />
+            <element signature="e#24749#24870#1" />
+            <element signature="method#onNothingSelected#0;class#22661:25137" />
+            <element signature="class#25531:26356" />
+            <element signature="method#onItemSelected#0;class#25531:26356" />
+            <element signature="e#25724#26039#1" />
+            <element signature="e#25842#26021#1" />
+            <element signature="e#26045#26108#1" />
+            <element signature="method#onNothingSelected#0;class#25531:26356" />
+            <element signature="e#26372#34425#0" />
+            <element signature="class#26791:29836" />
+            <element signature="method#onItemSelected#0;class#26791:29836" />
+            <element signature="e#26984#29443#1" />
+            <element signature="e#27108#29425#1" />
+            <element signature="e#27754#28121#1" />
+            <element signature="e#27938#28095#1" />
+            <element signature="e#29162#29402#1" />
+            <element signature="e#29449#29592#1" />
+            <element signature="method#onNothingSelected#0;class#26791:29836" />
+            <element signature="e#29852#30123#0" />
+            <element signature="class#30614:33242" />
+            <element signature="method#onItemSelected#0;class#30614:33242" />
+            <element signature="e#30807#32890#1" />
+            <element signature="e#30923#32752#1" />
+            <element signature="e#31426#31946#1" />
+            <element signature="e#31762#31920#1" />
+            <element signature="e#32562#32730#1" />
+            <element signature="e#32758#32872#1" />
+            <element signature="method#onNothingSelected#0;class#30614:33242" />
+            <element signature="class#33618:34414" />
+            <element signature="method#onItemSelected#0;class#33618:34414" />
+            <element signature="e#33811#34104#1" />
+            <element signature="e#33926#34086#1" />
+            <element signature="e#34110#34170#1" />
+            <element signature="method#onNothingSelected#0;class#33618:34414" />
+            <element signature="e#34430#35672#0" />
+            <element signature="e#34520#35665#0" />
+            <element signature="e#35679#35878#0" />
+            <element signature="e#35884#36307#0" />
+            <element signature="e#36004#36131#1" />
+            <element signature="e#36137#36301#1" />
+            <element signature="e#36313#38220#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/AdapterLayer/InsaatIkmal/InikYolAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_filter.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9047">
+          <caret line="296" column="36" selection-start-line="296" selection-start-column="36" selection-end-line="296" selection-end-column="36" />
+          <folding>
+            <element signature="e#3564#4076#0" />
+            <element signature="e#5995#7936#0" />
+            <element signature="e#6036#7613#0" />
+            <element signature="e#6270#6526#1" />
+            <element signature="e#6579#6836#1" />
+            <element signature="e#6889#7095#1" />
+            <element signature="e#7634#7772#0" />
+            <element signature="e#7793#7930#0" />
+            <element signature="e#9307#9362#1" />
+            <element signature="class#9653:10309" />
+            <element signature="method#onItemSelected#0;class#9653:10309" />
+            <element signature="method#onNothingSelected#0;class#9653:10309" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/agac_sorgulama_activity.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="82" column="56" selection-start-line="82" selection-start-column="56" selection-end-line="82" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/yeni_buton.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="49" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/hukuk_disiliskiler_insaatikmal.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        <state relative-caret-position="561">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10923">
+          <caret line="290" column="72" lean-forward="true" selection-start-line="290" selection-start-column="72" selection-end-line="290" selection-end-column="72" />
+          <folding>
+            <element signature="e#4371#5078#0" />
+            <element signature="e#5086#8267#0" />
+            <element signature="e#5127#7900#0" />
+            <element signature="e#5361#5853#1" />
+            <element signature="e#5909#6356#1" />
+            <element signature="e#6410#6854#1" />
+            <element signature="e#6912#7360#1" />
+            <element signature="e#7921#8081#0" />
+            <element signature="e#8102#8261#0" />
+            <element signature="e#10062#10117#1" />
+            <element signature="class#10408:11064" />
+            <element signature="method#onItemSelected#0;class#10408:11064" />
+            <element signature="method#onNothingSelected#0;class#10408:11064" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacSorgulamaActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="775" column="53" lean-forward="true" selection-start-line="775" selection-start-column="53" selection-end-line="775" selection-end-column="53" />
+          <folding>
+            <element signature="e#3325#3835#0" />
+            <element signature="e#4119#4335#1" />
+            <element signature="e#4388#4603#1" />
+            <element signature="e#5143#5281#0" />
+            <element signature="e#5302#5439#0" />
+            <element signature="e#6794#6849#1" />
+            <element signature="class#7619:8275" />
+            <element signature="method#onItemSelected#0;class#7619:8275" />
+            <element signature="method#onNothingSelected#0;class#7619:8275" />
+          </folding>
         </state>
       </provider>
     </entry>
