@@ -66,7 +66,7 @@
             android:layout_gravity="center"
             android:layout_height="wrap_content">
 
-                <LinearLayout
+            <LinearLayout
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
@@ -107,24 +107,22 @@
 
 
         <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_width="match_parent"
             android:id="@+id/birinci_baslik"
             style="@style/listTable_satircontainerLinearwrapwraphoriz"
-            >
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
-            <View
-                style="@style/listTable_satirAyracView"></View>
+            <View style="@style/listTable_satirAyracView"></View>
+
             <TextView
+                style="@style/listTable_SatirTextView"
                 android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
                 android:text="Bölge"
                 android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
 
             <TextView
                 style="@style/listTable_SatirTextView"
@@ -133,60 +131,55 @@
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
-            <View
-                style="@style/listTable_satirAyracView"></View>
+            <View style="@style/listTable_satirAyracView"></View>
+
             <TextView
+                style="@style/listTable_SatirTextView"
                 android:layout_weight="1.6"
-                android:textSize="@dimen/smaller_textsize"
                 android:text="Şeflik"
                 android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
+
             <TextView
+                style="@style/listTable_SatirTextView"
                 android:layout_weight="0.9"
-                android:textSize="@dimen/smaller_textsize"
                 android:text="Yıl"
                 android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
+
             <TextView
+                style="@style/listTable_SatirTextView"
                 android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
                 android:text="Bal Ormanı Sayısı"
                 android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
+                android:textSize="@dimen/smaller_textsize" />
 
+            <View style="@style/listTable_satirAyracView"></View>
 
 
             <TextView
+                style="@style/listTable_SatirTextView"
                 android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
                 android:text="Toplam Alan"
                 android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
 
             <TextView
+                style="@style/listTable_SatirTextView"
                 android:layout_weight="1"
-                android:textSize="@dimen/smaller_textsize"
                 android:text="Bal Toplam Kapasite"
                 android:textColor="@color/text"
-                style="@style/listTable_SatirTextView"
-                />
-            <View
-                style="@style/listTable_satirAyracView"></View>
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
 
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_marginLeft="10dp"
@@ -344,24 +337,108 @@
         </LinearLayout>
 
 
+        <LinearLayout
+            android:id="@+id/dorduncu_baslik"
+            style="@style/listTable_satircontainerLinearwrapwraphoriz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <View style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Bölge"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1.2"
+                android:text="Müdürlük"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1.6"
+                android:text="Şeflik"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="0.9"
+                android:text="İl"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="İlçe"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
+
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1.6"
+                android:text="Şehir Ormanı Sayısı"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="0.9"
+                android:text="Alan"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="Yıl"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
+
+
+        </LinearLayout>
+
         <ListView
+            android:id="@+id/oduh_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:animationCache="false"
+            android:background="@drawable/ip_dd_listitem_bg"
             android:scrollingCache="true"
             android:smoothScrollbar="true"
-            android:stackFromBottom="false"
-            android:background="@drawable/ip_dd_listitem_bg"
-            android:id="@+id/oduh_listview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:stackFromBottom="false">
 
         </ListView>
 
 
-
     </LinearLayout>
-
 
 
 </android.support.v4.widget.DrawerLayout>

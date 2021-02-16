@@ -29,18 +29,28 @@ import com.konumsal.orbisozetmobil.R;
 import net.cachapa.expandablelayout.ExpandableLayout;
 
 import java.lang.reflect.Field;
+import java.security.cert.CertificateException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
+
 import AdapterLayer.Oduh.BalOrmaniAdapter;
 import AdapterLayer.Oduh.MesireYeriAdapter;
+import AdapterLayer.Oduh.SehirOrmaniAdapter;
 import AdapterLayer.Oduh.UretimPaketAdapter;
 import DataLayer.Ortak.ConfigData;
 import EntityLayer.Oduh.BalOrmani;
 import EntityLayer.Oduh.MesireYeri;
+import EntityLayer.Oduh.SehirOrmani;
 import EntityLayer.Oduh.UretimPaket;
 import EntityLayer.Ortak.SCity;
 import EntityLayer.Ortak.SKoyBelde;
@@ -58,6 +68,8 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static ToolLayer.RetrofirCertifica.getUnsafeOkHttpClient;
+
 public class OduhSorgulamaActivity extends AppCompatActivity implements ExpandableLayout.OnExpansionUpdateListener {
     Toolbar toolbar;
     Spinner bolge_spinner, mudurluk_spinner, seflik_spinner, yil_spinner;
@@ -65,12 +77,14 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
     BalOrmaniAdapter balOrmaniAdapter;
     MesireYeriAdapter mesireYeriAdapter;
     UretimPaketAdapter uretimPaketAdapter;
+    SehirOrmaniAdapter sehirOrmaniAdapter;
     List<BalOrmani> gelenBalOrmaniList;
     List<MesireYeri> gelenMesireYeriList;
     List<UretimPaket> gelenUretimList;
+    List<SehirOrmani> gelenSehirOrmaniList;
     ListView listview;
     String gelenSayfaId;
-    LinearLayout baslikLinear1, baslikLinear2, baslikLinear3;
+    LinearLayout baslikLinear1, baslikLinear2, baslikLinear3, baslikLinear4;
 
     Spinner il_spinner, ilce_spinner, koy_spinner;
     List<SCity> il_list;
@@ -144,6 +158,36 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
         il_spinner.setSelection(shared_il_index);
         ilce_spinner.setSelection(shared_ilce_index);
         koy_spinner.setSelection(shared_koy_index);
+
+
+        birimRadioGrup.check(R.id.radio_bolge);
+        if (shared_bolge_index != 0)
+            secili_bolge_id = ((SOrgBirim) OrtakFunction.bolge_list.get(shared_bolge_index)).getId();
+        else
+            secili_bolge_id = -1L;
+        if (shared_mudurluk_index != 0)
+            secili_mudurluk_id = ((SOrgBirim) OrtakFunction.bolge_list.get(shared_mudurluk_index)).getId();
+        else
+            secili_mudurluk_id = -1L;
+        if (shared_seflik_index != 0)
+            secili_seflik_id = ((SOrgBirim) OrtakFunction.bolge_list.get(shared_seflik_index)).getId();
+        else
+            secili_seflik_id = -1L;
+
+        if (shared_il_index != 0)
+            secili_il_id = ((SCity) OrtakFunction.il_list.get(shared_il_index)).getId();
+        else
+            secili_il_id = -1L;
+        if (shared_ilce_index != 0)
+            secili_ilce_id = ((STown) OrtakFunction.ilce_list.get(shared_ilce_index)).getId();
+        else
+            secili_ilce_id = -1L;
+        if (shared_koy_index != 0)
+            secili_koy_id = ((SKoyBelde) OrtakFunction.koy_list.get(shared_koy_index)).getId();
+        else
+            secili_koy_id = -1L;
+
+
     }
 
     private void initToolBar() {
@@ -157,17 +201,28 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
                 baslikLinear1.setVisibility(View.VISIBLE);
                 baslikLinear2.setVisibility(View.GONE);
                 baslikLinear3.setVisibility(View.GONE);
+                baslikLinear4.setVisibility(View.GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("1")) {
                 getSupportActionBar().setTitle("Mesire Yeri Listesi");
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.VISIBLE);
                 baslikLinear3.setVisibility(View.GONE);
+                baslikLinear4.setVisibility(View.GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("2")) {
                 getSupportActionBar().setTitle("Orman Dışı Ürünleri Listesi");
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.GONE);
+                baslikLinear4.setVisibility(View.GONE);
+
+            }
+            if (gelenSayfaId.equalsIgnoreCase("3")) {
+                getSupportActionBar().setTitle("Şehir Ormanı Listesi");
+                baslikLinear1.setVisibility(View.GONE);
+                baslikLinear2.setVisibility(View.GONE);
+                baslikLinear3.setVisibility(View.GONE);
+                baslikLinear4.setVisibility(View.VISIBLE);
             }
 
             getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -198,6 +253,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
         expandableLayout.setOnExpansionUpdateListener(OduhSorgulamaActivity.this);
         linearLayout_bir = (LinearLayout) findViewById(R.id.linear_bir);
         linearLayout_iki = (LinearLayout) findViewById(R.id.linear_iki);
+        baslikLinear4 = (LinearLayout) findViewById(R.id.dorduncu_baslik);
         il_spinner = (Spinner) findViewById(R.id.il_spinner);
         ilce_spinner = (Spinner) findViewById(R.id.ilce_spinner);
         koy_spinner = (Spinner) findViewById(R.id.koy_spinner);
@@ -265,6 +321,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
         baslikLinear1 = (LinearLayout) findViewById(R.id.birinci_baslik);
         baslikLinear2 = (LinearLayout) findViewById(R.id.ikinci_baslik);
         baslikLinear3 = (LinearLayout) findViewById(R.id.ucuncu_baslik);
+        baslikLinear4 = (LinearLayout) findViewById(R.id.dorduncu_baslik);
 
         pd2 = new ProgressDialog(OduhSorgulamaActivity.this);
         listview = (ListView) findViewById(R.id.oduh_listview);
@@ -324,8 +381,10 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
                 .baseUrl(url)
                 .addConverterFactory(new NullOnEmptyConverterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
-                .client(okHttpClient)
+                .client(getUnsafeOkHttpClient().build())
                 .build();
+
+
         RefrofitRestApi refrofitRestApi = retrofit.create(RefrofitRestApi.class);
 
         SendParametersForServer parameters = new SendParametersForServer();
@@ -333,6 +392,9 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
         parameters.prmIsletmeId = secili_mudurluk_id.toString();
         parameters.prmSeflikId = secili_seflik_id.toString();
         parameters.prmYil = secili_yil.toString();
+        parameters.prmIlId = secili_il_id.toString();
+        parameters.prmIlceId = secili_ilce_id.toString();
+        parameters.prmKoyId = secili_koy_id.toString();
 
         final ProgressDialog progressDoalog;
         progressDoalog = new ProgressDialog(OduhSorgulamaActivity.this);
@@ -434,6 +496,40 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
 
         }
 
+        if (gelenSayfaId.equalsIgnoreCase("3")) {
+
+            Call<List<SehirOrmani>> call = refrofitRestApi.oduhDepoSehirOrmaniService(parameters);
+            call.enqueue(new Callback<List<SehirOrmani>>() {
+                @Override
+                public void onResponse(Call<List<SehirOrmani>> call, Response<List<SehirOrmani>> response) {
+                    if (!response.isSuccessful()) {
+                        // textViewResult.setText("Code: " + response.code());
+                        progressDoalog.dismiss();
+                        MessageBox.showAlert(OduhSorgulamaActivity.this, "Hata Oluştu.. " + response.message(), false);
+                        return;
+                    }
+                    if (response.isSuccessful()) {
+                        progressDoalog.dismiss();
+                        gelenSehirOrmaniList = response.body();
+                        if (gelenSehirOrmaniList != null && gelenSehirOrmaniList.size() > 0) {
+                            get_listview();
+
+                        } else
+                            MessageBox.showAlert(OduhSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
+
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<List<SehirOrmani>> call, Throwable t) {
+                    progressDoalog.dismiss();
+                    //textViewResult.setText(t.getMessage());
+                    MessageBox.showAlert(OduhSorgulamaActivity.this, "Hata Oluştu.. " + t.getMessage(), false);
+                }
+            });
+
+        }
+
     }
 
 
@@ -458,10 +554,10 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
             listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("3")) {
-            /*balOrmaniAdapter = new BalOrmaniAdapter(OduhSorgulamaActivity.this, R.layout.item_yedi, gelenBalOrmaniList);
-            listview.setAdapter(balOrmaniAdapter);
-            balOrmaniAdapter.notifyDataSetChanged();
-            listview.setClickable(true);*/
+            sehirOrmaniAdapter = new SehirOrmaniAdapter(OduhSorgulamaActivity.this, R.layout.item_sekiz, gelenSehirOrmaniList);
+            listview.setAdapter(sehirOrmaniAdapter);
+            sehirOrmaniAdapter.notifyDataSetChanged();
+            listview.setClickable(true);
         }
     }
 
@@ -617,6 +713,11 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
                         secili_mudurluk_id = -1L;
                         secili_seflik_id = -1L;
                     }
+                }
+                else {
+                    secili_mudurluk_id = -1L;
+                    secili_seflik_id = -1L;
+
                 }
                 localDataManager.setSharedPreference(getApplicationContext(), "mudurlukId", String.valueOf(position));
 
@@ -852,6 +953,8 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
 
         }
     }
+
+
 }
 
 

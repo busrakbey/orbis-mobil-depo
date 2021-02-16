@@ -101,16 +101,17 @@ public class OduhAltMenuActivity extends AppCompatActivity {
 
                 else if(position == 2)
                 {
+
                     Intent mintent = new Intent(OduhAltMenuActivity.this, OduhSorgulamaActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE","2");  // şehir ormanları
+                    mintent.putExtra("MODE","2");  // odun doışı orman ürünleri
                     startActivity(mintent);
                 }
                 else if(position == 3)
                 {
                     Intent mintent = new Intent(OduhAltMenuActivity.this, OduhSorgulamaActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    mintent.putExtra("MODE","3");  // odun doışı orman ürünleri
+                    mintent.putExtra("MODE","3");  // şehir ormanları
                     startActivity(mintent);
                 }
             }
@@ -121,6 +122,7 @@ public class OduhAltMenuActivity extends AppCompatActivity {
         menuList.add("Bal Ormanı Listesi");
         menuList.add("Mesire Yeri Listesi");
         menuList.add("Orman Ürünleri Listesi");
+        menuList.add("Şehir Ormanları Listesi");
 
     }
 

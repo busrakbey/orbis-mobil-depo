@@ -14,10 +14,10 @@
         android:layout_width="50dip"
         android:layout_height="50dip"
         android:layout_gravity="left|center"
-        android:layout_marginTop="10dip"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/fire"
-        />
+        android:src="@drawable/fire" />
 
 
     <!-- Rightend Arrow -->
@@ -35,13 +35,13 @@
     <TextView
         android:id="@+id/fire_alt_menu_list_item_text_title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_height="50dip"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dip"
+        android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/fire_image"
         android:layout_toRightOf="@+id/fire_image"
-        android:gravity="center_vertical"
+        android:gravity="center_horizontal|center_vertical"
         android:text="-------"
         android:textColor="@color/mylabeltextcolor"
         android:textSize="14dip"

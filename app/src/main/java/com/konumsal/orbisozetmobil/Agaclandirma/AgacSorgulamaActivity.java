@@ -49,6 +49,8 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static ToolLayer.RetrofirCertifica.getUnsafeOkHttpClient;
+
 public class AgacSorgulamaActivity extends AppCompatActivity implements ExpandableLayout.OnExpansionUpdateListener {
     Toolbar toolbar;
     Spinner bolge_spinner, mudurluk_spinner, seflik_spinner, yil_spinner;
@@ -102,8 +104,6 @@ public class AgacSorgulamaActivity extends AppCompatActivity implements Expandab
         initToolBar();
         shared_values();
     }
-
-
 
 
     private void initToolBar() {
@@ -250,7 +250,7 @@ public class AgacSorgulamaActivity extends AppCompatActivity implements Expandab
                 il_spinner.setSelection(0);
                 ilce_spinner.setSelection(0);
                 koy_spinner.setSelection(0);
-                secili_il_id=-1L;
+                secili_il_id = -1L;
                 secili_ilce_id = -1L;
                 secili_koy_id = -1L;
 
@@ -277,6 +277,7 @@ public class AgacSorgulamaActivity extends AppCompatActivity implements Expandab
                 .baseUrl(url)
                 .addConverterFactory(new NullOnEmptyConverterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
+                .client(getUnsafeOkHttpClient().build())
                 .build();
         RefrofitRestApi refrofitRestApi = retrofit.create(RefrofitRestApi.class);
 
@@ -353,8 +354,6 @@ public class AgacSorgulamaActivity extends AppCompatActivity implements Expandab
             });
         }
     }
-
-
 
 
     void get_listview() {
@@ -503,6 +502,11 @@ public class AgacSorgulamaActivity extends AppCompatActivity implements Expandab
                         secili_mudurluk_id = -1L;
                         secili_seflik_id = -1L;
                     }
+                }
+                else {
+                    secili_mudurluk_id = -1L;
+                    secili_seflik_id = -1L;
+
                 }
                 localDataManager.setSharedPreference(getApplicationContext(), "mudurlukId", String.valueOf(position));
 
@@ -715,7 +719,6 @@ public class AgacSorgulamaActivity extends AppCompatActivity implements Expandab
         });
 
 
-
     }
 
     public void radioGrupChange(RadioGroup group, int checkedId) {
@@ -791,6 +794,33 @@ public class AgacSorgulamaActivity extends AppCompatActivity implements Expandab
         il_spinner.setSelection(shared_il_index);
         ilce_spinner.setSelection(shared_ilce_index);
         koy_spinner.setSelection(shared_koy_index);
+
+        birimRadioGrup.check(R.id.radio_bolge);
+        if (shared_bolge_index != 0)
+            secili_bolge_id = ((SOrgBirim) OrtakFunction.bolge_list.get(shared_bolge_index)).getId();
+        else
+            secili_bolge_id = -1L;
+        if (shared_mudurluk_index != 0)
+            secili_mudurluk_id = ((SOrgBirim) OrtakFunction.bolge_list.get(shared_mudurluk_index)).getId();
+        else
+            secili_mudurluk_id = -1L;
+        if (shared_seflik_index != 0)
+            secili_seflik_id = ((SOrgBirim) OrtakFunction.bolge_list.get(shared_seflik_index)).getId();
+        else
+            secili_seflik_id = -1L;
+
+        if (shared_il_index != 0)
+            secili_il_id = ((SCity) OrtakFunction.il_list.get(shared_il_index)).getId();
+        else
+            secili_il_id = -1L;
+        if (shared_ilce_index != 0)
+            secili_ilce_id = ((STown) OrtakFunction.ilce_list.get(shared_ilce_index)).getId();
+        else
+            secili_ilce_id = -1L;
+        if (shared_koy_index != 0)
+            secili_koy_id = ((SKoyBelde) OrtakFunction.koy_list.get(shared_koy_index)).getId();
+        else
+            secili_koy_id = -1L;
     }
 
 }

@@ -68,6 +68,9 @@ public class MenuAdapter extends ArrayAdapter<String> {
             } else if (position == 2) {
                 menu_img.setImageResource(R.drawable.list_icon);
             }
+            else if (position == 3) {
+                menu_img.setImageResource(R.drawable.list_icon);
+            }
         }
 
         if (fromMenu == 1) {  // ozm

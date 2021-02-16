@@ -17,7 +17,10 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;import com.konumsal.orbisozetmobil.OrtakUI.OrtakFunction;
+import android.widget.Spinner;
+
+import com.google.android.gms.vision.text.Line;
+import com.konumsal.orbisozetmobil.OrtakUI.OrtakFunction;
 import com.konumsal.orbisozetmobil.R;
 
 import net.cachapa.expandablelayout.ExpandableLayout;
@@ -48,6 +51,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import static ToolLayer.RetrofirCertifica.getUnsafeOkHttpClient;
+import static android.view.View.GONE;
 
 public class EizinSorgulamaActivity extends AppCompatActivity implements ExpandableLayout.OnExpansionUpdateListener {
     Toolbar toolbar;
@@ -84,7 +90,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
     LocalDataManager localDataManager;
     private ExpandableLayout expandableLayout;
     private ImageView expandButton;
-    LinearLayout linearLayout_bir, linearLayout_iki;
+    LinearLayout linearLayout_bir, linearLayout_iki, seflik_linear, ilce_linear, koy_linear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,12 +117,14 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
             if (gelenSayfaId.equalsIgnoreCase("0")) {
                 getSupportActionBar().setTitle("İzin Listesi");
                 baslikLinear1.setVisibility(View.VISIBLE);
-                baslikLinear2.setVisibility(View.GONE);
+                baslikLinear2.setVisibility(GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("1")) {
                 getSupportActionBar().setTitle("Talep Listesi");
-                baslikLinear1.setVisibility(View.GONE);
+                baslikLinear1.setVisibility(GONE);
                 baslikLinear2.setVisibility(View.VISIBLE);
+                ilce_linear.setVisibility(GONE);
+                koy_linear.setVisibility(GONE);
             }
     
             getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -244,6 +252,12 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
             }
         });
 
+        ilce_linear = (LinearLayout) findViewById(R.id.ilce_linear);
+        koy_linear = (LinearLayout) findViewById(R.id.koy_linear);
+        seflik_linear = (LinearLayout) findViewById(R.id.seflik_linear);
+        seflik_linear.setVisibility(GONE);
+
+
 
     }
     
@@ -269,7 +283,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
                 .baseUrl(url)
                 .addConverterFactory(new NullOnEmptyConverterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
-                .client(okHttpClient)
+                .client(getUnsafeOkHttpClient().build())
                 .build();
         RefrofitRestApi refrofitRestApi = retrofit.create(RefrofitRestApi.class);
 
@@ -277,6 +291,9 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
         parameters.prmBolgeId = secili_bolge_id.toString();
         parameters.prmIsletmeId = secili_mudurluk_id.toString();
         parameters.prmSeflikId = secili_seflik_id.toString();
+        parameters.prmIlId = secili_il_id.toString();
+        parameters.prmIlceId = secili_ilce_id.toString();
+        parameters.prmKoyId = secili_koy_id.toString();
         parameters.prmYil = secili_yil.toString();
 
         final ProgressDialog progressDoalog;
@@ -492,6 +509,11 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
                         secili_mudurluk_id = -1L;
                         secili_seflik_id = -1L;
                     }
+                }
+                else {
+                    secili_mudurluk_id = -1L;
+                    secili_seflik_id = -1L;
+
                 }
                 localDataManager.setSharedPreference(getApplicationContext(), "mudurlukId", String.valueOf(position));
 
@@ -744,8 +766,8 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
         } else {
             expandableLayout.collapse();
 
-            linearLayout_iki.setVisibility(View.GONE);
-            linearLayout_bir.setVisibility(View.GONE);
+            linearLayout_iki.setVisibility(GONE);
+            linearLayout_bir.setVisibility(GONE);
 
         }
     }
@@ -780,6 +802,33 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
         il_spinner.setSelection(shared_il_index);
         ilce_spinner.setSelection(shared_ilce_index);
         koy_spinner.setSelection(shared_koy_index);
+
+        birimRadioGrup.check(R.id.radio_bolge);
+        if (shared_bolge_index != 0)
+            secili_bolge_id = ((SOrgBirim) OrtakFunction.bolge_list.get(shared_bolge_index)).getId();
+        else
+            secili_bolge_id = -1L;
+        if (shared_mudurluk_index != 0)
+            secili_mudurluk_id = ((SOrgBirim) OrtakFunction.bolge_list.get(shared_mudurluk_index)).getId();
+        else
+            secili_mudurluk_id = -1L;
+        if (shared_seflik_index != 0)
+            secili_seflik_id = ((SOrgBirim) OrtakFunction.bolge_list.get(shared_seflik_index)).getId();
+        else
+            secili_seflik_id = -1L;
+
+        if (shared_il_index != 0)
+            secili_il_id = ((SCity) OrtakFunction.il_list.get(shared_il_index)).getId();
+        else
+            secili_il_id = -1L;
+        if (shared_ilce_index != 0)
+            secili_ilce_id = ((STown) OrtakFunction.ilce_list.get(shared_ilce_index)).getId();
+        else
+            secili_ilce_id = -1L;
+        if (shared_koy_index != 0)
+            secili_koy_id = ((SKoyBelde) OrtakFunction.koy_list.get(shared_koy_index)).getId();
+        else
+            secili_koy_id = -1L;
     }
 
 

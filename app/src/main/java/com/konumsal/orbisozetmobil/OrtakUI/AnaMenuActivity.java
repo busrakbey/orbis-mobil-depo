@@ -180,6 +180,7 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
         shared_ilce_index = localDataManager.getValues(getApplicationContext(), "ilceId");
         shared_koy_index = localDataManager.getValues(getApplicationContext(), "koyId");
 
+
         birimRadioGrup.check(localDataManager.getValues(getApplicationContext(), "radioButton") == null ? null : localDataManager.getValues(getApplicationContext(), "radioButton"));
         if (localDataManager.getValues(getApplicationContext(), "radioButton").equals(R.id.radio_gen_mud))
             birimRadioGrup.check(R.id.radio_gen_mud);
@@ -202,6 +203,35 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
         koy_spinner.setSelection(shared_koy_index);
         if (pd.isShowing())
             pd.dismiss();
+
+        birimRadioGrup.check(R.id.radio_bolge);
+        if (shared_bolge_index != 0)
+            secili_bolge_id = ((SOrgBirim) OrtakFunction.bolge_list.get(shared_bolge_index)).getId();
+        else
+            secili_bolge_id = -1L;
+        if (shared_mudurluk_index != 0)
+            secili_mudurluk_id = ((SOrgBirim) OrtakFunction.bolge_list.get(shared_mudurluk_index)).getId();
+        else
+            secili_mudurluk_id = -1L;
+        if (shared_seflik_index != 0)
+            secili_seflik_id = ((SOrgBirim) OrtakFunction.bolge_list.get(shared_seflik_index)).getId();
+        else
+            secili_seflik_id = -1L;
+
+        if (shared_il_index != 0)
+            secili_il_id = ((SCity) OrtakFunction.il_list.get(shared_il_index)).getId();
+        else
+            secili_il_id = -1L;
+        if (shared_ilce_index != 0)
+            secili_ilce_id = ((STown) OrtakFunction.ilce_list.get(shared_ilce_index)).getId();
+        else
+            secili_ilce_id = -1L;
+        if (shared_koy_index != 0)
+            secili_koy_id = ((SKoyBelde) OrtakFunction.koy_list.get(shared_koy_index)).getId();
+        else
+            secili_koy_id = -1L;
+
+
     }
 
     private void initToolBar() {
@@ -218,7 +248,19 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    AnaMenuActivity.this.finish();
+                    AlertDialog.Builder builder = new AlertDialog.Builder(AnaMenuActivity.this);
+                    builder.setTitle("Sistem");
+                    builder.setMessage("Uygulamadan çıkış yapılacaktır. Devam etmek istiyor musunuz?");
+                    builder.setNegativeButton("Hayır", null);
+                    builder.setPositiveButton("Evet", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                            System.exit(0);
+
+                        }
+                    });
+                    builder.show();
                 }
             });
 
@@ -235,7 +277,7 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
 
     private void menuEkle() {
         menuList.add("Ağaçlandırma ve Toprak Muhafaza");
-        menuList.add("Amenajman");
+       // menuList.add("Amenajman");
         menuList.add("Bilgi Sistemleri");
         menuList.add("Destek Hizmetleri");
         menuList.add("Dış İlişkiler");
@@ -295,6 +337,7 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
         ilce_list = new ArrayList<STown>();
         koy_list = new ArrayList<SKoyBelde>();
         il_list = new ArrayList<SCity>();
+        pd = new ProgressDialog(AnaMenuActivity.this);
 
 
         yil_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -346,92 +389,92 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
                     mintent.putExtra("MODE", 0);
                     startActivity(mintent);
 
-                } else if (position == 1) {
+                }/* else if (position == 1) {
                     Intent mintent = new Intent(AnaMenuActivity.this, OrmIdaresi_Amenajman_Yangin_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", "1");  /// AMENAJMAN
                     startActivity(mintent);
-                } else if (position == 2) {
+                }*/ else if (position == 1) {
                     Intent mintent = new Intent(AnaMenuActivity.this, Kdm_Str_BilgiSis_SorgulamaActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", "1");  // bilgi sistemleri
                     startActivity(mintent);
-                } else if (position == 3) {
+                } else if (position == 2) {
                     Intent mintent = new Intent(AnaMenuActivity.this, MuhAltMenuActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", 3);
                     startActivity(mintent);
-                } else if (position == 4) {
+                } else if (position == 3) {
                     Intent mintent = new Intent(AnaMenuActivity.this, DisIliskilerAltMenuActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", "1"); // dış ilişkliler
                     startActivity(mintent);
-                } else if (position == 5) {
+                } else if (position == 4) {
                     Intent mintent = new Intent(AnaMenuActivity.this, Fidanlik_Orkoy_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", "0");  //fidanlık
                     startActivity(mintent);
-                } else if (position == 6) {
+                } else if (position == 5) {
                     Intent mintent = new Intent(AnaMenuActivity.this, Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", "0");  /// hukuk
                     startActivity(mintent);
-                } else if (position == 7) {
+                } else if (position == 6) {
                     Intent mintent = new Intent(AnaMenuActivity.this, IPAltMenuActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", 7);
                     startActivity(mintent);
-                } else if (position == 8) {
+                } else if (position == 7) {
                     Intent mintent = new Intent(AnaMenuActivity.this, Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", "2");
                     startActivity(mintent);
-                } else if (position == 9) {
+                } else if (position == 8) {
                     Intent mintent = new Intent(AnaMenuActivity.this, EizinAltMenuActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", 9);
                     startActivity(mintent);
-                } else if (position == 10) {
+                } else if (position == 9) {
                     Intent mintent = new Intent(AnaMenuActivity.this, Kdm_Str_BilgiSis_SorgulamaActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", "0"); // kadastro
                     startActivity(mintent);
-                } else if (position == 11) {
+                } else if (position == 10) {
                     Intent mintent = new Intent(AnaMenuActivity.this, OduhAltMenuActivity.class);
                     mintent.putExtra("MODE", 11);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(mintent);
-                } else if (position == 12) {
+                } else if (position == 11) {
                     Intent mintent = new Intent(AnaMenuActivity.this, Fidanlik_Orkoy_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", "1");  ///orkoy
                     startActivity(mintent);
-                } else if (position == 13) {
+                } else if (position == 12) {
                     Intent mintent = new Intent(AnaMenuActivity.this, OzmAltMenuActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", 13);
                     startActivity(mintent);
-                } else if (position == 14) {
+                } else if (position == 13) {
                     Intent mintent = new Intent(AnaMenuActivity.this, OrmIdaresi_Amenajman_Yangin_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", "0");  //// ORMAN İDARESİ
                     startActivity(mintent);
-                } else if (position == 15) {
+                } else if (position == 14) {
                     Intent mintent = new Intent(AnaMenuActivity.this, OrmIdaresi_Amenajman_Yangin_SorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", "2");  ///YANGIN
                     startActivity(mintent);
-                } else if (position == 16) {
+                } else if (position == 15) {
                     Intent mintent = new Intent(AnaMenuActivity.this, PersonelSorguActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", 16);
                     startActivity(mintent);
-                } else if (position == 17) {
+                } else if (position == 16) {
                     Intent mintent = new Intent(AnaMenuActivity.this, SilAltMenuActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", 17);
                     startActivity(mintent);
-                } else if (position == 18) {
+                } else if (position == 17) {
                     Intent mintent = new Intent(AnaMenuActivity.this, Kdm_Str_BilgiSis_SorgulamaActivity.class);
                     mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mintent.putExtra("MODE", "2"); // teftis
@@ -579,7 +622,7 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
         SOrgBirim_Data data = new SOrgBirim_Data(AnaMenuActivity.this);
         List<SOrgBirim> milli_park_bolge_mud = new ArrayList<SOrgBirim>();
         StringBuilder sqlStr = new StringBuilder();
-        sqlStr.append("SELECT * FROM S_ORG_BIRIM");
+        sqlStr.append("SELECT * FROM S_ORG_BIRIM WHERE AKTIF = 1");
         try {
             org_birim_list = new ArrayList<SOrgBirim>();
             org_birim_list = data.loadFromQuery(sqlStr.toString());
@@ -597,10 +640,26 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
                         milli_park_bolge_mud.add(item);
                     }
 
-                } else if (String.valueOf(item.getKategori()).equals("6")) {
+                }
+                else if (item.getUstId() != null && item.getUstId() == 1767) {
+
+                    if (String.valueOf(item.getKategori()).equals("2") || String.valueOf(item.getKategori()).equals("1")) {
+                        OrtakFunction.bolge_list.add(item);
+                        OrtakFunction.bolge_list_string.add(item.getAdi());
+                    }
+                }
+                else if (item.getUstId() != null && String.valueOf(item.getKategori()).equals("2")) {
+                    if (item.getUstId() == 5150 || item.getUstId() == 5105 || item.getUstId() == 4934 || item.getUstId() == 4958) {
+                        OrtakFunction.mudurluk_list.add(item);
+                        OrtakFunction.mudurluk_list_string.add(item.getAdi());
+                    }
+
+                }
+               else  if (String.valueOf(item.getKategori()).equals("6") || String.valueOf(item.getKategori()).equals("9")) {
                     OrtakFunction.mudurluk_list.add(item);
                     OrtakFunction.mudurluk_list_string.add(item.getAdi());
-                } else if (String.valueOf(item.getKategori()).equals("7")) {
+                }
+               else if (String.valueOf(item.getKategori()).equals("7") || String.valueOf(item.getKategori()).equals("12") || String.valueOf(item.getKategori()).equals("3")) {
                     OrtakFunction.seflik_list.add(item);
                     OrtakFunction.seflik_list_string.add(item.getAdi());
                 }
@@ -617,10 +676,16 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
                 if (item.getUstId() != null && item.getUstId().toString().equalsIgnoreCase("1769")) {
                     OrtakFunction.genel_mud_mudurluk_list.add(item);
                     OrtakFunction.genel_mud_mudurluk_list_string.add(item.getAdi());
+
+                    OrtakFunction.mudurluk_list.add(item);
+                    OrtakFunction.mudurluk_list_string.add(item.getAdi());
                 }
                 if (item.getId().toString().equalsIgnoreCase("1769")) {
                     OrtakFunction.genel_mud_bolge_list.add(item);
                     OrtakFunction.genel_mud_bolge_list_string.add(item.getAdi());
+
+                    OrtakFunction.bolge_list.add(item);
+                    OrtakFunction.bolge_list_string.add(item.getAdi());
                 }
 
                 if (String.valueOf(item.getKategori()).equals("-1") || String.valueOf(item.getKategori()).equals("0") || String.valueOf(item.getKategori()).equals("1")
@@ -762,7 +827,7 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
         SOrgBirim_Data data = new SOrgBirim_Data(AnaMenuActivity.this);
         List<SOrgBirim> milli_park_bolge_mud = new ArrayList<SOrgBirim>();
         StringBuilder sqlStr = new StringBuilder();
-        sqlStr.append("SELECT * FROM S_ORG_BIRIM");
+        sqlStr.append("SELECT * FROM S_ORG_BIRIM WHERE AKTIF = 1");
         try {
             org_birim_list = new ArrayList<SOrgBirim>();
             org_birim_list = data.loadFromQuery(sqlStr.toString());
@@ -776,6 +841,9 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
                 if (i != null && i.getId().toString().equalsIgnoreCase(item.getUstId().toString())) {
                     OrtakFunction.genel_mud_seflik_list.add(item);
                     OrtakFunction.genel_mud_seflik_list_string.add(item.getAdi());
+
+                    OrtakFunction.seflik_list.add(item);
+                    OrtakFunction.seflik_list_string.add(item.getAdi());
                 }
             }
 
@@ -801,7 +869,7 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
         SOrgBirim_Data data = new SOrgBirim_Data(AnaMenuActivity.this);
         List<SOrgBirim> milli_park_bolge_mud = new ArrayList<SOrgBirim>();
         StringBuilder sqlStr = new StringBuilder();
-        sqlStr.append("SELECT * FROM S_ORG_BIRIM WHERE KATEGORI != 5 AND KATEGORI != 6 AND  kategori != 7  AND KATEGORI != 9");
+        sqlStr.append("SELECT * FROM S_ORG_BIRIM WHERE KATEGORI != 5 AND KATEGORI != 6 AND  kategori != 7  AND KATEGORI != 9 AND AKTIF = 1");
         try {
             org_birim_list = new ArrayList<SOrgBirim>();
             org_birim_list = data.loadFromQuery(sqlStr.toString());
@@ -809,8 +877,8 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
             e.printStackTrace();
         }
 
-        for (SOrgBirim item : OrtakFunction.seflik_list) {
-            if(item != null && item.getAdi() != null ) {
+        /*for (SOrgBirim item : OrtakFunction.seflik_list) {
+            if (item != null && item.getAdi() != null) {
                 OrtakFunction.teskilat_seflik_list.add(item);
                 OrtakFunction.teskilat_seflik_list_string.add(item.getAdi());
             }
@@ -829,7 +897,7 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
             }
             //    }
             Log.v("BIRIM2", "=>" + item.getAdi());
-        }
+        }*/
 
         if (OrtakFunction.genel_mud_seflik_list != null && OrtakFunction.genel_mud_seflik_list.size() > 0 && OrtakFunction.genel_mud_seflik_list.get(0) != null)
             OrtakFunction.genel_mud_seflik_list.add(0, null);
@@ -986,7 +1054,7 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                Long a = null;
             }
         });
 
@@ -1328,10 +1396,6 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
 
                 }
             }, 8);
-
-
-
-
 
 
         } else

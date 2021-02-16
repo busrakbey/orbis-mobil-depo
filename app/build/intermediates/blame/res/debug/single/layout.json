@@ -4,16 +4,16 @@
         "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.4.5\\res\\layout\\md_dialog_progress_indeterminate_horizontal.xml"
     },
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_mode_bar.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\agac_sorgulama_activity.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\agac_sorgulama_activity.xml"
     },
     {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\silvikultur_alt_menu.xml",
         "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\silvikultur_alt_menu.xml"
     },
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\agac_sorgulama_activity.xml",
-        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\layout\\agac_sorgulama_activity.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "D:\\DepoMobilSon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",

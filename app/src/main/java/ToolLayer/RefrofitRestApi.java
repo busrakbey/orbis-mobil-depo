@@ -25,6 +25,7 @@ import EntityLayer.Kadastro.KdmDosya;
 import EntityLayer.Kadastro.KdmGerceklesme;
 import EntityLayer.Oduh.BalOrmani;
 import EntityLayer.Oduh.MesireYeri;
+import EntityLayer.Oduh.SehirOrmani;
 import EntityLayer.Oduh.UretimPaket;
 import EntityLayer.Orkoy.Orkoy;
 import EntityLayer.OrmanIdaresi.OrmanIdaresi;
@@ -53,6 +54,9 @@ public interface RefrofitRestApi {
 
     @POST("rest/OdunDisiRS/oduhDepoUretimPaketService")
     Call<List<UretimPaket>>  getOduhDepoUretimPaketService(@Body SendParametersForServer parameter);
+
+    @POST("rest/UrunDisiRS/oduhDepoSehirOrmaniService")
+    Call<List<SehirOrmani>>  oduhDepoSehirOrmaniService(@Body SendParametersForServer parameter);
 
     @POST("rest/StratejiRS/strDepoTefKonularForMobilService")
     Call<List<TefKonular>>  getStrDepoTefKonularForMobilService(@Body SendParametersForServer parameter);

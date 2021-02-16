@@ -47,13 +47,14 @@
                     android:layout_height="wrap_content"
                     android:text="Genel Müdürlük   "
                     android:textColor="@color/light_gray_header_color"
+                    android:visibility="gone"
                     android:textSize="@dimen/normal_definition_text_size"></RadioButton>
 
                 <RadioButton
                     android:id="@+id/radio_bolge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bölge   "
+                    android:text="Birimler ve İl/İlçe/Köy/Mahalle"
                     android:textColor="@color/light_gray_header_color"
                     android:textSize="@dimen/normal_definition_text_size"></RadioButton>
 
@@ -62,6 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tüm Teşkilat  "
+                    android:visibility="gone"
                     android:textColor="@color/light_gray_header_color"
                     android:textSize="@dimen/normal_definition_text_size"></RadioButton>
 
@@ -93,6 +95,7 @@
             android:visibility="gone">
 
             <LinearLayout
+                android:id="@+id/bolge_linear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -118,6 +121,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/isletme_linear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -143,6 +147,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/seflik_linear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
@@ -182,6 +187,7 @@
             android:visibility="gone">
 
             <LinearLayout
+                android:id="@+id/il_linear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -207,6 +213,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ilce_linear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -232,6 +239,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/koy_linear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"

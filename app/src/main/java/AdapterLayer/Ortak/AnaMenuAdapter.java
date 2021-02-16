@@ -14,6 +14,8 @@ import com.konumsal.orbisozetmobil.R;
 
 import java.util.List;
 
+import static android.view.View.GONE;
+
 
 public class AnaMenuAdapter extends ArrayAdapter<String> {
 
@@ -64,41 +66,39 @@ public class AnaMenuAdapter extends ArrayAdapter<String> {
         if (fromMenu == 0) {
             if (position == 0) {
                 menu_img.setImageResource(R.drawable.agac_icon);
-            } else if (position == 1) {
-                menu_img.setImageResource(R.drawable.amenajman_64_ana_menu);
-            } else if (position == 2) {
+            }  else if (position == 1) {
                 menu_img.setImageResource(R.drawable.bilgi_sistem_icon);
-            } else if (position == 3) {
+            } else if (position == 2) {
                 menu_img.setImageResource(R.drawable.destek_icon);
-            } else if (position == 4) {
+            } else if (position == 3) {
                 menu_img.setImageResource(R.drawable.dis_iliskiler_icon);
-            } else if (position == 5) {
+            } else if (position == 4) {
                 menu_img.setImageResource(R.drawable.icon_fidanlik_64);
-            } else if (position == 6) {
+            } else if (position == 5) {
                 menu_img.setImageResource(R.drawable.ozm_64);
-            } else if (position == 7) {
+            } else if (position == 6) {
                 menu_img.setImageResource(R.drawable.ip_ana_menu_64);
+            } else if (position == 7) {
+                menu_img.setImageResource(R.drawable.guzergah_64);
             } else if (position == 8) {
-                menu_img.setImageResource(R.drawable.guzergah_64);
+                menu_img.setImageResource(R.drawable.admin_64);
             } else if (position == 9) {
-                menu_img.setImageResource(R.drawable.admin_64);
-            } else if (position == 10) {
                 menu_img.setImageResource(R.drawable.guzergah_64);
-            } else if (position == 11) {
+            } else if (position == 10) {
                 menu_img.setImageResource(R.mipmap.ic_launcher);
-            } else if (position == 12) {
+            } else if (position == 11) {
                 menu_img.setImageResource(R.drawable.orkoy_logo);
-            } else if (position == 13) {
+            } else if (position == 12) {
                 menu_img.setImageResource(R.drawable.ozm_icon);
+            } else if (position == 13) {
+                menu_img.setImageResource(R.drawable.agac_icon);
             } else if (position == 14) {
-                menu_img.setImageResource(R.drawable.agac_icon);
-            } else if (position == 15) {
                 menu_img.setImageResource(R.drawable.fire);
-            } else if (position == 16) {
+            } else if (position == 15) {
                 menu_img.setImageResource(R.drawable.admin_64);
-            } else if (position == 17) {
+            } else if (position == 16) {
                 menu_img.setImageResource(R.drawable.agac_icon);
-            } else if (position == 18) {
+            } else if (position == 17) {
                 menu_img.setImageResource(R.drawable.ip_ana_menu_64);
             }
         }

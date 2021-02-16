@@ -8,6 +8,10 @@ public class SendParametersForServer {
     public String prmBasMuhId;
     public String prmBirimId;
 
+    public String prmIlId;
+    public String prmIlceId;
+    public String prmKoyId;
+
 
 
     public String getPrmBolgeId() {
@@ -56,6 +60,30 @@ public class SendParametersForServer {
 
     public void setPrmBirimId(String prmBirimId) {
         this.prmBirimId = prmBirimId;
+    }
+
+    public String getPrmIlId() {
+        return prmIlId;
+    }
+
+    public void setPrmIlId(String prmIlId) {
+        this.prmIlId = prmIlId;
+    }
+
+    public String getPrmIlceId() {
+        return prmIlceId;
+    }
+
+    public void setPrmIlceId(String prmIlceId) {
+        this.prmIlceId = prmIlceId;
+    }
+
+    public String getPrmKoyId() {
+        return prmKoyId;
+    }
+
+    public void setPrmKoyId(String prmKoyId) {
+        this.prmKoyId = prmKoyId;
     }
 }
 

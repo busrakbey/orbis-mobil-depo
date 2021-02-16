@@ -1367,7 +1367,7 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                         OrtakFunction.seflik_list.add(null);
                         OrtakFunction.seflik_list_string.add("");
                         for (SOrgBirim item : all_list_SOrgBirim) {
-                            if (item.getKategori() != null) {
+                            if (item.getKategori() != null && item.getAktif() != null && item.getAktif() == true) {
                                 if (String.valueOf(item.getKategori()).equals("5")) {
 
                                     if (!item.getAdi().contains("DOĞA")) {
