@@ -69,6 +69,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import static ToolLayer.RetrofirCertifica.getUnsafeOkHttpClient;
+import static android.view.View.GONE;
 
 public class OduhSorgulamaActivity extends AppCompatActivity implements ExpandableLayout.OnExpansionUpdateListener {
     Toolbar toolbar;
@@ -107,7 +108,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
     LocalDataManager localDataManager;
     private ExpandableLayout expandableLayout;
     private ImageView expandButton;
-    LinearLayout linearLayout_bir, linearLayout_iki;
+    LinearLayout linearLayout_bir, linearLayout_iki, ilce_linear, koy_linear;
 
 
     @Override
@@ -188,6 +189,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
             secili_koy_id = -1L;
 
 
+
     }
 
     private void initToolBar() {
@@ -202,6 +204,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
                 baslikLinear2.setVisibility(View.GONE);
                 baslikLinear3.setVisibility(View.GONE);
                 baslikLinear4.setVisibility(View.GONE);
+                ilce_linear.setVisibility(GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("1")) {
                 getSupportActionBar().setTitle("Mesire Yeri Listesi");
@@ -215,6 +218,7 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
                 baslikLinear1.setVisibility(View.GONE);
                 baslikLinear2.setVisibility(View.GONE);
                 baslikLinear4.setVisibility(View.GONE);
+                ilce_linear.setVisibility(GONE);
 
             }
             if (gelenSayfaId.equalsIgnoreCase("3")) {
@@ -355,6 +359,9 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
             }
         });
 
+        ilce_linear = (LinearLayout) findViewById(R.id.ilce_linear);
+        koy_linear = (LinearLayout) findViewById(R.id.koy_linear);
+        koy_linear.setVisibility(GONE);
 
     }
 
@@ -536,19 +543,19 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
 
     void get_listview() {
         if (gelenSayfaId.equalsIgnoreCase("0")) {
-            balOrmaniAdapter = new BalOrmaniAdapter(OduhSorgulamaActivity.this, R.layout.item_yedi, gelenBalOrmaniList);
+            balOrmaniAdapter = new BalOrmaniAdapter(OduhSorgulamaActivity.this, R.layout.item_sekiz, gelenBalOrmaniList);
             listview.setAdapter(balOrmaniAdapter);
             balOrmaniAdapter.notifyDataSetChanged();
             listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("1")) {
-            mesireYeriAdapter = new MesireYeriAdapter(OduhSorgulamaActivity.this, R.layout.item_bes, gelenMesireYeriList);
+            mesireYeriAdapter = new MesireYeriAdapter(OduhSorgulamaActivity.this, R.layout.item_yedi, gelenMesireYeriList);
             listview.setAdapter(mesireYeriAdapter);
             mesireYeriAdapter.notifyDataSetChanged();
             listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("2")) {
-            uretimPaketAdapter = new UretimPaketAdapter(OduhSorgulamaActivity.this, R.layout.item_sekiz, gelenUretimList);
+            uretimPaketAdapter = new UretimPaketAdapter(OduhSorgulamaActivity.this, R.layout.item_dokuz, gelenUretimList);
             listview.setAdapter(uretimPaketAdapter);
             uretimPaketAdapter.notifyDataSetChanged();
             listview.setClickable(true);
@@ -890,6 +897,10 @@ public class OduhSorgulamaActivity extends AppCompatActivity implements Expandab
                         secili_ilce_id = -1L;
                         secili_koy_id = -1L;
                     }
+                }
+                else {
+                    secili_ilce_id = -1L;
+                    secili_koy_id = -1L;
                 }
                 localDataManager.setSharedPreference(getApplicationContext(), "ilceId", String.valueOf(position));
                 localDataManager.setSharedPreference(getApplicationContext(), "koyId", String.valueOf(0));

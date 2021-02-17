@@ -64,6 +64,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import static ToolLayer.RetrofirCertifica.getUnsafeOkHttpClient;
+import static android.view.View.GONE;
 
 public class MuhSorgulamaActivity extends AppCompatActivity implements ExpandableLayout.OnExpansionUpdateListener  {
     Toolbar toolbar;
@@ -103,7 +104,7 @@ public class MuhSorgulamaActivity extends AppCompatActivity implements Expandabl
     LocalDataManager localDataManager;
     private ExpandableLayout expandableLayout;
     private ImageView expandButton;
-    LinearLayout linearLayout_bir, linearLayout_iki;
+    LinearLayout linearLayout_bir, linearLayout_iki,seflik_linear, ilce_linear, koy_linear;
 
 
     @Override
@@ -290,6 +291,13 @@ public class MuhSorgulamaActivity extends AppCompatActivity implements Expandabl
             }
         });
 
+        ilce_linear = (LinearLayout) findViewById(R.id.ilce_linear);
+        koy_linear = (LinearLayout) findViewById(R.id.koy_linear);
+        seflik_linear = (LinearLayout) findViewById(R.id.seflik_linear);
+        koy_linear.setVisibility(GONE);
+        ilce_linear.setVisibility(GONE);
+        seflik_linear.setVisibility(GONE);
+
 
     }
 
@@ -325,6 +333,9 @@ public class MuhSorgulamaActivity extends AppCompatActivity implements Expandabl
         parameters.prmIsletmeId = secili_mudurluk_id.toString().equalsIgnoreCase("-1") ? null  : secili_mudurluk_id.toString();
         parameters.prmSeflikId = secili_seflik_id.toString().equalsIgnoreCase("-1") ? null  : secili_seflik_id.toString();
         parameters.prmYil = secili_yil.toString();
+        parameters.prmIlId = secili_il_id.toString();
+        parameters.prmIlceId = secili_ilce_id.toString();
+        parameters.prmKoyId = secili_koy_id.toString();
 
         final ProgressDialog progressDoalog;
         progressDoalog = new ProgressDialog(MuhSorgulamaActivity.this);

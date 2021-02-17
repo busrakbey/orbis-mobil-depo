@@ -86,6 +86,7 @@ import EntityLayer.Ortak.SCity;
 import EntityLayer.Ortak.SKoyBelde;
 import EntityLayer.Ortak.STown;
 import EntityLayer.Ortak.User;
+import EntityLayer.Sistem.SCalisan;
 import EntityLayer.Sistem.SOrgBirim;
 import EnumsLayer.LocalDataManager;
 import ToolLayer.MessageBox;
@@ -807,7 +808,8 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
             }
         });
 
-        Collections.sort(OrtakFunction.il_list_string, String.CASE_INSENSITIVE_ORDER);
+        Collections.sort(OrtakFunction.il_list_string);
+        //Collections.sort(OrtakFunction.il_list_string, String.CASE_INSENSITIVE_ORDER);
         Collections.sort(OrtakFunction.il_list, new Comparator<SCity>() {
             @Override
             public int compare(final SCity object1, final SCity object2) {
@@ -818,6 +820,10 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
                 return 0;
             }
         });
+
+
+
+
 
     }
 

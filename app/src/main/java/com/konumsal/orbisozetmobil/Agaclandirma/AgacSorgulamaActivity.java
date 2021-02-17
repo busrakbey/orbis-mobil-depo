@@ -286,6 +286,9 @@ public class AgacSorgulamaActivity extends AppCompatActivity implements Expandab
         parameters.prmIsletmeId = secili_mudurluk_id.toString();
         parameters.prmSeflikId = secili_seflik_id.toString();
         parameters.prmYil = secili_yil.toString();
+        parameters.prmIlId = secili_il_id.toString();
+        parameters.prmIlceId = secili_ilce_id.toString();
+        parameters.prmKoyId = secili_koy_id.toString();
 
         final ProgressDialog progressDoalog;
         progressDoalog = new ProgressDialog(AgacSorgulamaActivity.this);

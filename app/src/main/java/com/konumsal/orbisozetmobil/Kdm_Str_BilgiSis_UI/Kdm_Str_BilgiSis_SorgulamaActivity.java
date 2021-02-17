@@ -101,7 +101,7 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity implem
     LocalDataManager localDataManager;
     private ExpandableLayout expandableLayout;
     private ImageView expandButton;
-    LinearLayout linearLayout_bir, linearLayout_iki,seflik_linear, ilce_linear, koy_linear;
+    LinearLayout linearLayout_bir, linearLayout_iki, seflik_linear, ilce_linear, koy_linear, mudurluk_linear;
 
 
     @Override
@@ -196,6 +196,10 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity implem
                 baslikLinear2.setVisibility(View.GONE);
                 baslikLinear3.setVisibility(View.GONE);
                 kdm_ana_baslik_linear.setVisibility(View.VISIBLE);
+                ilce_linear.setVisibility(GONE);
+                koy_linear.setVisibility(GONE);
+                mudurluk_linear.setVisibility(GONE);
+
 
             }
             if (gelenSayfaId.equalsIgnoreCase("1")) {
@@ -354,7 +358,7 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity implem
         ilce_linear = (LinearLayout) findViewById(R.id.ilce_linear);
         koy_linear = (LinearLayout) findViewById(R.id.koy_linear);
         seflik_linear = (LinearLayout) findViewById(R.id.seflik_linear);
-
+        mudurluk_linear = (LinearLayout) findViewById(R.id.mudurluk_linear);
 
 
     }
@@ -441,7 +445,10 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity implem
         }
         if (gelenSayfaId.equalsIgnoreCase("1")) {
 
-            parameters.prmBolgeId = secili_mudurluk_id.toString();
+            if (secili_mudurluk_id.toString().equalsIgnoreCase("-1"))
+                parameters.prmBolgeId = secili_bolge_id.toString();
+            else
+                parameters.prmBolgeId = secili_mudurluk_id.toString();
             parameters.prmIsletmeId = secili_seflik_id.toString();
             Call<List<HaritaArsiv>> call = refrofitRestApi.getHaritaArsivDepoDosyaListForMobil(parameters);
             call.enqueue(new Callback<List<HaritaArsiv>>() {
@@ -685,8 +692,7 @@ public class Kdm_Str_BilgiSis_SorgulamaActivity extends AppCompatActivity implem
                         secili_mudurluk_id = -1L;
                         secili_seflik_id = -1L;
                     }
-                }
-                else {
+                } else {
                     secili_mudurluk_id = -1L;
                     secili_seflik_id = -1L;
 

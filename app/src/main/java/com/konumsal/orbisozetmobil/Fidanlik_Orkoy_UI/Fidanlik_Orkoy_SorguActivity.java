@@ -121,6 +121,7 @@ public class Fidanlik_Orkoy_SorguActivity extends AppCompatActivity implements E
                 baslikLinear2.setVisibility(GONE);
                 baslikLinear3.setVisibility(GONE);
                 koy_linear.setVisibility(GONE);
+                ilce_linear.setVisibility(GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("1")) {
                 getSupportActionBar().setTitle("Kredi Hibe Listesi");
@@ -675,6 +676,7 @@ public class Fidanlik_Orkoy_SorguActivity extends AppCompatActivity implements E
                     secili_koy_id = -1L;
 
                 }
+
                 localDataManager.setSharedPreference(getApplicationContext(), "ilId", String.valueOf(position));
 
 
@@ -743,6 +745,10 @@ public class Fidanlik_Orkoy_SorguActivity extends AppCompatActivity implements E
                         secili_ilce_id = -1L;
                         secili_koy_id = -1L;
                     }
+                }
+                else {
+                    secili_ilce_id = -1L;
+                    secili_koy_id = -1L;
                 }
                 localDataManager.setSharedPreference(getApplicationContext(), "ilceId", String.valueOf(position));
                 localDataManager.setSharedPreference(getApplicationContext(), "koyId", String.valueOf(0));

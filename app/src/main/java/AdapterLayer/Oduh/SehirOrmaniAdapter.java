@@ -58,6 +58,8 @@ public class SehirOrmaniAdapter extends ArrayAdapter<SehirOrmani>
             drawerHolder.altinci_item = (TextView) view.findViewById(R.id.altinci_item);
             drawerHolder.yedinci_item = (TextView) view.findViewById(R.id.yedinci_item);
             drawerHolder.sekizinci_item = (TextView) view.findViewById(R.id.sekizinci_item);
+            drawerHolder.dokuzuncu_item = (TextView) view.findViewById(R.id.dokuzuncu_item);
+            drawerHolder.onuncu_item = (TextView) view.findViewById(R.id.onuncu_item);
 
             view.setTag(drawerHolder);
 
@@ -122,7 +124,7 @@ public class SehirOrmaniAdapter extends ArrayAdapter<SehirOrmani>
 
         private static class DetayBilgiOzetItemHolder
         {
-            TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item , sekizinci_item;
+            TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item , sekizinci_item, dokuzuncu_item, onuncu_item;
 
 
 

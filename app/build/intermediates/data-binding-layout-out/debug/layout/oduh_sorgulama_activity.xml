@@ -135,8 +135,17 @@
 
             <TextView
                 style="@style/listTable_SatirTextView"
-                android:layout_weight="1.6"
+                android:layout_weight="1"
                 android:text="Şeflik"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1.6"
+                android:text="İl"
                 android:textColor="@color/text"
                 android:textSize="@dimen/smaller_textsize" />
 
@@ -219,6 +228,26 @@
                 />
             <View
                 style="@style/listTable_satirAyracView"></View>
+
+
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="İl"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="İlçe"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
@@ -283,6 +312,15 @@
                 />
             <View
                 style="@style/listTable_satirAyracView"></View>
+
+            <TextView
+                style="@style/listTable_SatirTextView"
+                android:layout_weight="1"
+                android:text="İl"
+                android:textColor="@color/text"
+                android:textSize="@dimen/smaller_textsize" />
+
+            <View style="@style/listTable_satirAyracView"></View>
             <TextView
                 android:layout_weight="0.9"
                 android:textSize="@dimen/smaller_textsize"
@@ -373,6 +411,8 @@
                 android:textSize="@dimen/smaller_textsize" />
 
             <View style="@style/listTable_satirAyracView"></View>
+
+
 
             <TextView
                 style="@style/listTable_SatirTextView"

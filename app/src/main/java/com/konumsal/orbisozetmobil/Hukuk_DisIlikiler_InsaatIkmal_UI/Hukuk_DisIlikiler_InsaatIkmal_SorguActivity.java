@@ -152,6 +152,7 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
                 sorgu_egitim_linear.setVisibility(GONE);
                 genel_sorgu_linear.setVisibility(View.VISIBLE);
                 yil_sorgu_linear.setVisibility(GONE);
+                ilce_linear.setVisibility(GONE);
 
             }
             if (gelenEgitimPage.equalsIgnoreCase("0")) {
@@ -360,10 +361,10 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
             secili_yil = Long.valueOf(yil_spinner.getSelectedItem().toString());
 
 
-        if (egitim_yil_spinner.getSelectedItem() == null || egitim_yil_spinner.getSelectedItem().toString().equalsIgnoreCase(""))
+       /* if (egitim_yil_spinner.getSelectedItem() == null || egitim_yil_spinner.getSelectedItem().toString().equalsIgnoreCase(""))
             secili_yil = -1L;
         else
-            secili_yil = Long.valueOf(egitim_yil_spinner.getSelectedItem().toString());
+            secili_yil = Long.valueOf(egitim_yil_spinner.getSelectedItem().toString());*/
 
         ConfigData configData = new ConfigData(this);
         String url = configData.getSERVICURL() + "/";
@@ -908,6 +909,10 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
                         secili_ilce_id = -1L;
                         secili_koy_id = -1L;
                     }
+                }
+                else {
+                    secili_ilce_id = -1L;
+                    secili_koy_id = -1L;
                 }
                 localDataManager.setSharedPreference(getApplicationContext(), "ilceId", String.valueOf(position));
                 localDataManager.setSharedPreference(getApplicationContext(), "koyId", String.valueOf(0));

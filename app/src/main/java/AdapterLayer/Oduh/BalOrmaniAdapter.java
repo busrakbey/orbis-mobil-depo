@@ -61,6 +61,7 @@ public class BalOrmaniAdapter  extends ArrayAdapter<BalOrmani> {
             drawerHolder.besinci_item = (TextView) view.findViewById(R.id.besinci_item);
             drawerHolder.altinci_item = (TextView) view.findViewById(R.id.altinci_item);
             drawerHolder.yedinci_item = (TextView) view.findViewById(R.id.yedinci_item);
+            drawerHolder.sekizinci_item = (TextView) view.findViewById(R.id.sekizinci_item);
 
             view.setTag(drawerHolder);
 
@@ -87,29 +88,34 @@ public class BalOrmaniAdapter  extends ArrayAdapter<BalOrmani> {
         else
             drawerHolder.ucuncu_item.setText("");
 
-
-        if(dItem.getYil() != null)
-            drawerHolder.dorduncu_item.setText(dItem.getYil().toString());
+        if(dItem.getIlAdi() != null)
+            drawerHolder.dorduncu_item.setText(dItem.getIlAdi().toString());
         else
             drawerHolder.dorduncu_item.setText("");
 
 
-        if(dItem.getBalOrmaniSayisi() != null)
-            drawerHolder.besinci_item.setText(dItem.getBalOrmaniSayisi().toString());
+        if(dItem.getYil() != null)
+            drawerHolder.besinci_item.setText(dItem.getYil().toString());
         else
             drawerHolder.besinci_item.setText("");
 
 
-        if(dItem.getToplamAlan() != null)
-            drawerHolder.altinci_item.setText(dItem.getToplamAlan().toString());
+        if(dItem.getBalOrmaniSayisi() != null)
+            drawerHolder.altinci_item.setText(dItem.getBalOrmaniSayisi().toString());
         else
             drawerHolder.altinci_item.setText("");
 
 
-        if(dItem.getBalToplamKapasite() != null)
-            drawerHolder.yedinci_item.setText(dItem.getBalToplamKapasite().toString());
+        if(dItem.getToplamAlan() != null)
+            drawerHolder.yedinci_item.setText(dItem.getToplamAlan().toString());
         else
             drawerHolder.yedinci_item.setText("");
+
+
+        if(dItem.getBalToplamKapasite() != null)
+            drawerHolder.sekizinci_item.setText(dItem.getBalToplamKapasite().toString());
+        else
+            drawerHolder.sekizinci_item.setText("");
 
 
 
@@ -120,7 +126,7 @@ public class BalOrmaniAdapter  extends ArrayAdapter<BalOrmani> {
 
     private static class DetayBilgiOzetItemHolder
     {
-        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item ;
+        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item, sekizinci_item ;
 
 
     }

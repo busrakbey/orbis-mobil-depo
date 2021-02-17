@@ -14,6 +14,10 @@ public class UretimPaket {
     private Double alinanUrunMiktari;
     private Double uretilecekToplamMiktar;
     private String turAdi;
+    private Long ilId;
+    private String ilAdi;
+    private Long ilceId;
+    private String ilceAdi;
 
 
 
@@ -114,5 +118,37 @@ public class UretimPaket {
 
     public void setUretilecekToplamMiktar(Double uretilecekToplamMiktar) {
         this.uretilecekToplamMiktar = uretilecekToplamMiktar;
+    }
+
+    public Long getIlId() {
+        return ilId;
+    }
+
+    public void setIlId(Long ilId) {
+        this.ilId = ilId;
+    }
+
+    public String getIlAdi() {
+        return ilAdi;
+    }
+
+    public void setIlAdi(String ilAdi) {
+        this.ilAdi = ilAdi;
+    }
+
+    public Long getIlceId() {
+        return ilceId;
+    }
+
+    public void setIlceId(Long ilceId) {
+        this.ilceId = ilceId;
+    }
+
+    public String getIlceAdi() {
+        return ilceAdi;
+    }
+
+    public void setIlceAdi(String ilceAdi) {
+        this.ilceAdi = ilceAdi;
     }
 }

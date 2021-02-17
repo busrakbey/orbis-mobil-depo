@@ -59,6 +59,8 @@ public class MesireYeriAdapter  extends ArrayAdapter<MesireYeri> {
             drawerHolder.besinci_item = (TextView) view.findViewById(R.id.besinci_item);
             drawerHolder.altinci_item = (TextView) view.findViewById(R.id.altinci_item);
             drawerHolder.yedinci_item = (TextView) view.findViewById(R.id.yedinci_item);
+            drawerHolder.sekizinci_item = (TextView) view.findViewById(R.id.sekizinci_item);
+
 
             view.setTag(drawerHolder);
 
@@ -86,16 +88,26 @@ public class MesireYeriAdapter  extends ArrayAdapter<MesireYeri> {
             drawerHolder.ucuncu_item.setText("");
 
 
-        if(dItem.getYil() != null)
-            drawerHolder.dorduncu_item.setText(dItem.getYil().toString());
+        if(dItem.getIlAdi() != null)
+            drawerHolder.dorduncu_item.setText(dItem.getIlAdi().toString());
         else
             drawerHolder.dorduncu_item.setText("");
 
-
-        if(dItem.getAlanMesireYeri() != null)
-            drawerHolder.besinci_item.setText(dItem.getAlanMesireYeri().toString());
+        if(dItem.getIlceAdi() != null)
+            drawerHolder.besinci_item.setText(dItem.getIlceAdi().toString());
         else
             drawerHolder.besinci_item.setText("");
+
+        if(dItem.getYil() != null)
+            drawerHolder.altinci_item.setText(dItem.getYil().toString());
+        else
+            drawerHolder.altinci_item.setText("");
+
+
+        if(dItem.getAlanMesireYeri() != null)
+            drawerHolder.yedinci_item.setText(dItem.getAlanMesireYeri().toString());
+        else
+            drawerHolder.yedinci_item.setText("");
 
 
 
@@ -109,7 +121,7 @@ public class MesireYeriAdapter  extends ArrayAdapter<MesireYeri> {
 
     private static class DetayBilgiOzetItemHolder
     {
-        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item ;
+        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item ,sekizinci_item;
 
 
 

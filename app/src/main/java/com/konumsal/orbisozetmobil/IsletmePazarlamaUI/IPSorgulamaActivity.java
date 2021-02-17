@@ -58,7 +58,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import static ToolLayer.RetrofirCertifica.getUnsafeOkHttpClient;
 import static android.view.View.GONE;
 
-public class IPSorgulamaActivity extends AppCompatActivity implements ExpandableLayout.OnExpansionUpdateListener{
+public class IPSorgulamaActivity extends AppCompatActivity implements ExpandableLayout.OnExpansionUpdateListener {
     Toolbar toolbar;
     Spinner bolge_spinner, mudurluk_spinner, seflik_spinner, yil_spinner;
     Button sorgula_button, temizle_button;
@@ -97,8 +97,7 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
     LocalDataManager localDataManager;
     private ExpandableLayout expandableLayout;
     private ImageView expandButton;
-    LinearLayout linearLayout_bir, linearLayout_iki,seflik_linear, ilce_linear, koy_linear;
-
+    LinearLayout linearLayout_bir, linearLayout_iki, seflik_linear, ilce_linear, koy_linear;
 
 
     @Override
@@ -255,7 +254,11 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
         sorgula_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getBalOrmaniServis();
+                if (!yil_spinner.getSelectedItem().toString().equalsIgnoreCase(""))
+                    getBalOrmaniServis();
+                else
+                    MessageBox.showAlert(IPSorgulamaActivity.this, "Lütfen yıl seçiniz..", false);
+
 
             }
         });
@@ -275,7 +278,7 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
                 il_spinner.setSelection(0);
                 ilce_spinner.setSelection(0);
                 koy_spinner.setSelection(0);
-                secili_il_id=-1L;
+                secili_il_id = -1L;
                 secili_ilce_id = -1L;
                 secili_koy_id = -1L;
 
@@ -458,7 +461,7 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
             });
         }
     }
-    
+
     void get_listview() {
         if (gelenSayfaId.equalsIgnoreCase("0")) {
             damgaAdapter = new DamgaAdapter(IPSorgulamaActivity.this, R.layout.item_bes, gelenDamgaList);
@@ -615,8 +618,7 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
                         secili_mudurluk_id = -1L;
                         secili_seflik_id = -1L;
                     }
-                }
-                else {
+                } else {
                     secili_mudurluk_id = -1L;
                     secili_seflik_id = -1L;
 
@@ -830,7 +832,6 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
 
             }
         });
-
 
 
     }

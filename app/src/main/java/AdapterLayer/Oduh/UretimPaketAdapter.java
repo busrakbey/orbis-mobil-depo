@@ -56,6 +56,8 @@ public class UretimPaketAdapter extends ArrayAdapter<UretimPaket> {
             drawerHolder.altinci_item = (TextView) view.findViewById(R.id.altinci_item);
             drawerHolder.yedinci_item = (TextView) view.findViewById(R.id.yedinci_item);
             drawerHolder.sekizinci_item = (TextView) view.findViewById(R.id.sekizinci_item);
+            drawerHolder.dokuzuncu_item = (TextView) view.findViewById(R.id.dokuzuncu_item);
+
 
             view.setTag(drawerHolder);
 
@@ -82,33 +84,37 @@ public class UretimPaketAdapter extends ArrayAdapter<UretimPaket> {
         else
             drawerHolder.ucuncu_item.setText("");
 
-
-        if(dItem.getTurAdi() != null)
-            drawerHolder.dorduncu_item.setText(dItem.getTurAdi().toString());
+        if(dItem.getIlAdi() != null)
+            drawerHolder.dorduncu_item.setText(dItem.getIlAdi().toString());
         else
             drawerHolder.dorduncu_item.setText("");
 
-
-        if(dItem.getUretimYili() != null)
-            drawerHolder.besinci_item.setText(dItem.getUretimYili().toString());
+        if(dItem.getTurAdi() != null)
+            drawerHolder.besinci_item.setText(dItem.getTurAdi().toString());
         else
             drawerHolder.besinci_item.setText("");
 
 
-        if(dItem.getAlinanUrunAdedi() != null)
-            drawerHolder.altinci_item.setText(dItem.getAlinanUrunAdedi().toString());
+        if(dItem.getUretimYili() != null)
+            drawerHolder.altinci_item.setText(dItem.getUretimYili().toString());
         else
             drawerHolder.altinci_item.setText("");
 
-        if(dItem.getAlinanUrunMiktari() != null)
-            drawerHolder.yedinci_item.setText(dItem.getAlinanUrunMiktari().toString());
+
+        if(dItem.getAlinanUrunAdedi() != null)
+            drawerHolder.yedinci_item.setText(dItem.getAlinanUrunAdedi().toString());
         else
             drawerHolder.yedinci_item.setText("");
 
-        if(dItem.getUretilecekToplamMiktar() != null)
-            drawerHolder.sekizinci_item.setText(dItem.getUretilecekToplamMiktar().toString());
+        if(dItem.getAlinanUrunMiktari() != null)
+            drawerHolder.sekizinci_item.setText(dItem.getAlinanUrunMiktari().toString());
         else
             drawerHolder.sekizinci_item.setText("");
+
+        if(dItem.getUretilecekToplamMiktar() != null)
+            drawerHolder.dokuzuncu_item.setText(dItem.getUretilecekToplamMiktar().toString());
+        else
+            drawerHolder.dokuzuncu_item.setText("");
 
 
 
@@ -120,7 +126,7 @@ public class UretimPaketAdapter extends ArrayAdapter<UretimPaket> {
 
     private static class DetayBilgiOzetItemHolder
     {
-        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item , sekizinci_item;
+        TextView birinci_item , ikinci_item , ucuncu_item , dorduncu_item , besinci_item , altinci_item , yedinci_item , sekizinci_item, dokuzuncu_item;
 
 
 

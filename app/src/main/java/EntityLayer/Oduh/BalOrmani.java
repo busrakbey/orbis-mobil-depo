@@ -17,6 +17,10 @@ public class BalOrmani {
     private Long balOrmaniSayisi;
     private  Double toplamAlan;
     private  Double balToplamKapasite;
+    private Long ilId;
+    private String ilAdi;
+    private Long ilceId;
+    private String ilceAdi;
 
 
     public Long getId() {
@@ -105,5 +109,37 @@ public class BalOrmani {
 
     public void setYil(Long yil) {
         this.yil = yil;
+    }
+
+    public Long getIlId() {
+        return ilId;
+    }
+
+    public void setIlId(Long ilId) {
+        this.ilId = ilId;
+    }
+
+    public String getIlAdi() {
+        return ilAdi;
+    }
+
+    public void setIlAdi(String ilAdi) {
+        this.ilAdi = ilAdi;
+    }
+
+    public Long getIlceId() {
+        return ilceId;
+    }
+
+    public void setIlceId(Long ilceId) {
+        this.ilceId = ilceId;
+    }
+
+    public String getIlceAdi() {
+        return ilceAdi;
+    }
+
+    public void setIlceAdi(String ilceAdi) {
+        this.ilceAdi = ilceAdi;
     }
 }

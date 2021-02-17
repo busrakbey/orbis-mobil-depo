@@ -298,6 +298,9 @@ public class OzmSorgulamaActivity  extends AppCompatActivity implements Expandab
         parameters.prmIsletmeId = secili_mudurluk_id.toString();
         parameters.prmSeflikId = secili_seflik_id.toString();
         parameters.prmYil = secili_yil.toString();
+        parameters.prmIlId = secili_il_id.toString();
+        parameters.prmIlceId = secili_ilce_id.toString();
+        parameters.prmKoyId = secili_koy_id.toString();
 
         final ProgressDialog progressDoalog;
         progressDoalog = new ProgressDialog(OzmSorgulamaActivity.this);
@@ -766,6 +769,9 @@ public class OzmSorgulamaActivity  extends AppCompatActivity implements Expandab
                         secili_ilce_id = -1L;
                         secili_koy_id = -1L;
                     }
+                } else {
+                    secili_ilce_id = -1L;
+                    secili_koy_id = -1L;
                 }
                 localDataManager.setSharedPreference(getApplicationContext(), "ilceId", String.valueOf(position));
                 localDataManager.setSharedPreference(getApplicationContext(), "koyId", String.valueOf(0));

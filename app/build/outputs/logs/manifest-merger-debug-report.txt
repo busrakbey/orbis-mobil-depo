@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:2:1-244:12
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:2:1-245:12
 	package
 		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml
@@ -174,7 +174,7 @@ ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:33:9-83
 	android:name
 		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:33:17-80
 application
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:37:5-242:19
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:37:5-243:19
 MERGED from [com.google.android.gms:play-services:9.2.1] D:\DepoMobilSon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\9.2.1\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-ads-lite:9.2.1] D:\DepoMobilSon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.2.1\AndroidManifest.xml:24:5-32:19
 MERGED from [com.google.android.gms:play-services-basement:9.2.1] D:\DepoMobilSon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.2.1\AndroidManifest.xml:20:5-24:19
@@ -5170,271 +5170,273 @@ MERGED from [com.android.support:support-compat:25.3.1] D:\DepoMobilSon\app\buil
 	android:networkSecurityConfig
 		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:45:9-69
 	android:theme
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:46:9-56
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:47:9-56
 	android:name
 		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:38:9-68
+	android:usesCleartextTraffic
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:46:9-44
 meta-data#com.google.android.gms.ads.APPLICATION_ID
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:47:9-49:70
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:48:9-50:70
 	android:value
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:49:13-67
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:50:13-67
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:48:13-69
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:49:13-69
 receiver#com.konumsal.orbisozetmobil.OrtakUI.MyBlueToothReceiver
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:52:9-58:20
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:53:9-59:20
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:52:19-89
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:53:19-89
 activity#com.konumsal.orbisozetmobil.MainActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:61:9-70:20
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:62:9-71:20
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:64:13-49
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:65:13-49
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:63:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:64:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:62:13-68
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:63:13-68
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:65:13-69:29
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:66:13-70:29
 action#android.intent.action.MAIN
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:66:17-69
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:67:17-69
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:66:25-66
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:67:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:68:17-77
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:69:17-77
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:68:27-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:69:27-74
 activity#com.konumsal.orbisozetmobil.OrtakUI.Home2Activity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:71:9-75:52
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:72:9-76:52
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:75:13-49
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:76:13-49
 	android:parentActivityName
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:74:13-91
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:75:13-91
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:73:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:74:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:72:13-77
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:73:13-77
 activity#com.konumsal.orbisozetmobil.OrtakUI.LoginActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:76:9-79:52
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:77:9-80:52
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:79:13-49
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:80:13-49
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:78:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:79:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:77:13-77
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:78:13-77
 activity#com.konumsal.orbisozetmobil.OrtakUI.ConfigSettingsActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:81:9-85:52
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:82:9-86:52
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:85:13-49
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:86:13-49
 	android:parentActivityName
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:84:13-91
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:85:13-91
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:83:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:84:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:82:13-86
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:83:13-86
 activity#com.konumsal.orbisozetmobil.OrtakUI.YoneticiEkraniActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:88:9-92:54
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:89:9-93:54
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:92:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:93:13-51
 	android:parentActivityName
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:91:13-91
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:92:13-91
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:90:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:91:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:89:13-86
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:90:13-86
 activity#com.konumsal.orbisozetmobil.OrtakUI.Bluetooth.BluetoothChat
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:94:9-98:53
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:95:9-99:53
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:98:13-50
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:99:13-50
 	android:parentActivityName
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:97:13-91
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:98:13-91
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:96:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:97:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:95:13-87
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:96:13-87
 activity#com.konumsal.orbisozetmobil.OrtakUI.Bluetooth.DeviceListActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:100:9-104:53
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:101:9-105:53
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:104:13-50
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:105:13-50
 	android:parentActivityName
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:103:13-101
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:104:13-101
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:102:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:103:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:101:13-92
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:102:13-92
 activity#com.konumsal.orbisozetmobil.OrtakUI.AnaMenuActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:106:9-108:77
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:107:9-109:77
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:108:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:109:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:107:13-79
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:108:13-79
 activity#com.konumsal.orbisozetmobil.OduhUI.OduhSorgulamaActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:110:9-113:77
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:111:9-114:77
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:112:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:113:13-51
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:113:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:114:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:111:13-84
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:112:13-84
 activity#com.konumsal.orbisozetmobil.OduhUI.OduhAltMenuActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:115:9-118:52
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:116:9-119:52
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:118:13-49
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:119:13-49
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:117:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:118:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:116:13-82
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:117:13-82
 activity#com.konumsal.orbisozetmobil.Kdm_Str_BilgiSis_UI.Kdm_Str_BilgiSis_SorgulamaActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:120:9-123:54
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:121:9-124:54
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:123:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:124:13-51
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:122:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:123:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:121:13-110
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:122:13-110
 activity#com.konumsal.orbisozetmobil.OzmUI.OzmAltMenuActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:126:9-129:52
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:127:9-130:52
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:129:13-49
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:130:13-49
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:128:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:129:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:127:13-80
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:128:13-80
 activity#com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPAltMenuActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:132:9-135:52
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:133:9-136:52
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:135:13-49
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:136:13-49
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:134:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:135:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:133:13-92
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:134:13-92
 activity#com.konumsal.orbisozetmobil.IsletmePazarlamaUI.IPSorgulamaActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:138:9-141:54
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:139:9-142:54
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:141:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:142:13-51
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:140:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:141:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:139:13-94
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:140:13-94
 activity#com.konumsal.orbisozetmobil.OzmUI.OzmSorgulamaActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:143:9-146:54
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:144:9-147:54
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:146:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:147:13-51
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:145:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:146:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:144:13-82
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:145:13-82
 activity#com.konumsal.orbisozetmobil.Agaclandirma.AgacSorgulamaActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:149:9-152:54
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:150:9-153:54
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:152:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:153:13-51
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:151:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:152:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:150:13-90
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:151:13-90
 activity#com.konumsal.orbisozetmobil.Agaclandirma.AgacAltMenuActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:155:9-158:52
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:156:9-159:52
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:158:13-49
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:159:13-49
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:157:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:158:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:156:13-88
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:157:13-88
 activity#com.konumsal.orbisozetmobil.OrmIdaresi_Amenajman_Yangin_UI.OrmIdaresi_Amenajman_Yangin_SorguActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:161:9-164:54
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:162:9-165:54
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:164:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:165:13-51
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:163:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:164:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:162:13-128
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:163:13-128
 activity#com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.Hukuk_DisIlikiler_InsaatIkmal_SorguActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:166:9-169:54
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:167:9-170:54
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:169:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:170:13-51
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:168:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:169:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:167:13-132
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:168:13-132
 activity#com.konumsal.orbisozetmobil.EizinUI.EizinAltMenuActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:172:9-175:52
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:173:9-176:52
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:175:13-49
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:176:13-49
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:174:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:175:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:173:13-84
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:174:13-84
 activity#com.konumsal.orbisozetmobil.EizinUI.EizinSorgulamaActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:178:9-181:54
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:179:9-182:54
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:181:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:182:13-51
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:180:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:181:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:179:13-86
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:180:13-86
 activity#com.konumsal.orbisozetmobil.Hukuk_DisIlikiler_InsaatIkmal_UI.DisIliskilerAltMenuActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:183:9-186:52
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:184:9-187:52
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:186:13-49
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:187:13-49
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:185:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:186:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:184:13-116
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:185:13-116
 activity#com.konumsal.orbisozetmobil.DestekHizmetleriUI.MuhAltMenuActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:189:9-192:52
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:190:9-193:52
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:192:13-49
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:193:13-49
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:191:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:192:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:190:13-93
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:191:13-93
 activity#com.konumsal.orbisozetmobil.DestekHizmetleriUI.MuhSorgulamaActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:197:9-200:54
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:198:9-201:54
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:200:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:201:13-51
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:199:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:200:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:198:13-95
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:199:13-95
 activity#com.konumsal.orbisozetmobil.SilvikulturUI.SilAltMenuActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:204:9-207:52
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:205:9-208:52
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:207:13-49
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:208:13-49
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:206:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:207:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:205:13-88
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:206:13-88
 activity#com.konumsal.orbisozetmobil.SilvikulturUI.SilSorgulamaActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:212:9-215:54
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:213:9-216:54
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:215:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:216:13-51
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:214:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:215:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:213:13-90
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:214:13-90
 activity#com.konumsal.orbisozetmobil.Fidanlik_Orkoy_UI.Fidanlik_Orkoy_SorguActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:220:9-223:54
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:221:9-224:54
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:223:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:224:13-51
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:222:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:223:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:221:13-102
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:222:13-102
 activity#com.konumsal.orbisozetmobil.PersonelUI.PersonelSorguActivity
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:226:9-229:54
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:227:9-230:54
 	android:screenOrientation
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:229:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:230:13-51
 	android:configChanges
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:228:13-74
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:229:13-74
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:227:13-88
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:228:13-88
 meta-data#com.google.android.geo.API_KEY
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:236:9-238:54
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:237:9-239:54
 	android:value
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:238:13-51
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:239:13-51
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:237:13-58
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:238:13-58
 activity#com.konumsal.orbisozetmobil.ActivitEsri
-ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:240:9-76
+ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:241:9-76
 	android:name
-		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:240:19-73
+		ADDED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml:241:19-73
 uses-sdk
 INJECTED from D:\DepoMobilSon\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] D:\DepoMobilSon\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42
