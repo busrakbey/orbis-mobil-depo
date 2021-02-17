@@ -162,6 +162,7 @@ public class Hukuk_DisIlikiler_InsaatIkmal_SorguActivity extends AppCompatActivi
                 baslikLinear3.setVisibility(GONE);
                 baslikLinear4.setVisibility(GONE);
                 sorgu_egitim_linear.setVisibility(GONE);
+                ilce_linear.setVisibility(GONE);
               //  genel_sorgu_linear.setVisibility(View.GONE);
             }
 

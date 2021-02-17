@@ -1,6 +1,7 @@
 
 com/google/android/gms/internal/zzdq.class
 com/google/android/gms/ads/internal/purchase/zzk.class
+androidx/annotation/NavigationRes.class
 com/google/android/gms/cast/Cast$CastApi$zza.class
 com/google/android/gms/nearby/messages/Strategy.class
 com/nineoldandroids/animation/ObjectAnimator.class
@@ -53,6 +54,7 @@ android/support/v4/widget/ViewDragHelper$Callback.class
 com/google/android/gms/internal/zzer.class
 com/google/android/gms/ads/internal/reward/client/zzg.class
 com/google/firebase/iid/FirebaseInstanceId.class
+com/github/mikephil/charting/data/PieData.class
 android/support/annotation/StringDef.class
 android/support/v4/media/MediaBrowserCompat$ItemReceiver.class
 com/google/android/gms/ads/internal/client/AdRequestParcel.class
@@ -76,6 +78,7 @@ com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$16.class
 android/support/v4/app/FragmentTransition.class
 com/google/android/gms/common/SignInButton.class
 com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity$5.class
+androidx/annotation/MainThread.class
 android/support/v4/media/session/PlaybackStateCompat$ErrorCode.class
 com/google/android/gms/measurement/AppMeasurementReceiver.class
 com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$19.class
@@ -112,6 +115,8 @@ android/support/v4/app/NotificationCompatApi21.class
 com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity$14.class
 android/support/v7/widget/ViewBoundsCheck.class
 android/support/v4/app/BackStackState.class
+androidx/annotation/VisibleForTesting.class
+com/github/mikephil/charting/interfaces/datasets/IBarDataSet.class
 android/support/v4/media/MediaMetadataCompat$LongKey.class
 com/google/android/gms/wearable/CapabilityApi.class
 com/google/android/gms/auth/api/signin/GoogleSignInOptions.class
@@ -122,6 +127,7 @@ android/support/v4/widget/MaterialProgressDrawable$Ring.class
 org/apache/poi/util/Internal.class
 android/support/v4/app/NotificationCompat$BigTextStyle.class
 com/google/ads/mediation/customevent/CustomEventInterstitial.class
+androidx/annotation/Keep.class
 android/support/v4/app/FragmentManagerImpl$StartEnterTransitionListener.class
 android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat.class
 com/google/android/gms/internal/zzhe.class
@@ -132,6 +138,7 @@ ToolLayer/Utils.class
 android/support/v4/media/MediaBrowserCompatApi21$MediaItem.class
 android/support/v7/widget/Toolbar.class
 com/google/android/gms/ads/internal/client/zzl.class
+androidx/annotation/RestrictTo.class
 android/support/v4/view/ViewCompatLollipop$OnApplyWindowInsetsListenerBridge.class
 android/support/v4/view/ViewCompat$MarshmallowViewCompatImpl.class
 com/google/android/gms/wallet/fragment/BuyButtonText.class
@@ -179,14 +186,17 @@ EntityLayer/Ortak/OrtakIsKalemleri.class
 android/support/v4/widget/SearchViewCompat$OnQueryTextListenerCompat.class
 android/support/annotation/BoolRes.class
 com/google/android/gms/location/internal/LocationRequestInternal.class
+androidx/annotation/AnyThread.class
 AdapterLayer/Silvikultur/BakimAdapter.class
 android/support/annotation/WorkerThread.class
+com/github/mikephil/charting/components/ComponentBase.class
 com/google/android/gms/cast/framework/CastOptions.class
 com/google/android/gms/internal/zzfs.class
 android/support/v4/widget/MaterialProgressDrawable$3.class
 com/google/android/gms/internal/zzfc.class
 com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$6.class
 android/support/v4/app/RemoteInputCompatBase$RemoteInput.class
+EntityLayer/IsletmePazarlama/Uretim.class
 com/google/android/gms/internal/zzfm.class
 retrofit2/http/HeaderMap.class
 android/support/annotation/CallSuper.class
@@ -195,6 +205,7 @@ com/google/android/gms/location/places/NearbyAlertRequest.class
 com/konumsal/orbisozetmobil/Agaclandirma/AgacSorgulamaActivity$3.class
 com/google/android/gms/crash/internal/service/CrashSenderService.class
 AnnotationLayer/FeatureAttribute.class
+com/github/mikephil/charting/data/Entry.class
 com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity$3.class
 com/google/firebase/iid/FirebaseInstanceIdService.class
 com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$6.class
@@ -215,6 +226,7 @@ com/konumsal/orbisozetmobil/PersonelUI/PersonelSorguActivity.class
 com/konumsal/orbisozetmobil/Kdm_Str_BilgiSis_UI/Kdm_Str_BilgiSis_SorgulamaActivity$7.class
 com/google/android/gms/internal/zzls.class
 android/support/v7/widget/Toolbar$SavedState.class
+androidx/annotation/ColorLong.class
 com/google/android/gms/internal/zzjq.class
 com/google/android/gms/common/internal/zzk.class
 android/support/v4/media/VolumeProviderCompatApi21.class
@@ -236,7 +248,9 @@ android/support/design/widget/BottomSheetBehavior$1.class
 com/google/ads/mediation/EmptyNetworkExtras.class
 com/google/android/gms/internal/zzdk.class
 com/google/android/gms/awareness/fence/FenceState.class
+androidx/annotation/StyleableRes.class
 com/google/firebase/iid/zzf.class
+androidx/annotation/AnimRes.class
 EnumsLayer/LocalDataManager.class
 org/jetbrains/annotations/NotNull.class
 android/support/multidex/ZipUtil$CentralDirectory.class
@@ -271,6 +285,7 @@ com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$3.class
 com/google/android/gms/ads/internal/formats/zze.class
 DataLayer/IsletmePazarlama/MuhStokLokasyon_Data.class
 com/google/android/gms/internal/zzgg.class
+androidx/annotation/RequiresPermission$Read.class
 com/google/android/gms/wallet/CountrySpecification.class
 com/google/android/gms/wearable/DataApi$DataListener.class
 com/konumsal/orbisozetmobil/Fidanlik_Orkoy_UI/Fidanlik_Orkoy_SorguActivity.class
@@ -281,15 +296,18 @@ com/google/android/gms/internal/zzjw.class
 com/google/firebase/database/IgnoreExtraProperties.class
 com/google/android/gms/location/places/internal/PlaceLocalization.class
 android/support/v4/view/OnApplyWindowInsetsListener.class
+com/github/mikephil/charting/data/ChartData.class
 com/google/android/gms/location/internal/zzf.class
 AdapterLayer/Ozm/OtlatmaAdapter.class
 android/support/annotation/ColorRes.class
+androidx/annotation/XmlRes.class
 android/support/v4/view/ViewPager$2.class
 android/support/design/widget/ValueAnimatorCompat.class
 com/google/android/gms/internal/zzkx.class
 com/google/android/gms/wallet/EnableWalletOptimizationReceiver.class
 com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$9.class
 android/support/v7/appcompat/R.class
+com/github/mikephil/charting/formatter/IAxisValueFormatter.class
 com/google/android/gms/dynamic/zzd.class
 com/google/android/gms/internal/zzjj.class
 com/rengwuxian/materialedittext/MaterialMultiAutoCompleteTextView$2.class
@@ -342,6 +360,7 @@ android/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase.class
 com/google/android/gms/analytics/HitBuilders$ItemBuilder.class
 com/konumsal/orbisozetmobil/OrtakUI/Bluetooth/BluetoothChatService$AcceptThread.class
 com/google/android/gms/internal/zzpb$3.class
+androidx/annotation/DrawableRes.class
 android/support/v4/app/FragmentTabHost.class
 android/support/design/widget/HeaderScrollingViewBehavior.class
 retrofit2/Callback.class
@@ -358,6 +377,7 @@ android/support/design/widget/TabLayout$PagerAdapterObserver.class
 com/google/android/gms/internal/zzlv.class
 android/support/v4/media/MediaBrowserCompat$Subscription.class
 android/support/v4/media/MediaBrowserCompat$ConnectionCallback$ConnectionCallbackInternal.class
+androidx/annotation/RequiresFeature.class
 com/google/android/gms/ads/internal/reward/client/RewardedVideoAdRequestParcel.class
 android/support/design/widget/Snackbar$7.class
 android/support/v7/widget/RecyclerView.class
@@ -367,6 +387,7 @@ org/intellij/lang/annotations/JdkConstants$BoxLayoutAxis.class
 com/google/android/gms/internal/zzafm.class
 com/google/android/gms/internal/zzkk.class
 com/google/android/gms/internal/zzlj.class
+androidx/annotation/PluralsRes.class
 com/google/android/gms/internal/zzki.class
 com/google/android/gms/internal/zzku.class
 android/support/v4/view/ViewCompat$LollipopViewCompatImpl$1.class
@@ -406,6 +427,7 @@ org/java_websocket/server/WebSocketServer.class
 com/google/android/gms/analytics/internal/zzae.class
 com/konumsal/orbisozetmobil/PersonelUI/PersonelSorguActivity$5.class
 android/support/v7/view/menu/MenuPresenter.class
+androidx/annotation/RequiresPermission$Write.class
 com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity$1.class
 com/google/android/gms/ads/internal/zzb.class
 com/google/android/gms/internal/zzfz.class
@@ -439,6 +461,7 @@ android/support/multidex/MultiDex$V4.class
 android/support/annotation/TransitionRes.class
 android/support/annotation/PluralsRes.class
 android/support/v4/view/ViewPager$ItemInfo.class
+com/github/mikephil/charting/interfaces/datasets/IBarLineScatterCandleBubbleDataSet.class
 android/support/v4/app/FragmentManager.class
 com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity$6.class
 com/google/android/gms/common/internal/safeparcel/zza.class
@@ -448,12 +471,15 @@ com/google/android/gms/ads/internal/request/zzg.class
 com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity$10.class
 android/support/v4/app/NotificationBuilderWithActions.class
 com/google/android/gms/ads/internal/util/client/zza.class
+com/github/mikephil/charting/charts/PieRadarChartBase.class
 android/support/v7/view/menu/MenuAdapter.class
 com/google/android/gms/appdatasearch/GetRecentContextCall$Response.class
 com/konumsal/orbisozetmobil/SilvikulturUI/SilAltMenuActivity$2.class
 android/support/design/widget/AnimationUtils.class
+androidx/annotation/RequiresApi.class
 android/support/v4/widget/SlidingPaneLayout.class
 com/google/android/gms/ads/internal/request/zzn.class
+androidx/annotation/ColorRes.class
 retrofit2/http/QueryMap.class
 android/support/v7/recyclerview/R.class
 com/google/android/gms/contextmanager/fence/internal/FenceTriggerInfoImpl.class
@@ -474,6 +500,7 @@ com/konumsal/orbisozetmobil/SilvikulturUI/SilAltMenuActivity.class
 android/support/v4/view/ViewCompatApi24.class
 com/google/android/gms/internal/zzde.class
 com/google/android/gms/ads/internal/purchase/zzg.class
+com/github/mikephil/charting/data/BaseEntry.class
 android/support/v4/app/NotificationCompatJellybean$Builder.class
 com/google/android/gms/common/api/Scope.class
 com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$7.class
@@ -498,10 +525,12 @@ android/support/v4/media/MediaBrowserServiceCompat$BrowserRoot.class
 com/google/android/gms/cast/internal/zzm.class
 com/google/android/gms/common/api/GoogleApiClient.class
 android/support/v4/widget/DrawerLayout$DrawerListener.class
+androidx/annotation/StyleRes.class
 com/google/android/gms/cast/CastRemoteDisplay$CastRemoteDisplayOptions.class
 com/google/android/gms/internal/zzen.class
 com/konumsal/orbisozetmobil/EizinUI/EizinSorgulamaActivity$9.class
 org/intellij/lang/annotations/Flow.class
+androidx/annotation/AnyRes.class
 com/google/android/gms/common/SignInButton$ColorScheme.class
 com/google/android/gms/tagmanager/TagManagerPreviewActivity.class
 android/support/v4/app/FragmentHostCallback.class
@@ -594,6 +623,7 @@ android/support/design/R$style.class
 com/google/android/gms/plus/People.class
 com/google/android/gms/fitness/data/DataType.class
 android/support/design/widget/AppBarLayout$LayoutParams.class
+androidx/annotation/UiThread.class
 android/support/v4/view/ViewPager$3.class
 ToolLayer/RetrofirCertifica.class
 com/google/android/gms/internal/zzlb.class
@@ -611,6 +641,7 @@ android/support/v4/app/FragmentManager$FragmentLifecycleCallbacks.class
 android/support/v7/appcompat/R$attr.class
 android/support/v7/widget/RecyclerView$AdapterDataObservable.class
 com/google/android/gms/internal/zzco.class
+androidx/annotation/IntRange.class
 retrofit2/http/Header.class
 com/google/android/gms/ads/internal/zzt.class
 android/support/v4/net/ConnectivityManagerCompatApi24.class
@@ -622,9 +653,11 @@ android/support/annotation/XmlRes.class
 com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$10.class
 com/konumsal/orbisozetmobil/SilvikulturUI/SilSorgulamaActivity$10.class
 android/support/v7/app/ActionBarActivity.class
+androidx/annotation/StringRes.class
 com/google/android/gms/ads/internal/purchase/zzd.class
 com/google/android/gms/internal/zzhy.class
 android/support/multidex/MultiDex$V14.class
+androidx/annotation/Nullable.class
 com/google/android/gms/internal/zznk.class
 com/konumsal/orbisozetmobil/Kdm_Str_BilgiSis_UI/Kdm_Str_BilgiSis_SorgulamaActivity$1.class
 com/konumsal/orbisozetmobil/IsletmePazarlamaUI/IPSorgulamaActivity$4.class
@@ -638,6 +671,7 @@ DataLayer/Ortak/OrtakKisiHareket_Data.class
 android/support/v4/media/MediaMetadataCompatApi21.class
 com/google/android/gms/measurement/internal/zzu.class
 org/java_websocket/WebSocketListener.class
+androidx/annotation/WorkerThread.class
 android/support/v7/widget/RecyclerView$2.class
 com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$15.class
 retrofit2/http/FieldMap.class
@@ -655,10 +689,12 @@ com/google/android/gms/auth/api/signin/internal/zzi.class
 com/google/android/gms/internal/zzeu$zza.class
 com/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable.class
 android/support/design/widget/AppBarLayout.class
+com/github/mikephil/charting/charts/BarLineChartBase.class
 com/google/android/gms/wallet/fragment/WalletFragmentStyle$BuyButtonAppearance.class
 android/support/v4/view/ViewCompatJB.class
 com/google/firebase/iid/zzb$1.class
 com/google/android/apps/common/proguard/UsedByNative.class
+androidx/annotation/AttrRes.class
 com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$5.class
 com/konumsal/orbisozetmobil/Agaclandirma/AgacAltMenuActivity.class
 com/google/android/gms/ads/internal/formats/zzf.class
@@ -676,6 +712,7 @@ com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity$9.class
 android/support/v4/view/ViewCompat.class
 com/rengwuxian/materialedittext/MaterialEditText$FloatingLabelType.class
 com/google/android/gms/ads/mediation/NetworkExtras.class
+com/github/mikephil/charting/formatter/LargeValueFormatter.class
 android/support/v4/util/ArrayMap.class
 android/support/v4/view/ViewPager$SavedState.class
 android/support/v7/widget/RecyclerView$RecyclerListener.class
@@ -721,9 +758,11 @@ com/google/android/gms/analytics/Logger.class
 android/support/v4/app/FragmentController.class
 android/support/v7/widget/MenuPopupWindow.class
 com/google/android/gms/maps/StreetViewPanoramaView.class
+androidx/annotation/FractionRes.class
 android/support/v4/util/ContainerHelpers.class
 retrofit2/http/QueryName.class
 com/google/android/gms/internal/zzlm.class
+androidx/annotation/DimenRes.class
 com/google/android/gms/ads/internal/client/zzm.class
 android/support/v4/app/Fragment$OnStartEnterTransitionListener.class
 android/support/design/widget/Snackbar$Callback.class
@@ -750,6 +789,7 @@ android/support/v4/view/MenuItemCompat.class
 com/google/android/gms/common/internal/safeparcel/zzb.class
 android/support/v4/view/ViewCompat$JBViewCompatImpl.class
 com/google/firebase/database/PropertyName.class
+com/github/mikephil/charting/interfaces/dataprovider/ChartInterface.class
 com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity$11.class
 com/google/android/gms/internal/zzkc.class
 android/support/design/widget/HeaderBehavior.class
@@ -759,6 +799,7 @@ android/support/design/widget/TabItem.class
 android/support/v4/media/MediaBrowserCompat$SearchCallback.class
 com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity$12.class
 com/google/android/gms/analytics/internal/Command.class
+androidx/annotation/RequiresPermission.class
 org/jetbrains/annotations/NonNls.class
 com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/DisIliskilerAltMenuActivity$1.class
 android/support/v4/app/NotificationCompatBase.class
@@ -772,6 +813,7 @@ com/konumsal/orbisozetmobil/MainActivity.class
 com/google/ads/mediation/MediationServerParameters$Parameter.class
 com/google/android/gms/ads/mediation/NativeAdMapper.class
 ToolLayer/StateReceiver.class
+androidx/annotation/BinderThread.class
 android/support/v7/app/AlertDialog$Builder.class
 com/konumsal/orbisozetmobil/EizinUI/EizinSorgulamaActivity$3.class
 com/google/android/gms/ads/internal/client/zzaf.class
@@ -789,6 +831,7 @@ android/support/v4/app/NotificationCompatBase$UnreadConversation.class
 com/google/gson/reflect/TypeToken.class
 com/google/android/gms/internal/zzdr.class
 com/google/android/gms/internal/zzlf.class
+androidx/annotation/GuardedBy.class
 android/support/v4/media/MediaMetadataCompat.class
 com/google/android/gms/measurement/AppMeasurementContentProvider.class
 android/support/v7/widget/AppCompatTextView.class
@@ -799,6 +842,7 @@ android/support/v4/app/FragmentActivity$HostCallbacks.class
 android/support/v4/media/VolumeProviderCompat$Callback.class
 org/intellij/lang/annotations/MagicConstant.class
 com/google/android/gms/internal/zzdh.class
+androidx/annotation/NonNull.class
 com/google/android/gms/internal/zzpc.class
 android/support/v4/media/MediaMetadataCompat$Builder.class
 com/google/android/gms/contextmanager/fence/internal/FenceStateImpl.class
@@ -842,6 +886,7 @@ com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity.class
 android/support/v7/widget/RecyclerView$ItemAnimator$AdapterChanges.class
 com/google/android/gms/internal/zzir.class
 com/google/android/gms/nearby/messages/Distance$Accuracy.class
+androidx/annotation/InterpolatorRes.class
 com/google/android/gms/auth/api/signin/internal/zzf.class
 com/konumsal/orbisozetmobil/Kdm_Str_BilgiSis_UI/Kdm_Str_BilgiSis_SorgulamaActivity$5.class
 EntityLayer/Ortak/OrtakAgacTuru.class
@@ -867,10 +912,12 @@ com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$12.class
 com/google/android/gms/internal/zzqz.class
 android/support/annotation/Size.class
 com/android/volley/toolbox/JsonRequest.class
+com/github/mikephil/charting/data/BarDataSet.class
 com/google/android/gms/wallet/fragment/WalletLogoImageType.class
 com/google/android/gms/cast/CastRemoteDisplay$1.class
 android/support/v7/graphics/drawable/DrawerArrowDrawable.class
 android/support/v4/view/ViewCompatHC.class
+androidx/annotation/Dimension.class
 com/google/android/gms/internal/zzjn.class
 com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$8.class
 com/google/android/gms/internal/zzpb$2.class
@@ -888,6 +935,7 @@ com/google/android/gms/internal/zzih.class
 com/google/android/gms/ads/internal/overlay/zzc.class
 com/google/android/gms/wallet/firstparty/GetBuyFlowInitializationTokenRequest.class
 com/google/android/gms/common/api/Api$ApiOptions$Optional.class
+com/github/mikephil/charting/utils/ColorTemplate.class
 android/support/v4/media/MediaBrowserCompat$ConnectionCallback.class
 com/google/android/gms/internal/zzpt.class
 org/apache/poi/hssf/usermodel/HSSFComment.class
@@ -897,6 +945,7 @@ com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$2.class
 com/google/android/gms/internal/zzed.class
 com/google/android/gms/ads/internal/reward/client/zzf.class
 com/google/android/gms/ads/internal/overlay/zzd$zzb.class
+androidx/annotation/ColorInt.class
 android/support/v7/widget/RecyclerView$OnFlingListener.class
 android/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21.class
 android/support/v4/content/PermissionChecker$PermissionResult.class
@@ -908,6 +957,7 @@ com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_I
 com/google/android/gms/wallet/fragment/zzc.class
 com/google/android/gms/internal/zzkj.class
 com/google/android/gms/internal/zzeu$zzd.class
+com/github/mikephil/charting/components/Legend$LegendHorizontalAlignment.class
 android/support/v4/app/BaseFragmentActivityJB.class
 android/support/v7/view/menu/CascadingMenuPopup$2.class
 android/support/v4/app/FragmentManagerState.class
@@ -1042,6 +1092,7 @@ com/konumsal/orbisozetmobil/OrtakUI/FileDialog.class
 android/support/design/widget/TabLayout$Tab.class
 com/google/gson/JsonNull.class
 com/google/android/gms/ads/internal/request/CapabilityParcel.class
+androidx/annotation/Px.class
 android/support/design/widget/ViewOffsetHelper.class
 android/support/design/widget/HeaderBehavior$FlingRunnable.class
 android/support/design/widget/CoordinatorLayout$SavedState.class
@@ -1082,6 +1133,7 @@ com/google/android/gms/ads/internal/request/zze.class
 com/google/android/gms/auth/AccountChangeEventsRequest.class
 com/google/android/gms/games/Players$LoadPlayersResult.class
 android/support/v4/view/ViewCompatBase.class
+androidx/annotation/IntegerRes.class
 com/rengwuxian/materialedittext/validation/METValidator.class
 com/google/android/gms/common/internal/zzl$zza.class
 android/support/v4/view/ViewCompat$JbMr1ViewCompatImpl.class
@@ -1093,6 +1145,7 @@ AdapterLayer/Ozm/YirticiAdapter.class
 com/google/android/gms/iid/MessengerCompat$zza.class
 android/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper.class
 com/google/android/gms/internal/zzjf.class
+androidx/annotation/HalfFloat.class
 com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhAltMenuActivity.class
 com/google/android/gms/ads/AdActivity.class
 com/google/ads/mediation/customevent/CustomEventServerParameters.class
@@ -1114,6 +1167,7 @@ android/support/v4/view/VelocityTrackerCompat.class
 com/konumsal/orbisozetmobil/SilvikulturUI/SilSorgulamaActivity$8.class
 retrofit2/http/Field.class
 com/google/android/gms/common/api/Api$ApiOptions.class
+androidx/annotation/CallSuper.class
 com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$userTask.class
 com/konumsal/orbisozetmobil/OrtakUI/Bluetooth/DeviceListActivity.class
 com/google/android/gms/common/api/Api$zzi.class
@@ -1140,6 +1194,7 @@ com/google/android/gms/ads/internal/reward/client/zzi.class
 com/google/android/gms/internal/zzdf.class
 com/rengwuxian/materialedittext/MaterialAutoCompleteTextView$FloatingLabelType.class
 com/google/android/gms/ads/internal/request/zzd$zzb.class
+EntityLayer/IsletmePazarlama/Damga.class
 com/google/android/gms/auth/api/signin/GoogleSignInAccount.class
 android/support/v4/view/ViewCompatMarshmallow.class
 android/support/v4/media/MediaBrowserCompat$CallbackHandler.class
@@ -1155,9 +1210,12 @@ com/google/android/gms/internal/zzpb.class
 android/support/annotation/ArrayRes.class
 AnnotationLayer/ForeignKey.class
 android/support/v4/app/FragmentManagerImpl.class
+androidx/annotation/RawRes.class
 com/google/android/gms/internal/zzhp.class
+androidx/annotation/BoolRes.class
 android/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo.class
 com/google/android/gms/internal/zzpf.class
+androidx/annotation/LayoutRes.class
 android/support/v7/widget/RecyclerView$LayoutManager$LayoutPrefetchRegistry.class
 android/support/v7/widget/RecyclerView$SavedState.class
 com/google/android/gms/games/achievement/Achievement.class
@@ -1168,6 +1226,7 @@ AdapterLayer/Oduh/SehirOrmaniAdapter.class
 android/support/v4/media/session/PlaybackStateCompat$MediaKeyAction.class
 com/google/android/gms/ads/internal/overlay/zzx.class
 android/support/design/widget/TabLayout$SlidingTabStrip.class
+androidx/annotation/FontRes.class
 android/support/multidex/ZipUtil.class
 com/google/android/gms/internal/zzht.class
 android/support/v4/app/NotificationCompatJellybean.class
@@ -1186,10 +1245,12 @@ android/support/design/widget/SwipeDismissBehavior$OnDismissListener.class
 com/google/android/gms/internal/zzann.class
 com/google/android/gms/wearable/MessageApi.class
 android/support/design/widget/ViewUtils.class
+com/github/mikephil/charting/data/BarData.class
 com/google/android/gms/ads/internal/formats/zza.class
 AdapterLayer/IsletmePazarlama/SatisAdapter.class
 android/support/v4/view/ActionProvider$SubUiVisibilityListener.class
 android/support/v4/app/NotificationCompat$NotificationCompatImplApi20.class
+com/github/mikephil/charting/data/PieDataSet.class
 android/support/v4/app/NotificationBuilderWithBuilderAccessor.class
 com/google/android/gms/identity/intents/AddressConstants$Themes.class
 com/google/android/gms/wearable/MessageApi$FilterType.class
@@ -1210,12 +1271,14 @@ android/support/v7/widget/LinearLayoutCompat$LayoutParams.class
 com/google/android/gms/ads/internal/zzi.class
 android/support/v4/widget/MaterialProgressDrawable$2.class
 android/support/v7/widget/RecyclerView$3.class
+com/github/mikephil/charting/data/BarLineScatterCandleBubbleDataSet.class
 com/google/android/gms/ads/internal/zzl.class
 AnnotationLayer/Column.class
 com/google/android/gms/ads/internal/client/zzai.class
 android/support/v4/media/RatingCompat$1.class
 retrofit2/http/DELETE.class
 android/support/v7/widget/ActionMenuPresenter.class
+com/github/mikephil/charting/interfaces/datasets/IDataSet.class
 EntityLayer/GeoPortal/AGAC_HACIM_ARTIM_TABLOSU.class
 android/support/v7/view/menu/MenuView.class
 com/google/android/gms/internal/zziq.class
@@ -1230,6 +1293,8 @@ com/google/android/gms/cast/framework/media/CastMediaOptions.class
 com/google/android/gms/nearby/messages/internal/zzd.class
 android/support/v4/media/session/MediaSessionCompat$1.class
 com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$4.class
+com/github/mikephil/charting/components/Legend$LegendOrientation.class
+com/github/mikephil/charting/charts/BarChart.class
 com/konumsal/orbisozetmobil/Fidanlik_Orkoy_UI/Fidanlik_Orkoy_SorguActivity$3.class
 com/google/android/gms/internal/zzpd$zza.class
 com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$6.class
@@ -1323,8 +1388,10 @@ com/afollestad/materialdialogs/MaterialDialog$ButtonCallback.class
 com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$serviceConnectorTask.class
 com/google/android/gms/internal/zzib.class
 android/support/v7/appcompat/R$layout.class
+androidx/annotation/FloatRange.class
 android/support/v4/app/NotificationCompat$NotificationCompatImplBase.class
 com/google/android/gms/auth/api/signin/internal/SignInConfiguration.class
+com/github/mikephil/charting/interfaces/datasets/IPieDataSet.class
 com/google/android/gms/internal/zzpb$1.class
 android/support/v4/media/session/MediaSessionCompat$Callback.class
 org/intellij/lang/annotations/JdkConstants$HorizontalAlignment.class
@@ -1334,6 +1401,7 @@ EntityLayer/Ortak/OrtakKamera.class
 android/support/v4/widget/ExploreByTouchHelper.class
 com/google/android/gms/ads/internal/client/zzad$zza.class
 android/support/v7/app/AppCompatDelegate.class
+com/github/mikephil/charting/formatter/IValueFormatter.class
 com/google/android/gms/internal/zzfu.class
 android/support/design/widget/CoordinatorLayout$Behavior.class
 com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$18.class
@@ -1347,6 +1415,7 @@ com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity$6.class
 com/google/firebase/crash/internal/service/FirebaseCrashSenderService.class
 com/google/android/gms/location/FusedLocationProviderApi.class
 com/google/android/gms/location/places/personalized/zze.class
+com/github/mikephil/charting/components/XAxis.class
 com/google/android/gms/internal/zzud.class
 com/google/android/gms/dynamic/zzg$zza.class
 AdapterLayer/Hukuk/DavaAdapter.class
@@ -1367,6 +1436,7 @@ android/support/v4/view/ViewCompat$ICSMr1ViewCompatImpl.class
 com/google/android/gms/cast/framework/SessionManager.class
 com/google/android/gms/internal/zzgv.class
 com/google/android/gms/internal/zzjz$zza.class
+androidx/annotation/RestrictTo$Scope.class
 com/google/android/gms/ads/internal/formats/zzc.class
 android/support/v7/app/ActionBar.class
 android/support/v7/widget/RecyclerView$ViewFlinger.class
@@ -1378,6 +1448,7 @@ android/support/multidex/MultiDexApplication.class
 android/support/v4/app/ActivityCompat.class
 EntityLayer/Fidanlik/FidanAjaxTur.class
 com/google/android/gms/analytics/internal/Command$1.class
+androidx/annotation/IdRes.class
 DataLayer/Ortak/DataController.class
 com/google/android/gms/internal/zzkz.class
 com/google/android/gms/location/places/ui/PlacePicker.class
@@ -1387,6 +1458,7 @@ AdapterLayer/Strateji/TefKonularAdapter.class
 com/google/android/gms/internal/zzlg.class
 android/support/v4/app/BackStackRecord.class
 android/support/v7/widget/Toolbar$LayoutParams.class
+androidx/annotation/ArrayRes.class
 com/google/firebase/iid/zzd.class
 android/support/v7/widget/ViewBoundsCheck$BoundFlags.class
 android/support/v4/view/ViewCompat$FocusDirection.class
@@ -1407,6 +1479,7 @@ android/support/v4/view/ScrollingView.class
 com/google/android/gms/ads/internal/overlay/zzn.class
 android/support/v4/view/ViewPager$MyAccessibilityDelegate.class
 android/support/v7/app/ActionBar$Tab.class
+androidx/annotation/LongDef.class
 com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_InsaatIkmal_SorguActivity$9.class
 com/konumsal/orbisozetmobil/Kdm_Str_BilgiSis_UI/Kdm_Str_BilgiSis_SorgulamaActivity$6.class
 com/google/android/gms/ads/internal/client/SearchAdRequestParcel.class
@@ -1419,6 +1492,7 @@ DataLayer/Ortak/User_Data.class
 com/google/ads/mediation/customevent/CustomEventListener.class
 com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$8.class
 com/konumsal/orbisozetmobil/SilvikulturUI/SilSorgulamaActivity$2.class
+androidx/annotation/Size.class
 com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$MyBroadcastReceiver.class
 com/konumsal/orbisozetmobil/Kdm_Str_BilgiSis_UI/Kdm_Str_BilgiSis_SorgulamaActivity$13.class
 com/google/android/gms/ads/internal/zzo.class
@@ -1468,8 +1542,10 @@ com/google/android/gms/internal/zzcd.class
 com/konumsal/orbisozetmobil/OrtakUI/YoneticiEkraniActivity.class
 com/google/android/gms/internal/zzjp.class
 com/google/android/gms/internal/zzka.class
+com/github/mikephil/charting/data/DataSet.class
 com/google/ads/mediation/customevent/CustomEventInterstitialListener.class
 com/konumsal/orbisozetmobil/OrtakUI/YoneticiEkraniActivity$1.class
+com/github/mikephil/charting/interfaces/dataprovider/BarLineScatterCandleBubbleDataProvider.class
 com/rengwuxian/materialedittext/MaterialEditText$1.class
 android/support/v4/net/ConnectivityManagerCompatJellyBean.class
 EntityLayer/Sistem/SCalisan.class
@@ -1516,7 +1592,10 @@ com/rengwuxian/materialedittext/MaterialEditText.class
 android/support/v7/widget/RecyclerViewAccessibilityDelegate.class
 AdapterLayer/Oduh/MesireYeriAdapter.class
 com/google/android/gms/internal/zzdz.class
+androidx/annotation/AnimatorRes.class
 com/google/android/gms/internal/zzdj.class
+com/github/mikephil/charting/data/BarLineScatterCandleBubbleData.class
+androidx/annotation/CheckResult.class
 com/konumsal/orbisozetmobil/OzmUI/OzmAltMenuActivity.class
 com/konumsal/orbisozetmobil/EizinUI/EizinSorgulamaActivity$4.class
 com/google/android/gms/internal/zzlr.class
@@ -1545,6 +1624,7 @@ com/google/android/gms/ads/internal/overlay/zza.class
 com/google/android/gms/ads/internal/client/zzh.class
 com/google/android/gms/cast/framework/Session.class
 com/konumsal/orbisozetmobil/IsletmePazarlamaUI/IPSorgulamaActivity$12.class
+androidx/annotation/TransitionRes.class
 com/google/android/gms/maps/StreetViewPanoramaFragment.class
 com/google/android/gms/internal/zzgh.class
 com/google/android/gms/wallet/fragment/WalletFragmentStyle.class
@@ -1591,6 +1671,7 @@ com/google/gson/annotations/Since.class
 android/support/v4/app/NotificationCompatApi20.class
 com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity$9.class
 com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity$13.class
+com/github/mikephil/charting/components/Legend$LegendVerticalAlignment.class
 android/support/v4/view/ViewCompat$BaseViewCompatImpl.class
 com/google/android/gms/internal/zzcj.class
 com/konumsal/orbisozetmobil/EizinUI/EizinSorgulamaActivity$13.class
@@ -1602,12 +1683,14 @@ android/support/v4/media/TransportController.class
 com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$13.class
 android/support/design/widget/AppBarLayout$1.class
 android/support/v4/view/ViewPager.class
+com/github/mikephil/charting/components/Description.class
 com/google/android/gms/ads/internal/formats/zzk.class
 android/support/v4/app/RemoteInput.class
 com/google/android/gms/appinvite/PreviewActivity$1.class
 retrofit2/converter/gson/GsonConverterFactory.class
 com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$5.class
 android/support/v4/app/FragmentManagerImpl$PopBackStackState.class
+com/github/mikephil/charting/formatter/ValueFormatter.class
 com/google/android/gms/ads/internal/overlay/zzk.class
 AdapterLayer/Personel/PersonelSayiAdapter.class
 com/google/android/gms/ads/AdRequest.class
@@ -1656,6 +1739,7 @@ com/google/android/gms/internal/zzim.class
 AdapterLayer/Oduh/BalOrmaniAdapter.class
 android/support/v4/view/ViewPager$PageTransformer.class
 com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$7.class
+com/github/mikephil/charting/interfaces/dataprovider/BarDataProvider.class
 com/google/android/gms/internal/zzpr.class
 EnumsLayer/CascadeType.class
 com/google/android/gms/internal/zzqk.class
@@ -1667,7 +1751,6 @@ android/support/v4/app/SharedElementCallback.class
 com/konumsal/orbisozetmobil/OrtakUI/Bluetooth/BluetoothConnection$SearchListener.class
 android/support/v4/media/session/MediaSessionCompat$Token.class
 android/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi23.class
-com/github/mikephil/charting/components/Legend$LegendPosition.class
 com/konumsal/orbisozetmobil/OrtakUI/Bluetooth/BluetoothChatService$ConnectedThread.class
 android/support/v4/app/NotificationCompat$NotificationCompatImplApi24.class
 com/google/android/gms/wearable/DataApi.class
@@ -1728,6 +1811,7 @@ com/google/android/gms/internal/zzep.class
 android/databinding/Bindable.class
 android/support/v4/util/PatternsCompat.class
 com/google/android/gms/ads/internal/request/zzc.class
+androidx/annotation/MenuRes.class
 AdapterLayer/Eizin/IzinAdapter.class
 com/google/android/gms/ads/internal/overlay/zzo.class
 com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity$2.class
@@ -1743,7 +1827,9 @@ com/google/android/gms/dynamic/zzg.class
 com/github/mikephil/charting/data/BarEntry.class
 com/google/android/gms/common/api/CommonStatusCodes.class
 android/support/v4/app/NotificationCompat$Extender.class
+androidx/annotation/IntDef.class
 com/google/android/gms/gcm/Task.class
+com/github/mikephil/charting/data/BaseDataSet.class
 com/afollestad/materialdialogs/DialogBase.class
 com/google/android/gms/cast/framework/media/RemoteMediaClient.class
 com/konumsal/orbisozetmobil/OrtakUI/MyBlueToothReceiver$1.class
@@ -1894,3 +1980,4 @@ com/google/android/gms/internal/zzlk.class
 com/konumsal/orbisozetmobil/IsletmePazarlamaUI/IPSorgulamaActivity$6.class
 com/google/android/gms/internal/zzafx.class
 com/google/android/gms/games/leaderboard/Leaderboard.class
+androidx/annotation/StringDef.class

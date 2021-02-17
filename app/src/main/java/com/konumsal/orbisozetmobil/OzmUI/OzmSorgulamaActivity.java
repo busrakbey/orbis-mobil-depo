@@ -19,6 +19,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
+import com.google.android.gms.vision.text.Line;
 import com.konumsal.orbisozetmobil.OrtakUI.OrtakFunction;
 import com.konumsal.orbisozetmobil.R;
 
@@ -56,6 +57,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import static ToolLayer.RetrofirCertifica.getUnsafeOkHttpClient;
+import static android.view.View.GONE;
 
 public class OzmSorgulamaActivity  extends AppCompatActivity implements ExpandableLayout.OnExpansionUpdateListener{
     Toolbar toolbar;
@@ -79,7 +81,7 @@ public class OzmSorgulamaActivity  extends AppCompatActivity implements Expandab
 
     ListView listview;
     String gelenSayfaId;
-    LinearLayout  baslikLinear1, baslikLinear2, baslikLinear3, baslikLinear4;
+    LinearLayout  baslikLinear1, baslikLinear2, baslikLinear3, baslikLinear4,seflik_linear, ilce_linear, koy_linear, il_linear;
     Long secili_yil = -1L;
 
     Spinner il_spinner, ilce_spinner, koy_spinner;
@@ -130,6 +132,9 @@ public class OzmSorgulamaActivity  extends AppCompatActivity implements Expandab
                 baslikLinear2.setVisibility(View.GONE);
                 baslikLinear3.setVisibility(View.GONE);
                 baslikLinear4.setVisibility(View.GONE);
+                il_linear.setVisibility(GONE);
+                ilce_linear.setVisibility(GONE);
+                koy_linear.setVisibility(GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("1")) {
                 getSupportActionBar().setTitle("Kuş Yuvası - Karınca Nakli");
@@ -144,6 +149,9 @@ public class OzmSorgulamaActivity  extends AppCompatActivity implements Expandab
                 baslikLinear2.setVisibility(View.GONE);
                 baslikLinear3.setVisibility(View.VISIBLE);
                 baslikLinear4.setVisibility(View.GONE);
+                il_linear.setVisibility(GONE);
+                ilce_linear.setVisibility(GONE);
+                koy_linear.setVisibility(GONE);
             }
             if (gelenSayfaId.equalsIgnoreCase("3")) {
                 getSupportActionBar().setTitle("Yırtıcı Böcek Üretimi Listesi");
@@ -262,6 +270,11 @@ public class OzmSorgulamaActivity  extends AppCompatActivity implements Expandab
 
             }
         });
+
+        il_linear = (LinearLayout)  findViewById(R.id.il_linear);
+        ilce_linear = (LinearLayout) findViewById(R.id.ilce_linear);
+        koy_linear = (LinearLayout) findViewById(R.id.koy_linear);
+
 
 
     }

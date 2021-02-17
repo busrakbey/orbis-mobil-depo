@@ -89,7 +89,7 @@ public class Fidanlik_Orkoy_SorguActivity extends AppCompatActivity implements E
     LocalDataManager localDataManager;
     private ExpandableLayout expandableLayout;
     private ImageView expandButton;
-    LinearLayout linearLayout_bir, linearLayout_iki,seflik_linear, ilce_linear, koy_linear;
+    LinearLayout linearLayout_bir, linearLayout_iki,seflik_linear, ilce_linear, koy_linear, il_linear;
 
 
 
@@ -128,6 +128,9 @@ public class Fidanlik_Orkoy_SorguActivity extends AppCompatActivity implements E
                 baslikLinear1.setVisibility(GONE);
                 baslikLinear2.setVisibility(View.VISIBLE);
                 baslikLinear3.setVisibility(GONE);
+                il_linear.setVisibility(GONE);
+                ilce_linear.setVisibility(GONE);
+                koy_linear.setVisibility(GONE);
 
             }
 
@@ -273,6 +276,7 @@ public class Fidanlik_Orkoy_SorguActivity extends AppCompatActivity implements E
         ilce_linear = (LinearLayout) findViewById(R.id.ilce_linear);
         koy_linear = (LinearLayout) findViewById(R.id.koy_linear);
         seflik_linear = (LinearLayout) findViewById(R.id.seflik_linear);
+        il_linear = (LinearLayout) findViewById(R.id.il_linear);
 
 
 

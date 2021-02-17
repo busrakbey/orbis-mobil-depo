@@ -93,6 +93,9 @@ dependencies {
     compile 'com.github.iammert:ExpandableLayout:1.4.1'
     compile 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
 
+    compile 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+
 
 
 

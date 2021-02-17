@@ -2,9 +2,14 @@ package com.konumsal.orbisozetmobil.IsletmePazarlamaUI;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.RelativeSizeSpan;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -17,17 +22,42 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 
+import com.github.mikephil.charting.animation.Easing;
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.formatter.LargeValueFormatter;
+import com.github.mikephil.charting.formatter.PercentFormatter;
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
+import com.github.mikephil.charting.utils.ColorTemplate;
+import com.github.mikephil.charting.utils.MPPointF;
 import com.konumsal.orbisozetmobil.OrtakUI.OrtakFunction;
 import com.konumsal.orbisozetmobil.R;
 
 import net.cachapa.expandablelayout.ExpandableLayout;
 
+import org.apache.poi.hssf.record.formula.functions.T;
+
 import java.lang.reflect.Field;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 import AdapterLayer.IsletmePazarlama.DamgaAdapter;
@@ -99,6 +129,9 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
     private ImageView expandButton;
     LinearLayout linearLayout_bir, linearLayout_iki, seflik_linear, ilce_linear, koy_linear;
 
+    private PieChart chart;
+    private BarChart chart2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,6 +146,8 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
         Init();
         initToolBar();
         shared_values();
+
+
     }
 
     private void initToolBar() {
@@ -291,6 +326,52 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
         koy_linear.setVisibility(GONE);
         ilce_linear.setVisibility(GONE);
 
+        chart = (PieChart) findViewById(R.id.chart1);
+        chart.getDescription().setEnabled(false);
+        chart.setCenterText(generateCenterText());
+        chart.setCenterTextSize(10f);
+        chart.setHoleRadius(45f);
+        chart.setTransparentCircleRadius(50f);
+        Legend l = chart.getLegend();
+        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        l.setOrientation(Legend.LegendOrientation.VERTICAL);
+        l.setDrawInside(false);
+
+
+        chart2 = (BarChart) findViewById(R.id.chart2);
+        chart2.getDescription().setEnabled(false);
+
+//        chart2.setDrawBorders(true);
+
+        // scaling can now only be done on x- and y-axis separately
+        chart2.setPinchZoom(false);
+        chart2.setDrawBarShadow(false);
+        chart2.setDrawGridBackground(false);
+
+
+        Legend l2 = chart2.getLegend();
+        l2.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        l2.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        l2.setOrientation(Legend.LegendOrientation.VERTICAL);
+        l2.setDrawInside(true);
+        l2.setYOffset(0f);
+        l2.setXOffset(5f);
+        l2.setYEntrySpace(0f);
+        l2.setTextSize(8f);
+
+        XAxis xAxis = chart2.getXAxis();
+        xAxis.setGranularity(1f);
+        xAxis.setCenterAxisLabels(true);
+
+
+        YAxis leftAxis = chart2.getAxisLeft();
+        leftAxis.setValueFormatter(new LargeValueFormatter());
+        leftAxis.setDrawGridLines(false);
+        leftAxis.setSpaceTop(20f);
+        leftAxis.setAxisMinimum(0f); // this replaces setStartAtZero(true)
+
+        chart2.getAxisRight().setEnabled(false);
 
     }
 
@@ -351,6 +432,7 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
                         gelenDamgaList = response.body();
                         if (gelenDamgaList != null && gelenDamgaList.size() > 0) {
                             get_listview();
+                            piechart();
 
                         } else
                             MessageBox.showAlert(IPSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
@@ -445,6 +527,8 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
                         gelenUretimList = response.body();
                         if (gelenUretimList != null && gelenUretimList.size() > 0) {
                             get_listview();
+                            bar_chart();
+
 
                         } else
                             MessageBox.showAlert(IPSorgulamaActivity.this, "Kayıt bulunamamıştır..", false);
@@ -939,6 +1023,139 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
     }
 
 
+    void piechart() {
+
+        chart.invalidate();
+        if (gelenDamgaList != null)
+            chart.setData(generatePieData(null, null, null, gelenDamgaList));
+        if (gelenUretimList != null)
+            chart.setData(generatePieData(gelenUretimList, null, null, null));
+        if (gelenSatisList != null)
+            chart.setData(generatePieData(null, gelenSatisList, null, null));
+        if (gelenOdenekList != null)
+            chart.setData(generatePieData(null, null, gelenOdenekList, null));
+
+    }
+
+
+    private SpannableString generateCenterText() {
+        SpannableString s = new SpannableString("Damga\nListesi");
+        s.setSpan(new RelativeSizeSpan(2f), 0, 0, 0);
+        // s.setSpan(new ForegroundColorSpan(Color.GRAY), 8, s.length(), 0);
+        return s;
+    }
+
+    protected PieData generatePieData(List<Uretim> uretimList, List<Satis> satisList, List<Odenek> odenekList, List<Damga> damgaList) {
+        ArrayList<PieEntry> entries1 = new ArrayList<>();
+
+        for (int i = 0; i < damgaList.size(); i++) {
+            entries1.add(new PieEntry(damgaList.get(i).getDikili() != null ?
+                    damgaList.get(i).getDikili().setScale(2, RoundingMode.DOWN).floatValue() : null, "Dikili"));
+            entries1.add(new PieEntry(damgaList.get(i).getDikiliProgram() != null ?
+                    damgaList.get(i).getDikiliProgram().setScale(2, RoundingMode.DOWN).floatValue() : null, "Dikili\nProgram"));
+            entries1.add(new PieEntry(damgaList.get(i).getUretimeVerilen() != null ?
+                    damgaList.get(i).getUretimeVerilen().setScale(2, RoundingMode.DOWN).floatValue() : null, "Üretime\nVerilen"));
+            entries1.add(new PieEntry(damgaList.get(i).getToplamProgram() != null ?
+                    damgaList.get(i).getToplamProgram().setScale(2, RoundingMode.DOWN).floatValue() : null, "Toplam\nProgram"));
+
+        }
+
+        PieDataSet ds1 = new PieDataSet(entries1, "Damga Listesi");
+        ArrayList<Integer> colors = new ArrayList<>();
+        for (int c : ColorTemplate.MATERIAL_COLORS)
+            colors.add(c);
+        ds1.setColors(colors);
+
+
+        //  ds1.setColors(ColorTemplate.VORDIPLOM_COLORS);
+        ds1.setSliceSpace(2f);
+        ds1.setValueTextColor(Color.WHITE);
+        ds1.setValueTextSize(11f);
+
+        PieData d = new PieData(ds1);
+        //  d.setValueTypeface(tf);
+
+        return d;
+    }
+
+    void bar_chart() {
+
+        float groupSpace = 0.04f;
+        float barSpace = 0.01f; // x4 DataSet
+        float barWidth = 0.05f; // x4 DataSet
+        // (0.2 + 0.03) * 4 + 0.08 = 1.00 -> interval per "group"
+
+
+
+        ArrayList<BarEntry> values1 = new ArrayList<>();
+        ArrayList<BarEntry> values2 = new ArrayList<>();
+
+        BarData data;
+        BarDataSet set1,set2;
+        for (int i = 0; i < gelenUretimList.size(); i++) {
+            values1.add(new BarEntry(i, gelenUretimList.get(i).getGmiktar() != null ?
+                    gelenUretimList.get(i).getGmiktar().setScale(2, RoundingMode.DOWN).floatValue() : null));
+            values2.add(new BarEntry(i, gelenUretimList.get(i).getPmiktar() != null ?
+                    gelenUretimList.get(i).getPmiktar().setScale(2, RoundingMode.DOWN).floatValue() : null));
+
+
+            set1 = new BarDataSet(values1, "Gerçekleşme Miktarı");
+            set1.setColor(Color.rgb(104, 241, 175));
+            set2 = new BarDataSet(values2, "Program Miktarı");
+            set2.setColor(Color.rgb(164, 228, 251));
+           /* set3 = new BarDataSet(values3, "Company C");
+            set3.setColor(Color.rgb(242, 247, 158));
+            set4 = new BarDataSet(values4, "Company D");
+            set4.setColor(Color.rgb(255, 102, 0));*/
+
+           data = new BarData(set1);
+            data.setValueFormatter(new LargeValueFormatter());
+
+            chart2.setData(data);
+
+        }
+
+
+        /*if (chart2.getData() != null && chart2.getData().getDataSetCount() > 0) {
+
+            set1 = (BarDataSet) chart2.getData().getDataSetByIndex(0);
+            set2 = (BarDataSet) chart2.getData().getDataSetByIndex(1);
+            set1.setValues(values1);
+            set2.setValues(values2);
+
+            chart2.getData().notifyDataChanged();
+            chart2.notifyDataSetChanged();
+
+        } else {
+            // create 4 DataSets
+            set1 = new BarDataSet(values1, "Company A");
+            set1.setColor(Color.rgb(104, 241, 175));
+            set2 = new BarDataSet(values2, "Company B");
+            set2.setColor(Color.rgb(164, 228, 251));
+           /* set3 = new BarDataSet(values3, "Company C");
+            set3.setColor(Color.rgb(242, 247, 158));
+            set4 = new BarDataSet(values4, "Company D");
+            set4.setColor(Color.rgb(255, 102, 0));*/
+
+            /*BarData data = new BarData(set1, set2);
+            data.setValueFormatter(new LargeValueFormatter());
+
+            chart2.setData(data);
+        }*/
+        ArrayList<Integer> colors = new ArrayList<>();
+        for (int c : ColorTemplate.MATERIAL_COLORS)
+            colors.add(c);
+        /*set1.setColors(colors);
+        set2.setColors(colors);
+        set3.setColors(colors);
+        set4.setColors(colors);*/
+
+        chart2.getBarData().setBarWidth(barWidth);
+        chart2.getXAxis().setAxisMinimum(0);
+        chart2.getXAxis().setAxisMaximum(0 + chart2.getBarData().getGroupWidth(groupSpace, barSpace) * 2);
+        chart2.groupBars(0, groupSpace, barSpace);
+        chart2.invalidate();
+    }
 }
 
 
