@@ -155,15 +155,15 @@
                     style="@style/mr_fe_in_autocomplete">
 
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:textColor="@color/red"
-                        android:text="Not:Birimlerin kullanacağı ortak verileri indirir"
                         android:id="@+id/configSettings_Act_labelformName2_aciklama"
                         style="@style/topbarlabeltextstyle"
+                        android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/configSettings_Act_ImgHomeButton2"
+                        android:layout_toEndOf="@+id/configSettings_Act_ImgHomeButton2"
                         android:layout_toRightOf="@+id/configSettings_Act_ImgHomeButton2"
-                        android:layout_toEndOf="@+id/configSettings_Act_ImgHomeButton2" />
+                        android:text="Not:Birimlerin kullanacağı ortak verileri indirir.\nBu işlem yalnızca bir defaya mahsustur."
+                        android:textColor="@color/red"
+                        android:textSize="17sp" />
 
                 </LinearLayout>
                 <ListView

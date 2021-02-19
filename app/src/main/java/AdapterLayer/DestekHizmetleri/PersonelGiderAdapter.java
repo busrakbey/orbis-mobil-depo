@@ -62,15 +62,15 @@ public class PersonelGiderAdapter extends ArrayAdapter<PersonelGider> {
 
 
         if(dItem.getBakiye() != null)
-            drawerHolder.birinci_item.setText(decimalFormat(dItem.getBakiye()));
+            drawerHolder.ikinci_item.setText(decimalFormat(dItem.getBakiye()));
         else
-            drawerHolder.birinci_item.setText("");
+            drawerHolder.ikinci_item.setText("");
 
 
         if(dItem.getHarcamaTuru() != null)
-            drawerHolder.ikinci_item.setText(dItem.getHarcamaTuru());
+            drawerHolder.birinci_item.setText(dItem.getHarcamaTuru());
         else
-            drawerHolder.ikinci_item.setText("");
+            drawerHolder.birinci_item.setText("");
 
 
 

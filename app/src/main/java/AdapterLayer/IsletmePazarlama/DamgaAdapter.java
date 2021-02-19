@@ -67,8 +67,8 @@ public class DamgaAdapter extends ArrayAdapter<Damga> {
         }
 
 
-        if(dItem.getDikili() != null)
-            drawerHolder.birinci_item.setText(decimalFormat(dItem.getDikili()));
+        if(dItem.getToplamProgram() != null)
+            drawerHolder.birinci_item.setText(decimalFormat(dItem.getToplamProgram()));
         else
             drawerHolder.birinci_item.setText("");
 
@@ -78,23 +78,19 @@ public class DamgaAdapter extends ArrayAdapter<Damga> {
         else
             drawerHolder.ikinci_item.setText("");
 
-
-        if(dItem.getUretimeVerilen() != null)
-            drawerHolder.ucuncu_item.setText(decimalFormat(dItem.getUretimeVerilen()));
+        if(dItem.getToplam() != null)
+            drawerHolder.ucuncu_item.setText(decimalFormat(dItem.getToplam()));
         else
             drawerHolder.ucuncu_item.setText("");
 
 
-        if(dItem.getToplamProgram() != null)
-            drawerHolder.dorduncu_item.setText(decimalFormat(dItem.getToplamProgram()));
+        if(dItem.getUretimeVerilen() != null)
+            drawerHolder.dorduncu_item.setText(decimalFormat(dItem.getUretimeVerilen()));
         else
             drawerHolder.dorduncu_item.setText("");
 
 
-        if(dItem.getToplam() != null)
-            drawerHolder.besinci_item.setText(decimalFormat(dItem.getToplam()));
-        else
-            drawerHolder.besinci_item.setText("");
+
 
 
        /* if(dItem.ge() != null)

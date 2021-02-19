@@ -10410,8 +10410,6 @@ MERGED from [com.android.support:support-compat:25.3.1] D:\DepoMobilSon\app\buil
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] D:\DepoMobilSon\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:25.3.1] D:\DepoMobilSon\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-compat:25.3.1] D:\DepoMobilSon\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\AndroidManifest.xml:21:5-23:58
-MERGED from [com.github.iammert:ExpandableLayout:1.4.1] D:\DepoMobilSon\app\build\intermediates\exploded-aar\com.github.iammert\ExpandableLayout\1.4.1\AndroidManifest.xml:7:5-9:41
-MERGED from [net.cachapa.expandablelayout:expandablelayout:2.9.2] D:\DepoMobilSon\app\build\intermediates\exploded-aar\net.cachapa.expandablelayout\expandablelayout\2.9.2\AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] D:\DepoMobilSon\app\build\intermediates\exploded-aar\com.github.PhilJay\MPAndroidChart\v3.1.0\AndroidManifest.xml:16:5-18:41
 MERGED from [com.android.databinding:library:1.1] D:\DepoMobilSon\app\build\intermediates\exploded-aar\com.android.databinding\library\1.1\AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:support-v4:25.3.1] D:\DepoMobilSon\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:21:5-23:54

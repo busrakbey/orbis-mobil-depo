@@ -12,16 +12,16 @@
         "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\m_move_anim.xml"
     },
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\shakeanim.xml",
-        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\shakeanim.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\shake_anim_interpolator.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\shake_anim_interpolator.xml"
     },
     {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\fab_tool_5_show.xml",
         "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\fab_tool_5_show.xml"
     },
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\shake_anim_interpolator.xml",
-        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\shake_anim_interpolator.xml"
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\shakeanim.xml",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\anim\\shakeanim.xml"
     },
     {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\anim\\dialog_animation.xml",

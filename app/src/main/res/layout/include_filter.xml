@@ -23,16 +23,6 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1">
 
-            <ImageView
-                android:id="@+id/expand_button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.1"
-                android:background="?selectableItemBackgroundBorderless"
-                android:onClick="detayOnClick"
-                android:scaleType="center"
-                android:src="@drawable/ic_chevron_right_black_24dp" />
-
 
             <RadioGroup
                 android:id="@+id/birim_radio_group"
@@ -56,7 +46,8 @@
                     android:layout_height="wrap_content"
                     android:text="Birimler ve İl/İlçe/Köy/Mahalle"
                     android:textColor="@color/light_gray_header_color"
-                    android:textSize="@dimen/normal_definition_text_size"></RadioButton>
+                    android:textSize="@dimen/normal_definition_text_size"
+                    android:visibility="gone"></RadioButton>
 
                 <RadioButton
                     android:id="@+id/radio_teskilat"
@@ -71,18 +62,6 @@
 
         </LinearLayout>
 
-        <net.cachapa.expandablelayout.ExpandableLayout
-            android:id="@+id/expandable_layout"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            app:el_duration="1000"
-            app:el_expanded="false">
-
-
-        </net.cachapa.expandablelayout.ExpandableLayout>
-
         <LinearLayout
             android:id="@+id/linear_bir"
             android:layout_width="match_parent"
@@ -92,7 +71,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="0.5"
             android:orientation="horizontal"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <LinearLayout
                 android:id="@+id/bolge_linear"
@@ -184,7 +163,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="0.5"
             android:orientation="horizontal"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <LinearLayout
                 android:id="@+id/il_linear"

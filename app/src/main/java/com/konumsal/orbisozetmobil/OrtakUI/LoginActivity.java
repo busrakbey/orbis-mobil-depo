@@ -96,6 +96,8 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
     String uname = null;
     String upwd = null;
     ConfigData configData;
+    TextView version_txt;
+
 
     String jsonSOrgBirim = "";
     String jsonOduhTurKayitAile = "";
@@ -108,7 +110,6 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
     String jsonOrtakAgacTuru = "";
     public static String serviceUrl = "https://orbis.ogm.gov.tr/orbis";//"https://linkobs.ogm.gov.tr/orbis";
     NotificationManager nm;
-    TextView version_txt;
 
     ArrayList<SOrgBirim> list_SOrgBirim;
 
@@ -180,8 +181,19 @@ public class LoginActivity extends Activity implements DialogConfigFragment.serv
             login_act_txtUserName.setText(usr.getMadi());
             login_act_txtPassword.setText(usr.getMsifre());
         }
+        version_txt = (TextView) findViewById(R.id.version_txt);
 
-        // version_txt = (TextView) findViewById(R.id.version_txt);
+
+        try {
+            PackageInfo pInfo = LoginActivity.this.getPackageManager().getPackageInfo(getPackageName(), 0);
+            String version = pInfo.versionName;
+            version_txt.setText("Versiyon: "+version);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+         version_txt = (TextView) findViewById(R.id.version_txt);
 
     }
 

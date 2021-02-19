@@ -48,7 +48,7 @@ import com.github.mikephil.charting.utils.MPPointF;
 import com.konumsal.orbisozetmobil.OrtakUI.OrtakFunction;
 import com.konumsal.orbisozetmobil.R;
 
-import net.cachapa.expandablelayout.ExpandableLayout;
+
 
 import org.apache.poi.hssf.record.formula.functions.T;
 
@@ -88,7 +88,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import static ToolLayer.RetrofirCertifica.getUnsafeOkHttpClient;
 import static android.view.View.GONE;
 
-public class IPSorgulamaActivity extends AppCompatActivity implements ExpandableLayout.OnExpansionUpdateListener {
+public class IPSorgulamaActivity extends AppCompatActivity {
     Toolbar toolbar;
     Spinner bolge_spinner, mudurluk_spinner, seflik_spinner, yil_spinner;
     Button sorgula_button, temizle_button;
@@ -125,8 +125,7 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
     RadioButton genelMudRadioButton, bolgeRadioButton, teskilatRadioButton;
     RadioGroup birimRadioGrup;
     LocalDataManager localDataManager;
-    private ExpandableLayout expandableLayout;
-    private ImageView expandButton;
+private ImageView expandButton;
     LinearLayout linearLayout_bir, linearLayout_iki, seflik_linear, ilce_linear, koy_linear;
 
     private PieChart chart;
@@ -213,9 +212,7 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
     }
 
     void Init() {
-        expandableLayout = (ExpandableLayout) findViewById(R.id.expandable_layout);
-        expandButton = (ImageView) findViewById(R.id.expand_button);
-        expandableLayout.setOnExpansionUpdateListener(this);
+
         linearLayout_bir = (LinearLayout) findViewById(R.id.linear_bir);
         linearLayout_iki = (LinearLayout) findViewById(R.id.linear_iki);
         il_spinner = (Spinner) findViewById(R.id.il_spinner);
@@ -527,7 +524,7 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
                         gelenUretimList = response.body();
                         if (gelenUretimList != null && gelenUretimList.size() > 0) {
                             get_listview();
-                            bar_chart();
+                            //bar_chart();
 
 
                         } else
@@ -548,19 +545,19 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
 
     void get_listview() {
         if (gelenSayfaId.equalsIgnoreCase("0")) {
-            damgaAdapter = new DamgaAdapter(IPSorgulamaActivity.this, R.layout.item_bes, gelenDamgaList);
+            damgaAdapter = new DamgaAdapter(IPSorgulamaActivity.this, R.layout.item_dort, gelenDamgaList);
             listview.setAdapter(damgaAdapter);
             damgaAdapter.notifyDataSetChanged();
             listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("1")) {
-            odenekAdapter = new OdenekAdapter(IPSorgulamaActivity.this, R.layout.item_on_iki, gelenOdenekList);
+            odenekAdapter = new OdenekAdapter(IPSorgulamaActivity.this, R.layout.item_uc, gelenOdenekList);
             listview.setAdapter(odenekAdapter);
             odenekAdapter.notifyDataSetChanged();
             listview.setClickable(true);
         }
         if (gelenSayfaId.equalsIgnoreCase("2")) {
-            satisAdapter = new SatisAdapter(IPSorgulamaActivity.this, R.layout.item_dokuz, gelenSatisList);
+            satisAdapter = new SatisAdapter(IPSorgulamaActivity.this, R.layout.item_bes, gelenSatisList);
             listview.setAdapter(satisAdapter);
             satisAdapter.notifyDataSetChanged();
             listview.setClickable(true);
@@ -942,26 +939,9 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
     }
 
 
-    @Override
-    public void onExpansionUpdate(float expansionFraction, int state) {
-        Log.d("ExpandableLayout", "State: " + state);
-        expandButton.setRotation(expansionFraction * 90);
-    }
 
-    public void detayOnClick(View view) {
-        expandableLayout.toggle();
 
-        if (expandableLayout.getState() == 2) {
-            linearLayout_iki.setVisibility(View.VISIBLE);
-            linearLayout_bir.setVisibility(View.VISIBLE);
-        } else {
-            expandableLayout.collapse();
 
-            linearLayout_iki.setVisibility(GONE);
-            linearLayout_bir.setVisibility(GONE);
-
-        }
-    }
 
     public void shared_values() {
 
@@ -1026,7 +1006,7 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
     void piechart() {
 
         chart.invalidate();
-        if (gelenDamgaList != null)
+        if (gelenDamgaList != null && gelenDamgaList.size() > 0)
             chart.setData(generatePieData(null, null, null, gelenDamgaList));
         if (gelenUretimList != null)
             chart.setData(generatePieData(gelenUretimList, null, null, null));
@@ -1049,15 +1029,14 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
         ArrayList<PieEntry> entries1 = new ArrayList<>();
 
         for (int i = 0; i < damgaList.size(); i++) {
-            entries1.add(new PieEntry(damgaList.get(i).getDikili() != null ?
-                    damgaList.get(i).getDikili().setScale(2, RoundingMode.DOWN).floatValue() : null, "Dikili"));
-            entries1.add(new PieEntry(damgaList.get(i).getDikiliProgram() != null ?
-                    damgaList.get(i).getDikiliProgram().setScale(2, RoundingMode.DOWN).floatValue() : null, "Dikili\nProgram"));
-            entries1.add(new PieEntry(damgaList.get(i).getUretimeVerilen() != null ?
-                    damgaList.get(i).getUretimeVerilen().setScale(2, RoundingMode.DOWN).floatValue() : null, "Üretime\nVerilen"));
-            entries1.add(new PieEntry(damgaList.get(i).getToplamProgram() != null ?
-                    damgaList.get(i).getToplamProgram().setScale(2, RoundingMode.DOWN).floatValue() : null, "Toplam\nProgram"));
-
+            if (damgaList.get(i).getDikili() != null)
+                entries1.add(new PieEntry(damgaList.get(i).getDikili().setScale(2, RoundingMode.DOWN).floatValue(), "Dikili"));
+            if (damgaList.get(i).getDikiliProgram() != null)
+                entries1.add(new PieEntry(damgaList.get(i).getDikiliProgram().setScale(2, RoundingMode.DOWN).floatValue(), "Dikili\nProgram"));
+            if (damgaList.get(i).getUretimeVerilen() != null)
+                entries1.add(new PieEntry(damgaList.get(i).getUretimeVerilen().setScale(2, RoundingMode.DOWN).floatValue(), "Üretime\nVerilen"));
+            if (damgaList.get(i).getToplamProgram() != null)
+                entries1.add(new PieEntry(damgaList.get(i).getToplamProgram().setScale(2, RoundingMode.DOWN).floatValue(), "Toplam\nProgram"));
         }
 
         PieDataSet ds1 = new PieDataSet(entries1, "Damga Listesi");
@@ -1086,12 +1065,11 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
         // (0.2 + 0.03) * 4 + 0.08 = 1.00 -> interval per "group"
 
 
-
         ArrayList<BarEntry> values1 = new ArrayList<>();
         ArrayList<BarEntry> values2 = new ArrayList<>();
 
         BarData data;
-        BarDataSet set1,set2;
+        BarDataSet set1, set2;
         for (int i = 0; i < gelenUretimList.size(); i++) {
             values1.add(new BarEntry(i, gelenUretimList.get(i).getGmiktar() != null ?
                     gelenUretimList.get(i).getGmiktar().setScale(2, RoundingMode.DOWN).floatValue() : null));
@@ -1108,7 +1086,7 @@ public class IPSorgulamaActivity extends AppCompatActivity implements Expandable
             set4 = new BarDataSet(values4, "Company D");
             set4.setColor(Color.rgb(255, 102, 0));*/
 
-           data = new BarData(set1);
+            data = new BarData(set1);
             data.setValueFormatter(new LargeValueFormatter());
 
             chart2.setData(data);

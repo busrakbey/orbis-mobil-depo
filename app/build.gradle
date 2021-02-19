@@ -90,8 +90,8 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
 
-    compile 'com.github.iammert:ExpandableLayout:1.4.1'
-    compile 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
+   // compile 'com.github.iammert:ExpandableLayout:1.4.1'
+    //compile 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
 
     compile 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 

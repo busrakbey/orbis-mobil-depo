@@ -47,7 +47,6 @@ import com.konumsal.orbisozetmobil.PersonelUI.PersonelSorguActivity;
 import com.konumsal.orbisozetmobil.R;
 import com.konumsal.orbisozetmobil.SilvikulturUI.SilAltMenuActivity;
 
-import net.cachapa.expandablelayout.ExpandableLayout;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Type;
@@ -92,13 +91,13 @@ import EnumsLayer.LocalDataManager;
 import ToolLayer.MessageBox;
 import ToolLayer.OrbisDefaultException;
 
-public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayout.OnExpansionUpdateListener {
+public class AnaMenuActivity extends AppCompatActivity {
 
     GridView lst_alt_menu_listview;
     Toolbar toolbar;
     List<String> menuList;
     AnaMenuAdapter menuItemsAdapter;
-    public int kontrol = 0;
+    public int kontrol = 0, kontrol2 = 0;
     ArrayList<SOrgBirim> all_list_SOrgBirim;
     Type typeOf_SOrgBirim = null;
     String all_jsonSOrgBirim = "";
@@ -125,7 +124,6 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
     Long secili_il_id = -1L, secili_ilce_id = -1L, secili_koy_id = -1L;
     private ProgressDialog pd = null;
 
-    private ExpandableLayout expandableLayout;
     private ImageView expandButton;
     LinearLayout linearLayout_bir, linearLayout_iki;
 
@@ -138,16 +136,16 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.ana_menu_activity);
 
-
         Init();
         initToolBar();
+
+
 
         if (kontrol == 0 && OrtakFunction.s_org_birim_path == null) {
             kontrol = 1;
             Log.v("home2", "2");
             ortakVeriIndir("1");
 
-        } else {
         }
 
         if (OrtakFunction.mContext == null)
@@ -278,7 +276,7 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
 
     private void menuEkle() {
         menuList.add("Ağaçlandırma ve Toprak Muhafaza");
-       // menuList.add("Amenajman");
+        // menuList.add("Amenajman");
         menuList.add("Bilgi Sistemleri");
         menuList.add("Destek Hizmetleri");
         menuList.add("Dış İlişkiler");
@@ -301,9 +299,7 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
 
 
     private void Init() {
-        expandableLayout = (ExpandableLayout) findViewById(R.id.expandable_layout);
-        expandButton = (ImageView) findViewById(R.id.expand_button);
-        expandableLayout.setOnExpansionUpdateListener(this);
+
         linearLayout_bir = (LinearLayout) findViewById(R.id.linear_bir);
         linearLayout_iki = (LinearLayout) findViewById(R.id.linear_iki);
 
@@ -641,26 +637,22 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
                         milli_park_bolge_mud.add(item);
                     }
 
-                }
-                else if (item.getUstId() != null && item.getUstId() == 1767) {
+                } else if (item.getUstId() != null && item.getUstId() == 1767) {
 
                     if (String.valueOf(item.getKategori()).equals("2") || String.valueOf(item.getKategori()).equals("1")) {
                         OrtakFunction.bolge_list.add(item);
                         OrtakFunction.bolge_list_string.add(item.getAdi());
                     }
-                }
-                else if (item.getUstId() != null && String.valueOf(item.getKategori()).equals("2")) {
+                } else if (item.getUstId() != null && String.valueOf(item.getKategori()).equals("2")) {
                     if (item.getUstId() == 5150 || item.getUstId() == 5105 || item.getUstId() == 4934 || item.getUstId() == 4958) {
                         OrtakFunction.mudurluk_list.add(item);
                         OrtakFunction.mudurluk_list_string.add(item.getAdi());
                     }
 
-                }
-               else  if (String.valueOf(item.getKategori()).equals("6") || String.valueOf(item.getKategori()).equals("9")) {
+                } else if (String.valueOf(item.getKategori()).equals("6") || String.valueOf(item.getKategori()).equals("9")) {
                     OrtakFunction.mudurluk_list.add(item);
                     OrtakFunction.mudurluk_list_string.add(item.getAdi());
-                }
-               else if (String.valueOf(item.getKategori()).equals("7") || String.valueOf(item.getKategori()).equals("12") || String.valueOf(item.getKategori()).equals("3")) {
+                } else if (String.valueOf(item.getKategori()).equals("7") || String.valueOf(item.getKategori()).equals("12") || String.valueOf(item.getKategori()).equals("3")) {
                     OrtakFunction.seflik_list.add(item);
                     OrtakFunction.seflik_list_string.add(item.getAdi());
                 }
@@ -730,8 +722,12 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
             e.printStackTrace();
         }
 
-        OrtakFunction.il_list.add(null);
-        OrtakFunction.il_list_string.add("");
+
+
+      /*  OrtakFunction.il_list.add(null);
+        OrtakFunction.il_list_string.add("");*/
+
+
         for (SCity item : il_list) {
             if (item.getAdi() != null) {
                 OrtakFunction.il_list.add(item);
@@ -740,6 +736,12 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
 
             }
         }
+
+        if (OrtakFunction.il_list != null && OrtakFunction.il_list.size() > 0 && OrtakFunction.il_list.get(0) != null)
+            OrtakFunction.il_list.add(0, null);
+
+        if (OrtakFunction.il_list_string != null && OrtakFunction.il_list_string.size() > 0 && !OrtakFunction.il_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.il_list_string.add(0, "");
 
 
         STown_Data sTown_data = new STown_Data(AnaMenuActivity.this);
@@ -820,9 +822,6 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
                 return 0;
             }
         });
-
-
-
 
 
     }
@@ -1361,33 +1360,18 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
     }
 
 
-    @Override
-    public void onExpansionUpdate(float expansionFraction, int state) {
-        Log.d("ExpandableLayout", "State: " + state);
-        expandButton.setRotation(expansionFraction * 90);
-    }
-
-    public void detayOnClick(View view) {
-        expandableLayout.toggle();
-
-        if (expandableLayout.getState() == 2) {
-            linearLayout_iki.setVisibility(View.VISIBLE);
-            linearLayout_bir.setVisibility(View.VISIBLE);
-        } else {
-            expandableLayout.collapse();
-
-            linearLayout_iki.setVisibility(View.GONE);
-            linearLayout_bir.setVisibility(View.GONE);
-
-        }
-    }
-
     Handler handle;
 
     @Override
     public void onResume() {
         super.onResume();
+
+        setContentView(R.layout.ana_menu_activity);
+        Init();
+        initToolBar();
+
         if (OrtakFunction.bolge_list == null || OrtakFunction.bolge_list.size() == 0) {
+
             pd = ProgressDialog.show(AnaMenuActivity.this, "Lütfen bekleyiniz",
                     "Birim ve köy bilgileri listeleniyor..", true);
             pd.setCancelable(false);
@@ -1404,10 +1388,9 @@ public class AnaMenuActivity extends AppCompatActivity implements ExpandableLayo
             }, 8);
 
 
-        } else
+        } else {
             shared_values();
-
-
+       }
     }
 
 

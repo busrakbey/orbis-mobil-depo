@@ -40,12 +40,12 @@
         "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_actionhomebar.png"
     },
     {
-        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_actiontakvim.png",
-        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_actiontakvim.png"
-    },
-    {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
         "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_actiontakvim.png",
+        "source": "D:\\DepoMobilSon\\app\\src\\main\\res\\mipmap-mdpi\\ic_actiontakvim.png"
     },
     {
         "merged": "D:\\DepoMobilSon\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher_ogmlogo.png",

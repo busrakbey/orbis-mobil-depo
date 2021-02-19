@@ -10,6 +10,7 @@ import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -134,7 +135,6 @@ public class ConfigSettingsActivity extends AppCompatActivity {
     Type typeof_fidanTur = null;
     Type typeOf_Koy = null;
     String jsonSCity = "";
-
 
 
     HorizontalScrollView hsv;
@@ -927,7 +927,7 @@ public class ConfigSettingsActivity extends AppCompatActivity {
 
 
 
-                                    for(STown item : list_STown){
+                                  /*  for(STown item : list_STown){
                                         OrtakFunction.ilce_list.add(item);
                                         OrtakFunction.ilce_list_string.add(item.getAdi());
                                     }
@@ -940,7 +940,7 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                                                 return object1.getAdi().compareTo(object2.getAdi());
                                             return 0;
                                         }
-                                    });
+                                    });*/
 
 
                                 }
@@ -1354,12 +1354,14 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                 if (all_jsonSOrgBirim.trim().length() > 1) {
                     all_list_SOrgBirim = operator.convertJSONToEntity(all_jsonSOrgBirim, typeOf_SOrgBirim, all_list_SOrgBirim);
                     Boolean durum = false;
-                    durum = dasorg2.deleteAllBirim();
-                    if (durum)
-                        dasorg2.insertFromContent(all_list_SOrgBirim);
+                    if (all_list_SOrgBirim.size() > 0) {
+                        durum = dasorg2.deleteAllBirim();
+                        if (durum)
+                            dasorg2.insertFromContent(all_list_SOrgBirim);
+                    }
                     all_jsonSOrgBirim = null;
 
-                    if (all_list_SOrgBirim.size() > 0) {
+                  /*  if (all_list_SOrgBirim.size() > 0) {
                         //  OrtakFunction.bolge_list.add(null);
                         // OrtakFunction.bolge_list_string.add("");
                         OrtakFunction.mudurluk_list.add(null);
@@ -1410,7 +1412,7 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                         publishProgress("Veri indirme bilgisi: %100 tamamlandı.");
 
 
-                    }
+                    }*/
 
                 } else
                     MessageBox.showAlert(ConfigSettingsActivity.this, "Hata !\nBirim  verisi alinamadi !\n", false);
@@ -1477,7 +1479,7 @@ public class ConfigSettingsActivity extends AppCompatActivity {
 
                     /*OrtakFunction.il_list.add(null);
                     OrtakFunction.il_list_string.add("");*/
-                    for(SCity item : list_city){
+                  /*  for(SCity item : list_city){
                         OrtakFunction.il_list.add(item);
                         OrtakFunction.il_list_string.add(item.getAdi());
                     }
@@ -1490,7 +1492,7 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                                 return object1.getAdi().compareTo(object2.getAdi());
                             return 0;
                         }
-                    });
+                    });*/
 
                     publishProgress("İl verileri yüklendi..");
 
@@ -1511,6 +1513,7 @@ public class ConfigSettingsActivity extends AppCompatActivity {
 
 
     String jsonKoy = "";
+    private ProgressDialog pd = null;
 
     public class getKoyFromService extends AsyncTask {
         StringBuilder sb = new StringBuilder();
@@ -1532,7 +1535,22 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                 MessageBox.showAlert(ConfigSettingsActivity.this, "Köy verileri yüklenirken hata oluştu!", false);
             } else {
 
-                pd2.dismiss();
+               // pd2.dismiss();
+                pd = ProgressDialog.show(ConfigSettingsActivity.this, "İşlem tamamlanıyor",
+                        "Lütfen bekleyiniz..", true);
+                pd.setCancelable(false);
+                pd.show();
+                new Handler().postDelayed(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        getBolgeMudurlukSeflik();
+
+
+                    }
+                }, 8);
+               // getBolgeMudurlukSeflik();
+               /* pd2.dismiss();
                 new AlertDialog.Builder(ConfigSettingsActivity.this)
                         .setTitle("Orbis Mobile Sistem Bilgisi")
                         .setMessage("İşlem Tamamlandı ")
@@ -1546,7 +1564,7 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                             }
                         })
                         .setIcon(android.R.drawable.ic_dialog_alert)
-                        .show();
+                        .show();*/
 
             }
 
@@ -1575,19 +1593,19 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                         dasorg2.insertFromContent(koyList);
                     jsonSCity = null;
 
-                    OrtakFunction.koy_list.add(null);
+                   /* OrtakFunction.koy_list.add(null);
                     OrtakFunction.koy_list_string.add("");
                     for(SKoyBelde item : koyList){
                         OrtakFunction.koy_list.add(item);
                         OrtakFunction.koy_list_string.add(item.getKoyAdi());
-                    }
+                    }*/
 
                     try {
                         Thread.sleep(3000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    Collections.sort(OrtakFunction.koy_list_string);
+                  /*  Collections.sort(OrtakFunction.koy_list_string);
                     Collections.sort(OrtakFunction.koy_list, new Comparator<SKoyBelde>() {
                         @Override
                         public int compare(final SKoyBelde object1, final SKoyBelde object2) {
@@ -1595,7 +1613,7 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                                 return object1.getKoyAdi().compareTo(object2.getKoyAdi());
                             return 0;
                         }
-                    });
+                    });*/
                     publishProgress("Köy verileri yüklendi..");
 
 
@@ -1616,12 +1634,409 @@ public class ConfigSettingsActivity extends AppCompatActivity {
     }
 
 
+    List<SOrgBirim> org_birim_list;
+    List<SCity> il_list;
+    List<STown> ilce_list;
+    List<SKoyBelde> koy_list;
+
+
+    void getBolgeMudurlukSeflik() {
+        ilce_list = new ArrayList<STown>();
+        koy_list = new ArrayList<SKoyBelde>();
+        il_list = new ArrayList<SCity>();
+        SOrgBirim_Data data = new SOrgBirim_Data(ConfigSettingsActivity.this);
+        List<SOrgBirim> milli_park_bolge_mud = new ArrayList<SOrgBirim>();
+        StringBuilder sqlStr = new StringBuilder();
+        sqlStr.append("SELECT * FROM S_ORG_BIRIM WHERE AKTIF = 1");
+        try {
+            org_birim_list = new ArrayList<SOrgBirim>();
+            org_birim_list = data.loadFromQuery(sqlStr.toString());
+        } catch (OrbisDefaultException e) {
+            e.printStackTrace();
+        }
+        for (SOrgBirim item : org_birim_list) {
+            if (item.getKategori() != null) {
+                if (String.valueOf(item.getKategori()).equals("5")) {
+
+                    if (!item.getAdi().contains("DOĞA")) {
+                        OrtakFunction.bolge_list.add(item);
+                        OrtakFunction.bolge_list_string.add(item.getAdi());
+                    } else {
+                        milli_park_bolge_mud.add(item);
+                    }
+
+                } else if (item.getUstId() != null && item.getUstId() == 1767) {
+
+                    if (String.valueOf(item.getKategori()).equals("2") || String.valueOf(item.getKategori()).equals("1")) {
+                        OrtakFunction.bolge_list.add(item);
+                        OrtakFunction.bolge_list_string.add(item.getAdi());
+                    }
+                } else if (item.getUstId() != null && String.valueOf(item.getKategori()).equals("2")) {
+                    if (item.getUstId() == 5150 || item.getUstId() == 5105 || item.getUstId() == 4934 || item.getUstId() == 4958) {
+                        OrtakFunction.mudurluk_list.add(item);
+                        OrtakFunction.mudurluk_list_string.add(item.getAdi());
+                    }
+
+                } else if (String.valueOf(item.getKategori()).equals("6") || String.valueOf(item.getKategori()).equals("9")) {
+                    OrtakFunction.mudurluk_list.add(item);
+                    OrtakFunction.mudurluk_list_string.add(item.getAdi());
+                } else if (String.valueOf(item.getKategori()).equals("7") || String.valueOf(item.getKategori()).equals("12") || String.valueOf(item.getKategori()).equals("3")) {
+                    OrtakFunction.seflik_list.add(item);
+                    OrtakFunction.seflik_list_string.add(item.getAdi());
+                }
+                if (String.valueOf(item.getKategori()).equals("6") || String.valueOf(item.getKategori()).equals("9")) {
+                    OrtakFunction.mudurluk_list_fid.add(item);
+                    OrtakFunction.mudurluk_list_string_fid.add(item.getAdi());
+                }
+
+                if (String.valueOf(item.getKategori()).equals("7") || String.valueOf(item.getKategori()).equals("12")) {
+                    OrtakFunction.seflik_list_fid.add(item);
+                    OrtakFunction.seflik_list_string_fid.add(item.getAdi());
+                }
+
+                if (item.getUstId() != null && item.getUstId().toString().equalsIgnoreCase("1769")) {
+                    OrtakFunction.genel_mud_mudurluk_list.add(item);
+                    OrtakFunction.genel_mud_mudurluk_list_string.add(item.getAdi());
+
+                    OrtakFunction.mudurluk_list.add(item);
+                    OrtakFunction.mudurluk_list_string.add(item.getAdi());
+                }
+                if (item.getId().toString().equalsIgnoreCase("1769")) {
+                    OrtakFunction.genel_mud_bolge_list.add(item);
+                    OrtakFunction.genel_mud_bolge_list_string.add(item.getAdi());
+
+                    OrtakFunction.bolge_list.add(item);
+                    OrtakFunction.bolge_list_string.add(item.getAdi());
+                }
+
+                if (String.valueOf(item.getKategori()).equals("-1") || String.valueOf(item.getKategori()).equals("0") || String.valueOf(item.getKategori()).equals("1")
+                        || String.valueOf(item.getKategori()).equals("2") || String.valueOf(item.getKategori()).equals("5")) {
+                    OrtakFunction.teskilat_bolge_list.add(item);
+                    OrtakFunction.teskilat_bolge_list_string.add(item.getAdi());
+                }
+
+            }
+            Log.v("BIRIM", "=>" + item.getAdi());
+        }
+
+
+        Collections.sort(OrtakFunction.bolge_list_string);
+        Collections.sort(OrtakFunction.bolge_list, new Comparator<SOrgBirim>() {
+            @Override
+            public int compare(final SOrgBirim object1, final SOrgBirim object2) {
+                if (object1 != null && object2 != null)
+                    return object1.getAdi().compareTo(object2.getAdi());
+                return 0;
+            }
+        });
+
+        /*for (int i = 0; i < milli_park_bolge_mud.size(); i++) {
+            OrtakFunction.bolge_list.add(milli_park_bolge_mud.get(i));
+            OrtakFunction.bolge_list_string.add(milli_park_bolge_mud.get(i).getAdi());
+        }*/
+
+        getAltBirim();
+
+
+        SCity_Data sCity_data = new SCity_Data(ConfigSettingsActivity.this);
+        StringBuilder sqlStr1 = new StringBuilder();
+        sqlStr1.append("SELECT * FROM S_IL");
+
+
+        try {
+            il_list = new ArrayList<SCity>();
+            il_list = sCity_data.loadFromQuery(sqlStr1.toString());
+        } catch (OrbisDefaultException e) {
+            e.printStackTrace();
+        }
 
 
 
+      /*  OrtakFunction.il_list.add(null);
+        OrtakFunction.il_list_string.add("");*/
 
 
+        for (SCity item : il_list) {
+            if (item.getAdi() != null) {
+                OrtakFunction.il_list.add(item);
+                OrtakFunction.il_list_string.add(item.getAdi());
+                Log.v("il", "=>" + item.getAdi());
 
+            }
+        }
+
+        if (OrtakFunction.il_list != null && OrtakFunction.il_list.size() > 0 && OrtakFunction.il_list.get(0) != null)
+            OrtakFunction.il_list.add(0, null);
+
+        if (OrtakFunction.il_list_string != null && OrtakFunction.il_list_string.size() > 0 && !OrtakFunction.il_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.il_list_string.add(0, "");
+
+
+        STown_Data sTown_data = new STown_Data(ConfigSettingsActivity.this);
+        StringBuilder sqlStr2 = new StringBuilder();
+        sqlStr2.append("SELECT * FROM S_ILCE");
+        try {
+            ilce_list = new ArrayList<STown>();
+            ilce_list = sTown_data.loadFromQuery(sqlStr2.toString());
+        } catch (OrbisDefaultException e) {
+            e.printStackTrace();
+        }
+
+
+        SKoyBelde_Data sKoyBelde_data = new SKoyBelde_Data(ConfigSettingsActivity.this);
+        StringBuilder sqlStr3 = new StringBuilder();
+        sqlStr3.append("SELECT * FROM S_KOY_BELDE");
+        try {
+            koy_list = new ArrayList<SKoyBelde>();
+            koy_list = sKoyBelde_data.loadFromQuery(sqlStr3.toString());
+        } catch (OrbisDefaultException e) {
+            e.printStackTrace();
+        }
+
+
+        OrtakFunction.ilce_list.add(null);
+        OrtakFunction.ilce_list_string.add("");
+        for (STown item : ilce_list) {
+            if (item.getAdi() != null) {
+                OrtakFunction.ilce_list.add(item);
+                OrtakFunction.ilce_list_string.add(item.getAdi());
+                Log.v("ilçe", "=>" + item.getAdi());
+
+            }
+        }
+
+
+        OrtakFunction.koy_list.add(null);
+        OrtakFunction.koy_list_string.add("");
+        for (SKoyBelde item : koy_list) {
+            if (item.getKoyAdi() != null) {
+                OrtakFunction.koy_list.add(item);
+                OrtakFunction.koy_list_string.add(item.getKoyAdi());
+                Log.v("köy", "=>" + item.getKoyAdi());
+
+            }
+        }
+
+        Log.v("köy_size", "=>" + koy_list.size());
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        Collections.sort(OrtakFunction.ilce_list_string);
+        Collections.sort(OrtakFunction.ilce_list, new Comparator<STown>() {
+            @Override
+            public int compare(final STown object1, final STown object2) {
+                if (object1 != null && object2 != null && object2.getAdi() != null && object1.getAdi() != null)
+                    return object1.getAdi().compareTo(object2.getAdi());
+                Log.v("köy_sort", "=>" + koy_list.size());
+
+                return 0;
+
+            }
+        });
+
+        Collections.sort(OrtakFunction.il_list_string);
+        //Collections.sort(OrtakFunction.il_list_string, String.CASE_INSENSITIVE_ORDER);
+        Collections.sort(OrtakFunction.il_list, new Comparator<SCity>() {
+            @Override
+            public int compare(final SCity object1, final SCity object2) {
+                if (object1 != null && object2 != null && object2.getAdi() != null && object1.getAdi() != null)
+                    return object1.getAdi().compareTo(object2.getAdi());
+                Log.v("köy_sort2 ", "=>" + koy_list.size());
+
+                return 0;
+            }
+        });
+
+
+    }
+
+
+    void getAltBirim() {
+
+        SOrgBirim_Data data = new SOrgBirim_Data(ConfigSettingsActivity.this);
+        List<SOrgBirim> milli_park_bolge_mud = new ArrayList<SOrgBirim>();
+        StringBuilder sqlStr = new StringBuilder();
+        sqlStr.append("SELECT * FROM S_ORG_BIRIM WHERE AKTIF = 1");
+        try {
+            org_birim_list = new ArrayList<SOrgBirim>();
+            org_birim_list = data.loadFromQuery(sqlStr.toString());
+        } catch (OrbisDefaultException e) {
+            e.printStackTrace();
+        }
+        for (SOrgBirim item : org_birim_list) {
+            //  if (item.getKategori() != null) {
+
+            for (SOrgBirim i : OrtakFunction.genel_mud_mudurluk_list) {
+                if (i != null && i.getId().toString().equalsIgnoreCase(item.getUstId().toString())) {
+                    OrtakFunction.genel_mud_seflik_list.add(item);
+                    OrtakFunction.genel_mud_seflik_list_string.add(item.getAdi());
+
+                    OrtakFunction.seflik_list.add(item);
+                    OrtakFunction.seflik_list_string.add(item.getAdi());
+                }
+            }
+
+
+            for (SOrgBirim i : OrtakFunction.teskilat_bolge_list) {
+                if (i != null && i.getId().toString().equalsIgnoreCase(item.getUstId().toString())) {
+                    OrtakFunction.teskilat_mudurluk_list.add(item);
+                    OrtakFunction.teskilat_mudurluk_list_string.add(item.getAdi());
+                }
+            }
+
+            Log.v("BIRIM1", "=>" + item.getAdi());
+        }
+
+
+        getAltBirim2();
+
+    }
+
+
+    void getAltBirim2() {
+
+        SOrgBirim_Data data = new SOrgBirim_Data(ConfigSettingsActivity.this);
+        List<SOrgBirim> milli_park_bolge_mud = new ArrayList<SOrgBirim>();
+        StringBuilder sqlStr = new StringBuilder();
+        sqlStr.append("SELECT * FROM S_ORG_BIRIM WHERE KATEGORI != 5 AND KATEGORI != 6 AND  kategori != 7  AND KATEGORI != 9 AND AKTIF = 1");
+        try {
+            org_birim_list = new ArrayList<SOrgBirim>();
+            org_birim_list = data.loadFromQuery(sqlStr.toString());
+        } catch (OrbisDefaultException e) {
+            e.printStackTrace();
+        }
+
+        /*for (SOrgBirim item : OrtakFunction.seflik_list) {
+            if (item != null && item.getAdi() != null) {
+                OrtakFunction.teskilat_seflik_list.add(item);
+                OrtakFunction.teskilat_seflik_list_string.add(item.getAdi());
+            }
+        }
+
+
+        for (SOrgBirim item : org_birim_list) {
+            //if (item.getKategori() != null) {
+
+            for (SOrgBirim i : OrtakFunction.teskilat_mudurluk_list) {
+                if (i != null && i.getId().toString().equalsIgnoreCase(item.getUstId().toString())) {
+                    OrtakFunction.teskilat_seflik_list.add(item);
+                    OrtakFunction.teskilat_seflik_list_string.add(item.getAdi());
+                    break;
+                }
+            }
+            //    }
+            Log.v("BIRIM2", "=>" + item.getAdi());
+        }*/
+
+        if (OrtakFunction.genel_mud_seflik_list != null && OrtakFunction.genel_mud_seflik_list.size() > 0 && OrtakFunction.genel_mud_seflik_list.get(0) != null)
+            OrtakFunction.genel_mud_seflik_list.add(0, null);
+        if (OrtakFunction.genel_mud_seflik_list_string != null && OrtakFunction.genel_mud_seflik_list_string.size() > 0 && !OrtakFunction.genel_mud_seflik_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.genel_mud_seflik_list_string.add(0, "");
+
+        if (OrtakFunction.teskilat_mudurluk_list != null && OrtakFunction.teskilat_mudurluk_list.size() > 0 && OrtakFunction.teskilat_mudurluk_list.get(0) != null)
+            OrtakFunction.teskilat_mudurluk_list.add(0, null);
+        if (OrtakFunction.teskilat_mudurluk_list_string != null && OrtakFunction.teskilat_mudurluk_list_string.size() > 0 && !OrtakFunction.teskilat_mudurluk_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.teskilat_mudurluk_list_string.add(0, "");
+
+        if (OrtakFunction.bolge_list != null && OrtakFunction.bolge_list.size() > 0 && OrtakFunction.bolge_list.get(0) != null)
+            OrtakFunction.bolge_list.add(0, null);
+        if (OrtakFunction.bolge_list_string != null && OrtakFunction.bolge_list_string.size() > 0 && !OrtakFunction.bolge_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.bolge_list_string.add(0, "");
+
+        if (OrtakFunction.genel_mud_bolge_list != null && OrtakFunction.genel_mud_bolge_list.size() > 0 && OrtakFunction.genel_mud_bolge_list.get(0) != null)
+            OrtakFunction.genel_mud_bolge_list.add(0, null);
+        if (OrtakFunction.genel_mud_bolge_list_string != null && OrtakFunction.genel_mud_bolge_list_string.size() > 0 && !OrtakFunction.genel_mud_bolge_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.genel_mud_bolge_list_string.add(0, "");
+
+        if (OrtakFunction.genel_mud_mudurluk_list != null && OrtakFunction.genel_mud_mudurluk_list.size() > 0 && OrtakFunction.genel_mud_mudurluk_list.get(0) != null)
+            OrtakFunction.genel_mud_mudurluk_list.add(0, null);
+        if (OrtakFunction.genel_mud_mudurluk_list_string != null && OrtakFunction.genel_mud_mudurluk_list_string.size() > 0 && !OrtakFunction.genel_mud_mudurluk_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.genel_mud_mudurluk_list_string.add(0, "");
+
+        if (OrtakFunction.teskilat_bolge_list != null && OrtakFunction.teskilat_bolge_list.size() > 0 && OrtakFunction.teskilat_bolge_list.get(0) != null)
+            OrtakFunction.teskilat_bolge_list.add(0, null);
+        if (OrtakFunction.teskilat_bolge_list_string != null && OrtakFunction.teskilat_bolge_list_string.size() > 0 && !OrtakFunction.teskilat_bolge_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.teskilat_bolge_list_string.add(0, "");
+
+        if (OrtakFunction.teskilat_seflik_list != null && OrtakFunction.teskilat_seflik_list.size() > 0 && OrtakFunction.teskilat_seflik_list.get(0) != null)
+            OrtakFunction.teskilat_seflik_list.add(0, null);
+        if (OrtakFunction.teskilat_seflik_list_string != null && OrtakFunction.teskilat_seflik_list_string.size() > 0 && !OrtakFunction.teskilat_seflik_list_string.get(0).equalsIgnoreCase(""))
+            OrtakFunction.teskilat_seflik_list_string.add(0, "");
+
+        Collections.sort(OrtakFunction.bolge_list_string);
+        Collections.sort(OrtakFunction.mudurluk_list_string);
+        Collections.sort(OrtakFunction.seflik_list_string);
+        Collections.sort(OrtakFunction.genel_mud_bolge_list_string);
+        Collections.sort(OrtakFunction.genel_mud_mudurluk_list_string);
+        Collections.sort(OrtakFunction.genel_mud_seflik_list_string);
+
+        Collections.sort(OrtakFunction.teskilat_seflik_list, new Comparator<SOrgBirim>() {
+            @Override
+            public int compare(final SOrgBirim object1, final SOrgBirim object2) {
+                if (object1 != null && object2 != null)
+                    return object1.getAdi().compareTo(object2.getAdi());
+                return 0;
+            }
+        });
+
+
+        Collections.sort(OrtakFunction.teskilat_bolge_list_string);
+        Collections.sort(OrtakFunction.teskilat_bolge_list, new Comparator<SOrgBirim>() {
+            @Override
+            public int compare(final SOrgBirim object1, final SOrgBirim object2) {
+                if (object1 != null && object2 != null)
+                    return object1.getAdi().compareTo(object2.getAdi());
+                return 0;
+            }
+        });
+
+        Collections.sort(OrtakFunction.teskilat_mudurluk_list_string);
+        Collections.sort(OrtakFunction.teskilat_mudurluk_list, new Comparator<SOrgBirim>() {
+            @Override
+            public int compare(final SOrgBirim object1, final SOrgBirim object2) {
+                if (object1 != null && object2 != null)
+                    return object1.getAdi().compareTo(object2.getAdi());
+                return 0;
+            }
+        });
+
+
+        Collections.sort(OrtakFunction.genel_mud_mudurluk_list_string);
+        Collections.sort(OrtakFunction.genel_mud_mudurluk_list, new Comparator<SOrgBirim>() {
+            @Override
+            public int compare(final SOrgBirim object1, final SOrgBirim object2) {
+                if (object1 != null && object2 != null)
+                    return object1.getAdi().compareTo(object2.getAdi());
+                return 0;
+            }
+        });
+
+        if (pd.isShowing())
+            pd.dismiss();
+
+        if (pd2.isShowing())
+            pd2.dismiss();
+        new AlertDialog.Builder(ConfigSettingsActivity.this)
+                .setTitle("Orbis Mobile Sistem Bilgisi")
+                .setMessage("İşlem Tamamlandı ")
+                .setPositiveButton("Tamam", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                        if (ilk_giris.equals("1"))
+                            ConfigSettingsActivity.this.finish();
+
+
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+
+
+    }
 
 
 }

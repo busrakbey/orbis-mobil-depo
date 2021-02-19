@@ -23,7 +23,7 @@ import com.google.android.gms.vision.text.Line;
 import com.konumsal.orbisozetmobil.OrtakUI.OrtakFunction;
 import com.konumsal.orbisozetmobil.R;
 
-import net.cachapa.expandablelayout.ExpandableLayout;
+
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -55,7 +55,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import static ToolLayer.RetrofirCertifica.getUnsafeOkHttpClient;
 import static android.view.View.GONE;
 
-public class EizinSorgulamaActivity extends AppCompatActivity implements ExpandableLayout.OnExpansionUpdateListener {
+public class EizinSorgulamaActivity extends AppCompatActivity {
     Toolbar toolbar;
     Spinner bolge_spinner, mudurluk_spinner, seflik_spinner, yil_spinner;
     Button sorgula_button, temizle_button;
@@ -88,8 +88,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
     RadioButton genelMudRadioButton, bolgeRadioButton, teskilatRadioButton;
     RadioGroup birimRadioGrup;
     LocalDataManager localDataManager;
-    private ExpandableLayout expandableLayout;
-    private ImageView expandButton;
+private ImageView expandButton;
     LinearLayout linearLayout_bir, linearLayout_iki, seflik_linear, ilce_linear, koy_linear;
 
     @Override
@@ -150,9 +149,7 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
     }
 
     void Init() {
-        expandableLayout = (ExpandableLayout) findViewById(R.id.expandable_layout);
-        expandButton = (ImageView) findViewById(R.id.expand_button);
-        expandableLayout.setOnExpansionUpdateListener(this);
+
         linearLayout_bir = (LinearLayout) findViewById(R.id.linear_bir);
         linearLayout_iki = (LinearLayout) findViewById(R.id.linear_iki);
         il_spinner = (Spinner) findViewById(R.id.il_spinner);
@@ -751,26 +748,9 @@ public class EizinSorgulamaActivity extends AppCompatActivity implements Expanda
     }
 
 
-    @Override
-    public void onExpansionUpdate(float expansionFraction, int state) {
-        Log.d("ExpandableLayout", "State: " + state);
-        expandButton.setRotation(expansionFraction * 90);
-    }
 
-    public void detayOnClick(View view) {
-        expandableLayout.toggle();
 
-        if (expandableLayout.getState() == 2) {
-            linearLayout_iki.setVisibility(View.VISIBLE);
-            linearLayout_bir.setVisibility(View.VISIBLE);
-        } else {
-            expandableLayout.collapse();
 
-            linearLayout_iki.setVisibility(GONE);
-            linearLayout_bir.setVisibility(GONE);
-
-        }
-    }
 
     public void shared_values() {
 

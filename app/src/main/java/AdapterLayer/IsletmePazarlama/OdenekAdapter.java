@@ -54,15 +54,7 @@ public class OdenekAdapter extends ArrayAdapter<Odenek> {
             drawerHolder.birinci_item = (TextView) view.findViewById(R.id.birinci_item);
             drawerHolder.ikinci_item = (TextView) view.findViewById(R.id.ikinci_item);
             drawerHolder.ucuncu_item = (TextView) view.findViewById(R.id.ucuncu_item);
-            drawerHolder.dorduncu_item = (TextView) view.findViewById(R.id.dorduncu_item);
-            drawerHolder.besinci_item = (TextView) view.findViewById(R.id.besinci_item);
-            drawerHolder.altinci_item = (TextView) view.findViewById(R.id.altinci_item);
-            drawerHolder.yedinci_item = (TextView) view.findViewById(R.id.yedinci_item);
-            drawerHolder.sekizinci_item = (TextView) view.findViewById(R.id.sekizinci_item);
-            drawerHolder.dokuzuncu_item = (TextView) view.findViewById(R.id.dokuzuncu_item);
-            drawerHolder.onuncu_item = (TextView) view.findViewById(R.id.onuncu_item);
-            drawerHolder.on_birinci_item = (TextView) view.findViewById(R.id.onbirinci_item);
-            drawerHolder.on_ikinci_item = (TextView) view.findViewById(R.id.onikinci_item);
+
 
 
             view.setTag(drawerHolder);
@@ -80,68 +72,21 @@ public class OdenekAdapter extends ArrayAdapter<Odenek> {
             drawerHolder.birinci_item.setText("");
 
         if(dItem.getProgram() != null)
-            drawerHolder.ikinci_item.setText(dItem.getProgram().toString());
+            drawerHolder.ikinci_item.setText(decimalFormat(dItem.getProgram()));
         else
             drawerHolder.ikinci_item.setText("");
 
 
-        if(dItem.getKmiktar() != null)
-            drawerHolder.ucuncu_item.setText(decimalFormat(dItem.getKmiktar()));
-        else
-            drawerHolder.ucuncu_item.setText("");
 
+        //if(dItem.getKtutar() != null)
+            drawerHolder.ucuncu_item.setText(decimalFormat((dItem.getKtutar() != null ? dItem.getKtutar() : new BigDecimal(0))
+                    .add(dItem.getStutar() != null ? dItem.getStutar() : new BigDecimal(0))
+                    .add(dItem.getTtutar() != null ? dItem.getTtutar() : new BigDecimal(0))
+                    .add(dItem.getYtutar() != null ? dItem.getYtutar() : new BigDecimal(0))
+                    .add(dItem.getItutar()!= null ? dItem.getItutar() : new BigDecimal(0))));
+      /*  else
+            drawerHolder.ucuncu_item.setText("");*/
 
-        if(dItem.getKtutar() != null)
-            drawerHolder.dorduncu_item.setText(decimalFormat(dItem.getKtutar()));
-        else
-            drawerHolder.dorduncu_item.setText("");
-
-
-        if(dItem.getSmiktar() != null)
-            drawerHolder.besinci_item.setText(decimalFormat(dItem.getSmiktar()));
-        else
-            drawerHolder.besinci_item.setText("");
-
-
-       if(dItem.getStutar() != null)
-            drawerHolder.altinci_item.setText(decimalFormat(dItem.getStutar()));
-        else
-            drawerHolder.altinci_item.setText("");
-
-
-        if(dItem.getTmiktar() != null)
-            drawerHolder.yedinci_item.setText(decimalFormat(dItem.getTmiktar()).toString());
-        else
-            drawerHolder.yedinci_item.setText("");
-
-
-        if(dItem.getTtutar() != null)
-            drawerHolder.sekizinci_item.setText(decimalFormat(dItem.getTtutar()).toString());
-        else
-            drawerHolder.sekizinci_item.setText("");
-
-        if(dItem.getYmiktar() != null)
-            drawerHolder.dokuzuncu_item.setText(decimalFormat(dItem.getYmiktar()));
-        else
-            drawerHolder.dokuzuncu_item.setText("");
-
-
-        if(dItem.getYtutar() != null)
-            drawerHolder.onuncu_item.setText(decimalFormat(dItem.getYtutar()).toString());
-        else
-            drawerHolder.onuncu_item.setText("");
-
-
-        if(dItem.getImiktar() != null)
-            drawerHolder.on_birinci_item.setText(decimalFormat(dItem.getImiktar()).toString());
-        else
-            drawerHolder.on_birinci_item.setText("");
-
-
-        if(dItem.getItutar() != null)
-            drawerHolder.on_ikinci_item.setText(decimalFormat(dItem.getItutar()));
-        else
-            drawerHolder.on_ikinci_item.setText("");
 
 
 
