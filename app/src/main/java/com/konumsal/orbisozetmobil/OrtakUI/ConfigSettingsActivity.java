@@ -1535,23 +1535,11 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                 MessageBox.showAlert(ConfigSettingsActivity.this, "Köy verileri yüklenirken hata oluştu!", false);
             } else {
 
-               // pd2.dismiss();
-                pd = ProgressDialog.show(ConfigSettingsActivity.this, "İşlem tamamlanıyor",
-                        "Lütfen bekleyiniz..", true);
-                pd.setCancelable(false);
-                pd.show();
-                new Handler().postDelayed(new Runnable() {
-
-                    @Override
-                    public void run() {
-                        getBolgeMudurlukSeflik();
 
 
-                    }
-                }, 8);
-               // getBolgeMudurlukSeflik();
-               /* pd2.dismiss();
-                new AlertDialog.Builder(ConfigSettingsActivity.this)
+                pd2.dismiss();
+                listelebirimler();
+               /* new AlertDialog.Builder(ConfigSettingsActivity.this)
                         .setTitle("Orbis Mobile Sistem Bilgisi")
                         .setMessage("İşlem Tamamlandı ")
                         .setPositiveButton("Tamam", new DialogInterface.OnClickListener() {
@@ -1614,6 +1602,7 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                             return 0;
                         }
                     });*/
+
                     publishProgress("Köy verileri yüklendi..");
 
 
@@ -1634,6 +1623,41 @@ public class ConfigSettingsActivity extends AppCompatActivity {
     }
 
 
+    void listelebirimler(){
+
+        pd = ProgressDialog.show(ConfigSettingsActivity.this, "İşlem tamamlanıyor",
+                "Lütfen bekleyiniz..", true);
+        pd.setCancelable(false);
+        pd.show();
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                getBolgeMudurlukSeflik();
+
+                AlertDialog alertDialog = new AlertDialog.Builder(ConfigSettingsActivity.this)
+                        .setTitle("Orbis Mobile Sistem Bilgisi")
+                        .setMessage("İşlem Tamamlandı ")
+                        .setPositiveButton("Tamam", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                                if (ilk_giris.equals("1"))
+                                    ConfigSettingsActivity.this.finish();
+
+
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+
+                if(alertDialog.isShowing() && pd.isShowing())
+                    pd.dismiss();
+
+
+            }
+        }, 8);
+
+    }
     List<SOrgBirim> org_birim_list;
     List<SCity> il_list;
     List<STown> ilce_list;
@@ -1845,11 +1869,17 @@ public class ConfigSettingsActivity extends AppCompatActivity {
             public int compare(final SCity object1, final SCity object2) {
                 if (object1 != null && object2 != null && object2.getAdi() != null && object1.getAdi() != null)
                     return object1.getAdi().compareTo(object2.getAdi());
+
                 Log.v("köy_sort2 ", "=>" + koy_list.size());
+
 
                 return 0;
             }
         });
+
+
+
+
 
 
     }
@@ -2012,28 +2042,17 @@ public class ConfigSettingsActivity extends AppCompatActivity {
                 if (object1 != null && object2 != null)
                     return object1.getAdi().compareTo(object2.getAdi());
                 return 0;
+
             }
         });
 
-        if (pd.isShowing())
-            pd.dismiss();
-
-        if (pd2.isShowing())
-            pd2.dismiss();
-        new AlertDialog.Builder(ConfigSettingsActivity.this)
-                .setTitle("Orbis Mobile Sistem Bilgisi")
-                .setMessage("İşlem Tamamlandı ")
-                .setPositiveButton("Tamam", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                        if (ilk_giris.equals("1"))
-                            ConfigSettingsActivity.this.finish();
 
 
-                    }
-                })
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .show();
+
+
+
+
+
 
 
     }

@@ -19,7 +19,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="BookmarkManager">
@@ -40,19 +40,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/dataBinding/debug/android/databinding/layouts/DataBindingInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/dataBinding/debug/android/databinding/layouts/DataBindingInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/afollestad/materialdialogs/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/afollestad/materialdialogs/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/konumsal/orbisozetmobil/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/konumsal/orbisozetmobil/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/rengwuxian/materialedittext/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/rengwuxian/materialedittext/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/weiwangcn/betterspinner/library/material/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/weiwangcn/betterspinner/library/material/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/me/zhanghai/android/materialprogressbar/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/me/zhanghai/android/materialprogressbar/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/anim.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/anim.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterDir="false" />
@@ -61,147 +49,17 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-mdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-mdpi-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/AdapterLayer/Kadastro/KdmDosyaAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/AdapterLayer/Kadastro/KdmDosyaAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/AdapterLayer/Oduh/BalOrmaniAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/AdapterLayer/Oduh/BalOrmaniAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/AdapterLayer/Oduh/MesireYeriAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/AdapterLayer/Oduh/MesireYeriAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/AdapterLayer/Ortak/DefaultTreeListAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/AdapterLayer/Ortak/DefaultTreeListAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/AdapterLayer/Ortak/DynamicPopupAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/AdapterLayer/Ortak/DynamicPopupAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/AdapterLayer/Ozm/SucTutanagiAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/AdapterLayer/Ozm/SucTutanagiAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ComponentLayer/OrbisCustomDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ComponentLayer/OrbisCustomDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$attr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$attr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/mediarouter/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/mediarouter/R$attr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/mediarouter/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/mediarouter/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/mediarouter/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/mediarouter/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$attr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/afollestad/materialdialogs/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/afollestad/materialdialogs/R$attr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/afollestad/materialdialogs/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/afollestad/materialdialogs/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/afollestad/materialdialogs/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/afollestad/materialdialogs/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$attr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/Bluetooth/BluetoothChat.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/Bluetooth/BluetoothChat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$getBaseDataServiceForSorgulamalar$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$getBaseDataServiceForSorgulamalar.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$getBaseDataServiceForSorgulamalar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$serviceConnectorTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity$serviceConnectorTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/DataSelectorPopup.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/DataSelectorPopup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/DateSelectorPopup.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/DateSelectorPopup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/DialogConfigFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/DialogConfigFragment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/FragmentDefaultTreeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/FragmentDefaultTreeList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/Home2Activity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/Home2Activity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$MyBroadcastReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$MyBroadcastReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$getVersionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$getVersionInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$saveUserTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$saveUserTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$userTask$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$userTask$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$userTask$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$userTask$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$userTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity$userTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/OrtakFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/OrtakFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/YoneticiEkraniActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OrtakUI/YoneticiEkraniActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$attr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$bool.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$bool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$color.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$color.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$dimen.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$dimen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$integer.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$integer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$layout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$mipmap.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$mipmap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$raw.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$raw.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$string.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$string.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$style.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$style.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/konumsal/orbisozetmobil/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/rengwuxian/materialedittext/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/rengwuxian/materialedittext/R$attr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/rengwuxian/materialedittext/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/rengwuxian/materialedittext/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/weiwangcn/betterspinner/library/material/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/weiwangcn/betterspinner/library/material/R$attr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/weiwangcn/betterspinner/library/material/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/weiwangcn/betterspinner/library/material/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/me/zhanghai/android/materialprogressbar/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/me/zhanghai/android/materialprogressbar/R$attr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/me/zhanghai/android/materialprogressbar/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/me/zhanghai/android/materialprogressbar/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/me/zhanghai/android/materialprogressbar/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/me/zhanghai/android/materialprogressbar/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/layout/activity_config_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/layout/activity_config_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/layout/layout_dialog_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/layout/layout_dialog_config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/layout/login_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/layout/login_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/values/values.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/9.2.1/jars/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/9.2.1/jars/classes.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/componentClasses.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/componentClasses.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/maindexlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/maindexlist.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_config_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_config_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/layout_dialog_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/layout_dialog_config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/login_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/login_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/AdapterLayer/DestekHizmetleri/PersonelGiderAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/AdapterLayer/DestekHizmetleri/PersonelGiderAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/AdapterLayer/IsletmePazarlama/DamgaAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/AdapterLayer/IsletmePazarlama/DamgaAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/AdapterLayer/IsletmePazarlama/OdenekAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/AdapterLayer/IsletmePazarlama/OdenekAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/AdapterLayer/IsletmePazarlama/SatisAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/AdapterLayer/IsletmePazarlama/SatisAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/AdapterLayer/IsletmePazarlama/UretimAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/AdapterLayer/IsletmePazarlama/UretimAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacSorgulamaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/DestekHizmetleriUI/MuhSorgulamaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/EizinUI/EizinSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/EizinUI/EizinSorgulamaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Fidanlik_Orkoy_UI/Fidanlik_Orkoy_SorguActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Fidanlik_Orkoy_UI/Fidanlik_Orkoy_SorguActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/IsletmePazarlamaUI/IPSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/IsletmePazarlamaUI/IPSorgulamaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Kdm_Str_BilgiSis_UI/Kdm_Str_BilgiSis_SorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Kdm_Str_BilgiSis_UI/Kdm_Str_BilgiSis_SorgulamaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OduhUI/OduhSorgulamaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrmIdaresi_Amenajman_Yangin_UI/OrmIdaresi_Amenajman_Yangin_SorguActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OzmUI/OzmSorgulamaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/PersonelUI/PersonelSorguActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/PersonelUI/PersonelSorguActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/SilvikulturUI/SilSorgulamaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/SilvikulturUI/SilSorgulamaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_config_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_config_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/include_filter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/include_filter.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/ip_sorgulama_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/ip_sorgulama_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/login_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/login_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/muh_sorgulama_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/muh_sorgulama_activity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jxl/DepoMobilSon-jxl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jxl/DepoMobilSon-jxl.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -215,7 +73,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="5200bd8359d56559" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="android7" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -261,18 +119,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/AdapterLayer/IsletmePazarlama/OdenekAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="74" column="78" selection-start-line="74" selection-start-column="78" selection-end-line="74" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/AdapterLayer/DestekHizmetleri/PersonelGiderAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
+            <state relative-caret-position="969">
               <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
             </state>
           </provider>
@@ -288,90 +137,74 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_config_settings.xml">
           <provider selected="true" editor-type-id="android-designer2" />
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="2771">
               <caret line="163" column="90" selection-start-line="163" selection-start-column="90" selection-end-line="163" selection-end-column="90" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Hukuk_DisIlikiler_InsaatIkmal_UI/Hukuk_DisIlikiler_InsaatIkmal_SorguActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/DbHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_filter.xml">
-          <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="2635">
-              <caret line="156" column="21" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="1382" column="45" selection-start-line="1382" selection-start-column="45" selection-end-line="1382" selection-end-column="45" />
+            <state relative-caret-position="425">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
               <folding>
-                <element signature="e#27557#27568#0" expanded="true" />
-                <element signature="e#32394#32707#0" expanded="true" />
-                <element signature="e#32706#32707#0" expanded="true" />
-                <element signature="e#35945#36363#0" expanded="true" />
-                <element signature="e#36362#36363#0" expanded="true" />
-                <element signature="e#36560#36979#0" expanded="true" />
-                <element signature="e#36978#36979#0" expanded="true" />
-                <element signature="e#36004#37555#0" />
-                <element signature="e#37562#44439#0" />
-                <element signature="e#63299#63495#0" expanded="true" />
-                <element signature="e#63494#63495#0" expanded="true" />
+                <element signature="e#2962#2963#0" expanded="true" />
+                <element signature="e#3031#3032#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="62" column="61" lean-forward="true" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacSorgulamaActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="799" selection-start-line="799" selection-end-line="799" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7400">
-              <caret line="1550" column="20" selection-start-line="1550" selection-start-column="20" selection-end-line="1550" selection-end-column="20" />
-              <folding>
-                <element signature="e#60927#60928#0" expanded="true" />
-                <element signature="e#60951#60952#0" expanded="true" />
-                <element signature="e#70610#70830#0" expanded="true" />
-                <element signature="e#70829#70830#0" expanded="true" />
-                <element signature="e#73981#73992#0" expanded="true" />
-                <element signature="e#78913#79226#0" expanded="true" />
-                <element signature="e#79225#79226#0" expanded="true" />
-                <element signature="e#82485#82903#0" expanded="true" />
-                <element signature="e#82902#82903#0" expanded="true" />
-                <element signature="e#83100#83519#0" expanded="true" />
-                <element signature="e#83518#83519#0" expanded="true" />
-                <element signature="e#82928#82939#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="382">
+              <caret line="1371" lean-forward="true" selection-start-line="1371" selection-end-line="1371" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_config.xml">
-          <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26350">
+              <caret line="1644" column="55" selection-start-line="1644" selection-start-column="55" selection-end-line="1644" selection-end-column="55" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_activity.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/DataLayer/Ortak/SKoyBelde_Data.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
+            <state relative-caret-position="442">
               <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
@@ -393,24 +226,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Anamenuac</find>
-      <find>OrtakFu</find>
-      <find>item_source_str_il</find>
-      <find>il_spinn</find>
-      <find>OrtakFunction.il_list_string</find>
-      <find>OrtakFunction.il_li</find>
-      <find>OrtakFunction.il_lis</find>
-      <find>OrtakFunction.bolge_</find>
-      <find>server url</find>
-      <find>OrtakFunction.il_list</find>
-      <find>il_list_string</find>
-      <find>OrtakFunction.il_list_string</find>
-      <find>OrtakFunction.bolge_list</find>
-      <find>il_ilc</find>
-      <find>item_source_str_mudurluk</find>
-      <find>get</find>
-      <find>org_birim_list</find>
-      <find>il_list</find>
       <find>AnaMenuActivity</find>
       <find>İş</find>
       <find>Orbis Mobile Sistem Bilgisi</find>
@@ -419,10 +234,28 @@
       <find>getbol</find>
       <find>progres</find>
       <find>getbo</find>
-      <find>pd</find>
       <find>Bu işlem y</find>
       <find>ConfigSe</find>
       <find>İşlem tamam</find>
+      <find>başarılı</find>
+      <find>köyler yükle</find>
+      <find>3000</find>
+      <find>publishProgress</find>
+      <find>köy veri</find>
+      <find>pd2</find>
+      <find>köy</find>
+      <find>BIRIM</find>
+      <find>thread</find>
+      <find>BIRIM1</find>
+      <find>pd2.di</find>
+      <find>İşlem</find>
+      <find>pd2.dis</find>
+      <find>listele</find>
+      <find>DATABASE</find>
+      <find>pd</find>
+      <find>MANİFEST</find>
+      <find>COMPİLE</find>
+      <find>compile</find>
     </findStrings>
     <replaceStrings>
       <replace>;</replace>
@@ -484,7 +317,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/EntityLayer/SendParametersForServer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/AdapterLayer/RestAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/AdapterLayer/getUnsafeOkHttpClient.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/AdapterLayer/get.java" />
@@ -533,8 +365,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/AdapterLayer/IsletmePazarlama/OdenekAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/AdapterLayer/DestekHizmetleri/PersonelGiderAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/muh_sorgulama_activity.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_config_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_config_settings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/DbHelper.java" />
       </list>
     </option>
   </component>
@@ -638,8 +471,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="192.168.137.169:5555" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-02-18T11:12:22.477Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="5200bd8359d56559" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-02-20T06:46:08.240Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="run&#9;ACTION&#9;ActivateRunToolWindow" />
     <property name="android.project.structure.last.selected" value="jxl" />
@@ -812,7 +645,7 @@
       <window_info id="Structure" order="6" sideWeight="0.5040917" side_tool="true" weight="0.25100672" />
       <window_info content_ui="combo" id="Project" order="7" sideWeight="0.7388949" visible="true" weight="0.20202559" />
       <window_info id="Resources Explorer" order="8" weight="0.32995737" />
-      <window_info anchor="bottom" id="Build" order="0" sideWeight="0.4968017" weight="0.45612136" />
+      <window_info anchor="bottom" id="Build" order="0" sideWeight="0.4968017" weight="0.12784399" />
       <window_info anchor="bottom" id="Android Profiler" order="1" sideWeight="0.49946696" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50959486" side_tool="true" weight="0.49729145" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32936078" />
@@ -822,9 +655,9 @@
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.4989339" weight="0.27843988" />
-      <window_info anchor="bottom" id="Run" order="11" sideWeight="0.4978678" weight="0.054171182" />
-      <window_info anchor="bottom" id="Debug" order="12" sideWeight="0.4904051" weight="0.56446373" />
+      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.4989339" weight="0.1928494" />
+      <window_info anchor="bottom" id="Run" order="11" sideWeight="0.4978678" weight="0.2524377" />
+      <window_info anchor="bottom" id="Debug" order="12" sideWeight="0.4904051" weight="0.058504876" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32936078" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Gradle" order="1" weight="0.32942432" />
@@ -883,6 +716,20 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.java</url>
+          <line>1635</line>
+          <properties />
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.java</url>
+          <line>1540</line>
+          <properties />
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="dart-exception">
           <properties />
@@ -964,13 +811,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/EntityLayer/Oduh/SehirOrmani.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/EntityLayer/Oduh/MesireYeri.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="622">
@@ -1085,14 +925,6 @@
             <element signature="e#3025#3026#0" expanded="true" />
             <element signature="e#3063#3064#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -1247,19 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="93" column="6" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_activity.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-1122" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1295,16 +1114,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacSorgulamaActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="742" column="5" selection-start-line="742" selection-start-column="5" selection-end-line="742" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_filter.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
@@ -1335,37 +1144,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/DataLayer/Ortak/SKoyBelde_Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/25.3.1/97d3ad2e852f173c8a563752d9908e68e1e10a0a/appcompat-v7-25.3.1-sources.jar!/android/support/v7/app/AppCompatActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="1382" column="45" selection-start-line="1382" selection-start-column="45" selection-end-line="1382" selection-end-column="45" />
-          <folding>
-            <element signature="e#27557#27568#0" expanded="true" />
-            <element signature="e#32394#32707#0" expanded="true" />
-            <element signature="e#32706#32707#0" expanded="true" />
-            <element signature="e#35945#36363#0" expanded="true" />
-            <element signature="e#36362#36363#0" expanded="true" />
-            <element signature="e#36560#36979#0" expanded="true" />
-            <element signature="e#36978#36979#0" expanded="true" />
-            <element signature="e#36004#37555#0" />
-            <element signature="e#37562#44439#0" />
-            <element signature="e#63299#63495#0" expanded="true" />
-            <element signature="e#63494#63495#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1382,16 +1164,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4148">
+          <caret line="244" column="2" selection-start-line="244" selection-start-column="2" selection-end-line="244" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/AdapterLayer/IsletmePazarlama/OdenekAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
+        <state relative-caret-position="1003">
           <caret line="74" column="78" selection-start-line="74" selection-start-column="78" selection-end-line="74" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/AdapterLayer/DestekHizmetleri/PersonelGiderAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
+        <state relative-caret-position="969">
           <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
         </state>
       </provider>
@@ -1403,29 +1193,61 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_config_settings.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="2771">
           <caret line="163" column="90" selection-start-line="163" selection-start-column="90" selection-end-line="163" selection-end-column="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/ConfigSettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7400">
-          <caret line="1550" column="20" selection-start-line="1550" selection-start-column="20" selection-end-line="1550" selection-end-column="20" />
+        <state relative-caret-position="26350">
+          <caret line="1644" column="55" selection-start-line="1644" selection-start-column="55" selection-end-line="1644" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_activity.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/DataLayer/Ortak/SKoyBelde_Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/DbHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
           <folding>
-            <element signature="e#60927#60928#0" expanded="true" />
-            <element signature="e#60951#60952#0" expanded="true" />
-            <element signature="e#70610#70830#0" expanded="true" />
-            <element signature="e#70829#70830#0" expanded="true" />
-            <element signature="e#73981#73992#0" expanded="true" />
-            <element signature="e#78913#79226#0" expanded="true" />
-            <element signature="e#79225#79226#0" expanded="true" />
-            <element signature="e#82485#82903#0" expanded="true" />
-            <element signature="e#82902#82903#0" expanded="true" />
-            <element signature="e#83100#83519#0" expanded="true" />
-            <element signature="e#83518#83519#0" expanded="true" />
-            <element signature="e#82928#82939#0" expanded="true" />
+            <element signature="e#2962#2963#0" expanded="true" />
+            <element signature="e#3031#3032#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="62" column="61" lean-forward="true" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/Agaclandirma/AgacSorgulamaActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="799" selection-start-line="799" selection-end-line="799" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/konumsal/orbisozetmobil/OrtakUI/AnaMenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="1371" lean-forward="true" selection-start-line="1371" selection-end-line="1371" />
         </state>
       </provider>
     </entry>
